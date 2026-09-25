@@ -20,7 +20,7 @@ This source contributed 3 historical candidates. The release certified 3 structu
 - Redistribution basis recorded by release: `upstream-license`
 - Approval authority recorded by release: `Najd Research`
 - Semantic review: not performed in this release.
-- Collection adapter from original upstream bytes: not reconstructed here. The [reproduction path](../reproduction.md) starts from the preserved pre-audit export.
+- Original upstream bytes reproduce all 3 public rows. Run `uv run najd-datasets reproduce-source sources/humain-araifeval.json --output build/humain-araifeval` using the [pinned adapter manifest](../../sources/humain-araifeval.json).
 
 ## Evidence
 

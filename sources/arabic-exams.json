@@ -1,0 +1,26 @@
+{
+  "schema_version": "1",
+  "adapter": "arabic-exams-v1",
+  "source_id": "arabic-exams",
+  "upstream_url": "https://huggingface.co/datasets/OALL/Arabic_EXAMS",
+  "raw_url": "https://huggingface.co/datasets/OALL/Arabic_EXAMS/resolve/bc7a29346dbcaa16a8cd883b1f3e681ab2b7ff2a/data/test-00000-of-00001.parquet",
+  "revision": "bc7a29346dbcaa16a8cd883b1f3e681ab2b7ff2a",
+  "raw_sha256": "8968d8a0ca14b53171dd1ae6cda21451b4767530c56027907a3ac9339e078c82",
+  "expected_rows": 537,
+  "expected_sha256": "926bd603fa581c153e6a977259a2e3f90a0d27940f9b52850ca501eca482cd03",
+  "selection_mode": "published_subset",
+  "expected_published_rows": 24,
+  "reference_url": "https://huggingface.co/datasets/najdresearch/najd-benchmark/resolve/cb30c1c9e46c62f691380c3269885cdb8f22f52b/datasets/najd-benchmark/2026.09.14/cases.jsonl",
+  "reference_sha256": "b8b52ded0f6731b7a4764a90476edfe643f46d6a286096bab02b7ed189af94f6",
+  "license": "not-declared",
+  "redistribution_basis": "permission-on-file",
+  "review_status": "not_reviewed",
+  "split": "historical_test_candidates",
+  "transformations": [
+    "field_mapping",
+    "source_provenance",
+    "historical_global_selection"
+  ],
+  "reviewer": null,
+  "required_extra": "parquet"
+}

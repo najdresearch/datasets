@@ -50,7 +50,7 @@ This source contributed 104 historical candidates. The release certified 104 str
 - Redistribution basis recorded by release: `upstream-license`
 - Approval authority recorded by release: `Najd Research`
 - Semantic review: not performed in this release.
-- Collection adapter from original upstream bytes: not reconstructed here. The [reproduction path](../reproduction.md) starts from the preserved pre-audit export.
+- Original upstream bytes reproduce all 104 public rows. Run `uv run najd-datasets reproduce-source sources/arabicmmlu.json --output build/arabicmmlu` using the [pinned adapter manifest](../../sources/arabicmmlu.json).
 
 ## Evidence
 

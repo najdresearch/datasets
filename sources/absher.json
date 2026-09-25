@@ -1,0 +1,171 @@
+{
+  "schema_version": "1",
+  "adapter": "absher-v1",
+  "source_id": "absher",
+  "upstream_url": "https://huggingface.co/datasets/Renad10/Absher-Benchmark",
+  "revision": "554f7457e9f91290f204ac56ab82e707f302944e",
+  "raw_files": [
+    {
+      "name": "Phrases_Contextual_Usage_questions.csv",
+      "url": "https://huggingface.co/datasets/Renad10/Absher-Benchmark/resolve/554f7457e9f91290f204ac56ab82e707f302944e/Phrases/Phrases_Contextual_Usage_questions.csv",
+      "sha256": "0d04d927210d051f2082b3001dcd23c58a138c937ffb69fae0c4575283d6afc7"
+    },
+    {
+      "name": "Phrases_Cultural_Interpretation_questions.csv",
+      "url": "https://huggingface.co/datasets/Renad10/Absher-Benchmark/resolve/554f7457e9f91290f204ac56ab82e707f302944e/Phrases/Phrases_Cultural_Interpretation_questions.csv",
+      "sha256": "105335484f02a21fa5c24f5ccccb222921df0b9e0e059a2c782e1fb81ae1368b"
+    },
+    {
+      "name": "Phrases_Fill_in_Blank_questions.csv",
+      "url": "https://huggingface.co/datasets/Renad10/Absher-Benchmark/resolve/554f7457e9f91290f204ac56ab82e707f302944e/Phrases/Phrases_Fill_in_Blank_questions.csv",
+      "sha256": "e36ae840ed7b18d4ab82f6675d6c2762717070c8a08dc2360582e0dbb596e717"
+    },
+    {
+      "name": "Phrases_Location_Recognition_questions.csv",
+      "url": "https://huggingface.co/datasets/Renad10/Absher-Benchmark/resolve/554f7457e9f91290f204ac56ab82e707f302944e/Phrases/Phrases_Location_Recognition_questions.csv",
+      "sha256": "8b9ad6386bced48c275898c312b3c88bf62f904cb16f2d974246d34805e8b06d"
+    },
+    {
+      "name": "Phrases_Meaning_questions.csv",
+      "url": "https://huggingface.co/datasets/Renad10/Absher-Benchmark/resolve/554f7457e9f91290f204ac56ab82e707f302944e/Phrases/Phrases_Meaning_questions.csv",
+      "sha256": "be6ba20a2a1e5764a9953078eb88f13198d422680e7e32c5445ee91d56cfe41d"
+    },
+    {
+      "name": "Phrases_True_False_questions.csv",
+      "url": "https://huggingface.co/datasets/Renad10/Absher-Benchmark/resolve/554f7457e9f91290f204ac56ab82e707f302944e/Phrases/Phrases_True_False_questions.csv",
+      "sha256": "63ea80ab4619bef5b519c26de1d34a595fa36f2d7be57dabf91ac0b94067236f"
+    },
+    {
+      "name": "Proverbs_Contextual_Usage_questions.csv",
+      "url": "https://huggingface.co/datasets/Renad10/Absher-Benchmark/resolve/554f7457e9f91290f204ac56ab82e707f302944e/Proverbs/Proverbs_Contextual_Usage_questions.csv",
+      "sha256": "d32857f38132183e02667b8c5b3db256b85cb9fd3f5abaa60560f45860fa671c"
+    },
+    {
+      "name": "Proverbs_Cultural_Interpretation_questions.csv",
+      "url": "https://huggingface.co/datasets/Renad10/Absher-Benchmark/resolve/554f7457e9f91290f204ac56ab82e707f302944e/Proverbs/Proverbs_Cultural_Interpretation_questions.csv",
+      "sha256": "81ec64baf854e1f381a1c94653f8a9deba22638f0bff6b30e583a09bad23d54f"
+    },
+    {
+      "name": "Proverbs_Fill_in_Blank_questions.csv",
+      "url": "https://huggingface.co/datasets/Renad10/Absher-Benchmark/resolve/554f7457e9f91290f204ac56ab82e707f302944e/Proverbs/Proverbs_Fill_in_Blank_questions.csv",
+      "sha256": "5b94c7e520a52cbf8ce2e609e63e7db38ca9ddd5c60386507c0c1e70228e8677"
+    },
+    {
+      "name": "Proverbs_Location_Recognition_questions.csv",
+      "url": "https://huggingface.co/datasets/Renad10/Absher-Benchmark/resolve/554f7457e9f91290f204ac56ab82e707f302944e/Proverbs/Proverbs_Location_Recognition_questions.csv",
+      "sha256": "539824afef6db09b859eb8711fa5dfe796b28e65e5d7dcce90c3dabc5282ba18"
+    },
+    {
+      "name": "Proverbs_Meaning_questions.csv",
+      "url": "https://huggingface.co/datasets/Renad10/Absher-Benchmark/resolve/554f7457e9f91290f204ac56ab82e707f302944e/Proverbs/Proverbs_Meaning_questions.csv",
+      "sha256": "a109d065cf8a618dbefaa70e98a662dae7493f45539f9acde8d88358cfc2d8ad"
+    },
+    {
+      "name": "Proverbs_True_False_questions.csv",
+      "url": "https://huggingface.co/datasets/Renad10/Absher-Benchmark/resolve/554f7457e9f91290f204ac56ab82e707f302944e/Proverbs/Proverbs_True_False_questions.csv",
+      "sha256": "f899836843923dc1dd3444fbf6f4ccddfd47b1c4db319cb0c6e362efb394bc23"
+    },
+    {
+      "name": "Words_Contextual_Usage_questions.csv",
+      "url": "https://huggingface.co/datasets/Renad10/Absher-Benchmark/resolve/554f7457e9f91290f204ac56ab82e707f302944e/Words/Words_Contextual_Usage_questions.csv",
+      "sha256": "a87ec2558226731694af31d53708f25e9c658bc332b4b30f697e25f8f0ea2e34"
+    },
+    {
+      "name": "Words_Cultural_Interpretation_questions.csv",
+      "url": "https://huggingface.co/datasets/Renad10/Absher-Benchmark/resolve/554f7457e9f91290f204ac56ab82e707f302944e/Words/Words_Cultural_Interpretation_questions.csv",
+      "sha256": "e4a263214f20b3d22e3d288d732f957998af4f8e49a011db7e8d27c797b6b40b"
+    },
+    {
+      "name": "Words_Fill_in_Blank_questions.csv",
+      "url": "https://huggingface.co/datasets/Renad10/Absher-Benchmark/resolve/554f7457e9f91290f204ac56ab82e707f302944e/Words/Words_Fill_in_Blank_questions.csv",
+      "sha256": "b8cb88ee4c3227d974e9042cecbd1153225ec3f62f0fb2a9dc4be351d66e9f97"
+    },
+    {
+      "name": "Words_Location_Recognition_questions.csv",
+      "url": "https://huggingface.co/datasets/Renad10/Absher-Benchmark/resolve/554f7457e9f91290f204ac56ab82e707f302944e/Words/Words_Location_Recognition_questions.csv",
+      "sha256": "9934fdd588e05d50260d553c5ecc2f0e836cc89d8417357693b3bde82002e986"
+    },
+    {
+      "name": "Words_Meaning_questions.csv",
+      "url": "https://huggingface.co/datasets/Renad10/Absher-Benchmark/resolve/554f7457e9f91290f204ac56ab82e707f302944e/Words/Words_Meaning_questions.csv",
+      "sha256": "c19d92a9add058d12d0f537bd514e51e6ae89fd710ab5184b9a5f5091216411a"
+    },
+    {
+      "name": "Words_True_False_questions.csv",
+      "url": "https://huggingface.co/datasets/Renad10/Absher-Benchmark/resolve/554f7457e9f91290f204ac56ab82e707f302944e/Words/Words_True_False_questions.csv",
+      "sha256": "2c2f5b8a17a3e863ce4c9c8568e24425606dd66e383066a5ee7223368dc7d89c"
+    }
+  ],
+  "expected_rows": 18564,
+  "expected_sha256": "57e8f0fbae608db04613124a737786597d297ca050ee1e67b22c1d7d58fa54fd",
+  "selection_mode": "published_subset",
+  "case_overrides": {
+    "absher-phrases-fill_in_blank-00239": {
+      "answer_recovery_evidence": {
+        "do_not_promote_without_review": true,
+        "evidence_text": "جملة تقال للي ما عنده سالفه و معناها : سود الله وجهك",
+        "source_file": "sources/absher/raw/Phrases_Fill_in_Blank_questions.csv",
+        "source_row": 240
+      },
+      "answer_recovery_status": "explicit_marker",
+      "expected": {
+        "answer": "B",
+        "answerCandidate": "B"
+      },
+      "prompt": "### نوع السؤال: املأ الفراغ\nTask: اختر فقط إجابة واحدة دون أي ملاحظات إضافية. \nQuestion: عندما رأيت شخصًا يفعل شيئًا غير لائق، قلت له: \" الله رقاعك\". \nOptions: \nA) صغم \nB) صخم \nC) سقم \nD) زخم",
+      "prompt_cleaned": true
+    },
+    "absher-words-fill_in_blank-00888": {
+      "answer_recovery_evidence": {
+        "do_not_promote_without_review": true,
+        "evidence_text": "وجمعها شخاقيق، وتطلق على فروع الأودية الصغيرة جداً والتي حفرت الأرض وجعلت فيها شقوقاً، ولهذا تسمى شخاقيق (مع تعديل القاف عند النطق إلى \"دز\")",
+        "source_file": "sources/absher/raw/Words_Fill_in_Blank_questions.csv",
+        "source_row": 889
+      },
+      "answer_recovery_status": "exact_evidence_match",
+      "expected": {
+        "answer": "A"
+      },
+      "prompt": "المهمة: املأ الفراغ بالكلمة المناسبة.\nالسؤال: تطلق 'شخاقيق' على فروع الأودية الصغيرة جداً التي _____ الأرض.\nالخيارات:\nأ) حفرت\nب) نمت\nج) زُرعت\nد) تساقطت",
+      "prompt_cleaned": true
+    },
+    "absher-words-cultural_interpretation-00175": {
+      "answer_recovery_status": "unresolved",
+      "prompt": "المهمة: فسر معنى كلمة 'افقشه' في السياق الثقافي.\nالسؤال: لماذا تستخدم كلمة 'افقشه' في اللهجة السعودية؟\nالخيارات:\nأ) تعبير شائع في الاحتفالات\nب) تعبير يستخدم في الأطعمة\nج) تعبير للتعبير عن الحزن\nد) تعبير يستخدم في التعليم",
+      "prompt_cleaned": true
+    },
+    "absher-words-location_recognition-01207": {
+      "answer_recovery_status": "unresolved",
+      "prompt": "المهمة: حدد الدولة التي تستخدم فيها كلمة 'قموطه' بشكل شائع.\nالسؤال: أي دولة تستخدم المصطلح 'قموطه' بشكل رئيسي؟\nالخيارات:\nأ) المملكة العربية السعودية\nب) الكويت\nج) الإمارات\nد) البحرين",
+      "prompt_cleaned": true
+    },
+    "absher-words-true_false-00536": {
+      "answer_recovery_status": "unresolved",
+      "prompt": "المهمة: حدد ما إذا كانت العبارة صحيحة أم خاطئة.\nالسؤال: كلمة 'حره' تشير إلى الشعور بالراحة والهدوء.\nالخيارات:\nأ) صحيح\nب) خطأ",
+      "prompt_cleaned": true
+    },
+    "absher-words-true_false-01042": {
+      "answer_recovery_status": "unresolved",
+      "prompt": "المهمة: حدد ما إذا كانت العبارة صحيحة أم خاطئة.\nالسؤال: عبارة 'محمد عبنه توظف' تعني أن محمد يبدو أنه قد توظف.\nالخيارات:\nأ) صحيح\nب) خاطئ",
+      "prompt_cleaned": true
+    }
+  },
+  "expected_published_rows": 239,
+  "expected_quarantine_rows": 4,
+  "reference_url": "https://huggingface.co/datasets/najdresearch/najd-benchmark/resolve/cb30c1c9e46c62f691380c3269885cdb8f22f52b/datasets/najd-benchmark/2026.09.14/cases.jsonl",
+  "reference_sha256": "b8b52ded0f6731b7a4764a90476edfe643f46d6a286096bab02b7ed189af94f6",
+  "reference_quarantine_url": "https://huggingface.co/datasets/najdresearch/najd-benchmark/resolve/cb30c1c9e46c62f691380c3269885cdb8f22f52b/datasets/najd-benchmark/2026.09.14/quarantine.jsonl",
+  "reference_quarantine_sha256": "5b108a254466d621da41e53acfa5b6302b310c4f9f80d8e87124d605cbfc5ed8",
+  "license": "cc-by-4.0",
+  "redistribution_basis": "permission-on-file",
+  "review_status": "not_reviewed",
+  "split": "historical_test_candidates",
+  "transformations": [
+    "field_mapping",
+    "source_provenance",
+    "term_surface_normalization",
+    "historical_global_selection",
+    "six_recorded_case_repairs"
+  ],
+  "reviewer": null
+}

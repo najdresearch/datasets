@@ -4,6 +4,7 @@ from pathlib import Path
 import pytest
 
 from najd_datasets.adapters import (
+    _selected_candidate,
     _with_correction,
     arabic_agent_eval,
     arabic_ragb,
@@ -62,6 +63,13 @@ def test_arabic_agent_adapter_matches_reference_and_detects_drift(tmp_path: Path
     monkeypatch.setattr("najd_datasets.adapters.urlopen", lambda *_args, **_kwargs: Response())
     result = reproduce_source(manifest, tmp_path / "run", expected)
     assert result["published_rows_matched"] == 1
+    assert reproduce_source(manifest, tmp_path / "local", expected, original)[
+        "published_rows_matched"
+    ] == 1
+    wrong_raw = tmp_path / "wrong.jsonl"
+    wrong_raw.write_bytes(raw + b"\n")
+    with pytest.raises(PipelineError, match="upstream source SHA-256 mismatch"):
+        reproduce_source(manifest, tmp_path / "wrong-raw", expected, wrong_raw)
     reference = json.loads(expected.read_text())
     reference["expected"]["tool_calls"] = []
     expected.write_text(json.dumps(reference, ensure_ascii=False) + "\n")
@@ -161,3 +169,24 @@ def test_recorded_correction_changes_only_prompt_and_options():
         "expected": {"answerIndex": 3, "options": ["first"]},
     }
     assert raw["prompt"] == "old"
+
+
+def test_selected_case_metadata_and_repairs_are_explicit():
+    candidate = {
+        "id": "case", "prompt": "old", "expected": {"answer": None},
+        "tags": ["arabic", ""],
+    }
+    manifest = {
+        "selected_metadata": {"derived_from_candidate": True},
+        "selected_metadata_except_ids": ["other"],
+        "selected_remove_empty_tags": True,
+        "case_overrides": {"case": {"prompt": "clean", "expected": {"answer": "A"}}},
+    }
+    assert _selected_candidate(candidate, "case", manifest) == {
+        "id": "case", "prompt": "clean", "expected": {"answer": "A"},
+        "tags": ["arabic"], "derived_from_candidate": True,
+    }
+    assert candidate["prompt"] == "old"
+    assert "derived_from_candidate" not in _selected_candidate(
+        candidate, "other", manifest,
+    )

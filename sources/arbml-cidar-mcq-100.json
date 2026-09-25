@@ -1,0 +1,29 @@
+{
+  "schema_version": "1",
+  "adapter": "arbml-cidar-mcq-v1",
+  "source_id": "arbml-cidar-mcq-100",
+  "upstream_url": "https://huggingface.co/datasets/arbml/CIDAR-MCQ-100",
+  "raw_url": "https://huggingface.co/datasets/arbml/CIDAR-MCQ-100/resolve/a64885fb2b20a7ec066209681cc31a751f4e1425/data/test-00000-of-00001.parquet",
+  "revision": "a64885fb2b20a7ec066209681cc31a751f4e1425",
+  "raw_sha256": "07a00aea95c76dc8cbd3667e83d37ac521affe8cd4be8b5aebd704a732a946ed",
+  "expected_rows": 100,
+  "expected_sha256": "a74ed7c6f96edf6916f8ed9a0d52fd480fee4894e3420dffaed642319b07d1b7",
+  "selection_mode": "published_subset",
+  "expected_published_rows": 7,
+  "reference_url": "https://huggingface.co/datasets/najdresearch/najd-benchmark/resolve/cb30c1c9e46c62f691380c3269885cdb8f22f52b/datasets/najd-benchmark/2026.09.14/cases.jsonl",
+  "reference_sha256": "b8b52ded0f6731b7a4764a90476edfe643f46d6a286096bab02b7ed189af94f6",
+  "license": "apache-2.0",
+  "redistribution_basis": "upstream-license",
+  "review_status": "not_reviewed",
+  "split": "historical_test_candidates",
+  "transformations": [
+    "field_mapping",
+    "source_provenance",
+    "historical_global_selection"
+  ],
+  "reviewer": null,
+  "required_extra": "parquet",
+  "selected_metadata": {
+    "derived_from_candidate": true
+  }
+}
