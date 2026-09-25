@@ -1,0 +1,26 @@
+{
+  "schema_version": "1",
+  "adapter": "commonsense-validation-v1",
+  "source_id": "commonsense-validation",
+  "upstream_url": "https://huggingface.co/datasets/arbml/Commonsense_Validation",
+  "raw_url": "https://huggingface.co/datasets/arbml/Commonsense_Validation/resolve/85da6793fc34e58c885b80a9d070122afb249083/data/validation-00000-of-00001.parquet",
+  "revision": "85da6793fc34e58c885b80a9d070122afb249083",
+  "raw_sha256": "f71e309a7889acea279548be015254458eca31125d8bd0bb91a5668ade7b681d",
+  "expected_rows": 1000,
+  "expected_sha256": "bb126ce92ad69308a113524813a7f535cc539a5242a6e82dfbeba0ba62f3f0d4",
+  "selection_mode": "published_subset",
+  "expected_published_rows": 48,
+  "reference_url": "https://huggingface.co/datasets/najdresearch/najd-benchmark/resolve/cb30c1c9e46c62f691380c3269885cdb8f22f52b/datasets/najd-benchmark/2026.09.14/cases.jsonl",
+  "reference_sha256": "b8b52ded0f6731b7a4764a90476edfe643f46d6a286096bab02b7ed189af94f6",
+  "license": "not-declared",
+  "redistribution_basis": "permission-on-file",
+  "review_status": "not_reviewed",
+  "split": "historical_test_candidates",
+  "transformations": [
+    "field_mapping",
+    "source_provenance",
+    "historical_global_selection"
+  ],
+  "reviewer": null,
+  "required_extra": "parquet"
+}

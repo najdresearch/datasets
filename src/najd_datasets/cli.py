@@ -47,6 +47,7 @@ def main() -> None:
             cmd.add_argument("--output", required=True, type=Path)
         if name == "reproduce-source":
             cmd.add_argument("--reference", type=Path)
+            cmd.add_argument("--local-raw", type=Path)
         if name == "prepare-review":
             cmd.add_argument("--per-category", type=int, default=2)
         if name == "package":
@@ -70,7 +71,7 @@ def main() -> None:
         elif args.command == "render-source-reference":
             result = render_source_catalog(args.input, args.output)
         elif args.command == "reproduce-source":
-            result = reproduce_source(args.input, args.output, args.reference)
+            result = reproduce_source(args.input, args.output, args.reference, args.local_raw)
         elif args.command == "prepare-review":
             result = prepare_review(args.input, args.output, args.per_category)
         elif args.command == "sync-release":

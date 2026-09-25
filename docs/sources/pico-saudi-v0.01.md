@@ -20,7 +20,7 @@ This source contributed 55 historical candidates. The release certified 55 struc
 - Redistribution basis recorded by release: `permission-on-file`
 - Approval authority recorded by release: `Najd Research`
 - Semantic review: not performed in this release.
-- Collection adapter from original upstream bytes: not reconstructed here. The [reproduction path](../reproduction.md) starts from the preserved pre-audit export.
+- Original upstream bytes reproduce all 55 public rows. Run `uv run najd-datasets reproduce-source sources/pico-saudi-v0.01.json --output build/pico-saudi-v0.01` using the [pinned adapter manifest](../../sources/pico-saudi-v0.01.json).
 
 ## Evidence
 

@@ -1,0 +1,26 @@
+{
+  "schema_version": "1",
+  "adapter": "pico-saudi-v0.01-v1",
+  "source_id": "pico-saudi-v0.01",
+  "upstream_url": "https://github.com/mznmel/Pico-Saudi-LLMs-Benchmark",
+  "raw_url": "https://raw.githubusercontent.com/mznmel/Pico-Saudi-LLMs-Benchmark/6117a74aa757ddee27cd72c20aa428cf7e8e6b1b/v0.01/Pico-Saudi-LLMs-Questions-v0.01.csv",
+  "revision": "6117a74aa757ddee27cd72c20aa428cf7e8e6b1b",
+  "raw_sha256": "016d2d39e30b097f0bbe29ff4f1d44095da88e42408b4e821e75b6a7af590b11",
+  "expected_rows": 55,
+  "expected_sha256": "3ddc4366bae67601bfc998ab0babff08a4e95a3f6fe73fb097a155f15d509536",
+  "selection_mode": "published_subset",
+  "expected_published_rows": 55,
+  "reference_url": "https://huggingface.co/datasets/najdresearch/najd-benchmark/resolve/cb30c1c9e46c62f691380c3269885cdb8f22f52b/datasets/najd-benchmark/2026.09.14/cases.jsonl",
+  "reference_sha256": "b8b52ded0f6731b7a4764a90476edfe643f46d6a286096bab02b7ed189af94f6",
+  "license": "mit",
+  "redistribution_basis": "permission-on-file",
+  "review_status": "not_reviewed",
+  "split": "historical_test_candidates",
+  "transformations": [
+    "csv_to_pico_case",
+    "legacy_contract_repair",
+    "source_provenance",
+    "archived_csv_serialization_differs_but_rows_equal"
+  ],
+  "reviewer": null
+}

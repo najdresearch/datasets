@@ -35,3 +35,21 @@ def test_coverage_accounts_for_every_case_and_detects_duplicate_ids(tmp_path: Pa
     (tmp_path / "quarantine.jsonl").write_text(json.dumps(quarantine) + "\n")
     with pytest.raises(PipelineError, match="duplicate case ID"):
         _coverage(tmp_path, tmp_path / "case-index.csv")
+
+
+def test_pinned_release_coverage_has_no_adapter_gap():
+    from najd_datasets.snapshot import UPSTREAM_REPRODUCED_SOURCES
+
+    ledger = json.loads(Path("releases/2026.09.14/sources.json").read_text())
+    source_ids = {item["source_id"] for item in ledger["sources"]}
+    private_extract_ids = {
+        item["source_id"] for item in ledger["sources"]
+        if any(
+            path.startswith("private/authorized-source-extracts/")
+            for path in item["source_files"]
+        )
+    }
+    assert source_ids == (
+        UPSTREAM_REPRODUCED_SOURCES | private_extract_ids | {"najd-benchmark-v1"}
+    )
+    assert len(UPSTREAM_REPRODUCED_SOURCES) == 29

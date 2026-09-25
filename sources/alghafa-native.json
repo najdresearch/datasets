@@ -1,0 +1,72 @@
+{
+  "schema_version": "1",
+  "adapter": "alghafa-native-v1",
+  "source_id": "alghafa-native",
+  "upstream_url": "https://huggingface.co/datasets/OALL/AlGhafa-Arabic-LLM-Benchmark-Native",
+  "revision": "a31ebd34ca311d7e0cfc6ad7f458b3435af280f5",
+  "raw_files": [
+    {
+      "name": "mcq_exams_test_ar/test-00000-of-00001.parquet",
+      "url": "https://huggingface.co/datasets/OALL/AlGhafa-Arabic-LLM-Benchmark-Native/resolve/a31ebd34ca311d7e0cfc6ad7f458b3435af280f5/mcq_exams_test_ar/test-00000-of-00001.parquet",
+      "sha256": "47182c0a7e189b2e4812fb35dac6ce0258b963d02040a6fcd81d7cb3aa257416"
+    },
+    {
+      "name": "meta_ar_dialects/test-00000-of-00001.parquet",
+      "url": "https://huggingface.co/datasets/OALL/AlGhafa-Arabic-LLM-Benchmark-Native/resolve/a31ebd34ca311d7e0cfc6ad7f458b3435af280f5/meta_ar_dialects/test-00000-of-00001.parquet",
+      "sha256": "38cb8f2bc06444edfaa772e1984578bbb9622b9372905c43a839e4c98c015ca9"
+    },
+    {
+      "name": "meta_ar_msa/test-00000-of-00001.parquet",
+      "url": "https://huggingface.co/datasets/OALL/AlGhafa-Arabic-LLM-Benchmark-Native/resolve/a31ebd34ca311d7e0cfc6ad7f458b3435af280f5/meta_ar_msa/test-00000-of-00001.parquet",
+      "sha256": "3fa56899ae390fb5bc4943348c62f89eec06ffd3f26bfec89866d7e3eb6292ef"
+    },
+    {
+      "name": "multiple_choice_facts_truefalse_balanced_task/test-00000-of-00001.parquet",
+      "url": "https://huggingface.co/datasets/OALL/AlGhafa-Arabic-LLM-Benchmark-Native/resolve/a31ebd34ca311d7e0cfc6ad7f458b3435af280f5/multiple_choice_facts_truefalse_balanced_task/test-00000-of-00001.parquet",
+      "sha256": "5d4e49db81a1b1f9f4aafddd19cb3a45408f69ca368fc6f77bb277fefa9f6b96"
+    },
+    {
+      "name": "multiple_choice_grounded_statement_soqal_task/test-00000-of-00001.parquet",
+      "url": "https://huggingface.co/datasets/OALL/AlGhafa-Arabic-LLM-Benchmark-Native/resolve/a31ebd34ca311d7e0cfc6ad7f458b3435af280f5/multiple_choice_grounded_statement_soqal_task/test-00000-of-00001.parquet",
+      "sha256": "126beb0fee774cd3dd788bc2d3a5c592ab1126fac4e9b417d86c273340b5c19a"
+    },
+    {
+      "name": "multiple_choice_grounded_statement_xglue_mlqa_task/test-00000-of-00001.parquet",
+      "url": "https://huggingface.co/datasets/OALL/AlGhafa-Arabic-LLM-Benchmark-Native/resolve/a31ebd34ca311d7e0cfc6ad7f458b3435af280f5/multiple_choice_grounded_statement_xglue_mlqa_task/test-00000-of-00001.parquet",
+      "sha256": "809454b9d2c5a5e3e50534f66e787f314333990af0fd32d3de72e9c26cb83b7c"
+    },
+    {
+      "name": "multiple_choice_rating_sentiment_no_neutral_task/test-00000-of-00001.parquet",
+      "url": "https://huggingface.co/datasets/OALL/AlGhafa-Arabic-LLM-Benchmark-Native/resolve/a31ebd34ca311d7e0cfc6ad7f458b3435af280f5/multiple_choice_rating_sentiment_no_neutral_task/test-00000-of-00001.parquet",
+      "sha256": "5a138c1e188323d7f2ea66b0896c600be6b53f6462d4f823e82fb868b1b790e2"
+    },
+    {
+      "name": "multiple_choice_rating_sentiment_task/test-00000-of-00001.parquet",
+      "url": "https://huggingface.co/datasets/OALL/AlGhafa-Arabic-LLM-Benchmark-Native/resolve/a31ebd34ca311d7e0cfc6ad7f458b3435af280f5/multiple_choice_rating_sentiment_task/test-00000-of-00001.parquet",
+      "sha256": "358c17358c5f5b64f95372dcc11f3f63993eaffcd28fc40741436351c775d2b9"
+    },
+    {
+      "name": "multiple_choice_sentiment_task/test-00000-of-00001.parquet",
+      "url": "https://huggingface.co/datasets/OALL/AlGhafa-Arabic-LLM-Benchmark-Native/resolve/a31ebd34ca311d7e0cfc6ad7f458b3435af280f5/multiple_choice_sentiment_task/test-00000-of-00001.parquet",
+      "sha256": "a6a532b2ad08c65b01fc3caa4835e8790227817185d8098a038afa91bf0ec24c"
+    }
+  ],
+  "expected_rows": 22932,
+  "expected_sha256": "68d9053e9df85e585a0e79fcba42367c5ff6d5906ef1c4e3bc29a6a33d9880d4",
+  "selection_mode": "published_subset",
+  "expected_published_rows": 150,
+  "reference_url": "https://huggingface.co/datasets/najdresearch/najd-benchmark/resolve/cb30c1c9e46c62f691380c3269885cdb8f22f52b/datasets/najd-benchmark/2026.09.14/cases.jsonl",
+  "reference_sha256": "b8b52ded0f6731b7a4764a90476edfe643f46d6a286096bab02b7ed189af94f6",
+  "license": "not-declared",
+  "redistribution_basis": "permission-on-file",
+  "review_status": "not_reviewed",
+  "split": "historical_test_candidates",
+  "transformations": [
+    "field_mapping",
+    "source_provenance",
+    "historical_absolute_path_id_mapping",
+    "historical_global_selection"
+  ],
+  "reviewer": null,
+  "required_extra": "parquet"
+}

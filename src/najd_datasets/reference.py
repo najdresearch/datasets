@@ -5,6 +5,7 @@ from __future__ import annotations
 from pathlib import Path
 
 from .pipeline import read_json
+from .snapshot import UPSTREAM_REPRODUCED_SOURCES
 
 
 def render_source_catalog(ledger_path: Path, output_dir: Path) -> dict[str, int]:
@@ -25,18 +26,10 @@ def render_source_catalog(ledger_path: Path, output_dir: Path) -> dict[str, int]
     for source in sorted(ledger["sources"], key=lambda item: item["source_id"]):
         name = source["source_id"]
         slug = name.lower().replace("/", "-")
-        if name in {
-            "arabic-agent-eval", "paired-msa-saudi-tool-use", "QCRI/IslamicFaithQA",
-            "arabic-function-calling", "arabicragb",
-            "humain-aratruthfulqa",
-            "arasafe",
-            "mena-values",
-            "arbml-quran_hadith", "arbml-saudiirony", "arbml-arabic-rc", "humain-arapro",
-            "dialectal-arabic-mmlu",
-            "arbml-arabic_dialects_dataset", "arbml-arabic-hate-speech",
-            "arbml-dangerous-dataset",
-        }:
+        if name in UPSTREAM_REPRODUCED_SOURCES:
             rebuild = "verified"
+        elif name == "najd-benchmark-v1":
+            rebuild = "private archive input verified"
         elif any(
             path.startswith("private/authorized-source-extracts/")
             for path in source.get("source_files", [])
@@ -87,17 +80,7 @@ def render_source_catalog(ledger_path: Path, output_dir: Path) -> dict[str, int]
             "- [Historical reproduction](../reproduction.md)",
             "",
         ]
-        if name in {
-            "arabic-agent-eval", "paired-msa-saudi-tool-use", "QCRI/IslamicFaithQA",
-            "arabic-function-calling", "arabicragb",
-            "humain-aratruthfulqa",
-            "arasafe",
-            "mena-values",
-            "arbml-quran_hadith", "arbml-saudiirony", "arbml-arabic-rc", "humain-arapro",
-            "dialectal-arabic-mmlu",
-            "arbml-arabic_dialects_dataset", "arbml-arabic-hate-speech",
-            "arbml-dangerous-dataset",
-        }:
+        if name in UPSTREAM_REPRODUCED_SOURCES:
             index = lines.index(
                 "- Collection adapter from original upstream bytes: not reconstructed here. "
                 "The [reproduction path](../reproduction.md) starts from the preserved "
@@ -114,6 +97,20 @@ def render_source_catalog(ledger_path: Path, output_dir: Path) -> dict[str, int]
                 "Run `uv run najd-datasets reproduce-source "
                 f"sources/{manifest}.json --output build/{manifest}` "
                 f"using the [pinned adapter manifest](../../sources/{manifest}.json)."
+            )
+        elif name == "najd-benchmark-v1":
+            index = lines.index(
+                "- Collection adapter from original upstream bytes: not reconstructed here. "
+                "The [reproduction path](../reproduction.md) starts from the preserved "
+                "pre-audit export."
+            )
+            lines[index] = (
+                "- The preserved private archive's 64-row `datasets/m3-saudi-v1/cases.jsonl` "
+                "reproduces all 31 quarantined copies. Its SHA-256 is pinned in "
+                "[the adapter manifest](../../sources/najd-benchmark-v1.json). "
+                "Run `uv run najd-datasets reproduce-source "
+                "sources/najd-benchmark-v1.json --local-raw <archive-cases.jsonl> "
+                "--output build/najd-benchmark-v1`."
             )
         (pages / f"{slug}.md").write_text("\n".join(lines), encoding="utf-8")
     catalog.extend(["", "[How the rows are reproduced](reproduction.md).", ""])

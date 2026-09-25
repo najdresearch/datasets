@@ -1,0 +1,29 @@
+{
+  "schema_version": "1",
+  "adapter": "najd-benchmark-v1-copy",
+  "source_id": "najd-benchmark-v1",
+  "upstream_url": null,
+  "original_archive_path": "datasets/m3-saudi-v1/cases.jsonl",
+  "original_archive_commit": "211d3df42c6b9dba1838c1b94e942d30724f09cd",
+  "revision": "1.0.0",
+  "raw_sha256": "cde88fc8d3780ae81ff776dcb56a90e5f5f29bf132089ba323015d3e7876b014",
+  "expected_rows": 64,
+  "expected_sha256": "82a2608a5fbe9efa74cdcf9fc1e347315ceb38fadfdbafd31758abea2597a3a1",
+  "selection_mode": "published_subset",
+  "expected_published_rows": 0,
+  "expected_quarantine_rows": 31,
+  "reference_url": "https://huggingface.co/datasets/najdresearch/najd-benchmark/resolve/cb30c1c9e46c62f691380c3269885cdb8f22f52b/datasets/najd-benchmark/2026.09.14/cases.jsonl",
+  "reference_sha256": "b8b52ded0f6731b7a4764a90476edfe643f46d6a286096bab02b7ed189af94f6",
+  "reference_quarantine_url": "https://huggingface.co/datasets/najdresearch/najd-benchmark/resolve/cb30c1c9e46c62f691380c3269885cdb8f22f52b/datasets/najd-benchmark/2026.09.14/quarantine.jsonl",
+  "reference_quarantine_sha256": "5b108a254466d621da41e53acfa5b6302b310c4f9f80d8e87124d605cbfc5ed8",
+  "license": "other",
+  "redistribution_basis": "permission-on-file",
+  "review_status": "not_reviewed",
+  "split": "historical_internal_copy",
+  "transformations": [
+    "legacy_v1_copy",
+    "source_provenance",
+    "historical_global_selection"
+  ],
+  "reviewer": null
+}

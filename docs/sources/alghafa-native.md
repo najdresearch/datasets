@@ -27,7 +27,7 @@ This source contributed 150 historical candidates. The release certified 150 str
 - Redistribution basis recorded by release: `permission-on-file`
 - Approval authority recorded by release: `Najd Research`
 - Semantic review: not performed in this release.
-- Collection adapter from original upstream bytes: not reconstructed here. The [reproduction path](../reproduction.md) starts from the preserved pre-audit export.
+- Original upstream bytes reproduce all 150 public rows. Run `uv run najd-datasets reproduce-source sources/alghafa-native.json --output build/alghafa-native` using the [pinned adapter manifest](../../sources/alghafa-native.json).
 
 ## Evidence
 

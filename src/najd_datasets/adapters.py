@@ -3,21 +3,38 @@
 from __future__ import annotations
 
 import json
+import time
 from pathlib import Path
-from urllib.error import URLError
 from urllib.request import urlopen
 
 from .pipeline import PipelineError, digest, read_jsonl, write_json, write_jsonl
+from .remaining_adapters import (
+    absher,
+    alghafa_native,
+    ara_math,
+    ara_trust,
+    arabic_exams,
+    arabic_mmlu,
+    arabic_safety_evaluation,
+    cidar_eval,
+    cidar_mcq,
+    commonsense_validation,
+    humain_araifeval,
+    inception_ifeval,
+    najd_v1_copy,
+    pico_saudi,
+)
 
 
 def _fetch(url: str) -> bytes:
-    for attempt in range(3):
+    for attempt in range(5):
         try:
-            with urlopen(url, timeout=30) as response:
+            with urlopen(url, timeout=60) as response:
                 return response.read()
-        except URLError:
-            if attempt == 2:
+        except OSError:
+            if attempt == 4:
                 raise
+            time.sleep(attempt + 1)
     raise AssertionError("unreachable")
 
 
@@ -548,7 +565,10 @@ def dialectal_mmlu(raw_path: Path, output_path: Path, revision: str) -> dict[str
 
 
 def reproduce_source(
-    manifest_path: Path, output_dir: Path, reference_path: Path | None = None
+    manifest_path: Path,
+    output_dir: Path,
+    reference_path: Path | None = None,
+    local_raw_path: Path | None = None,
 ) -> dict:
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
     adapters = {
@@ -568,6 +588,20 @@ def reproduce_source(
         "arbml-dialects-v1": arabic_dialects,
         "arbml-hate-v1": arabic_hate_speech,
         "arbml-dangerous-v1": dangerous_dataset,
+        "humain-aramath-v1": ara_math,
+        "humain-araifeval-v1": humain_araifeval,
+        "inception-arabic-ifeval-v1": inception_ifeval,
+        "commonsense-validation-v1": commonsense_validation,
+        "arabic-exams-v1": arabic_exams,
+        "aratrust-v1": ara_trust,
+        "arbml-cidar-eval-v1": cidar_eval,
+        "arbml-cidar-mcq-v1": cidar_mcq,
+        "arabicmmlu-v1": arabic_mmlu,
+        "absher-v1": absher,
+        "alghafa-native-v1": alghafa_native,
+        "pico-saudi-v0.01-v1": pico_saudi,
+        "arabic-safety-evaluation-v1": arabic_safety_evaluation,
+        "najd-benchmark-v1-copy": najd_v1_copy,
     }
     if manifest["adapter"] not in adapters:
         raise PipelineError("unknown source adapter")
@@ -575,6 +609,8 @@ def reproduce_source(
         raise PipelineError("output directory must be empty")
     output_dir.mkdir(parents=True, exist_ok=True)
     if "raw_files" in manifest:
+        if local_raw_path is not None:
+            raise PipelineError("--local-raw is only supported for single-file sources")
         raw_path = output_dir / "raw"
         raw_path.mkdir()
         for file in manifest["raw_files"]:
@@ -584,20 +620,31 @@ def reproduce_source(
             raw = _fetch(url)
             if digest(raw) != file["sha256"]:
                 raise PipelineError("upstream source SHA-256 mismatch")
-            (raw_path / file["name"]).write_bytes(raw)
+            target = (raw_path / file["name"]).resolve()
+            if not target.is_relative_to(raw_path.resolve()):
+                raise PipelineError("raw file name escapes output directory")
+            target.parent.mkdir(parents=True, exist_ok=True)
+            target.write_bytes(raw)
     else:
         parquet_adapters = {
             "mena-values-v1", "arbml-quran-hadith-v1", "arbml-saudi-irony-v1",
             "arbml-arabic-rc-v1", "humain-ara-pro-v1",
             "dialectal-mmlu-v1",
             "arbml-dialects-v1", "arbml-hate-v1", "arbml-dangerous-v1",
+            "commonsense-validation-v1", "arabic-exams-v1", "aratrust-v1",
+            "arbml-cidar-eval-v1", "arbml-cidar-mcq-v1",
         }
         suffix = ".parquet" if manifest["adapter"] in parquet_adapters else ".jsonl"
         raw_path = output_dir / f"upstream{suffix}"
-        url = manifest["raw_url"]
-        if f"/{manifest['revision']}/" not in url:
-            raise PipelineError("raw URL is not pinned to manifest revision")
-        raw = _fetch(url)
+        if local_raw_path is not None:
+            raw = local_raw_path.read_bytes()
+        else:
+            url = manifest.get("raw_url")
+            if not url:
+                raise PipelineError("this source requires --local-raw")
+            if f"/{manifest['revision']}/" not in url:
+                raise PipelineError("raw URL is not pinned to manifest revision")
+            raw = _fetch(url)
         if digest(raw) != manifest["raw_sha256"]:
             raise PipelineError("upstream source SHA-256 mismatch")
         raw_path.write_bytes(raw)
@@ -659,9 +706,8 @@ def reproduce_source(
                 raise PipelineError("generated review copy differs from published source row")
     elif selection_mode == "published_subset":
         if any(
-            _with_correction(
-                generated_by_id.get(row["id"]),
-                manifest.get("case_corrections", {}).get(row["id"]),
+            _selected_candidate(
+                generated_by_id.get(row["id"]), row["id"], manifest,
             ) != {key: value for key, value in row.items() if not key.startswith("audit_")}
             for row in reference
         ):
@@ -684,3 +730,16 @@ def _with_correction(row: dict | None, correction: dict | None) -> dict | None:
     updated["prompt"] = correction["prompt"]
     updated["expected"]["options"] = correction["expected_options"]
     return updated
+
+
+def _selected_candidate(row: dict | None, case_id: str, manifest: dict) -> dict | None:
+    if row is None:
+        return None
+    selected = dict(row)
+    if manifest.get("selected_remove_empty_tags"):
+        selected["tags"] = [tag for tag in selected.get("tags", []) if tag]
+    if case_id not in manifest.get("selected_metadata_except_ids", []):
+        selected.update(manifest.get("selected_metadata", {}))
+    selected = _with_correction(selected, manifest.get("case_corrections", {}).get(case_id))
+    selected.update(manifest.get("case_overrides", {}).get(case_id, {}))
+    return selected

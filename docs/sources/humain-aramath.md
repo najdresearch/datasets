@@ -20,7 +20,7 @@ This source contributed 50 historical candidates. The release certified 50 struc
 - Redistribution basis recorded by release: `upstream-license`
 - Approval authority recorded by release: `Najd Research`
 - Semantic review: not performed in this release.
-- Collection adapter from original upstream bytes: not reconstructed here. The [reproduction path](../reproduction.md) starts from the preserved pre-audit export.
+- Original upstream bytes reproduce all 50 public rows. Run `uv run najd-datasets reproduce-source sources/humain-aramath.json --output build/humain-aramath` using the [pinned adapter manifest](../../sources/humain-aramath.json).
 
 ## Evidence
 

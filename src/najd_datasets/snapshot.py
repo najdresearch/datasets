@@ -11,6 +11,19 @@ from urllib.request import urlopen
 
 from .pipeline import PipelineError, digest, read_json, read_jsonl, write_json
 
+UPSTREAM_REPRODUCED_SOURCES = frozenset({
+    "arabic-agent-eval", "paired-msa-saudi-tool-use", "QCRI/IslamicFaithQA",
+    "arabic-function-calling", "arabicragb", "humain-aratruthfulqa",
+    "arasafe", "mena-values", "arbml-quran_hadith", "arbml-saudiirony",
+    "arbml-arabic-rc", "humain-arapro", "dialectal-arabic-mmlu",
+    "arbml-arabic_dialects_dataset", "arbml-arabic-hate-speech",
+    "arbml-dangerous-dataset", "humain-aramath", "humain-araifeval",
+    "inception-arabic-ifeval", "commonsense-validation", "arabic-exams",
+    "aratrust", "arbml-cidar-eval-100", "arbml-cidar-mcq-100",
+    "arabicmmlu", "absher", "alghafa-native", "pico-saudi-v0.01",
+    "arabic-safety-evaluation",
+})
+
 
 def _fetch(url: str) -> bytes:
     for attempt in range(3):
@@ -41,18 +54,10 @@ def _coverage(release: Path, index_path: Path) -> dict:
     ledger = read_json(release / "sources.json")
     source_entries = {source["source_id"]: source for source in ledger["sources"]}
     def rebuild_status(source_id: str) -> str:
-        if source_id in {
-            "arabic-agent-eval", "paired-msa-saudi-tool-use", "QCRI/IslamicFaithQA",
-            "arabic-function-calling", "arabicragb",
-            "humain-aratruthfulqa",
-            "arasafe",
-            "mena-values",
-            "arbml-quran_hadith", "arbml-saudiirony", "arbml-arabic-rc", "humain-arapro",
-            "dialectal-arabic-mmlu",
-            "arbml-arabic_dialects_dataset", "arbml-arabic-hate-speech",
-            "arbml-dangerous-dataset",
-        }:
+        if source_id in UPSTREAM_REPRODUCED_SOURCES:
             return "upstream_reproduced"
+        if source_id == "najd-benchmark-v1":
+            return "private_archive_reproduced"
         if any(
             path.startswith("private/authorized-source-extracts/")
             for path in source_entries[source_id]["source_files"]

@@ -1,0 +1,29 @@
+{
+  "schema_version": "1",
+  "adapter": "humain-araifeval-v1",
+  "source_id": "humain-araifeval",
+  "upstream_url": "https://huggingface.co/datasets/humain-ai/AraIFEval",
+  "raw_url": "https://huggingface.co/datasets/humain-ai/AraIFEval/resolve/49d32ae083091fc1fbfa22c300c209ebe4740372/Arabic_IF_Eval_Flat.jsonl",
+  "revision": "49d32ae083091fc1fbfa22c300c209ebe4740372",
+  "raw_sha256": "6f0643ceb32943033401fa02d4808f10c3c4b8cdb599e40827752e393f169110",
+  "expected_rows": 536,
+  "expected_sha256": "284f9194fd48877f4d810a4e9f3923b4505506ed38970e9d9991258a0f496b71",
+  "selection_mode": "published_subset",
+  "selected_metadata": {
+    "derived_from_candidate": true
+  },
+  "expected_published_rows": 3,
+  "reference_url": "https://huggingface.co/datasets/najdresearch/najd-benchmark/resolve/cb30c1c9e46c62f691380c3269885cdb8f22f52b/datasets/najd-benchmark/2026.09.14/cases.jsonl",
+  "reference_sha256": "b8b52ded0f6731b7a4764a90476edfe643f46d6a286096bab02b7ed189af94f6",
+  "license": "apache-2.0",
+  "redistribution_basis": "upstream-license",
+  "review_status": "not_reviewed",
+  "split": "historical_test_candidates",
+  "transformations": [
+    "field_mapping",
+    "source_provenance",
+    "historical_global_selection",
+    "recorded_candidate_marker"
+  ],
+  "reviewer": null
+}

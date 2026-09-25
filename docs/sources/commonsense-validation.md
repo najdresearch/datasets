@@ -20,7 +20,7 @@ This source contributed 48 historical candidates. The release certified 48 struc
 - Redistribution basis recorded by release: `permission-on-file`
 - Approval authority recorded by release: `Najd Research`
 - Semantic review: not performed in this release.
-- Collection adapter from original upstream bytes: not reconstructed here. The [reproduction path](../reproduction.md) starts from the preserved pre-audit export.
+- Original upstream bytes reproduce all 48 public rows. Run `uv run najd-datasets reproduce-source sources/commonsense-validation.json --output build/commonsense-validation` using the [pinned adapter manifest](../../sources/commonsense-validation.json).
 
 ## Evidence
 

@@ -21,7 +21,7 @@ This source contributed 35 historical candidates. The release certified 35 struc
 - Redistribution basis recorded by release: `permission-on-file`
 - Approval authority recorded by release: `Najd Research`
 - Semantic review: not performed in this release.
-- Collection adapter from original upstream bytes: not reconstructed here. The [reproduction path](../reproduction.md) starts from the preserved pre-audit export.
+- Original upstream bytes reproduce all 35 public rows. Run `uv run najd-datasets reproduce-source sources/arabic-safety-evaluation.json --output build/arabic-safety-evaluation` using the [pinned adapter manifest](../../sources/arabic-safety-evaluation.json).
 
 ## Evidence
 

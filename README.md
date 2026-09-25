@@ -38,6 +38,8 @@ Four further Parquet adapters reproduce the selected public rows from ARBML Qura
 
 The Dialectal Arabic MMLU, ARBML Arabic dialect, hate speech, and dangerous prompt adapters account for another 391 selected rows from pinned Parquet files.
 
+The [remaining-source guide](docs/remaining-source-reproduction.md) covers all 774 rows that previously lacked adapters. The complete source breakdown is 5,725 public rows reconstructed from pinned external inputs, 31 internal-copy rows reconstructed from a hash-checked private archive file, and 333 quarantined rows matched against a fresh extraction while the original extract remains missing.
+
 ## Pipeline
 
 ```mermaid

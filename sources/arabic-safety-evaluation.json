@@ -1,0 +1,36 @@
+{
+  "schema_version": "1",
+  "adapter": "arabic-safety-evaluation-v1",
+  "source_id": "arabic-safety-evaluation",
+  "upstream_url": "https://github.com/mbzuai-nlp/Arabic_safety_evaluation",
+  "revision": "aae91341a5ffcef61c9cb797ca259fb98ff45352",
+  "raw_files": [
+    {
+      "name": "Regional sensitive dataset.xlsx",
+      "url": "https://raw.githubusercontent.com/mbzuai-nlp/Arabic_safety_evaluation/aae91341a5ffcef61c9cb797ca259fb98ff45352/data/Regional%20sensitive%20dataset.xlsx",
+      "sha256": "cffa039c6376387db305390072df940e67bd7b6898f1288c4a248a66ba44db86"
+    },
+    {
+      "name": "Regional_specific_dataset_for_arab_countries.xlsx",
+      "url": "https://raw.githubusercontent.com/mbzuai-nlp/Arabic_safety_evaluation/aae91341a5ffcef61c9cb797ca259fb98ff45352/data/Regional_specific_dataset_for_arab_countries.xlsx",
+      "sha256": "ea32641d4bab35bdffa77daf40943bfa25376970a411440176709ece381455ca"
+    }
+  ],
+  "expected_rows": 3095,
+  "expected_sha256": "f9be7a4ba939e822653382b62bf5a8087a054dea0ea9c71a84c9fbe579a8fa45",
+  "selection_mode": "published_subset",
+  "expected_published_rows": 35,
+  "reference_url": "https://huggingface.co/datasets/najdresearch/najd-benchmark/resolve/cb30c1c9e46c62f691380c3269885cdb8f22f52b/datasets/najd-benchmark/2026.09.14/cases.jsonl",
+  "reference_sha256": "b8b52ded0f6731b7a4764a90476edfe643f46d6a286096bab02b7ed189af94f6",
+  "license": "not-declared",
+  "redistribution_basis": "permission-on-file",
+  "review_status": "not_reviewed",
+  "split": "historical_test_candidates",
+  "transformations": [
+    "excel_field_mapping",
+    "source_provenance",
+    "historical_global_selection"
+  ],
+  "reviewer": null,
+  "required_extra": "excel"
+}

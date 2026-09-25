@@ -20,7 +20,7 @@ This source contributed 31 historical candidates. The release certified 0 struct
 - Redistribution basis recorded by release: `permission-on-file`
 - Approval authority recorded by release: `Najd Research`
 - Semantic review: not performed in this release.
-- Collection adapter from original upstream bytes: not reconstructed here. The [reproduction path](../reproduction.md) starts from the preserved pre-audit export.
+- The preserved private archive's 64-row `datasets/m3-saudi-v1/cases.jsonl` reproduces all 31 quarantined copies. Its SHA-256 is pinned in [the adapter manifest](../../sources/najd-benchmark-v1.json). Run `uv run najd-datasets reproduce-source sources/najd-benchmark-v1.json --local-raw <archive-cases.jsonl> --output build/najd-benchmark-v1`.
 
 ## Evidence
 

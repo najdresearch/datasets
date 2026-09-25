@@ -20,7 +20,7 @@ This source contributed 2 historical candidates. The release certified 2 structu
 - Redistribution basis recorded by release: `upstream-license`
 - Approval authority recorded by release: `Najd Research`
 - Semantic review: not performed in this release.
-- Collection adapter from original upstream bytes: not reconstructed here. The [reproduction path](../reproduction.md) starts from the preserved pre-audit export.
+- Original upstream bytes reproduce all 2 public rows. Run `uv run najd-datasets reproduce-source sources/inception-arabic-ifeval.json --output build/inception-arabic-ifeval` using the [pinned adapter manifest](../../sources/inception-arabic-ifeval.json).
 
 ## Evidence
 

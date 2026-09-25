@@ -33,7 +33,7 @@ This source contributed 243 historical candidates. The release certified 239 str
 - Redistribution basis recorded by release: `permission-on-file`
 - Approval authority recorded by release: `Najd Research`
 - Semantic review: not performed in this release.
-- Collection adapter from original upstream bytes: not reconstructed here. The [reproduction path](../reproduction.md) starts from the preserved pre-audit export.
+- Original upstream bytes reproduce all 243 public rows. Run `uv run najd-datasets reproduce-source sources/absher.json --output build/absher` using the [pinned adapter manifest](../../sources/absher.json).
 
 ## Evidence
 

@@ -1,0 +1,234 @@
+{
+  "schema_version": "1",
+  "adapter": "arabicmmlu-v1",
+  "source_id": "arabicmmlu",
+  "upstream_url": "https://huggingface.co/datasets/MBZUAI/ArabicMMLU",
+  "revision": "7aa530e2893ac420352b3f5c1a1310c010e9758b",
+  "raw_files": [
+    {
+      "name": "Accounting (University)/test.csv",
+      "url": "https://huggingface.co/datasets/MBZUAI/ArabicMMLU/resolve/7aa530e2893ac420352b3f5c1a1310c010e9758b/Accounting%20%28University%29/test.csv",
+      "sha256": "9ddbc9aba815304f5c20db10ec401549c8c61811cb23578c3eaa9c1ed6dff9b7"
+    },
+    {
+      "name": "Arabic Language (General)/test.csv",
+      "url": "https://huggingface.co/datasets/MBZUAI/ArabicMMLU/resolve/7aa530e2893ac420352b3f5c1a1310c010e9758b/Arabic%20Language%20%28General%29/test.csv",
+      "sha256": "ef20c64ec8e0ae0fd3249063a27892eafc70d268b682e9e168d89e905973634f"
+    },
+    {
+      "name": "Arabic Language (Grammar)/test.csv",
+      "url": "https://huggingface.co/datasets/MBZUAI/ArabicMMLU/resolve/7aa530e2893ac420352b3f5c1a1310c010e9758b/Arabic%20Language%20%28Grammar%29/test.csv",
+      "sha256": "29781642304f47639b332cef56671d5aa8b49dc7052e0c5b18de42c775d1dadd"
+    },
+    {
+      "name": "Arabic Language (High School)/test.csv",
+      "url": "https://huggingface.co/datasets/MBZUAI/ArabicMMLU/resolve/7aa530e2893ac420352b3f5c1a1310c010e9758b/Arabic%20Language%20%28High%20School%29/test.csv",
+      "sha256": "a031911882249870e930bd50eff99d746443dcee33798ba6974ae0a624b3f4f0"
+    },
+    {
+      "name": "Arabic Language (Middle School)/test.csv",
+      "url": "https://huggingface.co/datasets/MBZUAI/ArabicMMLU/resolve/7aa530e2893ac420352b3f5c1a1310c010e9758b/Arabic%20Language%20%28Middle%20School%29/test.csv",
+      "sha256": "16b408860e8994ade2bebeff207f2f506159229d9228f069832c329d8bdedab3"
+    },
+    {
+      "name": "Arabic Language (Primary School)/test.csv",
+      "url": "https://huggingface.co/datasets/MBZUAI/ArabicMMLU/resolve/7aa530e2893ac420352b3f5c1a1310c010e9758b/Arabic%20Language%20%28Primary%20School%29/test.csv",
+      "sha256": "b31dabdf40335d6e9e201d0a92f90fe088e4cbda36a4d2c2b382fe6fb3cb4182"
+    },
+    {
+      "name": "Biology (High School)/test.csv",
+      "url": "https://huggingface.co/datasets/MBZUAI/ArabicMMLU/resolve/7aa530e2893ac420352b3f5c1a1310c010e9758b/Biology%20%28High%20School%29/test.csv",
+      "sha256": "d4e7579e7a6670e964f308e036060b176da038c9ce9095a193f03ede163db78f"
+    },
+    {
+      "name": "Civics (High School)/test.csv",
+      "url": "https://huggingface.co/datasets/MBZUAI/ArabicMMLU/resolve/7aa530e2893ac420352b3f5c1a1310c010e9758b/Civics%20%28High%20School%29/test.csv",
+      "sha256": "60a0947cd445a90f1113c32d3c5ff13f524965eacacc7779f9634871413906c6"
+    },
+    {
+      "name": "Civics (Middle School)/test.csv",
+      "url": "https://huggingface.co/datasets/MBZUAI/ArabicMMLU/resolve/7aa530e2893ac420352b3f5c1a1310c010e9758b/Civics%20%28Middle%20School%29/test.csv",
+      "sha256": "caddf5732996a10483d7231b2da14ecad0e7a498574849b515d66bd632fb00b1"
+    },
+    {
+      "name": "Computer Science (High School)/test.csv",
+      "url": "https://huggingface.co/datasets/MBZUAI/ArabicMMLU/resolve/7aa530e2893ac420352b3f5c1a1310c010e9758b/Computer%20Science%20%28High%20School%29/test.csv",
+      "sha256": "fd7bae2a8ad52d53fcd7ae77e00f641d9185630377e76dbf5ddde8eaa921374d"
+    },
+    {
+      "name": "Computer Science (Middle School)/test.csv",
+      "url": "https://huggingface.co/datasets/MBZUAI/ArabicMMLU/resolve/7aa530e2893ac420352b3f5c1a1310c010e9758b/Computer%20Science%20%28Middle%20School%29/test.csv",
+      "sha256": "09105d24437f35f6c0f9620f5cc721fcf20ea020a38bf26e46633f2ebf75c80e"
+    },
+    {
+      "name": "Computer Science (Primary School)/test.csv",
+      "url": "https://huggingface.co/datasets/MBZUAI/ArabicMMLU/resolve/7aa530e2893ac420352b3f5c1a1310c010e9758b/Computer%20Science%20%28Primary%20School%29/test.csv",
+      "sha256": "26a6eacd3350978cf3bda2807aefdd66c7af4ea5ceaafe8e4026801414e78b8b"
+    },
+    {
+      "name": "Computer Science (University)/test.csv",
+      "url": "https://huggingface.co/datasets/MBZUAI/ArabicMMLU/resolve/7aa530e2893ac420352b3f5c1a1310c010e9758b/Computer%20Science%20%28University%29/test.csv",
+      "sha256": "afd0acac8b88977c47bc4093bc0471a531aff27c64fc6b2140d57c1ce2d14c28"
+    },
+    {
+      "name": "Driving Test/test.csv",
+      "url": "https://huggingface.co/datasets/MBZUAI/ArabicMMLU/resolve/7aa530e2893ac420352b3f5c1a1310c010e9758b/Driving%20Test/test.csv",
+      "sha256": "44f4faac18b884755e84caed2f90338a8ed216dcafbc5c6589ebd1fe0e22c121"
+    },
+    {
+      "name": "Economics (High School)/test.csv",
+      "url": "https://huggingface.co/datasets/MBZUAI/ArabicMMLU/resolve/7aa530e2893ac420352b3f5c1a1310c010e9758b/Economics%20%28High%20School%29/test.csv",
+      "sha256": "a75334170f2b3602036907e5f4c3bdc6378442f0964c1840501bb089d0645287"
+    },
+    {
+      "name": "Economics (Middle School)/test.csv",
+      "url": "https://huggingface.co/datasets/MBZUAI/ArabicMMLU/resolve/7aa530e2893ac420352b3f5c1a1310c010e9758b/Economics%20%28Middle%20School%29/test.csv",
+      "sha256": "bb002d695113d79b53e32804255e47b7b5ca4842ec4a225f1a668418fd295890"
+    },
+    {
+      "name": "Economics (University)/test.csv",
+      "url": "https://huggingface.co/datasets/MBZUAI/ArabicMMLU/resolve/7aa530e2893ac420352b3f5c1a1310c010e9758b/Economics%20%28University%29/test.csv",
+      "sha256": "1e621dd3a2440b73e7fcc1475a2142d9d576cb8d04fed053e02aa360b43c31a9"
+    },
+    {
+      "name": "General Knowledge/test.csv",
+      "url": "https://huggingface.co/datasets/MBZUAI/ArabicMMLU/resolve/7aa530e2893ac420352b3f5c1a1310c010e9758b/General%20Knowledge/test.csv",
+      "sha256": "fc8428e1a523e7612db4865137871f33b49bc8e0fc0cdb33d8f7df60140c2305"
+    },
+    {
+      "name": "General Knowledge (Middle School)/test.csv",
+      "url": "https://huggingface.co/datasets/MBZUAI/ArabicMMLU/resolve/7aa530e2893ac420352b3f5c1a1310c010e9758b/General%20Knowledge%20%28Middle%20School%29/test.csv",
+      "sha256": "c1c2652d7470aad2f1f30e0e23e83f1cc492cf7a70dbbb1647bcee39ff2059ca"
+    },
+    {
+      "name": "General Knowledge (Primary School)/test.csv",
+      "url": "https://huggingface.co/datasets/MBZUAI/ArabicMMLU/resolve/7aa530e2893ac420352b3f5c1a1310c010e9758b/General%20Knowledge%20%28Primary%20School%29/test.csv",
+      "sha256": "7d51269fb90eb5baa90cccbbbe4d53e74ed9f1a081b7daa0708f155179b46761"
+    },
+    {
+      "name": "Geography (High School)/test.csv",
+      "url": "https://huggingface.co/datasets/MBZUAI/ArabicMMLU/resolve/7aa530e2893ac420352b3f5c1a1310c010e9758b/Geography%20%28High%20School%29/test.csv",
+      "sha256": "6c128ea340acbfa3afbdd8ce9ad406f19a3349273588e87e8182818f2e600488"
+    },
+    {
+      "name": "Geography (Middle School)/test.csv",
+      "url": "https://huggingface.co/datasets/MBZUAI/ArabicMMLU/resolve/7aa530e2893ac420352b3f5c1a1310c010e9758b/Geography%20%28Middle%20School%29/test.csv",
+      "sha256": "e23e0f3276c0b2a85aa4c5a905419f48143b849ba7dcc27f4a3626210c7ab990"
+    },
+    {
+      "name": "Geography (Primary School)/test.csv",
+      "url": "https://huggingface.co/datasets/MBZUAI/ArabicMMLU/resolve/7aa530e2893ac420352b3f5c1a1310c010e9758b/Geography%20%28Primary%20School%29/test.csv",
+      "sha256": "bf08e4f70288b64b6e9f745c1ab79549efb19f32bf0ff0cf73cc1b97b3988a96"
+    },
+    {
+      "name": "History (High School)/test.csv",
+      "url": "https://huggingface.co/datasets/MBZUAI/ArabicMMLU/resolve/7aa530e2893ac420352b3f5c1a1310c010e9758b/History%20%28High%20School%29/test.csv",
+      "sha256": "ae5b8278c7d8cdcdf5d1c02d447917ea656ad3af69774813b69e027193e1a06a"
+    },
+    {
+      "name": "History (Middle School)/test.csv",
+      "url": "https://huggingface.co/datasets/MBZUAI/ArabicMMLU/resolve/7aa530e2893ac420352b3f5c1a1310c010e9758b/History%20%28Middle%20School%29/test.csv",
+      "sha256": "6a2255fb9485c4454eb3d1e78913872f8e7b6016e14ef8c2105f36996b55b149"
+    },
+    {
+      "name": "History (Primary School)/test.csv",
+      "url": "https://huggingface.co/datasets/MBZUAI/ArabicMMLU/resolve/7aa530e2893ac420352b3f5c1a1310c010e9758b/History%20%28Primary%20School%29/test.csv",
+      "sha256": "1cec6bc5eb6688631d293a32ceeeee35b4d04299d1e671aa82da86883ad1daa4"
+    },
+    {
+      "name": "Islamic Studies/test.csv",
+      "url": "https://huggingface.co/datasets/MBZUAI/ArabicMMLU/resolve/7aa530e2893ac420352b3f5c1a1310c010e9758b/Islamic%20Studies/test.csv",
+      "sha256": "21659fc6713718a824c4edd5459c6f1734b0d8044f87400a6d98fec6fea49cbf"
+    },
+    {
+      "name": "Islamic Studies (High School)/test.csv",
+      "url": "https://huggingface.co/datasets/MBZUAI/ArabicMMLU/resolve/7aa530e2893ac420352b3f5c1a1310c010e9758b/Islamic%20Studies%20%28High%20School%29/test.csv",
+      "sha256": "a6bdd8bcb7291c8bfdd3a61585f84e836a6e61c24f0084d4eb7bfb1be35eb8fd"
+    },
+    {
+      "name": "Islamic Studies (Middle School)/test.csv",
+      "url": "https://huggingface.co/datasets/MBZUAI/ArabicMMLU/resolve/7aa530e2893ac420352b3f5c1a1310c010e9758b/Islamic%20Studies%20%28Middle%20School%29/test.csv",
+      "sha256": "56391ebc2b6b17cad7acce86a987169bb3aafb81a091100a5ff7e75060ae6f9b"
+    },
+    {
+      "name": "Islamic Studies (Primary School)/test.csv",
+      "url": "https://huggingface.co/datasets/MBZUAI/ArabicMMLU/resolve/7aa530e2893ac420352b3f5c1a1310c010e9758b/Islamic%20Studies%20%28Primary%20School%29/test.csv",
+      "sha256": "39dee84007a76f2678f5b73f4dc6b5d9e4f1e41177b25f02334248d0f414f08f"
+    },
+    {
+      "name": "Law (Professional)/test.csv",
+      "url": "https://huggingface.co/datasets/MBZUAI/ArabicMMLU/resolve/7aa530e2893ac420352b3f5c1a1310c010e9758b/Law%20%28Professional%29/test.csv",
+      "sha256": "bdbea554568c23d75685c7a59cb2faed16001b703857a2a7958f1d07cf625a5b"
+    },
+    {
+      "name": "Management (University)/test.csv",
+      "url": "https://huggingface.co/datasets/MBZUAI/ArabicMMLU/resolve/7aa530e2893ac420352b3f5c1a1310c010e9758b/Management%20%28University%29/test.csv",
+      "sha256": "afab38ad417170f15c97bc8e7576d4ec7d0943e39a405b86748a8e4676229811"
+    },
+    {
+      "name": "Math (Primary School)/test.csv",
+      "url": "https://huggingface.co/datasets/MBZUAI/ArabicMMLU/resolve/7aa530e2893ac420352b3f5c1a1310c010e9758b/Math%20%28Primary%20School%29/test.csv",
+      "sha256": "5bf483bef936c4b456b4ed80cd04c88852a04d76e492f2cb7e80b843c879b1a9"
+    },
+    {
+      "name": "Natural Science (Middle School)/test.csv",
+      "url": "https://huggingface.co/datasets/MBZUAI/ArabicMMLU/resolve/7aa530e2893ac420352b3f5c1a1310c010e9758b/Natural%20Science%20%28Middle%20School%29/test.csv",
+      "sha256": "20c70af2857320b277090f1b9af61036c18a82e4baa508afdd8e6e3c22aa015f"
+    },
+    {
+      "name": "Natural Science (Primary School)/test.csv",
+      "url": "https://huggingface.co/datasets/MBZUAI/ArabicMMLU/resolve/7aa530e2893ac420352b3f5c1a1310c010e9758b/Natural%20Science%20%28Primary%20School%29/test.csv",
+      "sha256": "9c01973e8d64a546d88b506f4016714eb26d025b44228e27ab5b4b1153652213"
+    },
+    {
+      "name": "Philosophy (High School)/test.csv",
+      "url": "https://huggingface.co/datasets/MBZUAI/ArabicMMLU/resolve/7aa530e2893ac420352b3f5c1a1310c010e9758b/Philosophy%20%28High%20School%29/test.csv",
+      "sha256": "e96bea20bb710795efb46c5887b4e63064cab6edf0a0536c4699ad2d6fca5131"
+    },
+    {
+      "name": "Physics (High School)/test.csv",
+      "url": "https://huggingface.co/datasets/MBZUAI/ArabicMMLU/resolve/7aa530e2893ac420352b3f5c1a1310c010e9758b/Physics%20%28High%20School%29/test.csv",
+      "sha256": "6518f41a6d905c9d495b6b48b7c640ed84073f5f7e98535553a0a9ec36ca7c40"
+    },
+    {
+      "name": "Political Science (University)/test.csv",
+      "url": "https://huggingface.co/datasets/MBZUAI/ArabicMMLU/resolve/7aa530e2893ac420352b3f5c1a1310c010e9758b/Political%20Science%20%28University%29/test.csv",
+      "sha256": "3b8ba9bc2b12c503011d694c5dba4c010f7db81121e0ef4f37e0b4c15cae221a"
+    },
+    {
+      "name": "Social Science (Middle School)/test.csv",
+      "url": "https://huggingface.co/datasets/MBZUAI/ArabicMMLU/resolve/7aa530e2893ac420352b3f5c1a1310c010e9758b/Social%20Science%20%28Middle%20School%29/test.csv",
+      "sha256": "b684ce25dc4b6de06ac7c046f096bb1a1d1621617222564086f3b958b05f2f3b"
+    },
+    {
+      "name": "Social Science (Primary School)/test.csv",
+      "url": "https://huggingface.co/datasets/MBZUAI/ArabicMMLU/resolve/7aa530e2893ac420352b3f5c1a1310c010e9758b/Social%20Science%20%28Primary%20School%29/test.csv",
+      "sha256": "cd715f4b2b39bd1b6148b1f2ce4a19b8749136e676b8dd9c714014102079e748"
+    }
+  ],
+  "expected_rows": 14455,
+  "expected_sha256": "3edc010ee0543a620d79bd1939d90e5f3036f4b3c0e8d9ced0e05c415f99fd89",
+  "selection_mode": "published_subset",
+  "selected_metadata": {
+    "derived_from_candidate": true
+  },
+  "selected_metadata_except_ids": [
+    "arabicmmlu-2982-0a28dc0e"
+  ],
+  "selected_remove_empty_tags": true,
+  "expected_published_rows": 104,
+  "reference_url": "https://huggingface.co/datasets/najdresearch/najd-benchmark/resolve/cb30c1c9e46c62f691380c3269885cdb8f22f52b/datasets/najd-benchmark/2026.09.14/cases.jsonl",
+  "reference_sha256": "b8b52ded0f6731b7a4764a90476edfe643f46d6a286096bab02b7ed189af94f6",
+  "license": "cc-by-nc-4.0",
+  "redistribution_basis": "upstream-license",
+  "review_status": "not_reviewed",
+  "split": "historical_test_candidates",
+  "transformations": [
+    "field_mapping",
+    "source_provenance",
+    "historical_global_selection",
+    "recorded_candidate_marker",
+    "empty_tag_removal"
+  ],
+  "reviewer": null
+}

@@ -1,0 +1,29 @@
+{
+  "schema_version": "1",
+  "adapter": "humain-aramath-v1",
+  "source_id": "humain-aramath",
+  "upstream_url": "https://huggingface.co/datasets/humain-ai/AraMath",
+  "raw_url": "https://huggingface.co/datasets/humain-ai/AraMath/resolve/b79e79b1b993d153613d1ce2357a1177f2cdcfa1/test.jsonl",
+  "revision": "b79e79b1b993d153613d1ce2357a1177f2cdcfa1",
+  "raw_sha256": "26f8da62679c444660cf3f83d82e1317bbca9e77e9fe0805c1d8274d476e2cc5",
+  "expected_rows": 605,
+  "expected_sha256": "1605a7b74ad41f52abce211a533145a44988a5eb8523cf19e512973303ac87e6",
+  "selection_mode": "published_subset",
+  "selected_metadata": {
+    "derived_from_candidate": true
+  },
+  "expected_published_rows": 50,
+  "reference_url": "https://huggingface.co/datasets/najdresearch/najd-benchmark/resolve/cb30c1c9e46c62f691380c3269885cdb8f22f52b/datasets/najd-benchmark/2026.09.14/cases.jsonl",
+  "reference_sha256": "b8b52ded0f6731b7a4764a90476edfe643f46d6a286096bab02b7ed189af94f6",
+  "license": "apache-2.0",
+  "redistribution_basis": "upstream-license",
+  "review_status": "not_reviewed",
+  "split": "historical_test_candidates",
+  "transformations": [
+    "field_mapping",
+    "source_provenance",
+    "historical_global_selection",
+    "recorded_candidate_marker"
+  ],
+  "reviewer": null
+}
