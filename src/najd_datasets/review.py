@@ -26,16 +26,22 @@ def prepare_review(input_path: Path, output_path: Path, per_category: int = 2) -
     with output_path.open("w", encoding="utf-8", newline="") as handle:
         writer = csv.writer(handle)
         writer.writerow([
-            "case_id", "category", "dialect", "prompt", "expected_json", "source_url",
+            "case_id", "category", "source_id", "dialect", "prompt", "expected_json",
+            "source_url",
             "reviewer_id", "rights_decision", "privacy_decision", "semantic_decision",
             "issue", "evidence_url", "reviewed_at",
         ])
         for category, row in selected:
+            provenance = row.get("provenance") or {}
+            upstream = provenance.get("upstream") or {}
             writer.writerow([
-                row["id"], category, row["tags"][-1], row["prompt"],
+                row["id"], category,
+                provenance.get("sourceId") or provenance.get("source_id") or "",
+                provenance.get("dialect") or upstream.get("dialect") or "",
+                row["prompt"],
                 json.dumps(row["expected"], ensure_ascii=False, sort_keys=True),
-                "https://github.com/Moshe-ship/arabic-agent-eval/tree/"
-                "9f075af0ae5b70580e650b26ddf1d26cf871b24f/data", "", "", "", "", "", "", "",
+                provenance.get("sourceUrl") or upstream.get("sourceUrl") or "",
+                "", "", "", "", "", "", "",
             ])
     return {
         "categories": len(groups),
