@@ -1,0 +1,19 @@
+{
+  "schema_version": "1",
+  "adapter": "paired-tool-use-v1",
+  "source_id": "paired-msa-saudi-tool-use",
+  "upstream_url": "https://github.com/aalsaedi/paired-msa-saudi-tool-use-dataset",
+  "raw_url": "https://raw.githubusercontent.com/aalsaedi/paired-msa-saudi-tool-use-dataset/ba360380c1ca1dacb48b12c20c130385ef20650a/data/releases/heldout-v1.0.3/records.jsonl",
+  "revision": "ba360380c1ca1dacb48b12c20c130385ef20650a",
+  "raw_sha256": "1239ae0cdf24f6343d574c9b04477259650221a1f1bfa932b38c7f139af41e34",
+  "expected_rows": 150,
+  "expected_sha256": "36362e7536a6b811443740db9f00663e15f90c0830526a6b79f91a4e0b35065c",
+  "reference_url": "https://huggingface.co/datasets/najdresearch/najd-benchmark/resolve/cb30c1c9e46c62f691380c3269885cdb8f22f52b/datasets/najd-benchmark/2026.09.14/cases.jsonl",
+  "reference_sha256": "b8b52ded0f6731b7a4764a90476edfe643f46d6a286096bab02b7ed189af94f6",
+  "license": "CC-BY-4.0 for data, per upstream release",
+  "redistribution_basis": "historical permission-on-file claim; recheck for new release",
+  "review_status": "not_reviewed",
+  "split": "historical_test_candidates",
+  "transformations": ["field_mapping", "source_provenance", "historical_structural_audit"],
+  "reviewer": null
+}

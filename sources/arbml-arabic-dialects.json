@@ -1,0 +1,22 @@
+{
+  "schema_version": "1",
+  "adapter": "arbml-dialects-v1",
+  "source_id": "arbml-arabic_dialects_dataset",
+  "upstream_url": "https://huggingface.co/datasets/arbml/Arabic_Dialects_Dataset",
+  "raw_url": "https://huggingface.co/datasets/arbml/Arabic_Dialects_Dataset/resolve/cad29588d485a685c01dc9d4f2a4d51be146285a/data/train-00000-of-00001.parquet",
+  "revision": "cad29588d485a685c01dc9d4f2a4d51be146285a",
+  "raw_sha256": "e30188519e1a870bd791f56d7e60b6df554f77d00283f237d99c2c499b20ef94",
+  "expected_rows": 9992,
+  "expected_sha256": "10ba8e1b8d8ee0a4de2f9d291a95d9d147c370041436490209d6655c931598b0",
+  "selection_mode": "published_subset",
+  "expected_published_rows": 76,
+  "reference_url": "https://huggingface.co/datasets/najdresearch/najd-benchmark/resolve/cb30c1c9e46c62f691380c3269885cdb8f22f52b/datasets/najd-benchmark/2026.09.14/cases.jsonl",
+  "reference_sha256": "b8b52ded0f6731b7a4764a90476edfe643f46d6a286096bab02b7ed189af94f6",
+  "license": "Not declared in the historical source ledger",
+  "redistribution_basis": "historical permission-on-file claim; recheck before new publication",
+  "review_status": "not_reviewed",
+  "split": "historical_test_candidates",
+  "transformations": ["field_mapping", "source_provenance", "historical_global_selection"],
+  "reviewer": null,
+  "required_extra": "parquet"
+}

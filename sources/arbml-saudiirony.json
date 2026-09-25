@@ -1,0 +1,22 @@
+{
+  "schema_version": "1",
+  "adapter": "arbml-saudi-irony-v1",
+  "source_id": "arbml-saudiirony",
+  "upstream_url": "https://huggingface.co/datasets/arbml/SaudiIrony",
+  "raw_url": "https://huggingface.co/datasets/arbml/SaudiIrony/resolve/008b2ebf5a8a19194cf91048d8e3453b934c2b52/data/train-00000-of-00001.parquet",
+  "revision": "008b2ebf5a8a19194cf91048d8e3453b934c2b52",
+  "raw_sha256": "668e2706d3b9839283c74b6cfc597acce172df2c796d12ba805f142108f118c9",
+  "expected_rows": 19804,
+  "expected_sha256": "5fc925606f62a43a8c884114f9fb6bc8fe1bbcc08b0f8608908eb3eb1d5f0a9a",
+  "selection_mode": "published_subset",
+  "expected_published_rows": 257,
+  "reference_url": "https://huggingface.co/datasets/najdresearch/najd-benchmark/resolve/cb30c1c9e46c62f691380c3269885cdb8f22f52b/datasets/najd-benchmark/2026.09.14/cases.jsonl",
+  "reference_sha256": "b8b52ded0f6731b7a4764a90476edfe643f46d6a286096bab02b7ed189af94f6",
+  "license": "Not declared in the historical source ledger",
+  "redistribution_basis": "historical permission-on-file claim; recheck before new publication",
+  "review_status": "not_reviewed",
+  "split": "historical_test_candidates",
+  "transformations": ["field_mapping", "source_provenance", "historical_global_selection"],
+  "reviewer": null,
+  "required_extra": "parquet"
+}

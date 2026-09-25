@@ -1,0 +1,19 @@
+{
+  "id": "najd-original-demo",
+  "kind": "local",
+  "path": "../fixtures/original-demo.jsonl",
+  "origin": "najd_original_synthetic",
+  "license": "CC-BY-4.0",
+  "redistribution_basis": "Najd-authored synthetic fixture",
+  "rights_status": "approved",
+  "split": "development",
+  "revision": "fixture-v1",
+  "schema_version": "1",
+  "collection_method": "local_jsonl",
+  "transformations": [
+    "whitespace_normalization",
+    "exact_prompt_expected_dedup"
+  ],
+  "review_status": "not_reviewed",
+  "sha256": "9c1b9b99a3748f486edef040f982c93bf990a3d4d9db7de41bfa83bfdd6ed8dc"
+}

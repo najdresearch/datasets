@@ -1,0 +1,831 @@
+{
+  "case_count": 6089,
+  "certified_case_count": 5717,
+  "certified_source_count": 29,
+  "quarantine_case_count": 372,
+  "schema_version": "2",
+  "source_count": 39,
+  "sources": [
+    {
+      "approval_authority": "Najd Research",
+      "case_count": 243,
+      "certified_case_count": 239,
+      "exact_artifact_url": "https://huggingface.co/datasets/Renad10/Absher-Benchmark/tree/554f7457e9f91290f204ac56ab82e707f302944e",
+      "ingest_source_revisions": [
+        "692857e9adb56c70943718e7480b5c696d94af53"
+      ],
+      "quarantine_case_count": 4,
+      "redistribution_basis": "permission-on-file",
+      "source_files": [
+        "sources/absher/raw/Phrases_Contextual_Usage_questions.csv",
+        "sources/absher/raw/Phrases_Cultural_Interpretation_questions.csv",
+        "sources/absher/raw/Phrases_Fill_in_Blank_questions.csv",
+        "sources/absher/raw/Phrases_Location_Recognition_questions.csv",
+        "sources/absher/raw/Phrases_Meaning_questions.csv",
+        "sources/absher/raw/Phrases_True_False_questions.csv",
+        "sources/absher/raw/Proverbs_Contextual_Usage_questions.csv",
+        "sources/absher/raw/Proverbs_Fill_in_Blank_questions.csv",
+        "sources/absher/raw/Words_Contextual_Usage_questions.csv",
+        "sources/absher/raw/Words_Cultural_Interpretation_questions.csv",
+        "sources/absher/raw/Words_Fill_in_Blank_questions.csv",
+        "sources/absher/raw/Words_Location_Recognition_questions.csv",
+        "sources/absher/raw/Words_Meaning_questions.csv",
+        "sources/absher/raw/Words_True_False_questions.csv"
+      ],
+      "source_id": "absher",
+      "source_revisions": [
+        "554f7457e9f91290f204ac56ab82e707f302944e"
+      ],
+      "upstream_license": "cc-by-4.0",
+      "upstream_url": "https://huggingface.co/datasets/Renad10/Absher-Benchmark",
+      "verification_method": "immutable Hub commit resolved; all 14 recorded CSV SHA-256 hashes matched upstream bytes",
+      "verification_status": "verified",
+      "verified_at": "2026-09-14"
+    },
+    {
+      "approval_authority": "Najd Research",
+      "case_count": 150,
+      "certified_case_count": 150,
+      "exact_artifact_url": "https://huggingface.co/datasets/OALL/AlGhafa-Arabic-LLM-Benchmark-Native/tree/a31ebd34ca311d7e0cfc6ad7f458b3435af280f5",
+      "quarantine_case_count": 0,
+      "redistribution_basis": "permission-on-file",
+      "source_files": [
+        "sources/huggingface/alghafa-native/mcq_exams_test_ar/test-00000-of-00001.parquet",
+        "sources/huggingface/alghafa-native/meta_ar_dialects/test-00000-of-00001.parquet",
+        "sources/huggingface/alghafa-native/multiple_choice_facts_truefalse_balanced_task/test-00000-of-00001.parquet",
+        "sources/huggingface/alghafa-native/multiple_choice_grounded_statement_soqal_task/test-00000-of-00001.parquet",
+        "sources/huggingface/alghafa-native/multiple_choice_grounded_statement_xglue_mlqa_task/test-00000-of-00001.parquet",
+        "sources/huggingface/alghafa-native/multiple_choice_rating_sentiment_no_neutral_task/test-00000-of-00001.parquet",
+        "sources/huggingface/alghafa-native/multiple_choice_rating_sentiment_task/test-00000-of-00001.parquet",
+        "sources/huggingface/alghafa-native/multiple_choice_sentiment_task/test-00000-of-00001.parquet"
+      ],
+      "source_id": "alghafa-native",
+      "source_revisions": [
+        "a31ebd34ca311d7e0cfc6ad7f458b3435af280f5"
+      ],
+      "upstream_license": "not-declared",
+      "upstream_url": "https://huggingface.co/datasets/OALL/AlGhafa-Arabic-LLM-Benchmark-Native",
+      "verification_method": "immutable upstream revision and recorded source path resolved",
+      "verification_status": "verified",
+      "verified_at": "2026-09-14"
+    },
+    {
+      "approval_authority": "Najd Research",
+      "case_count": 11,
+      "certified_case_count": 0,
+      "exact_artifact_url": null,
+      "quarantine_case_count": 11,
+      "redistribution_basis": "permission-on-file",
+      "source_files": [
+        "private/authorized-source-extracts/authorized-items.jsonl"
+      ],
+      "source_id": "almrsal-general-contest",
+      "source_revisions": [],
+      "upstream_license": "not-declared",
+      "upstream_url": "https://www.almrsal.com/",
+      "verification_method": "No item-level or immutable upstream artifact URL was present in the release provenance.",
+      "verification_status": "quarantined_unverified",
+      "verified_at": "2026-09-14"
+    },
+    {
+      "approval_authority": "Najd Research",
+      "case_count": 99,
+      "certified_case_count": 0,
+      "exact_artifact_url": null,
+      "quarantine_case_count": 99,
+      "redistribution_basis": "permission-on-file",
+      "source_files": [
+        "private/authorized-source-extracts/authorized-items.jsonl"
+      ],
+      "source_id": "almrsal-riddles",
+      "source_revisions": [],
+      "upstream_license": "not-declared",
+      "upstream_url": "https://www.almrsal.com/",
+      "verification_method": "No item-level or immutable upstream artifact URL was present in the release provenance.",
+      "verification_status": "quarantined_unverified",
+      "verified_at": "2026-09-14"
+    },
+    {
+      "approval_authority": "Najd Research",
+      "case_count": 51,
+      "certified_case_count": 51,
+      "exact_artifact_url": "https://github.com/Moshe-ship/arabic-agent-eval/tree/9f075af0ae5b70580e650b26ddf1d26cf871b24f",
+      "quarantine_case_count": 0,
+      "redistribution_basis": "upstream-license",
+      "source_files": [
+        "sources/github/arabic-agent-eval/data/all.jsonl"
+      ],
+      "source_id": "arabic-agent-eval",
+      "source_revisions": [
+        "9f075af0ae5b70580e650b26ddf1d26cf871b24f"
+      ],
+      "upstream_license": "cc-by-4.0",
+      "upstream_url": "https://github.com/Moshe-ship/arabic-agent-eval",
+      "verification_method": "immutable Git commit and recorded upstream data path resolved",
+      "verification_status": "verified",
+      "verified_at": "2026-09-14"
+    },
+    {
+      "approval_authority": "Najd Research",
+      "case_count": 24,
+      "certified_case_count": 24,
+      "exact_artifact_url": "https://huggingface.co/datasets/OALL/Arabic_EXAMS/tree/bc7a29346dbcaa16a8cd883b1f3e681ab2b7ff2a",
+      "quarantine_case_count": 0,
+      "redistribution_basis": "permission-on-file",
+      "source_files": [
+        "sources/huggingface/arabic-exams/data/test-00000-of-00001.parquet"
+      ],
+      "source_id": "arabic-exams",
+      "source_revisions": [
+        "bc7a29346dbcaa16a8cd883b1f3e681ab2b7ff2a"
+      ],
+      "upstream_license": "not-declared",
+      "upstream_url": "https://huggingface.co/datasets/OALL/Arabic_EXAMS",
+      "verification_method": "immutable upstream revision and recorded source path resolved",
+      "verification_status": "verified",
+      "verified_at": "2026-09-14"
+    },
+    {
+      "approval_authority": "Najd Research",
+      "case_count": 499,
+      "certified_case_count": 499,
+      "exact_artifact_url": "https://huggingface.co/datasets/HeshamHaroon/Arabic_Function_Calling/tree/ec4d3302f6b2d91c5fbe81864c2ee498b8cd3ade",
+      "quarantine_case_count": 0,
+      "redistribution_basis": "upstream-license",
+      "source_files": [
+        "sources/huggingface/arabic-function-calling/test.jsonl"
+      ],
+      "source_id": "arabic-function-calling",
+      "source_revisions": [
+        "ec4d3302f6b2d91c5fbe81864c2ee498b8cd3ade"
+      ],
+      "upstream_license": "apache-2.0",
+      "upstream_url": "https://huggingface.co/datasets/HeshamHaroon/Arabic_Function_Calling",
+      "verification_method": "immutable upstream revision and recorded source path resolved",
+      "verification_status": "verified",
+      "verified_at": "2026-09-14"
+    },
+    {
+      "approval_authority": "Najd Research",
+      "case_count": 35,
+      "certified_case_count": 35,
+      "exact_artifact_url": "https://github.com/mbzuai-nlp/Arabic_safety_evaluation/tree/aae91341a5ffcef61c9cb797ca259fb98ff45352",
+      "quarantine_case_count": 0,
+      "redistribution_basis": "permission-on-file",
+      "source_files": [
+        "sources/github-snapshots/arabic-safety-evaluation/data/Regional sensitive dataset.xlsx",
+        "sources/github-snapshots/arabic-safety-evaluation/data/Regional_specific_dataset_for_arab_countries.xlsx"
+      ],
+      "source_id": "arabic-safety-evaluation",
+      "source_revisions": [
+        "aae91341a5ffcef61c9cb797ca259fb98ff45352"
+      ],
+      "upstream_license": "not-declared",
+      "upstream_url": "https://github.com/mbzuai-nlp/Arabic_safety_evaluation",
+      "verification_method": "immutable upstream revision and recorded source path resolved",
+      "verification_status": "verified",
+      "verified_at": "2026-09-14"
+    },
+    {
+      "approval_authority": "Najd Research",
+      "case_count": 104,
+      "certified_case_count": 104,
+      "exact_artifact_url": "https://huggingface.co/datasets/MBZUAI/ArabicMMLU/tree/7aa530e2893ac420352b3f5c1a1310c010e9758b",
+      "quarantine_case_count": 0,
+      "redistribution_basis": "upstream-license",
+      "source_files": [
+        "sources/huggingface/arabicmmlu/Accounting (University)/test.csv",
+        "sources/huggingface/arabicmmlu/Arabic Language (General)/test.csv",
+        "sources/huggingface/arabicmmlu/Arabic Language (Grammar)/test.csv",
+        "sources/huggingface/arabicmmlu/Arabic Language (High School)/test.csv",
+        "sources/huggingface/arabicmmlu/Arabic Language (Primary School)/test.csv",
+        "sources/huggingface/arabicmmlu/Biology (High School)/test.csv",
+        "sources/huggingface/arabicmmlu/Civics (Middle School)/test.csv",
+        "sources/huggingface/arabicmmlu/Computer Science (High School)/test.csv",
+        "sources/huggingface/arabicmmlu/Computer Science (Primary School)/test.csv",
+        "sources/huggingface/arabicmmlu/Computer Science (University)/test.csv",
+        "sources/huggingface/arabicmmlu/Driving Test/test.csv",
+        "sources/huggingface/arabicmmlu/Economics (High School)/test.csv",
+        "sources/huggingface/arabicmmlu/Economics (University)/test.csv",
+        "sources/huggingface/arabicmmlu/General Knowledge/test.csv",
+        "sources/huggingface/arabicmmlu/Geography (High School)/test.csv",
+        "sources/huggingface/arabicmmlu/Geography (Middle School)/test.csv",
+        "sources/huggingface/arabicmmlu/Geography (Primary School)/test.csv",
+        "sources/huggingface/arabicmmlu/History (High School)/test.csv",
+        "sources/huggingface/arabicmmlu/History (Middle School)/test.csv",
+        "sources/huggingface/arabicmmlu/Islamic Studies (High School)/test.csv",
+        "sources/huggingface/arabicmmlu/Islamic Studies (Middle School)/test.csv",
+        "sources/huggingface/arabicmmlu/Islamic Studies (Primary School)/test.csv",
+        "sources/huggingface/arabicmmlu/Islamic Studies/test.csv",
+        "sources/huggingface/arabicmmlu/Law (Professional)/test.csv",
+        "sources/huggingface/arabicmmlu/Management (University)/test.csv",
+        "sources/huggingface/arabicmmlu/Math (Primary School)/test.csv",
+        "sources/huggingface/arabicmmlu/Natural Science (Middle School)/test.csv",
+        "sources/huggingface/arabicmmlu/Physics (High School)/test.csv",
+        "sources/huggingface/arabicmmlu/Political Science (University)/test.csv",
+        "sources/huggingface/arabicmmlu/Social Science (Middle School)/test.csv",
+        "sources/huggingface/arabicmmlu/Social Science (Primary School)/test.csv"
+      ],
+      "source_id": "arabicmmlu",
+      "source_revisions": [
+        "7aa530e2893ac420352b3f5c1a1310c010e9758b"
+      ],
+      "upstream_license": "cc-by-nc-4.0",
+      "upstream_url": "https://huggingface.co/datasets/MBZUAI/ArabicMMLU",
+      "verification_method": "immutable upstream revision and recorded source path resolved",
+      "verification_status": "verified",
+      "verified_at": "2026-09-14"
+    },
+    {
+      "approval_authority": "Najd Research",
+      "case_count": 499,
+      "certified_case_count": 499,
+      "exact_artifact_url": "https://huggingface.co/datasets/HeshamHaroon/ArabicRAGB/tree/9427b6c04c6bb8c85e45cb32071cf6a7978280d2",
+      "quarantine_case_count": 0,
+      "redistribution_basis": "upstream-license",
+      "source_files": [
+        "sources/huggingface/arabicragb/unified_test.jsonl"
+      ],
+      "source_id": "arabicragb",
+      "source_revisions": [
+        "9427b6c04c6bb8c85e45cb32071cf6a7978280d2"
+      ],
+      "upstream_license": "cc-by-sa-4.0",
+      "upstream_url": "https://huggingface.co/datasets/HeshamHaroon/ArabicRAGB",
+      "verification_method": "immutable upstream revision and recorded source path resolved",
+      "verification_status": "verified",
+      "verified_at": "2026-09-14"
+    },
+    {
+      "approval_authority": "Najd Research",
+      "case_count": 300,
+      "certified_case_count": 300,
+      "exact_artifact_url": "https://github.com/qcri/AraSafe-benchmark/tree/b5e8a6f3d9f83a57ab8b4bea58b4d68a44ae6331",
+      "quarantine_case_count": 0,
+      "redistribution_basis": "permission-on-file",
+      "source_files": [
+        "sources/github-snapshots/arasafe-benchmark/human_written/arasafe_natural_prompts.jsonl",
+        "sources/github-snapshots/arasafe-benchmark/synthetic/arasafe_synthetic_prompts.jsonl"
+      ],
+      "source_id": "arasafe",
+      "source_revisions": [
+        "b5e8a6f3d9f83a57ab8b4bea58b4d68a44ae6331"
+      ],
+      "upstream_license": "not-declared",
+      "upstream_url": "https://github.com/qcri/AraSafe-benchmark",
+      "verification_method": "immutable upstream revision and recorded source path resolved",
+      "verification_status": "verified",
+      "verified_at": "2026-09-14"
+    },
+    {
+      "approval_authority": "Najd Research",
+      "case_count": 15,
+      "certified_case_count": 15,
+      "exact_artifact_url": "https://huggingface.co/datasets/EmanAmeen/AraTrust/tree/54f05f0e8a980c2937f488316fbc28392b41a52b",
+      "quarantine_case_count": 0,
+      "redistribution_basis": "upstream-license",
+      "source_files": [
+        "sources/huggingface/aratrust/data/test-00000-of-00001.parquet"
+      ],
+      "source_id": "aratrust",
+      "source_revisions": [
+        "54f05f0e8a980c2937f488316fbc28392b41a52b"
+      ],
+      "upstream_license": "mit",
+      "upstream_url": "https://huggingface.co/datasets/EmanAmeen/AraTrust",
+      "verification_method": "immutable upstream revision and recorded source path resolved",
+      "verification_status": "verified",
+      "verified_at": "2026-09-14"
+    },
+    {
+      "approval_authority": "Najd Research",
+      "case_count": 94,
+      "certified_case_count": 94,
+      "exact_artifact_url": "https://huggingface.co/datasets/arbml/Arabic_Hate_Speech/tree/06797a1aa4ab67ad290179096499fcfbea5d3396",
+      "quarantine_case_count": 0,
+      "redistribution_basis": "permission-on-file",
+      "source_files": [
+        "sources/huggingface/arbml/arabic_hate_speech/train-00000-of-00001.parquet"
+      ],
+      "source_id": "arbml-arabic-hate-speech",
+      "source_revisions": [
+        "06797a1aa4ab67ad290179096499fcfbea5d3396"
+      ],
+      "upstream_license": "not-declared",
+      "upstream_url": "https://huggingface.co/datasets/arbml/Arabic_Hate_Speech",
+      "verification_method": "immutable upstream revision and recorded source path resolved",
+      "verification_status": "verified",
+      "verified_at": "2026-09-14"
+    },
+    {
+      "approval_authority": "Najd Research",
+      "case_count": 496,
+      "certified_case_count": 492,
+      "exact_artifact_url": "https://huggingface.co/datasets/arbml/Arabic_RC/tree/5e87525e9805b3f944e4bb89455e966fc1befd43",
+      "quarantine_case_count": 4,
+      "redistribution_basis": "permission-on-file",
+      "source_files": [
+        "sources/huggingface/arbml/arabic_rc/train-00000-of-00001-88a129334d052012.parquet"
+      ],
+      "source_id": "arbml-arabic-rc",
+      "source_revisions": [
+        "5e87525e9805b3f944e4bb89455e966fc1befd43"
+      ],
+      "upstream_license": "not-declared",
+      "upstream_url": "https://huggingface.co/datasets/arbml/Arabic_RC",
+      "verification_method": "immutable upstream revision and recorded source path resolved",
+      "verification_status": "verified",
+      "verified_at": "2026-09-14"
+    },
+    {
+      "approval_authority": "Najd Research",
+      "case_count": 76,
+      "certified_case_count": 76,
+      "exact_artifact_url": "https://huggingface.co/datasets/arbml/Arabic_Dialects_Dataset/tree/cad29588d485a685c01dc9d4f2a4d51be146285a",
+      "quarantine_case_count": 0,
+      "redistribution_basis": "permission-on-file",
+      "source_files": [
+        "sources/huggingface/arbml/arabic_dialects_dataset/train-00000-of-00001.parquet"
+      ],
+      "source_id": "arbml-arabic_dialects_dataset",
+      "source_revisions": [
+        "cad29588d485a685c01dc9d4f2a4d51be146285a"
+      ],
+      "upstream_license": "not-declared",
+      "upstream_url": "https://huggingface.co/datasets/arbml/Arabic_Dialects_Dataset",
+      "verification_method": "immutable upstream revision and recorded source path resolved",
+      "verification_status": "verified",
+      "verified_at": "2026-09-14"
+    },
+    {
+      "approval_authority": "Najd Research",
+      "case_count": 7,
+      "certified_case_count": 7,
+      "exact_artifact_url": "https://huggingface.co/datasets/arbml/CIDAR-EVAL-100/tree/f7997c45b73a26c1b54a697c9c8bb6a78c9e8b84",
+      "quarantine_case_count": 0,
+      "redistribution_basis": "upstream-license",
+      "source_files": [
+        "sources/huggingface/arbml/cidar_eval_100/data/train-00000-of-00001.parquet"
+      ],
+      "source_id": "arbml-cidar-eval-100",
+      "source_revisions": [
+        "f7997c45b73a26c1b54a697c9c8bb6a78c9e8b84"
+      ],
+      "upstream_license": "apache-2.0",
+      "upstream_url": "https://huggingface.co/datasets/arbml/CIDAR-EVAL-100",
+      "verification_method": "immutable upstream revision and recorded source path resolved",
+      "verification_status": "verified",
+      "verified_at": "2026-09-14"
+    },
+    {
+      "approval_authority": "Najd Research",
+      "case_count": 7,
+      "certified_case_count": 7,
+      "exact_artifact_url": "https://huggingface.co/datasets/arbml/CIDAR-MCQ-100/tree/a64885fb2b20a7ec066209681cc31a751f4e1425",
+      "quarantine_case_count": 0,
+      "redistribution_basis": "upstream-license",
+      "source_files": [
+        "sources/huggingface/arbml/cidar_mcq_100/data/test-00000-of-00001.parquet"
+      ],
+      "source_id": "arbml-cidar-mcq-100",
+      "source_revisions": [
+        "a64885fb2b20a7ec066209681cc31a751f4e1425"
+      ],
+      "upstream_license": "apache-2.0",
+      "upstream_url": "https://huggingface.co/datasets/arbml/CIDAR-MCQ-100",
+      "verification_method": "immutable upstream revision and recorded source path resolved",
+      "verification_status": "verified",
+      "verified_at": "2026-09-14"
+    },
+    {
+      "approval_authority": "Najd Research",
+      "case_count": 56,
+      "certified_case_count": 56,
+      "exact_artifact_url": "https://huggingface.co/datasets/arbml/Dangerous_Dataset/tree/3d1bed077281daea67963195892c748d36fff5a8",
+      "quarantine_case_count": 0,
+      "redistribution_basis": "permission-on-file",
+      "source_files": [
+        "sources/huggingface/arbml/dangerous_dataset/train-00000-of-00001.parquet"
+      ],
+      "source_id": "arbml-dangerous-dataset",
+      "source_revisions": [
+        "3d1bed077281daea67963195892c748d36fff5a8"
+      ],
+      "upstream_license": "not-declared",
+      "upstream_url": "https://huggingface.co/datasets/arbml/Dangerous_Dataset",
+      "verification_method": "immutable upstream revision and recorded source path resolved",
+      "verification_status": "verified",
+      "verified_at": "2026-09-14"
+    },
+    {
+      "approval_authority": "Najd Research",
+      "case_count": 500,
+      "certified_case_count": 500,
+      "exact_artifact_url": "https://huggingface.co/datasets/arbml/Quran_Hadith/tree/db75746e2bb76dc1969869d552c9809c60c14358",
+      "quarantine_case_count": 0,
+      "redistribution_basis": "permission-on-file",
+      "source_files": [
+        "sources/huggingface/arbml/quran_hadith/train-00000-of-00001.parquet"
+      ],
+      "source_id": "arbml-quran_hadith",
+      "source_revisions": [
+        "db75746e2bb76dc1969869d552c9809c60c14358"
+      ],
+      "upstream_license": "not-declared",
+      "upstream_url": "https://huggingface.co/datasets/arbml/Quran_Hadith",
+      "verification_method": "immutable upstream revision and recorded source path resolved",
+      "verification_status": "verified",
+      "verified_at": "2026-09-14"
+    },
+    {
+      "approval_authority": "Najd Research",
+      "case_count": 257,
+      "certified_case_count": 257,
+      "exact_artifact_url": "https://huggingface.co/datasets/arbml/SaudiIrony/tree/008b2ebf5a8a19194cf91048d8e3453b934c2b52",
+      "quarantine_case_count": 0,
+      "redistribution_basis": "permission-on-file",
+      "source_files": [
+        "sources/huggingface/arbml/saudiirony/train-00000-of-00001.parquet"
+      ],
+      "source_id": "arbml-saudiirony",
+      "source_revisions": [
+        "008b2ebf5a8a19194cf91048d8e3453b934c2b52"
+      ],
+      "upstream_license": "not-declared",
+      "upstream_url": "https://huggingface.co/datasets/arbml/SaudiIrony",
+      "verification_method": "immutable upstream revision and recorded source path resolved",
+      "verification_status": "verified",
+      "verified_at": "2026-09-14"
+    },
+    {
+      "approval_authority": "Najd Research",
+      "case_count": 48,
+      "certified_case_count": 48,
+      "exact_artifact_url": "https://huggingface.co/datasets/arbml/Commonsense_Validation/tree/85da6793fc34e58c885b80a9d070122afb249083",
+      "quarantine_case_count": 0,
+      "redistribution_basis": "permission-on-file",
+      "source_files": [
+        "sources/huggingface/commonsense-validation/data/validation-00000-of-00001.parquet"
+      ],
+      "source_id": "commonsense-validation",
+      "source_revisions": [
+        "85da6793fc34e58c885b80a9d070122afb249083"
+      ],
+      "upstream_license": "not-declared",
+      "upstream_url": "https://huggingface.co/datasets/arbml/Commonsense_Validation",
+      "verification_method": "immutable upstream revision and recorded source path resolved",
+      "verification_status": "verified",
+      "verified_at": "2026-09-14"
+    },
+    {
+      "approval_authority": "Najd Research",
+      "case_count": 165,
+      "certified_case_count": 165,
+      "exact_artifact_url": "https://huggingface.co/datasets/MBZUAI/Dialectal-Arabic-MMLU/tree/f3c801b43861aa47bdbaca5f884598e9fabc8e67",
+      "quarantine_case_count": 0,
+      "redistribution_basis": "permission-on-file",
+      "source_files": [
+        "sources/huggingface/dialectal-arabic-mmlu/data/test-00000-of-00001.parquet"
+      ],
+      "source_id": "dialectal-arabic-mmlu",
+      "source_revisions": [
+        "f3c801b43861aa47bdbaca5f884598e9fabc8e67"
+      ],
+      "upstream_license": "not-declared",
+      "upstream_url": "https://huggingface.co/datasets/MBZUAI/Dialectal-Arabic-MMLU",
+      "verification_method": "immutable Hub commit resolved; selected rows matched the pinned Parquet artifact",
+      "verification_status": "verified",
+      "verified_at": "2026-09-14"
+    },
+    {
+      "approval_authority": "Najd Research",
+      "case_count": 3,
+      "certified_case_count": 3,
+      "exact_artifact_url": "https://huggingface.co/datasets/humain-ai/AraIFEval/tree/49d32ae083091fc1fbfa22c300c209ebe4740372",
+      "quarantine_case_count": 0,
+      "redistribution_basis": "upstream-license",
+      "source_files": [
+        "sources/huggingface/humain-araifeval/Arabic_IF_Eval_Flat.jsonl"
+      ],
+      "source_id": "humain-araifeval",
+      "source_revisions": [
+        "49d32ae083091fc1fbfa22c300c209ebe4740372"
+      ],
+      "upstream_license": "apache-2.0",
+      "upstream_url": "https://huggingface.co/datasets/humain-ai/AraIFEval",
+      "verification_method": "immutable upstream revision and recorded source path resolved",
+      "verification_status": "verified",
+      "verified_at": "2026-09-14"
+    },
+    {
+      "approval_authority": "Najd Research",
+      "case_count": 50,
+      "certified_case_count": 50,
+      "exact_artifact_url": "https://huggingface.co/datasets/humain-ai/AraMath/tree/b79e79b1b993d153613d1ce2357a1177f2cdcfa1",
+      "quarantine_case_count": 0,
+      "redistribution_basis": "upstream-license",
+      "source_files": [
+        "sources/huggingface/humain-aramath/test.jsonl"
+      ],
+      "source_id": "humain-aramath",
+      "source_revisions": [
+        "b79e79b1b993d153613d1ce2357a1177f2cdcfa1"
+      ],
+      "upstream_license": "apache-2.0",
+      "upstream_url": "https://huggingface.co/datasets/humain-ai/AraMath",
+      "verification_method": "immutable upstream revision and recorded source path resolved",
+      "verification_status": "verified",
+      "verified_at": "2026-09-14"
+    },
+    {
+      "approval_authority": "Najd Research",
+      "case_count": 363,
+      "certified_case_count": 363,
+      "exact_artifact_url": "https://huggingface.co/datasets/humain-ai/AraPro/tree/e606730ed50b663d7655ea2e02793238f5166422",
+      "quarantine_case_count": 0,
+      "redistribution_basis": "permission-on-file",
+      "source_files": [
+        "sources/huggingface/humain-arapro/data/test-00000-of-00001.parquet"
+      ],
+      "source_id": "humain-arapro",
+      "source_revisions": [
+        "e606730ed50b663d7655ea2e02793238f5166422"
+      ],
+      "upstream_license": "not-declared",
+      "upstream_url": "https://huggingface.co/datasets/humain-ai/AraPro",
+      "verification_method": "immutable upstream revision and recorded source path resolved",
+      "verification_status": "verified",
+      "verified_at": "2026-09-14"
+    },
+    {
+      "approval_authority": "Najd Research",
+      "case_count": 500,
+      "certified_case_count": 500,
+      "exact_artifact_url": "https://huggingface.co/datasets/humain-ai/AraTruthfulQA/tree/162744fbf0590606415eb0924f2b5bd680486e3a",
+      "quarantine_case_count": 0,
+      "redistribution_basis": "permission-on-file",
+      "source_files": [
+        "sources/huggingface/humain-aratruthfulqa/AraTruthfulQA_test.jsonl"
+      ],
+      "source_id": "humain-aratruthfulqa",
+      "source_revisions": [
+        "162744fbf0590606415eb0924f2b5bd680486e3a"
+      ],
+      "upstream_license": "not-declared",
+      "upstream_url": "https://huggingface.co/datasets/humain-ai/AraTruthfulQA",
+      "verification_method": "immutable upstream revision and recorded source path resolved",
+      "verification_status": "verified",
+      "verified_at": "2026-09-14"
+    },
+    {
+      "approval_authority": "Najd Research",
+      "case_count": 2,
+      "certified_case_count": 2,
+      "exact_artifact_url": "https://huggingface.co/datasets/inception42/Arabic-IFEval/tree/48f209003f5c90055248d11b8f0e4ffd4162cb87",
+      "quarantine_case_count": 0,
+      "redistribution_basis": "upstream-license",
+      "source_files": [
+        "sources/huggingface/inception-arabic-ifeval/ar_IFEval.jsonl"
+      ],
+      "source_id": "inception-arabic-ifeval",
+      "source_revisions": [
+        "48f209003f5c90055248d11b8f0e4ffd4162cb87"
+      ],
+      "upstream_license": "cc-by-nc-4.0",
+      "upstream_url": "https://huggingface.co/datasets/inception42/Arabic-IFEval",
+      "verification_method": "immutable upstream revision and recorded source path resolved",
+      "verification_status": "verified",
+      "verified_at": "2026-09-14"
+    },
+    {
+      "approval_authority": "Najd Research",
+      "case_count": 19,
+      "certified_case_count": 0,
+      "exact_artifact_url": null,
+      "quarantine_case_count": 19,
+      "redistribution_basis": "permission-on-file",
+      "source_files": [
+        "private/authorized-source-extracts/authorized-items.jsonl"
+      ],
+      "source_id": "mawdoo3-animals",
+      "source_revisions": [],
+      "upstream_license": "not-declared",
+      "upstream_url": "https://mawdoo3.com/",
+      "verification_method": "No item-level or immutable upstream artifact URL was present in the release provenance.",
+      "verification_status": "quarantined_unverified",
+      "verified_at": "2026-09-14"
+    },
+    {
+      "approval_authority": "Najd Research",
+      "case_count": 18,
+      "certified_case_count": 0,
+      "exact_artifact_url": null,
+      "quarantine_case_count": 18,
+      "redistribution_basis": "permission-on-file",
+      "source_files": [
+        "private/authorized-source-extracts/authorized-items.jsonl"
+      ],
+      "source_id": "mawdoo3-riddles",
+      "source_revisions": [],
+      "upstream_license": "not-declared",
+      "upstream_url": "https://mawdoo3.com/",
+      "verification_method": "No item-level or immutable upstream artifact URL was present in the release provenance.",
+      "verification_status": "quarantined_unverified",
+      "verified_at": "2026-09-14"
+    },
+    {
+      "approval_authority": "Najd Research",
+      "case_count": 15,
+      "certified_case_count": 0,
+      "exact_artifact_url": null,
+      "quarantine_case_count": 15,
+      "redistribution_basis": "permission-on-file",
+      "source_files": [
+        "private/authorized-source-extracts/authorized-items.jsonl"
+      ],
+      "source_id": "mawdoo3-science",
+      "source_revisions": [],
+      "upstream_license": "not-declared",
+      "upstream_url": "https://mawdoo3.com/",
+      "verification_method": "No item-level or immutable upstream artifact URL was present in the release provenance.",
+      "verification_status": "quarantined_unverified",
+      "verified_at": "2026-09-14"
+    },
+    {
+      "approval_authority": "Najd Research",
+      "case_count": 500,
+      "certified_case_count": 500,
+      "exact_artifact_url": "https://huggingface.co/datasets/llm-lab/MENA_VALUES_Benchmark/tree/43bdb1b77d3ed2cbbd957a0d3a976d986fdfebcc",
+      "quarantine_case_count": 0,
+      "redistribution_basis": "upstream-license",
+      "source_files": [
+        "sources/huggingface/mena-values/transposed_output.parquet"
+      ],
+      "source_id": "mena-values",
+      "source_revisions": [
+        "43bdb1b77d3ed2cbbd957a0d3a976d986fdfebcc"
+      ],
+      "upstream_license": "cc-by-4.0",
+      "upstream_url": "https://huggingface.co/datasets/llm-lab/MENA_VALUES_Benchmark",
+      "verification_method": "immutable upstream revision and recorded source path resolved",
+      "verification_status": "verified",
+      "verified_at": "2026-09-14"
+    },
+    {
+      "approval_authority": "Najd Research",
+      "case_count": 31,
+      "certified_case_count": 0,
+      "exact_artifact_url": null,
+      "quarantine_case_count": 31,
+      "redistribution_basis": "permission-on-file",
+      "source_files": [
+        "datasets/najd-benchmark-v1/cases.jsonl"
+      ],
+      "source_id": "najd-benchmark-v1",
+      "source_revisions": [
+        "1.0.0"
+      ],
+      "upstream_license": "other",
+      "upstream_url": "https://huggingface.co/datasets/najdresearch/najd-benchmark",
+      "verification_method": "No item-level or immutable upstream artifact URL was present in the release provenance.",
+      "verification_status": "quarantined_unverified",
+      "verified_at": "2026-09-14"
+    },
+    {
+      "approval_authority": "Najd Research",
+      "case_count": 150,
+      "certified_case_count": 150,
+      "citation_url": "https://zenodo.org/records/21796335",
+      "exact_artifact_url": "https://github.com/aalsaedi/paired-msa-saudi-tool-use-dataset/tree/ba360380c1ca1dacb48b12c20c130385ef20650a",
+      "quarantine_case_count": 0,
+      "redistribution_basis": "permission-on-file",
+      "release_url": "https://github.com/aalsaedi/paired-msa-saudi-tool-use-dataset/releases/tag/heldout-v1.0.3",
+      "source_files": [
+        "sources/missing-track-candidates/paired-msa-saudi-tool-use/paired-msa-saudi-tool-use-v1.0.3/data/releases/heldout-v1.0.3/records.jsonl"
+      ],
+      "source_id": "paired-msa-saudi-tool-use",
+      "source_revisions": [
+        "ba360380c1ca1dacb48b12c20c130385ef20650a"
+      ],
+      "upstream_license": "cc-by-4.0",
+      "upstream_url": "https://github.com/aalsaedi/paired-msa-saudi-tool-use-dataset",
+      "verification_method": "immutable Git tag heldout-v1.0.3 resolved to commit; Zenodo record 21796335 resolved",
+      "verification_status": "verified",
+      "verified_at": "2026-09-14"
+    },
+    {
+      "approval_authority": "Najd Research",
+      "case_count": 55,
+      "certified_case_count": 55,
+      "exact_artifact_url": "https://github.com/mznmel/Pico-Saudi-LLMs-Benchmark/tree/6117a74aa757ddee27cd72c20aa428cf7e8e6b1b",
+      "quarantine_case_count": 0,
+      "redistribution_basis": "permission-on-file",
+      "source_files": [
+        "datasets/pico-saudi-v0.01/cases.jsonl"
+      ],
+      "source_id": "pico-saudi-v0.01",
+      "source_revisions": [
+        "6117a74aa757ddee27cd72c20aa428cf7e8e6b1b"
+      ],
+      "source_version": "0.01",
+      "upstream_license": "mit",
+      "upstream_url": "https://github.com/mznmel/Pico-Saudi-LLMs-Benchmark",
+      "verification_method": "recorded snapshot prefix resolved to the full immutable Git commit",
+      "verification_status": "verified",
+      "verified_at": "2026-09-14"
+    },
+    {
+      "approval_authority": "Najd Research",
+      "case_count": 476,
+      "certified_case_count": 476,
+      "exact_artifact_url": "https://huggingface.co/datasets/QCRI/IslamicFaithQA/tree/a525f5d47a04f9290e6aecaf34668c23a4431d63",
+      "quarantine_case_count": 0,
+      "redistribution_basis": "upstream-license",
+      "source_files": [
+        "sources/missing-track-candidates/islamicfaithqa/arabic/dataset_with_difficulty_clean_updated.jsonl"
+      ],
+      "source_id": "QCRI/IslamicFaithQA",
+      "source_revisions": [
+        "a525f5d47a04f9290e6aecaf34668c23a4431d63"
+      ],
+      "upstream_license": "apache-2.0",
+      "upstream_url": "https://huggingface.co/datasets/QCRI/IslamicFaithQA",
+      "verification_method": "immutable Hub commit and recorded Arabic JSONL path resolved",
+      "verification_status": "verified",
+      "verified_at": "2026-09-14"
+    },
+    {
+      "approval_authority": "Najd Research",
+      "case_count": 96,
+      "certified_case_count": 0,
+      "exact_artifact_url": null,
+      "quarantine_case_count": 96,
+      "redistribution_basis": "permission-on-file",
+      "source_files": [
+        "private/authorized-source-extracts/authorized-items.jsonl"
+      ],
+      "source_id": "qusama-riddles",
+      "source_revisions": [],
+      "upstream_license": "not-declared",
+      "upstream_url": null,
+      "verification_method": "No item-level or immutable upstream artifact URL was present in the release provenance.",
+      "verification_status": "quarantined_unverified",
+      "verified_at": "2026-09-14"
+    },
+    {
+      "approval_authority": "Najd Research",
+      "case_count": 1,
+      "certified_case_count": 0,
+      "exact_artifact_url": null,
+      "quarantine_case_count": 1,
+      "redistribution_basis": "permission-on-file",
+      "source_files": [
+        "private/authorized-source-extracts/authorized-items.jsonl"
+      ],
+      "source_id": "sayidaty-children-riddles",
+      "source_revisions": [],
+      "upstream_license": "not-declared",
+      "upstream_url": "https://www.sayidaty.net/",
+      "verification_method": "No item-level or immutable upstream artifact URL was present in the release provenance.",
+      "verification_status": "quarantined_unverified",
+      "verified_at": "2026-09-14"
+    },
+    {
+      "approval_authority": "Najd Research",
+      "case_count": 50,
+      "certified_case_count": 0,
+      "exact_artifact_url": null,
+      "quarantine_case_count": 50,
+      "redistribution_basis": "permission-on-file",
+      "source_files": [
+        "private/authorized-source-extracts/authorized-items.jsonl"
+      ],
+      "source_id": "twinkl-arabic-riddles",
+      "source_revisions": [],
+      "upstream_license": "not-declared",
+      "upstream_url": "https://www.twinkl.com/",
+      "verification_method": "No item-level or immutable upstream artifact URL was present in the release provenance.",
+      "verification_status": "quarantined_unverified",
+      "verified_at": "2026-09-14"
+    },
+    {
+      "approval_authority": "Najd Research",
+      "case_count": 24,
+      "certified_case_count": 0,
+      "exact_artifact_url": null,
+      "quarantine_case_count": 24,
+      "redistribution_basis": "permission-on-file",
+      "source_files": [
+        "private/authorized-source-extracts/authorized-items.jsonl"
+      ],
+      "source_id": "twinkl-islamic-questions",
+      "source_revisions": [],
+      "upstream_license": "not-declared",
+      "upstream_url": "https://www.twinkl.com/",
+      "verification_method": "No item-level or immutable upstream artifact URL was present in the release provenance.",
+      "verification_status": "quarantined_unverified",
+      "verified_at": "2026-09-14"
+    }
+  ],
+  "verified_at": "2026-09-14"
+}
