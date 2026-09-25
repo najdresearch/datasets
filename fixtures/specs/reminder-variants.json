@@ -1,0 +1,31 @@
+{
+  "id": "reminder-variants-v1",
+  "track": "agent_tool_decision",
+  "language": "en",
+  "prompt_template": "Remind me to {task} on {day}.",
+  "expected_template": {
+    "tool": "create_reminder",
+    "arguments": {
+      "task": "{task}",
+      "when": "{day}"
+    }
+  },
+  "slots": {
+    "task": [
+      "buy milk",
+      "call Omar"
+    ],
+    "day": [
+      "Monday",
+      "Friday"
+    ]
+  },
+  "tags": [
+    "synthetic",
+    "development"
+  ],
+  "max_cases": 10,
+  "license": "CC-BY-4.0",
+  "redistribution_basis": "Najd-authored synthetic template",
+  "rights_status": "approved"
+}

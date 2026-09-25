@@ -1,0 +1,28 @@
+{
+  "schema_version": "1",
+  "adapter": "humain-ara-pro-v1",
+  "source_id": "humain-arapro",
+  "upstream_url": "https://huggingface.co/datasets/humain-ai/AraPro",
+  "raw_url": "https://huggingface.co/datasets/humain-ai/AraPro/resolve/e606730ed50b663d7655ea2e02793238f5166422/data/test-00000-of-00001.parquet",
+  "revision": "e606730ed50b663d7655ea2e02793238f5166422",
+  "raw_sha256": "232a8494b2b30153b654be8dceaed690889452c718057132bf2414c6871bd9e8",
+  "expected_rows": 5001,
+  "expected_sha256": "d03bc2cb6aab04e40f5165bb59348cf118e474bd3be7564d9930d5c3e23af50e",
+  "selection_mode": "published_subset",
+  "expected_published_rows": 363,
+  "case_corrections": {
+    "humain-arapro-01980": {
+      "prompt": "من تقسيمات عرض النقود الفئة الأولى، الفئة الثانية، والفئة الثالثة؛ أيها الأشمل؟",
+      "expected_options": ["الفئة الأولى", "الفئة الثانية", "الفئة الثالثة", "كل ما سبق"]
+    }
+  },
+  "reference_url": "https://huggingface.co/datasets/najdresearch/najd-benchmark/resolve/cb30c1c9e46c62f691380c3269885cdb8f22f52b/datasets/najd-benchmark/2026.09.14/cases.jsonl",
+  "reference_sha256": "b8b52ded0f6731b7a4764a90476edfe643f46d6a286096bab02b7ed189af94f6",
+  "license": "Not declared in the historical source ledger",
+  "redistribution_basis": "historical permission-on-file claim; recheck before new publication",
+  "review_status": "not_reviewed",
+  "split": "historical_test_candidates",
+  "transformations": ["field_mapping", "source_provenance", "historical_global_selection", "recorded_case_correction"],
+  "reviewer": null,
+  "required_extra": "parquet"
+}

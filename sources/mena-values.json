@@ -1,0 +1,22 @@
+{
+  "schema_version": "1",
+  "adapter": "mena-values-v1",
+  "source_id": "mena-values",
+  "upstream_url": "https://huggingface.co/datasets/llm-lab/MENA_VALUES_Benchmark",
+  "raw_url": "https://huggingface.co/datasets/llm-lab/MENA_VALUES_Benchmark/resolve/43bdb1b77d3ed2cbbd957a0d3a976d986fdfebcc/transposed_output.parquet",
+  "revision": "43bdb1b77d3ed2cbbd957a0d3a976d986fdfebcc",
+  "raw_sha256": "65a387f6f7f54d59f87eb18033a68894c51d44fa04858585a70b963d0949b20c",
+  "expected_rows": 864,
+  "expected_sha256": "3a5852cbbad455ad7130a5338f937af8e36e8ec0ff879b300b7f2bbacf350932",
+  "selection_mode": "derived_review_copy",
+  "expected_published_rows": 500,
+  "reference_url": "https://huggingface.co/datasets/najdresearch/najd-benchmark/resolve/cb30c1c9e46c62f691380c3269885cdb8f22f52b/datasets/najd-benchmark/2026.09.14/cases.jsonl",
+  "reference_sha256": "b8b52ded0f6731b7a4764a90476edfe643f46d6a286096bab02b7ed189af94f6",
+  "license": "CC-BY-4.0, per historical source ledger",
+  "redistribution_basis": "upstream-license; verify attribution before new release",
+  "review_status": "not_reviewed",
+  "split": "historical_test_candidates",
+  "transformations": ["field_mapping", "source_provenance", "review_copy", "historical_global_selection"],
+  "reviewer": null,
+  "required_extra": "parquet"
+}

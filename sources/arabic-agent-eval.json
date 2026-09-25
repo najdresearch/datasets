@@ -1,0 +1,19 @@
+{
+  "schema_version": "1",
+  "adapter": "arabic-agent-eval-v1",
+  "source_id": "arabic-agent-eval",
+  "upstream_url": "https://github.com/Moshe-ship/arabic-agent-eval",
+  "raw_url": "https://raw.githubusercontent.com/Moshe-ship/arabic-agent-eval/9f075af0ae5b70580e650b26ddf1d26cf871b24f/data/all.jsonl",
+  "revision": "9f075af0ae5b70580e650b26ddf1d26cf871b24f",
+  "raw_sha256": "99ffb990f9ea0fb943e5e45266ef653aca098246def7f23b8de59e38057bb095",
+  "expected_rows": 51,
+  "expected_sha256": "7a311ce5bb25e5456cf18af8236d4614214838a23f8427bb32c99e5d80426ce8",
+  "reference_url": "https://huggingface.co/datasets/najdresearch/najd-benchmark/resolve/cb30c1c9e46c62f691380c3269885cdb8f22f52b/datasets/najd-benchmark/2026.09.14/cases.jsonl",
+  "reference_sha256": "b8b52ded0f6731b7a4764a90476edfe643f46d6a286096bab02b7ed189af94f6",
+  "license": "CC-BY-4.0 for data, per upstream data/LICENSE",
+  "redistribution_basis": "upstream-license; confirm attribution in each downstream release",
+  "review_status": "not_reviewed",
+  "split": "historical_test_candidates",
+  "transformations": ["field_mapping", "source_provenance", "historical_structural_audit"],
+  "reviewer": null
+}

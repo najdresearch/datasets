@@ -1,0 +1,3 @@
+{"id":"reminder-1","track":"agent_tool_decision","language":"en","prompt":"Remind me to buy milk on Friday.","expected":{"tool":"create_reminder","arguments":{"task":"buy milk","when":"Friday"}},"tags":["synthetic","development"]}
+{"id":"reminder-2","track":"agent_tool_decision","language":"ar","prompt":"ذكرني أشتري حليب يوم الجمعة.","expected":{"tool":"create_reminder","arguments":{"task":"أشتري حليب","when":"يوم الجمعة"}},"tags":["synthetic","development"]}
+{"id":"none-1","track":"agent_tool_decision","language":"en","prompt":"What does a reminder do?","expected":{"tool":"none","arguments":{}},"tags":["synthetic","development"]}

@@ -1,0 +1,21 @@
+{
+  "schema_version": "1",
+  "adapter": "arabic-ragb-v1",
+  "source_id": "arabicragb",
+  "upstream_url": "https://huggingface.co/datasets/HeshamHaroon/ArabicRAGB",
+  "raw_url": "https://huggingface.co/datasets/HeshamHaroon/ArabicRAGB/resolve/9427b6c04c6bb8c85e45cb32071cf6a7978280d2/unified_test.jsonl",
+  "revision": "9427b6c04c6bb8c85e45cb32071cf6a7978280d2",
+  "raw_sha256": "67863e73430839aa5b9bdfaa364a7b453a9256e13aa749811794a3bce49c0477",
+  "expected_rows": 2633,
+  "expected_sha256": "9ef3814a5fefa675e8788d5903c0692b607861af62a55d7ff6a8b732d26ef1e2",
+  "selection_mode": "derived_review_copy",
+  "expected_published_rows": 499,
+  "reference_url": "https://huggingface.co/datasets/najdresearch/najd-benchmark/resolve/cb30c1c9e46c62f691380c3269885cdb8f22f52b/datasets/najd-benchmark/2026.09.14/cases.jsonl",
+  "reference_sha256": "b8b52ded0f6731b7a4764a90476edfe643f46d6a286096bab02b7ed189af94f6",
+  "license": "CC-BY-SA-4.0, per historical source ledger",
+  "redistribution_basis": "upstream-license; preserve attribution and share-alike terms in new releases",
+  "review_status": "not_reviewed",
+  "split": "historical_test_candidates",
+  "transformations": ["field_mapping", "source_provenance", "review_copy", "historical_global_selection"],
+  "reviewer": null
+}

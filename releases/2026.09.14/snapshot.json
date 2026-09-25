@@ -1,0 +1,10 @@
+{
+  "repo_id": "najdresearch/najd-benchmark",
+  "revision": "cb30c1c9e46c62f691380c3269885cdb8f22f52b",
+  "release_dir": "datasets/najd-benchmark/2026.09.14",
+  "checksums_sha256": "b2d8a3608058eef02c7f85323a3d348884011b9e28388bc9dfce1fa24767d3eb",
+  "root_files": {
+    ".gitattributes": "162a6d3512ae6e029dbbca8c39067aee30f7b9ad55ced76df42b4eba8321dce2",
+    "README.md": "ed049146e6caca60110c625cf1e8f1403191cd9bc18f8860c660d33713409c3d"
+  }
+}

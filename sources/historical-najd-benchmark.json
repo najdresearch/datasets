@@ -1,0 +1,20 @@
+{
+  "id": "najd-benchmark-2026-09-14",
+  "kind": "huggingface",
+  "repo_id": "najdresearch/najd-benchmark",
+  "file": "datasets/najd-benchmark/2026.09.14/cases.jsonl",
+  "sha256": "b8b52ded0f6731b7a4764a90476edfe643f46d6a286096bab02b7ed189af94f6",
+  "origin": "historical_public_collection",
+  "license": "other; mixed upstream terms",
+  "redistribution_basis": "Source-specific rights recorded in the published sources.json; recheck before derivative publication",
+  "rights_status": "pending",
+  "split": "test; historical candidate pool",
+  "revision": "cb30c1c9e46c62f691380c3269885cdb8f22f52b",
+  "schema_version": "1",
+  "collection_method": "huggingface_jsonl",
+  "transformations": [
+    "whitespace_normalization",
+    "exact_prompt_expected_dedup"
+  ],
+  "review_status": "not_reviewed"
+}

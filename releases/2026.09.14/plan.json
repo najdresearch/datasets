@@ -1,0 +1,37 @@
+{
+  "release": "najd-benchmark@2026.09.14",
+  "origin": "Private historical preservation archive",
+  "input": "exports/20260906-cleaned-not_reviewed/cases.jsonl",
+  "input_sha256": "a6dbfcabaaa0eb2945bcd4b0c978afccd3e038e44103cbc017eb7af4cb8fa5a6",
+  "input_rows": 178517,
+  "selection": {
+    "per_category_cap": 500,
+    "expected_rows": 6089,
+    "sha256": "ae9fc3e8f176a0b3024274993304fd55a61ec42ebef1c0c9402f4b8aa433721e"
+  },
+  "audit": {
+    "sources_sha256": "2583a8ef2cb7d040122c2a922a7dfa62ce198722f6b83a446421c8a56456ede2",
+    "cases": {"rows": 5717, "sha256": "b8b52ded0f6731b7a4764a90476edfe643f46d6a286096bab02b7ed189af94f6"},
+    "quarantine": {"rows": 372, "sha256": "5b108a254466d621da41e53acfa5b6302b310c4f9f80d8e87124d605cbfc5ed8"}
+  },
+  "source_revisions": {
+    "arabic-agent-eval": "9f075af0ae5b70580e650b26ddf1d26cf871b24f",
+    "paired-msa-saudi-tool-use": "ba360380c1ca1dacb48b12c20c130385ef20650a",
+    "dialectal-arabic-mmlu": "f3c801b43861aa47bdbaca5f884598e9fabc8e67",
+    "pico-saudi-v0.01": "6117a74aa757ddee27cd72c20aa428cf7e8e6b1b",
+    "QCRI/IslamicFaithQA": "a525f5d47a04f9290e6aecaf34668c23a4431d63",
+    "absher": "554f7457e9f91290f204ac56ab82e707f302944e"
+  },
+  "zero_answer_key_sources": ["dialectal-arabic-mmlu", "commonsense-validation"],
+  "source_rewrite": {
+    "from": "m3-saudi-v1",
+    "to": "najd-benchmark-v1",
+    "source_file": "datasets/najd-benchmark-v1/cases.jsonl"
+  },
+  "case_corrections": {
+    "humain-arapro-01980": {
+      "prompt": "من تقسيمات عرض النقود الفئة الأولى، الفئة الثانية، والفئة الثالثة؛ أيها الأشمل؟",
+      "expected_options": ["الفئة الأولى", "الفئة الثانية", "الفئة الثالثة", "كل ما سبق"]
+    }
+  }
+}
