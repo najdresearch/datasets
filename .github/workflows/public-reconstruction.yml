@@ -4,6 +4,7 @@ on:
   pull_request:
     paths:
       - 'scripts/reconstruct_public_release.py'
+      - 'scripts/build_unified_release.py'
       - 'scripts/verify_public_release.py'
       - 'src/najd_datasets/**'
       - 'sources/**'
@@ -24,6 +25,7 @@ jobs:
       - run: uv run pytest
       - run: uv run python scripts/reconstruct_public_release.py --output build/public-release
       - run: uv run python scripts/verify_public_release.py build/public-release
+      - run: uv run python scripts/build_unified_release.py build/public-release/release build/current
       - uses: actions/upload-artifact@v4
         with:
           name: public-reconstruction-evidence
