@@ -121,7 +121,10 @@ def stage(source, output, clearance, notices=None):
         "---",
         "# Najd System One — public research draft",
         "",
-        "Decision tasks in English, MSA and Saudi Arabic. This draft is for research and debugging; independent linguistic and label review is pending.",
+        (
+            "Decision tasks in English, MSA and Saudi Arabic. This draft is for research "
+            "and debugging; independent linguistic and label review is pending."
+        ),
         "",
         "| Pack | Cases | License |",
         "|---|---:|---|",
@@ -131,15 +134,38 @@ def stage(source, output, clearance, notices=None):
         "",
         "## Use and limitations",
         "",
-        "Viewer fields ending in `_json` preserve heterogeneous decision types as JSON strings. Benchmark runners use the original typed `cases.jsonl` files and verify their manifest hashes.",
-        "The viewer calls development data `train` for tooling compatibility; this is not a training recommendation. Original split names remain in each row. Published reserved cases are not secret holdouts.",
-        "Policies in Najd-authored data are fictional. Controlled cases share one logical template; translations are correlated. Do not treat every row as independent or pool packs into one headline score.",
-        "The Saudi controlled wording is record-style, not natural customer conversation. Source Arabic locales are not automatically Saudi dialect.",
-        "Rights apply per subset; no blanket relicensing of third-party material. Attribution and transformations are retained in row provenance and clearance.json.",
+        (
+            "Viewer fields ending in `_json` preserve heterogeneous decision types as "
+            "JSON strings. Benchmark runners use the original typed `cases.jsonl` files "
+            "and verify their manifest hashes."
+        ),
+        (
+            "The viewer calls development data `train` for tooling compatibility; this "
+            "is not a training recommendation. Original split names remain in each row. "
+            "Published reserved cases are not secret holdouts."
+        ),
+        (
+            "Policies in Najd-authored data are fictional. Controlled cases share one "
+            "logical template; translations are correlated. Do not treat every row as "
+            "independent or pool packs into one headline score."
+        ),
+        (
+            "The Saudi controlled wording is record-style, not natural customer "
+            "conversation. Source Arabic locales are not automatically Saudi dialect."
+        ),
+        (
+            "Rights apply per subset; no blanket relicensing of third-party material. "
+            "Attribution and transformations are retained in row provenance and "
+            "clearance.json."
+        ),
         "",
         "## Reproduction",
         "",
-        "Builders: https://github.com/najdresearch/datasets . Scoring: https://github.com/najdresearch/benchmark . Pin the Hugging Face commit SHA and verify release-lock.json before evaluation.",
+        (
+            "Builders: https://github.com/najdresearch/datasets . Scoring: "
+            "https://github.com/najdresearch/benchmark . Pin the Hugging Face commit SHA "
+            "and verify release-lock.json before evaluation."
+        ),
     ]
     (output / "README.md").write_text("\n".join(lines) + "\n")
     if notices is not None:
