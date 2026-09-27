@@ -22,3 +22,9 @@ Use a branch and submit a pull request explaining what changed, why, tests run a
 | Documentation | Copyable commands and an explicit distinction between implemented and planned behavior |
 
 Report data or scoring problems with source/case IDs and a reproducible explanation using public material. Keep proposed corrections separate from immutable historical releases. Report security issues privately using the repository's security policy where available; never post secrets publicly.
+
+## Dataset manifests and task examples
+
+Follow [the shared contract guide](docs/shared-contracts.md). Run the deterministic
+builder, `uv run python scripts/check_contracts.py`, and `uv run pytest -q`. Never
+silently edit vendored schemas: their authoritative source is the pinned benchmark commit.

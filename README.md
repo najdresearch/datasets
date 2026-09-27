@@ -7,13 +7,15 @@ Code and source manifests for collecting, cleaning, normalizing, generating and 
 | Dataset | Rows | Purpose |
 |---|---:|---|
 | [System One](https://huggingface.co/datasets/najdresearch/system-one) | 5,184 | Public decision-model research draft; 11 separately licensed packs, independent review pending |
-| [Najd Benchmark](https://huggingface.co/datasets/najdresearch/najd-benchmark) | 6,089 | Historical Arabic/Saudi evaluation collection: 5,717 structurally certified and 372 quarantined cases |
+| [Najd Benchmark](https://huggingface.co/datasets/najdresearch/najd-benchmark) | 6,089 | Arabic/Saudi evaluation collection: all 6,089 cases in one default configuration |
 | [Najd Legacy 31](https://huggingface.co/datasets/najdresearch/najd-legacy-31) | 31 | Selected original Najd cases, required fixtures and historical row mapping |
 | [Arabic Riddles and Questions](https://huggingface.co/datasets/najdresearch/arabic-riddles) | 333 | Freshly collected question–answer pairs, with source attribution on every row and the dataset card |
 
-The standalone datasets overlap with Najd Benchmark; do not add their counts as independent cases. Current public versions omit review annotations. Questions, answers, IDs, splits and scoring were not changed by that metadata migration. Structural certification is not a claim of semantic correctness.
+The standalone datasets overlap with Najd Benchmark; do not add their counts as independent cases. Current public versions omit review annotations. Questions, answers, IDs, splits and scoring were not changed by that metadata migration. Dataset availability is not a claim of semantic correctness.
 
-Current immutable revisions and hashes are in the [migration ledger](releases/metadata-migration-2026.09.27.json). See [standalone dataset builds](docs/standalone-publications.md) and [metadata migration](docs/metadata-migration.md).
+The current benchmark pin is in [releases/current.json](releases/current.json). Earlier metadata-only revisions are in the [migration ledger](releases/metadata-migration-2026.09.27.json). See [standalone dataset builds](docs/standalone-publications.md) and [metadata migration](docs/metadata-migration.md).
+
+The published [Hugging Face dataset card](docs/huggingface/najd-benchmark.md) is also tracked here for documentation updates.
 
 ## Repository responsibilities
 
@@ -23,6 +25,20 @@ Current immutable revisions and hashes are in the [migration ledger](releases/me
 | [benchmark](https://github.com/najdresearch/benchmark) | Task contracts, shared evaluation/scoring, local reports and pinned execution package |
 | [najd-arena](https://github.com/najdresearch/najd-arena) | Website, organizations, managed jobs, private reports, publication and public results |
 
+## Current unified release
+
+The current Hugging Face version, `2026.09.27`, exposes all 6,089 cases in `default/test` without `audit_status` labels. Prompts, answers, IDs, provenance and specific issue notes are preserved. To produce it after the historical public build:
+
+```sh
+uv run python scripts/build_unified_release.py build/public-release/release build/current
+```
+
+Earlier pinned revisions remain unchanged. Historical commands below reproduce those original artifacts.
+
+## Reconstruction audit
+
+See the [complete source dependency audit](docs/reconstruction-audit.md) for all 39 sources, the public-only execution command, and evidence required to close each remaining gap.
+
 ## Start locally
 
 ```sh
@@ -31,7 +47,14 @@ uv run pytest
 uv run najd-datasets audit-public-inputs releases/2026.09.14/sources.json --sources sources
 ```
 
-The audit inventories original historical source manifests. It does not certify a fresh complete public rebuild. The 31-case subset and 333 fresh questions are now public; integration of those new artifacts into the full reconstruction path remains unfinished. Do not call the entire historical release publicly reconstructible yet.
+The offline audit inventories original manifests. To rebuild all 6,089 cases from public sources, use the [public release builder](docs/public-release-builder.md):
+
+```sh
+uv run python scripts/reconstruct_public_release.py --output build/public-release
+uv run python scripts/verify_public_release.py build/public-release
+```
+
+Both JSONL files reproduce the published bytes. Parquet exports reproduce values and schema. Historical audit documents are preserved separately. Original authoring/extract history and some redistribution permission evidence remain unavailable; see the documented reconstruction boundary and [source attribution](docs/source-attribution.md).
 
 ## Choose a workflow
 
@@ -74,3 +97,21 @@ The original bilingual pilot can now be packaged locally with hashes and develop
 ## System One decision candidate
 
 [Dataset v1 documentation](docs/system-one-v1.md) describes the completed local candidate: 6,884 cases across controlled policies, natural development drafts, and public references/diagnostics. Build with `python -m najd_datasets.system_one_release --include-references --output <fresh-directory>` after restoring the pinned inputs. Cases are not automatically eligible for publication.
+
+## Consumers
+
+`benchmark` and Arena use the immutable identity in `releases/current.json`: 6,089 cases across 25 tracks. Task-specific scorers may select a documented subset. Saved results keep their original revisions; changing the default release never rewrites prior scores. New rows do not become scorable merely by removing metadata: missing references and tasks requiring an execution harness must remain explicitly ungraded until supported.
+
+### Executable fixture release
+
+Version `2026.09.27.1` adds verified public fixture files and four source-based answer
+corrections. Run `scripts/build_executable_release.py` after the historical and unified
+builders; see [the correction guide](docs/executable-release.md). Case count remains
+6,089. Old revisions remain immutable; these corrected cases require a fresh evaluation.
+
+## Shared contracts (Step 2)
+
+[Dataset manifests and contribution checks](docs/shared-contracts.md) now share pinned
+schemas with benchmark and Arena. The original [Arabic support routing example](examples/arabic-support-routing-v1/README.md)
+rebuilds deterministically and demonstrates the end-to-end development contract.
+It is separate from the existing Hugging Face benchmark release.

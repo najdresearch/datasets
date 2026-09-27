@@ -571,6 +571,8 @@ def reproduce_source(
     output_dir: Path,
     reference_path: Path | None = None,
     local_raw_path: Path | None = None,
+    *,
+    candidates_only: bool = False,
 ) -> dict:
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
     adapters = {
@@ -660,6 +662,12 @@ def reproduce_source(
         raise PipelineError("adapter row count mismatch")
     if result["sha256"] != manifest["expected_sha256"]:
         raise PipelineError("adapter output SHA-256 mismatch")
+    if candidates_only:
+        result["historical_output_sha256"] = result["sha256"]
+        write_jsonl(output_path, without_review_metadata(read_jsonl(output_path)))
+        result["sha256"] = digest(output_path.read_bytes())
+        write_json(output_dir / "report.json", result)
+        return result
     if not manifest.get("reference_sha256"):
         raise PipelineError("pinned published reference SHA-256 is required")
     if reference_path is None and manifest.get("reference_url"):
