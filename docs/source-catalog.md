@@ -1,5 +1,7 @@
 # Historical source catalog
 
+> Historical provenance and original pinned artifacts are described below. The 31 selected legacy cases and 333 fresh questions are now public: see [standalone publications](standalone-publications.md). Current public revisions omit review annotations: see [metadata migration](metadata-migration.md). Availability of those subsets does not yet establish a complete end-to-end public rebuild.
+
 These are the source claims recorded for Najd Benchmark 2026.09.14. A verified link or recorded permission does not certify the meaning of a case. Recheck rights before any new release.
 
 | Source | Cases | Certified | Quarantined | Link check | Upstream rebuild |

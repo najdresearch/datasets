@@ -1,5 +1,7 @@
 # Public reconstruction acceptance criteria
 
+> Historical provenance and original pinned artifacts are described below. The 31 selected legacy cases and 333 fresh questions are now public: see [standalone publications](standalone-publications.md). Current public revisions omit review annotations: see [metadata migration](metadata-migration.md). Availability of those subsets does not yet establish a complete end-to-end public rebuild.
+
 A reader must be able to rebuild the release using this repository and public inputs, without Najd's private archive. Downloading our own Hugging Face output is artifact recovery, not source reconstruction.
 
 ## Current audit
