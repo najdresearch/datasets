@@ -5,7 +5,11 @@ requires-python = ">=3.12"
 dependencies = ["huggingface-hub>=0.36,<2"]
 
 [project.optional-dependencies]
-dev = ["pytest>=8,<9", "ruff>=0.13,<1"]
+dev = [
+    "jsonschema>=4.23,<5",
+    "pytest>=8,<9",
+    "ruff>=0.13,<1",
+]
 parquet = ["pyarrow>=20,<25"]
 excel = ["pandas>=2.2,<3", "openpyxl>=3.1,<4"]
 
