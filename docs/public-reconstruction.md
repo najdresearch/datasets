@@ -6,6 +6,8 @@ A reader must be able to rebuild the release using this repository and public in
 
 ## Current audit
 
+The [execution audit](reconstruction-audit.md) supersedes the old inventory statuses below: every source now has public verification evidence. Read its scope distinctions and remaining dependencies before claiming complete reconstruction.
+
 Run from the repository root:
 
 ```sh

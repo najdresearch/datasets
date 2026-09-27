@@ -1,0 +1,636 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-27T15:20:54.561251+00:00",
+  "benchmark_revision": "43674ef228c1461d6fd34e20c20f51efcbdce56d",
+  "reference_checksums": {
+    "cases.jsonl": "149e6815a29434a462e9d1f8f3ccbb21a142c79848947ad20c19b9639c72c081",
+    "quarantine.jsonl": "ea1ec967e3161388406251e395e699b4826114a605ed8e68958d382dc1848c40"
+  },
+  "sources": [
+    {
+      "source_id": "QCRI/IslamicFaithQA",
+      "rows": 476,
+      "status": "verified",
+      "scope": "historical adapter output and selected non-audit fields",
+      "manifest_sha256": "aa5cbd1bf54b8c5efe34f9c41e76a8268b3d67bf3a8e290c08c96547543ee804",
+      "evidence": {
+        "source_id": "QCRI/IslamicFaithQA",
+        "rows": 3804,
+        "sha256": "7f3328c640a83ff5bf61731aae0143d2d39af2c68daa2f058428b0338da08c2e",
+        "published_rows_matched": 476,
+        "historical_output_sha256": "a4db6a86c768cd1267e9c732a401580253cec5a6a0f3fbd0265b6cbfd58b73ce"
+      }
+    },
+    {
+      "source_id": "absher",
+      "rows": 243,
+      "status": "verified",
+      "scope": "historical adapter output and selected non-audit fields",
+      "manifest_sha256": "3a6c66debaa05ad879dd16246e02f95ca2b90e12e01bdcec61c16499f6f6685b",
+      "evidence": {
+        "source_id": "absher",
+        "rows": 18564,
+        "sha256": "cfb3c48369cbc4c528b0a9fe92d4be42c5631273704b38dde560310631d1f7bb",
+        "quarantine_rows_matched": 4,
+        "published_rows_matched": 243,
+        "historical_output_sha256": "57e8f0fbae608db04613124a737786597d297ca050ee1e67b22c1d7d58fa54fd"
+      }
+    },
+    {
+      "source_id": "alghafa-native",
+      "rows": 150,
+      "status": "verified",
+      "scope": "historical adapter output and selected non-audit fields",
+      "manifest_sha256": "f413293ef9229bf2e42c236fb37fec199aeb0add38273b7e13df36770e424558",
+      "evidence": {
+        "source_id": "alghafa-native",
+        "rows": 22932,
+        "sha256": "b8f3a26c011f425352b214e73a5cf2ad98eee5b70dbb771ced6302437dbdb82e",
+        "published_rows_matched": 150,
+        "historical_output_sha256": "68d9053e9df85e585a0e79fcba42367c5ff6d5906ef1c4e3bc29a6a33d9880d4"
+      }
+    },
+    {
+      "source_id": "almrsal-general-contest",
+      "rows": 11,
+      "status": "verified",
+      "scope": "fresh public question/answer snapshot; not original extract bytes",
+      "revision": "96dd7b99b31233f83325307c778e756501afb8fc",
+      "evidence": {
+        "expected_rows": 11,
+        "actual_rows": 11,
+        "fields": [
+          "prompt",
+          "expected"
+        ],
+        "missing_ids": [],
+        "extra_ids": [],
+        "changed_ids": [],
+        "passed": true
+      }
+    },
+    {
+      "source_id": "almrsal-riddles",
+      "rows": 99,
+      "status": "verified",
+      "scope": "fresh public question/answer snapshot; not original extract bytes",
+      "revision": "96dd7b99b31233f83325307c778e756501afb8fc",
+      "evidence": {
+        "expected_rows": 99,
+        "actual_rows": 99,
+        "fields": [
+          "prompt",
+          "expected"
+        ],
+        "missing_ids": [],
+        "extra_ids": [],
+        "changed_ids": [],
+        "passed": true
+      }
+    },
+    {
+      "source_id": "arabic-agent-eval",
+      "rows": 51,
+      "status": "verified",
+      "scope": "historical adapter output and selected non-audit fields",
+      "manifest_sha256": "ee5c344b84e53574f7a6a122df00c474dccf1b1c9665f53a710e54b3695f682c",
+      "evidence": {
+        "source_id": "arabic-agent-eval",
+        "rows": 51,
+        "sha256": "6216961bc3f7e56d49ad01ca4a0097e3ae63f1ab8c264c3da1281f2fafc6ec78",
+        "published_rows_matched": 51,
+        "historical_output_sha256": "7a311ce5bb25e5456cf18af8236d4614214838a23f8427bb32c99e5d80426ce8"
+      }
+    },
+    {
+      "source_id": "arabic-exams",
+      "rows": 24,
+      "status": "verified",
+      "scope": "historical adapter output and selected non-audit fields",
+      "manifest_sha256": "aa24a3a07b97a7076f6d49cfe774bb80b2e680c2bf9fbd470316116f20ba2aae",
+      "evidence": {
+        "source_id": "arabic-exams",
+        "rows": 537,
+        "sha256": "5832680b53bfbbf6ecd461e29e3bc05f24fd4c19092e7d4ae1bd72176528bed5",
+        "published_rows_matched": 24,
+        "historical_output_sha256": "926bd603fa581c153e6a977259a2e3f90a0d27940f9b52850ca501eca482cd03"
+      }
+    },
+    {
+      "source_id": "arabic-function-calling",
+      "rows": 499,
+      "status": "verified",
+      "scope": "historical adapter output and selected non-audit fields",
+      "manifest_sha256": "b04e0911cf69e332090dde4c3144fc5978ab76e0d9256476b58761d35817e5a7",
+      "evidence": {
+        "source_id": "arabic-function-calling",
+        "rows": 5079,
+        "sha256": "47ab5ea31476feb23ed7623136f85d2457669eacf697c83e5aef14e77d4f7b30",
+        "published_rows_matched": 499,
+        "historical_output_sha256": "d3d2441508c62b01179b88161bbc95f5be87f84f181f896f13f46b1b1a4954ea"
+      }
+    },
+    {
+      "source_id": "arabic-safety-evaluation",
+      "rows": 35,
+      "status": "verified",
+      "scope": "historical adapter output and selected non-audit fields",
+      "manifest_sha256": "db5992f3ffaf9e0cac60d363c01aa60b421aa74f21b5e59f654e27235d8d89df",
+      "evidence": {
+        "source_id": "arabic-safety-evaluation",
+        "rows": 3095,
+        "sha256": "d7e3f8cbe7a017b7af9c0f3a87e243200dfda39753bbcf0fe62c64eecc57b40c",
+        "published_rows_matched": 35,
+        "historical_output_sha256": "f9be7a4ba939e822653382b62bf5a8087a054dea0ea9c71a84c9fbe579a8fa45"
+      }
+    },
+    {
+      "source_id": "arabicmmlu",
+      "rows": 104,
+      "status": "verified",
+      "scope": "historical adapter output and selected non-audit fields",
+      "manifest_sha256": "6f8f1c88579f7835ff0de457ae2553f70cddfb7852ac57d2cb9fda57443a9ca7",
+      "evidence": {
+        "source_id": "arabicmmlu",
+        "rows": 14455,
+        "sha256": "9c02d081f637f996d1de66808dcc39054da27779cfd4c3ab79082a37afe672ab",
+        "published_rows_matched": 104,
+        "historical_output_sha256": "3edc010ee0543a620d79bd1939d90e5f3036f4b3c0e8d9ced0e05c415f99fd89"
+      }
+    },
+    {
+      "source_id": "arabicragb",
+      "rows": 499,
+      "status": "verified",
+      "scope": "historical adapter output and selected non-audit fields",
+      "manifest_sha256": "a572971a72f4907020cea13b1a35ee0c56a9bb91fc4537c7cd68167915f6af8e",
+      "evidence": {
+        "source_id": "arabicragb",
+        "rows": 2633,
+        "sha256": "f0c78f0df2eedde719d23d4c07f6bcdb89386e76075d6336e41eb0f5761a674d",
+        "published_rows_matched": 499,
+        "historical_output_sha256": "9ef3814a5fefa675e8788d5903c0692b607861af62a55d7ff6a8b732d26ef1e2"
+      }
+    },
+    {
+      "source_id": "arasafe",
+      "rows": 300,
+      "status": "verified",
+      "scope": "historical adapter output and selected non-audit fields",
+      "manifest_sha256": "396e179127c988e8537b97dc6fc137a8f3dc99cae2f22555c3bfa95ad81c759e",
+      "evidence": {
+        "source_id": "arasafe",
+        "rows": 24341,
+        "sha256": "303a32c2fee0fdd6bf66ec7a3b7b503f60a1e94a835f0dca508d1690206401a7",
+        "published_rows_matched": 300,
+        "historical_output_sha256": "df7a80062c0c518b962262b0b9403b7206945e27a662910702448a3da9621c8d"
+      }
+    },
+    {
+      "source_id": "aratrust",
+      "rows": 15,
+      "status": "verified",
+      "scope": "historical adapter output and selected non-audit fields",
+      "manifest_sha256": "09965a871bd3a7314dbfd4ce875590698968a91ab7a0e00ec6b5dcef43fb531b",
+      "evidence": {
+        "source_id": "aratrust",
+        "rows": 522,
+        "sha256": "bb1b6b04b8a22ac42469773a5bd47caebf2cb27f613d730ba42d5d87d55b6a6c",
+        "published_rows_matched": 15,
+        "historical_output_sha256": "76d724d875fb98599c1e106b226acf0d2ed83b2d040a6685be84f67c5c674a02"
+      }
+    },
+    {
+      "source_id": "arbml-arabic-hate-speech",
+      "rows": 94,
+      "status": "verified",
+      "scope": "historical adapter output and selected non-audit fields",
+      "manifest_sha256": "401e0a25a159bdb9518f02586772859e995a245e8397379e8a2e2ad2c232d25c",
+      "evidence": {
+        "source_id": "arbml-arabic-hate-speech",
+        "rows": 8557,
+        "sha256": "27375ab1704f15fd36a1bcfc1466d89e2e262a737d6306e8adb0bc4ab75ff708",
+        "published_rows_matched": 94,
+        "historical_output_sha256": "6491f5453a7b406271bacd3b655be42c6e7617ce731fc2425c6f4279fb2e1475"
+      }
+    },
+    {
+      "source_id": "arbml-arabic-rc",
+      "rows": 496,
+      "status": "verified",
+      "scope": "historical adapter output and selected non-audit fields",
+      "manifest_sha256": "1a217bbe2f857157db87094fe627ea21e7081b31c87f911954ab99fbc4ddc7ba",
+      "evidence": {
+        "source_id": "arbml-arabic-rc",
+        "rows": 1008,
+        "sha256": "d1d45a7f3d172343a7cd4ed68ae9b753157216916ff166c02fe97a06ac5723dd",
+        "quarantine_rows_matched": 4,
+        "published_rows_matched": 496,
+        "historical_output_sha256": "fa2de6b1ed1c9a4f747c595210e5c9f7ae36c8fcacaae119126ad9ee5b2fac7d"
+      }
+    },
+    {
+      "source_id": "arbml-arabic_dialects_dataset",
+      "rows": 76,
+      "status": "verified",
+      "scope": "historical adapter output and selected non-audit fields",
+      "manifest_sha256": "fb8001b68f37b5bd206800ec55e8455e67937b45afd98d884c1160718566a4fb",
+      "evidence": {
+        "source_id": "arbml-arabic_dialects_dataset",
+        "rows": 9992,
+        "sha256": "bbed2fc4779c7a3d68b68afe740f9165b4a48a67be1ed113a094567080cd6773",
+        "published_rows_matched": 76,
+        "historical_output_sha256": "10ba8e1b8d8ee0a4de2f9d291a95d9d147c370041436490209d6655c931598b0"
+      }
+    },
+    {
+      "source_id": "arbml-cidar-eval-100",
+      "rows": 7,
+      "status": "verified",
+      "scope": "historical adapter output and selected non-audit fields",
+      "manifest_sha256": "2521ca988f9c5303e873d59b9a49b4f8d735c17f9b508d6a3894f24e3aad3a11",
+      "evidence": {
+        "source_id": "arbml-cidar-eval-100",
+        "rows": 100,
+        "sha256": "ec3fd06294b7e7a27e1fd392b4818c9baab3023ecc1b83d0be020f0380b0fa7e",
+        "published_rows_matched": 7,
+        "historical_output_sha256": "483e10b8e76d2f1d2e8d6d3f0e1f12572ba17b616babcc83eb6a409c01e2ddd7"
+      }
+    },
+    {
+      "source_id": "arbml-cidar-mcq-100",
+      "rows": 7,
+      "status": "verified",
+      "scope": "historical adapter output and selected non-audit fields",
+      "manifest_sha256": "5111cd206aa655a3d33471eb43da64be110fd813326d904ace80c599f272cbd2",
+      "evidence": {
+        "source_id": "arbml-cidar-mcq-100",
+        "rows": 100,
+        "sha256": "78a1fd65f2d6c85f590964d9d3795caa74d6f4507daa145b080db661946a03da",
+        "published_rows_matched": 7,
+        "historical_output_sha256": "a74ed7c6f96edf6916f8ed9a0d52fd480fee4894e3420dffaed642319b07d1b7"
+      }
+    },
+    {
+      "source_id": "arbml-dangerous-dataset",
+      "rows": 56,
+      "status": "verified",
+      "scope": "historical adapter output and selected non-audit fields",
+      "manifest_sha256": "77abb4ddd633179855cc133c194f6ef9a908257571b76a29e27f0556ecc7ebeb",
+      "evidence": {
+        "source_id": "arbml-dangerous-dataset",
+        "rows": 5009,
+        "sha256": "28582c5818a7bffeb6117a60e94a924416c0b5f66602cf587c8cc4b339a2f74e",
+        "published_rows_matched": 56,
+        "historical_output_sha256": "0013f38511cd95331621c55249d8d28e2adc92ac2918973de86d66192975a766"
+      }
+    },
+    {
+      "source_id": "arbml-quran_hadith",
+      "rows": 500,
+      "status": "verified",
+      "scope": "historical adapter output and selected non-audit fields",
+      "manifest_sha256": "d8955233435c6f6e1fd6f26821d50a5cb9635c47a54abd9985b92a52ba0cc96e",
+      "evidence": {
+        "source_id": "arbml-quran_hadith",
+        "rows": 8144,
+        "sha256": "dd663b756cbaea04c6c5a2a0857fcfadfa8780b6b81258d0a31f8e1d13cb1fac",
+        "published_rows_matched": 500,
+        "historical_output_sha256": "7b7ac42eefd487872aa35f7671db39dfc38f6b1559e19bad752f3cd9f2c429b4"
+      }
+    },
+    {
+      "source_id": "arbml-saudiirony",
+      "rows": 257,
+      "status": "verified",
+      "scope": "historical adapter output and selected non-audit fields",
+      "manifest_sha256": "0161e51075494d760a5f9181f711e11f5e4ec514a601961b8567902922e7c3ca",
+      "evidence": {
+        "source_id": "arbml-saudiirony",
+        "rows": 19804,
+        "sha256": "a20ebddde5f09166c63f0887458d287bf655fb2870233c0b6a3ce340bde83bf5",
+        "published_rows_matched": 257,
+        "historical_output_sha256": "5fc925606f62a43a8c884114f9fb6bc8fe1bbcc08b0f8608908eb3eb1d5f0a9a"
+      }
+    },
+    {
+      "source_id": "commonsense-validation",
+      "rows": 48,
+      "status": "verified",
+      "scope": "historical adapter output and selected non-audit fields",
+      "manifest_sha256": "3318b9624b16a1322857a74a257af70c0fbf0ae978be99dea9c62ab0a72f920b",
+      "evidence": {
+        "source_id": "commonsense-validation",
+        "rows": 1000,
+        "sha256": "7b96aa43149db950936af218529b79189a20476f5d441d7b87651adb3c2248a5",
+        "published_rows_matched": 48,
+        "historical_output_sha256": "bb126ce92ad69308a113524813a7f535cc539a5242a6e82dfbeba0ba62f3f0d4"
+      }
+    },
+    {
+      "source_id": "dialectal-arabic-mmlu",
+      "rows": 165,
+      "status": "verified",
+      "scope": "historical adapter output and selected non-audit fields",
+      "manifest_sha256": "6259996f9de2b8f602b5b7254611271fd957bf401968b33be77c6074e5c8cbda",
+      "evidence": {
+        "source_id": "dialectal-arabic-mmlu",
+        "rows": 21945,
+        "sha256": "f70134ef0c05f637355e93e2a0dd82427dd43ce6a267f179cc23304c6bae82f1",
+        "published_rows_matched": 165,
+        "historical_output_sha256": "89bf459f5ee38631defcd49b21fb448e350643a3a0ce15e11ca0fe9e33336f82"
+      }
+    },
+    {
+      "source_id": "humain-araifeval",
+      "rows": 3,
+      "status": "verified",
+      "scope": "historical adapter output and selected non-audit fields",
+      "manifest_sha256": "75ea4d7e6073329f72a96aba03e95ef22d5174204af1b131773fd481a2082295",
+      "evidence": {
+        "source_id": "humain-araifeval",
+        "rows": 536,
+        "sha256": "be90b4dad056548f6e6ea4c0f5435f08f3905c46e8daba12fce017e96829304d",
+        "published_rows_matched": 3,
+        "historical_output_sha256": "284f9194fd48877f4d810a4e9f3923b4505506ed38970e9d9991258a0f496b71"
+      }
+    },
+    {
+      "source_id": "humain-aramath",
+      "rows": 50,
+      "status": "verified",
+      "scope": "historical adapter output and selected non-audit fields",
+      "manifest_sha256": "8e0b7706a62753c32ba739fbf7010818ba652b548210a8a57bf898d4da34002e",
+      "evidence": {
+        "source_id": "humain-aramath",
+        "rows": 605,
+        "sha256": "303e01a851cad7469ad557b7aa7723e2b886be2da17063cf01108c0e5a1793da",
+        "published_rows_matched": 50,
+        "historical_output_sha256": "1605a7b74ad41f52abce211a533145a44988a5eb8523cf19e512973303ac87e6"
+      }
+    },
+    {
+      "source_id": "humain-arapro",
+      "rows": 363,
+      "status": "verified",
+      "scope": "historical adapter output and selected non-audit fields",
+      "manifest_sha256": "0703718fa7ceb58c3a86a76bf64a8eb347c92b1e53a9a1e3d685684e44fc324d",
+      "evidence": {
+        "source_id": "humain-arapro",
+        "rows": 5001,
+        "sha256": "6cb575fe10f557d37abe20c50c18169fb53ec9ea7201f025a55cf6090812ee9a",
+        "published_rows_matched": 363,
+        "historical_output_sha256": "d03bc2cb6aab04e40f5165bb59348cf118e474bd3be7564d9930d5c3e23af50e"
+      }
+    },
+    {
+      "source_id": "humain-aratruthfulqa",
+      "rows": 500,
+      "status": "verified",
+      "scope": "historical adapter output and selected non-audit fields",
+      "manifest_sha256": "0a0ec5abb01ee689d9439c1cf9aa247d6947c14bfbc548ad3b37d1d9f963206a",
+      "evidence": {
+        "source_id": "humain-aratruthfulqa",
+        "rows": 536,
+        "sha256": "6418a680107b7cf23eecaa2b1e914871038db2abba18032fa99e830872168757",
+        "published_rows_matched": 500,
+        "historical_output_sha256": "8edd4cb63fd9a637545a967e1c33b9c63251345be3963f9528d0df358e34c236"
+      }
+    },
+    {
+      "source_id": "inception-arabic-ifeval",
+      "rows": 2,
+      "status": "verified",
+      "scope": "historical adapter output and selected non-audit fields",
+      "manifest_sha256": "a55f46f930abee62050ec97d429dcfd82a6e51afff2c1237b5c8ae24a29ca060",
+      "evidence": {
+        "source_id": "inception-arabic-ifeval",
+        "rows": 404,
+        "sha256": "1b04e393f192676ae599bc933b1070ca5ec5293accc4c2def00ee2796f41bc4f",
+        "published_rows_matched": 2,
+        "historical_output_sha256": "cfa8a879683daee683820d338bb2f3b25b0f44deabee73e56063f09de8008e35"
+      }
+    },
+    {
+      "source_id": "mawdoo3-animals",
+      "rows": 19,
+      "status": "verified",
+      "scope": "fresh public question/answer snapshot; not original extract bytes",
+      "revision": "96dd7b99b31233f83325307c778e756501afb8fc",
+      "evidence": {
+        "expected_rows": 19,
+        "actual_rows": 19,
+        "fields": [
+          "prompt",
+          "expected"
+        ],
+        "missing_ids": [],
+        "extra_ids": [],
+        "changed_ids": [],
+        "passed": true
+      }
+    },
+    {
+      "source_id": "mawdoo3-riddles",
+      "rows": 18,
+      "status": "verified",
+      "scope": "fresh public question/answer snapshot; not original extract bytes",
+      "revision": "96dd7b99b31233f83325307c778e756501afb8fc",
+      "evidence": {
+        "expected_rows": 18,
+        "actual_rows": 18,
+        "fields": [
+          "prompt",
+          "expected"
+        ],
+        "missing_ids": [],
+        "extra_ids": [],
+        "changed_ids": [],
+        "passed": true
+      }
+    },
+    {
+      "source_id": "mawdoo3-science",
+      "rows": 15,
+      "status": "verified",
+      "scope": "fresh public question/answer snapshot; not original extract bytes",
+      "revision": "96dd7b99b31233f83325307c778e756501afb8fc",
+      "evidence": {
+        "expected_rows": 15,
+        "actual_rows": 15,
+        "fields": [
+          "prompt",
+          "expected"
+        ],
+        "missing_ids": [],
+        "extra_ids": [],
+        "changed_ids": [],
+        "passed": true
+      }
+    },
+    {
+      "source_id": "mena-values",
+      "rows": 500,
+      "status": "verified",
+      "scope": "historical adapter output and selected non-audit fields",
+      "manifest_sha256": "0ef2d7e852a34578bb147fc230e1514e36c1ace8022b4cda0be7cc1510128233",
+      "evidence": {
+        "source_id": "mena-values",
+        "rows": 864,
+        "sha256": "fb2d706c2d35f4b5ad8781cf883713e7e7c462c45d4e95fdd239b9c69c18c476",
+        "published_rows_matched": 500,
+        "historical_output_sha256": "3a5852cbbad455ad7130a5338f937af8e36e8ec0ff879b300b7f2bbacf350932"
+      }
+    },
+    {
+      "source_id": "najd-benchmark-v1",
+      "rows": 31,
+      "status": "verified",
+      "scope": "public archived subset, not original authoring procedure",
+      "revision": "ccbf837af54611fa8106e4355302fa2b4d4660f9",
+      "evidence": {
+        "expected_rows": 31,
+        "actual_rows": 31,
+        "fields": [
+          "category",
+          "dialect",
+          "expected",
+          "fixture",
+          "id",
+          "judge_dimensions",
+          "language",
+          "prompt",
+          "provenance",
+          "tags",
+          "track"
+        ],
+        "missing_ids": [],
+        "extra_ids": [],
+        "changed_ids": [],
+        "passed": true
+      }
+    },
+    {
+      "source_id": "paired-msa-saudi-tool-use",
+      "rows": 150,
+      "status": "verified",
+      "scope": "historical adapter output and selected non-audit fields",
+      "manifest_sha256": "cd67cd20b6ec0096c01897ec4750cbf72e49ec0ce7615942c05810e94989c13c",
+      "evidence": {
+        "source_id": "paired-msa-saudi-tool-use",
+        "rows": 150,
+        "sha256": "42074bc02e0c2eb10329e2e53c1f7baf5ed6eb13961d65eda48d3c9ed5457f0d",
+        "published_rows_matched": 150,
+        "historical_output_sha256": "36362e7536a6b811443740db9f00663e15f90c0830526a6b79f91a4e0b35065c"
+      }
+    },
+    {
+      "source_id": "pico-saudi-v0.01",
+      "rows": 55,
+      "status": "verified",
+      "scope": "historical adapter output and selected non-audit fields",
+      "manifest_sha256": "85de31496d481506b2345fdcb0055023c6b57afce19c651277f94b586303dd40",
+      "evidence": {
+        "source_id": "pico-saudi-v0.01",
+        "rows": 55,
+        "sha256": "740e6930b3fb2e85fcb1125faa589eaa0b11c203762931e08cac8c96e99f7185",
+        "published_rows_matched": 55,
+        "historical_output_sha256": "3ddc4366bae67601bfc998ab0babff08a4e95a3f6fe73fb097a155f15d509536"
+      }
+    },
+    {
+      "source_id": "qusama-riddles",
+      "rows": 96,
+      "status": "verified",
+      "scope": "fresh public question/answer snapshot; not original extract bytes",
+      "revision": "96dd7b99b31233f83325307c778e756501afb8fc",
+      "evidence": {
+        "expected_rows": 96,
+        "actual_rows": 96,
+        "fields": [
+          "prompt",
+          "expected"
+        ],
+        "missing_ids": [],
+        "extra_ids": [],
+        "changed_ids": [],
+        "passed": true
+      }
+    },
+    {
+      "source_id": "sayidaty-children-riddles",
+      "rows": 1,
+      "status": "verified",
+      "scope": "fresh public question/answer snapshot; not original extract bytes",
+      "revision": "96dd7b99b31233f83325307c778e756501afb8fc",
+      "evidence": {
+        "expected_rows": 1,
+        "actual_rows": 1,
+        "fields": [
+          "prompt",
+          "expected"
+        ],
+        "missing_ids": [],
+        "extra_ids": [],
+        "changed_ids": [],
+        "passed": true
+      }
+    },
+    {
+      "source_id": "twinkl-arabic-riddles",
+      "rows": 50,
+      "status": "verified",
+      "scope": "fresh public question/answer snapshot; not original extract bytes",
+      "revision": "96dd7b99b31233f83325307c778e756501afb8fc",
+      "evidence": {
+        "expected_rows": 50,
+        "actual_rows": 50,
+        "fields": [
+          "prompt",
+          "expected"
+        ],
+        "missing_ids": [],
+        "extra_ids": [],
+        "changed_ids": [],
+        "passed": true
+      }
+    },
+    {
+      "source_id": "twinkl-islamic-questions",
+      "rows": 24,
+      "status": "verified",
+      "scope": "fresh public question/answer snapshot; not original extract bytes",
+      "revision": "96dd7b99b31233f83325307c778e756501afb8fc",
+      "evidence": {
+        "expected_rows": 24,
+        "actual_rows": 24,
+        "fields": [
+          "prompt",
+          "expected"
+        ],
+        "missing_ids": [],
+        "extra_ids": [],
+        "changed_ids": [],
+        "passed": true
+      }
+    }
+  ],
+  "verified_rows": 6089,
+  "total_rows": 6089,
+  "source_count": 39,
+  "public_reconstruction_complete": false,
+  "limitations": [
+    "Checks have different scopes; inspect each source.",
+    "Published reference is still used for selection in historical adapters.",
+    "Original authoring and original 333-row extract bytes are unavailable.",
+    "Full release metadata/Parquet assembly and rights evidence are separate gates."
+  ],
+  "execution_environment": {
+    "python": "3.9.6",
+    "platform": "Darwin",
+    "uv_lock_sha256": "ae433984cd785452185b2c7b475c3034431a8acfaa4b3abd53c42229eab5b3fa",
+    "runner_sha256": "7460ecd25d702f8797e660aed68c2c23e8e7961c7c679fa8905e015fcdcedac0",
+    "checkout": "clean clone of public repository, empty build directory",
+    "network": "anonymous public HTTP only"
+  }
+}
