@@ -1,0 +1,1247 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-09-27",
+  "scope": "Evidence inventory for the 6089 published rows, not a legal opinion or a semantic review. Historical artifacts remain unchanged.",
+  "summary": {
+    "owner_attested_permission": {
+      "sources": 9,
+      "rows": 333
+    },
+    "owner_authorized_release": {
+      "sources": 1,
+      "rows": 31
+    },
+    "permission_evidence_missing": {
+      "sources": 12,
+      "rows": 2759
+    },
+    "public_license_evidence": {
+      "sources": 17,
+      "rows": 2966
+    }
+  },
+  "sources": [
+    {
+      "source_id": "absher",
+      "rows": 243,
+      "source_url": "https://huggingface.co/datasets/Renad10/Absher-Benchmark",
+      "historical_license": "cc-by-4.0",
+      "historical_basis": "permission-on-file",
+      "purpose": "Arabic and Saudi AI evaluation research",
+      "evidence": [
+        {
+          "file": "README.md",
+          "url": "https://huggingface.co/datasets/Renad10/Absher-Benchmark/raw/554f7457e9f91290f204ac56ab82e707f302944e/README.md",
+          "sha256": "6b6dd0cf96ea0b5dcf4001f2a12004448f1fc2a97e8933e02352797becd57acc"
+        }
+      ],
+      "checked_paths": [
+        {
+          "file": "README.md",
+          "result": "retrieved"
+        },
+        {
+          "file": "LICENSE",
+          "result": "HTTP Error 404: Not Found"
+        },
+        {
+          "file": "LICENSE.md",
+          "result": "HTTP Error 404: Not Found"
+        },
+        {
+          "file": "LICENSE.txt",
+          "result": "HTTP Error 404: Not Found"
+        }
+      ],
+      "status": "public_license_evidence",
+      "license": "cc-by-4.0",
+      "basis": "Pinned dataset card or data license declares these terms. This records the upstream declaration, not a legal certification.",
+      "remaining_action": "Retain attribution, license notices and change notices; comply with the declared terms."
+    },
+    {
+      "source_id": "alghafa-native",
+      "rows": 150,
+      "source_url": "https://huggingface.co/datasets/OALL/AlGhafa-Arabic-LLM-Benchmark-Native",
+      "historical_license": "not-declared",
+      "historical_basis": "permission-on-file",
+      "purpose": "Arabic and Saudi AI evaluation research",
+      "evidence": [
+        {
+          "file": "README.md",
+          "url": "https://huggingface.co/datasets/OALL/AlGhafa-Arabic-LLM-Benchmark-Native/raw/a31ebd34ca311d7e0cfc6ad7f458b3435af280f5/README.md",
+          "sha256": "f383ae5b1c1d05e4353411bf282940ac14692b8e916aa751dadf2bf358c5317d"
+        }
+      ],
+      "checked_paths": [
+        {
+          "file": "README.md",
+          "result": "retrieved"
+        },
+        {
+          "file": "LICENSE",
+          "result": "HTTP Error 404: Not Found"
+        },
+        {
+          "file": "LICENSE.md",
+          "result": "HTTP Error 404: Not Found"
+        },
+        {
+          "file": "LICENSE.txt",
+          "result": "HTTP Error 404: Not Found"
+        }
+      ],
+      "status": "permission_evidence_missing",
+      "basis": "Checked pinned dataset card and common license paths; no applicable data license or permission evidence established.",
+      "remaining_action": "Obtain permission covering redistribution and intended use, or exclude from a separately versioned successor."
+    },
+    {
+      "source_id": "almrsal-general-contest",
+      "rows": 11,
+      "source_url": "https://www.almrsal.com/post/1556481",
+      "historical_license": "not-declared",
+      "historical_basis": "permission-on-file",
+      "purpose": "Arabic and Saudi AI evaluation research",
+      "evidence": [],
+      "status": "owner_attested_permission",
+      "basis": "Owner confirmed public redistribution permission on 2026-09-27 with source attribution required.",
+      "remaining_action": "Retain underlying permission documentation; this entry records owner attestation only."
+    },
+    {
+      "source_id": "almrsal-riddles",
+      "rows": 99,
+      "source_url": "https://www.almrsal.com/post/1369176",
+      "historical_license": "not-declared",
+      "historical_basis": "permission-on-file",
+      "purpose": "Arabic and Saudi AI evaluation research",
+      "evidence": [],
+      "status": "owner_attested_permission",
+      "basis": "Owner confirmed public redistribution permission on 2026-09-27 with source attribution required.",
+      "remaining_action": "Retain underlying permission documentation; this entry records owner attestation only."
+    },
+    {
+      "source_id": "arabic-agent-eval",
+      "rows": 51,
+      "source_url": "https://github.com/Moshe-ship/arabic-agent-eval",
+      "historical_license": "cc-by-4.0",
+      "historical_basis": "upstream-license",
+      "purpose": "Arabic and Saudi AI evaluation research",
+      "evidence": [
+        {
+          "file": "README.md",
+          "url": "https://raw.githubusercontent.com/Moshe-ship/arabic-agent-eval/9f075af0ae5b70580e650b26ddf1d26cf871b24f/README.md",
+          "sha256": "9f29611d9e3a163ed8d615fbb84740e675bd17ed8e17b83e562088ca75c9d9f6"
+        },
+        {
+          "file": "LICENSE",
+          "url": "https://raw.githubusercontent.com/Moshe-ship/arabic-agent-eval/9f075af0ae5b70580e650b26ddf1d26cf871b24f/LICENSE",
+          "sha256": "b27dfbe004c3deef9e6f63f21251479c5a015d423adf73b0ca6f33443d5c2802"
+        }
+      ],
+      "checked_paths": [
+        {
+          "file": "README.md",
+          "result": "retrieved"
+        },
+        {
+          "file": "LICENSE",
+          "result": "retrieved"
+        },
+        {
+          "file": "LICENSE.md",
+          "result": "HTTP Error 404: Not Found"
+        },
+        {
+          "file": "LICENSE.txt",
+          "result": "HTTP Error 404: Not Found"
+        }
+      ],
+      "status": "public_license_evidence",
+      "license": "cc-by-4.0",
+      "basis": "Pinned dataset card or data license declares these terms. This records the upstream declaration, not a legal certification.",
+      "remaining_action": "Retain attribution, license notices and change notices; comply with the declared terms."
+    },
+    {
+      "source_id": "arabic-exams",
+      "rows": 24,
+      "source_url": "https://huggingface.co/datasets/OALL/Arabic_EXAMS",
+      "historical_license": "not-declared",
+      "historical_basis": "permission-on-file",
+      "purpose": "Arabic and Saudi AI evaluation research",
+      "evidence": [
+        {
+          "file": "README.md",
+          "url": "https://huggingface.co/datasets/OALL/Arabic_EXAMS/raw/bc7a29346dbcaa16a8cd883b1f3e681ab2b7ff2a/README.md",
+          "sha256": "1d621aa605bfa71c5117a4ce862545d602cf9c84c4dcba1dccef7e1f9693cbb7"
+        }
+      ],
+      "checked_paths": [
+        {
+          "file": "README.md",
+          "result": "retrieved"
+        },
+        {
+          "file": "LICENSE",
+          "result": "HTTP Error 404: Not Found"
+        },
+        {
+          "file": "LICENSE.md",
+          "result": "HTTP Error 404: Not Found"
+        },
+        {
+          "file": "LICENSE.txt",
+          "result": "HTTP Error 404: Not Found"
+        }
+      ],
+      "status": "permission_evidence_missing",
+      "basis": "Checked pinned dataset card and common license paths; no applicable data license or permission evidence established.",
+      "remaining_action": "Obtain permission covering redistribution and intended use, or exclude from a separately versioned successor."
+    },
+    {
+      "source_id": "arabic-function-calling",
+      "rows": 499,
+      "source_url": "https://huggingface.co/datasets/HeshamHaroon/Arabic_Function_Calling",
+      "historical_license": "apache-2.0",
+      "historical_basis": "upstream-license",
+      "purpose": "Arabic and Saudi AI evaluation research",
+      "evidence": [
+        {
+          "file": "README.md",
+          "url": "https://huggingface.co/datasets/HeshamHaroon/Arabic_Function_Calling/raw/ec4d3302f6b2d91c5fbe81864c2ee498b8cd3ade/README.md",
+          "sha256": "915172c3f346188ee872a88473bdb001214f9aefe66f5c32a6cb01d10ef302eb"
+        }
+      ],
+      "checked_paths": [
+        {
+          "file": "README.md",
+          "result": "retrieved"
+        },
+        {
+          "file": "LICENSE",
+          "result": "HTTP Error 404: Not Found"
+        },
+        {
+          "file": "LICENSE.md",
+          "result": "HTTP Error 404: Not Found"
+        },
+        {
+          "file": "LICENSE.txt",
+          "result": "HTTP Error 404: Not Found"
+        }
+      ],
+      "status": "public_license_evidence",
+      "license": "apache-2.0",
+      "basis": "Pinned dataset card or data license declares these terms. This records the upstream declaration, not a legal certification.",
+      "remaining_action": "Retain attribution, license notices and change notices; comply with the declared terms."
+    },
+    {
+      "source_id": "arabic-safety-evaluation",
+      "rows": 35,
+      "source_url": "https://github.com/mbzuai-nlp/Arabic_safety_evaluation",
+      "historical_license": "not-declared",
+      "historical_basis": "permission-on-file",
+      "purpose": "Arabic and Saudi AI evaluation research",
+      "evidence": [
+        {
+          "file": "README.md",
+          "url": "https://raw.githubusercontent.com/mbzuai-nlp/Arabic_safety_evaluation/aae91341a5ffcef61c9cb797ca259fb98ff45352/README.md",
+          "sha256": "1eaf26f9799139ef4a4e6ba37b283d50ab4f513e349290bb5635ba58f2909430"
+        }
+      ],
+      "checked_paths": [
+        {
+          "file": "README.md",
+          "result": "retrieved"
+        },
+        {
+          "file": "LICENSE",
+          "result": "HTTP Error 404: Not Found"
+        },
+        {
+          "file": "LICENSE.md",
+          "result": "HTTP Error 404: Not Found"
+        },
+        {
+          "file": "LICENSE.txt",
+          "result": "HTTP Error 404: Not Found"
+        }
+      ],
+      "status": "permission_evidence_missing",
+      "basis": "Checked pinned dataset card and common license paths; no applicable data license or permission evidence established.",
+      "remaining_action": "Obtain permission covering redistribution and intended use, or exclude from a separately versioned successor."
+    },
+    {
+      "source_id": "arabicmmlu",
+      "rows": 104,
+      "source_url": "https://huggingface.co/datasets/MBZUAI/ArabicMMLU",
+      "historical_license": "cc-by-nc-4.0",
+      "historical_basis": "upstream-license",
+      "purpose": "Arabic and Saudi AI evaluation research",
+      "evidence": [
+        {
+          "file": "README.md",
+          "url": "https://huggingface.co/datasets/MBZUAI/ArabicMMLU/raw/7aa530e2893ac420352b3f5c1a1310c010e9758b/README.md",
+          "sha256": "898f444b923bd933f1030c76238d0fe008a4667fb21e30a3f7d5cb79af86e939"
+        }
+      ],
+      "checked_paths": [
+        {
+          "file": "README.md",
+          "result": "retrieved"
+        },
+        {
+          "file": "LICENSE",
+          "result": "HTTP Error 404: Not Found"
+        },
+        {
+          "file": "LICENSE.md",
+          "result": "HTTP Error 404: Not Found"
+        },
+        {
+          "file": "LICENSE.txt",
+          "result": "HTTP Error 404: Not Found"
+        }
+      ],
+      "status": "public_license_evidence",
+      "license": "cc-by-nc-4.0",
+      "basis": "Pinned dataset card or data license declares these terms. This records the upstream declaration, not a legal certification.",
+      "remaining_action": "Retain attribution, license notices and change notices; comply with the declared terms."
+    },
+    {
+      "source_id": "arabicragb",
+      "rows": 499,
+      "source_url": "https://huggingface.co/datasets/HeshamHaroon/ArabicRAGB",
+      "historical_license": "cc-by-sa-4.0",
+      "historical_basis": "upstream-license",
+      "purpose": "Arabic and Saudi AI evaluation research",
+      "evidence": [
+        {
+          "file": "README.md",
+          "url": "https://huggingface.co/datasets/HeshamHaroon/ArabicRAGB/raw/9427b6c04c6bb8c85e45cb32071cf6a7978280d2/README.md",
+          "sha256": "c67166639e6243f1a00e6a49532d212627816a4552b07cde18124f50e03ed010"
+        }
+      ],
+      "checked_paths": [
+        {
+          "file": "README.md",
+          "result": "retrieved"
+        },
+        {
+          "file": "LICENSE",
+          "result": "HTTP Error 404: Not Found"
+        },
+        {
+          "file": "LICENSE.md",
+          "result": "HTTP Error 404: Not Found"
+        },
+        {
+          "file": "LICENSE.txt",
+          "result": "HTTP Error 404: Not Found"
+        }
+      ],
+      "status": "public_license_evidence",
+      "license": "cc-by-sa-4.0",
+      "basis": "Pinned dataset card or data license declares these terms. This records the upstream declaration, not a legal certification.",
+      "remaining_action": "Retain attribution, license notices and change notices; comply with the declared terms."
+    },
+    {
+      "source_id": "arasafe",
+      "rows": 300,
+      "source_url": "https://github.com/qcri/AraSafe-benchmark",
+      "historical_license": "not-declared",
+      "historical_basis": "permission-on-file",
+      "purpose": "Arabic and Saudi AI evaluation research",
+      "evidence": [
+        {
+          "file": "README.md",
+          "url": "https://raw.githubusercontent.com/qcri/AraSafe-benchmark/b5e8a6f3d9f83a57ab8b4bea58b4d68a44ae6331/README.md",
+          "sha256": "9da6b3d5a20c9056939b4efa2d450dc324f796b05308fb5e57cc03574a91772a"
+        }
+      ],
+      "checked_paths": [
+        {
+          "file": "README.md",
+          "result": "retrieved"
+        },
+        {
+          "file": "LICENSE",
+          "result": "HTTP Error 404: Not Found"
+        },
+        {
+          "file": "LICENSE.md",
+          "result": "HTTP Error 404: Not Found"
+        },
+        {
+          "file": "LICENSE.txt",
+          "result": "HTTP Error 404: Not Found"
+        }
+      ],
+      "status": "permission_evidence_missing",
+      "basis": "Checked pinned dataset card and common license paths; no applicable data license or permission evidence established.",
+      "remaining_action": "Obtain permission covering redistribution and intended use, or exclude from a separately versioned successor."
+    },
+    {
+      "source_id": "aratrust",
+      "rows": 15,
+      "source_url": "https://huggingface.co/datasets/EmanAmeen/AraTrust",
+      "historical_license": "mit",
+      "historical_basis": "upstream-license",
+      "purpose": "Arabic and Saudi AI evaluation research",
+      "evidence": [
+        {
+          "file": "README.md",
+          "url": "https://huggingface.co/datasets/EmanAmeen/AraTrust/raw/54f05f0e8a980c2937f488316fbc28392b41a52b/README.md",
+          "sha256": "37080761e4fa92b8fa8943d4f5f29c73d907aceba1b7645e3b8b0a6dcc40ae3d"
+        }
+      ],
+      "checked_paths": [
+        {
+          "file": "README.md",
+          "result": "retrieved"
+        },
+        {
+          "file": "LICENSE",
+          "result": "HTTP Error 404: Not Found"
+        },
+        {
+          "file": "LICENSE.md",
+          "result": "HTTP Error 404: Not Found"
+        },
+        {
+          "file": "LICENSE.txt",
+          "result": "HTTP Error 404: Not Found"
+        }
+      ],
+      "status": "public_license_evidence",
+      "license": "mit",
+      "basis": "Pinned dataset card or data license declares these terms. This records the upstream declaration, not a legal certification.",
+      "remaining_action": "Retain attribution, license notices and change notices; comply with the declared terms."
+    },
+    {
+      "source_id": "arbml-arabic-hate-speech",
+      "rows": 94,
+      "source_url": "https://huggingface.co/datasets/arbml/Arabic_Hate_Speech",
+      "historical_license": "not-declared",
+      "historical_basis": "permission-on-file",
+      "purpose": "Arabic and Saudi AI evaluation research",
+      "evidence": [
+        {
+          "file": "README.md",
+          "url": "https://huggingface.co/datasets/arbml/Arabic_Hate_Speech/raw/06797a1aa4ab67ad290179096499fcfbea5d3396/README.md",
+          "sha256": "db16fdffa3c0f02408d049b3a48de4cbdcc84f9367da97e4d89efede6b29a4e9"
+        }
+      ],
+      "checked_paths": [
+        {
+          "file": "README.md",
+          "result": "retrieved"
+        },
+        {
+          "file": "LICENSE",
+          "result": "HTTP Error 404: Not Found"
+        },
+        {
+          "file": "LICENSE.md",
+          "result": "HTTP Error 404: Not Found"
+        },
+        {
+          "file": "LICENSE.txt",
+          "result": "HTTP Error 404: Not Found"
+        }
+      ],
+      "status": "permission_evidence_missing",
+      "basis": "Checked pinned dataset card and common license paths; no applicable data license or permission evidence established.",
+      "remaining_action": "Obtain permission covering redistribution and intended use, or exclude from a separately versioned successor."
+    },
+    {
+      "source_id": "arbml-arabic-rc",
+      "rows": 496,
+      "source_url": "https://huggingface.co/datasets/arbml/Arabic_RC",
+      "historical_license": "not-declared",
+      "historical_basis": "permission-on-file",
+      "purpose": "Arabic and Saudi AI evaluation research",
+      "evidence": [],
+      "checked_paths": [
+        {
+          "file": "README.md",
+          "result": "HTTP Error 404: Not Found"
+        },
+        {
+          "file": "LICENSE",
+          "result": "HTTP Error 404: Not Found"
+        },
+        {
+          "file": "LICENSE.md",
+          "result": "HTTP Error 404: Not Found"
+        },
+        {
+          "file": "LICENSE.txt",
+          "result": "HTTP Error 404: Not Found"
+        }
+      ],
+      "status": "permission_evidence_missing",
+      "basis": "Checked pinned dataset card and common license paths; no applicable data license or permission evidence established.",
+      "remaining_action": "Obtain permission covering redistribution and intended use, or exclude from a separately versioned successor."
+    },
+    {
+      "source_id": "arbml-arabic_dialects_dataset",
+      "rows": 76,
+      "source_url": "https://huggingface.co/datasets/arbml/Arabic_Dialects_Dataset",
+      "historical_license": "not-declared",
+      "historical_basis": "permission-on-file",
+      "purpose": "Arabic and Saudi AI evaluation research",
+      "evidence": [
+        {
+          "file": "README.md",
+          "url": "https://huggingface.co/datasets/arbml/Arabic_Dialects_Dataset/raw/cad29588d485a685c01dc9d4f2a4d51be146285a/README.md",
+          "sha256": "d43ddd87b09f4a6be5e18667bd2d074058e42475f2bfbaca5fd4a22db1e6c2b0"
+        }
+      ],
+      "checked_paths": [
+        {
+          "file": "README.md",
+          "result": "retrieved"
+        },
+        {
+          "file": "LICENSE",
+          "result": "HTTP Error 404: Not Found"
+        },
+        {
+          "file": "LICENSE.md",
+          "result": "HTTP Error 404: Not Found"
+        },
+        {
+          "file": "LICENSE.txt",
+          "result": "HTTP Error 404: Not Found"
+        }
+      ],
+      "status": "permission_evidence_missing",
+      "basis": "Checked pinned dataset card and common license paths; no applicable data license or permission evidence established.",
+      "remaining_action": "Obtain permission covering redistribution and intended use, or exclude from a separately versioned successor."
+    },
+    {
+      "source_id": "arbml-cidar-eval-100",
+      "rows": 7,
+      "source_url": "https://huggingface.co/datasets/arbml/CIDAR-EVAL-100",
+      "historical_license": "apache-2.0",
+      "historical_basis": "upstream-license",
+      "purpose": "Arabic and Saudi AI evaluation research",
+      "evidence": [
+        {
+          "file": "README.md",
+          "url": "https://huggingface.co/datasets/arbml/CIDAR-EVAL-100/raw/f7997c45b73a26c1b54a697c9c8bb6a78c9e8b84/README.md",
+          "sha256": "b9ac3da951680cf7205b92ba2aab23fd006e5d049b81d92173add72c26ad2773"
+        }
+      ],
+      "checked_paths": [
+        {
+          "file": "README.md",
+          "result": "retrieved"
+        },
+        {
+          "file": "LICENSE",
+          "result": "HTTP Error 404: Not Found"
+        },
+        {
+          "file": "LICENSE.md",
+          "result": "HTTP Error 404: Not Found"
+        },
+        {
+          "file": "LICENSE.txt",
+          "result": "HTTP Error 404: Not Found"
+        }
+      ],
+      "status": "public_license_evidence",
+      "license": "apache-2.0",
+      "basis": "Pinned dataset card or data license declares these terms. This records the upstream declaration, not a legal certification.",
+      "remaining_action": "Retain attribution, license notices and change notices; comply with the declared terms."
+    },
+    {
+      "source_id": "arbml-cidar-mcq-100",
+      "rows": 7,
+      "source_url": "https://huggingface.co/datasets/arbml/CIDAR-MCQ-100",
+      "historical_license": "apache-2.0",
+      "historical_basis": "upstream-license",
+      "purpose": "Arabic and Saudi AI evaluation research",
+      "evidence": [
+        {
+          "file": "README.md",
+          "url": "https://huggingface.co/datasets/arbml/CIDAR-MCQ-100/raw/a64885fb2b20a7ec066209681cc31a751f4e1425/README.md",
+          "sha256": "942eb037cd91d42615b8ff99966fd34570f4dbf1d390d8485953a9b579410d37"
+        }
+      ],
+      "checked_paths": [
+        {
+          "file": "README.md",
+          "result": "retrieved"
+        },
+        {
+          "file": "LICENSE",
+          "result": "HTTP Error 404: Not Found"
+        },
+        {
+          "file": "LICENSE.md",
+          "result": "HTTP Error 404: Not Found"
+        },
+        {
+          "file": "LICENSE.txt",
+          "result": "HTTP Error 404: Not Found"
+        }
+      ],
+      "status": "public_license_evidence",
+      "license": "apache-2.0",
+      "basis": "Pinned dataset card or data license declares these terms. This records the upstream declaration, not a legal certification.",
+      "remaining_action": "Retain attribution, license notices and change notices; comply with the declared terms."
+    },
+    {
+      "source_id": "arbml-dangerous-dataset",
+      "rows": 56,
+      "source_url": "https://huggingface.co/datasets/arbml/Dangerous_Dataset",
+      "historical_license": "not-declared",
+      "historical_basis": "permission-on-file",
+      "purpose": "Arabic and Saudi AI evaluation research",
+      "evidence": [
+        {
+          "file": "README.md",
+          "url": "https://huggingface.co/datasets/arbml/Dangerous_Dataset/raw/3d1bed077281daea67963195892c748d36fff5a8/README.md",
+          "sha256": "fcbb757d19cda1ebe011bdf25e4e54071be70bf7d91bacf1bded1e173f5d0d48"
+        }
+      ],
+      "checked_paths": [
+        {
+          "file": "README.md",
+          "result": "retrieved"
+        },
+        {
+          "file": "LICENSE",
+          "result": "HTTP Error 404: Not Found"
+        },
+        {
+          "file": "LICENSE.md",
+          "result": "HTTP Error 404: Not Found"
+        },
+        {
+          "file": "LICENSE.txt",
+          "result": "HTTP Error 404: Not Found"
+        }
+      ],
+      "status": "permission_evidence_missing",
+      "basis": "Checked pinned dataset card and common license paths; no applicable data license or permission evidence established.",
+      "remaining_action": "Obtain permission covering redistribution and intended use, or exclude from a separately versioned successor."
+    },
+    {
+      "source_id": "arbml-quran_hadith",
+      "rows": 500,
+      "source_url": "https://huggingface.co/datasets/arbml/Quran_Hadith",
+      "historical_license": "not-declared",
+      "historical_basis": "permission-on-file",
+      "purpose": "Arabic and Saudi AI evaluation research",
+      "evidence": [
+        {
+          "file": "README.md",
+          "url": "https://huggingface.co/datasets/arbml/Quran_Hadith/raw/db75746e2bb76dc1969869d552c9809c60c14358/README.md",
+          "sha256": "00a296879e46ce8e90b622ed11acd1ef1575a1179d91680e8c290959e9bd9f2b"
+        }
+      ],
+      "checked_paths": [
+        {
+          "file": "README.md",
+          "result": "retrieved"
+        },
+        {
+          "file": "LICENSE",
+          "result": "HTTP Error 404: Not Found"
+        },
+        {
+          "file": "LICENSE.md",
+          "result": "HTTP Error 404: Not Found"
+        },
+        {
+          "file": "LICENSE.txt",
+          "result": "HTTP Error 404: Not Found"
+        }
+      ],
+      "status": "permission_evidence_missing",
+      "basis": "Checked pinned dataset card and common license paths; no applicable data license or permission evidence established.",
+      "remaining_action": "Obtain permission covering redistribution and intended use, or exclude from a separately versioned successor."
+    },
+    {
+      "source_id": "arbml-saudiirony",
+      "rows": 257,
+      "source_url": "https://huggingface.co/datasets/arbml/SaudiIrony",
+      "historical_license": "not-declared",
+      "historical_basis": "permission-on-file",
+      "purpose": "Arabic and Saudi AI evaluation research",
+      "evidence": [
+        {
+          "file": "README.md",
+          "url": "https://huggingface.co/datasets/arbml/SaudiIrony/raw/008b2ebf5a8a19194cf91048d8e3453b934c2b52/README.md",
+          "sha256": "30532775709029c846131741b14fa5b52512129c70368277f7e8bd8e893b21d4"
+        },
+        {
+          "file": "LICENSE",
+          "url": "https://raw.githubusercontent.com/iwan-rg/Saudi-Dialect-Irony-Dataset/c5320f185a570fe10c74ac5dbfe67f57c3741457/LICENSE",
+          "sha256": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499"
+        },
+        {
+          "file": "README.md",
+          "url": "https://raw.githubusercontent.com/iwan-rg/Saudi-Dialect-Irony-Dataset/c5320f185a570fe10c74ac5dbfe67f57c3741457/README.md",
+          "sha256": "d82f5b97d2d51661d55f2bd6fddac16db867679a4e3ecf2dbd3a2c9a45221720"
+        }
+      ],
+      "checked_paths": [
+        {
+          "file": "README.md",
+          "result": "retrieved"
+        },
+        {
+          "file": "LICENSE",
+          "result": "HTTP Error 404: Not Found"
+        },
+        {
+          "file": "LICENSE.md",
+          "result": "HTTP Error 404: Not Found"
+        },
+        {
+          "file": "LICENSE.txt",
+          "result": "HTTP Error 404: Not Found"
+        }
+      ],
+      "status": "public_license_evidence",
+      "basis": "Original data repository declares CC0; selected rows checked against the original source linked by the ARBML loader.",
+      "remaining_action": "Retain source attribution and provenance. CC0 does not grant third-party privacy or personality rights.",
+      "license": "cc0-1.0",
+      "ancestry": {
+        "loader_url": "https://github.com/ARBML/dar/blob/df8020b96a47a482740f8ae355e7afcbb4794804/datasets/SaudiIrony/SaudiIrony.py",
+        "selected_rows": 257,
+        "selected_content_mismatches": 0,
+        "scope": "Commonsense: all 1000 validation text pairs equal; HF labels map 0 to original 1 and 1 to original 0. SaudiIrony: all 257 selected text/label pairs equal; unselected rows have differences, not asserted equal."
+      }
+    },
+    {
+      "source_id": "commonsense-validation",
+      "rows": 48,
+      "source_url": "https://huggingface.co/datasets/arbml/Commonsense_Validation",
+      "historical_license": "not-declared",
+      "historical_basis": "permission-on-file",
+      "purpose": "Arabic and Saudi AI evaluation research",
+      "evidence": [
+        {
+          "file": "README.md",
+          "url": "https://huggingface.co/datasets/arbml/Commonsense_Validation/raw/85da6793fc34e58c885b80a9d070122afb249083/README.md",
+          "sha256": "d14a9cdf9ba4b9ffd762f2d2b547491ee4eff5a1e138d474dbd01c99b6bf3411"
+        },
+        {
+          "file": "LICENSE",
+          "url": "https://raw.githubusercontent.com/msmadi/Arabic-Dataset-for-Commonsense-Validationion/24897e3c069f15aa78a0faa4d2399c44ed8f6364/LICENSE",
+          "sha256": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499"
+        },
+        {
+          "file": "README.md",
+          "url": "https://raw.githubusercontent.com/msmadi/Arabic-Dataset-for-Commonsense-Validationion/24897e3c069f15aa78a0faa4d2399c44ed8f6364/README.md",
+          "sha256": "c195b8888e37878714c97afe5f775887d9d7e55a239fde81d8b18512cceb182d"
+        }
+      ],
+      "checked_paths": [
+        {
+          "file": "README.md",
+          "result": "retrieved"
+        },
+        {
+          "file": "LICENSE",
+          "result": "HTTP Error 404: Not Found"
+        },
+        {
+          "file": "LICENSE.md",
+          "result": "HTTP Error 404: Not Found"
+        },
+        {
+          "file": "LICENSE.txt",
+          "result": "HTTP Error 404: Not Found"
+        }
+      ],
+      "status": "public_license_evidence",
+      "basis": "Original data repository declares CC0; selected rows checked against the original source linked by the ARBML loader.",
+      "remaining_action": "Retain source attribution and provenance. CC0 does not grant third-party privacy or personality rights.",
+      "license": "cc0-1.0",
+      "ancestry": {
+        "loader_url": "https://github.com/ARBML/dar/blob/df8020b96a47a482740f8ae355e7afcbb4794804/datasets/Commonsense_Validation/Commonsense_Validation.py",
+        "selected_rows": 48,
+        "selected_content_mismatches": 0,
+        "scope": "Commonsense: all 1000 validation text pairs equal; HF labels map 0 to original 1 and 1 to original 0. SaudiIrony: all 257 selected text/label pairs equal; unselected rows have differences, not asserted equal."
+      }
+    },
+    {
+      "source_id": "dialectal-arabic-mmlu",
+      "rows": 165,
+      "source_url": "https://huggingface.co/datasets/MBZUAI/Dialectal-Arabic-MMLU",
+      "historical_license": "not-declared",
+      "historical_basis": "permission-on-file",
+      "purpose": "Arabic and Saudi AI evaluation research",
+      "evidence": [
+        {
+          "file": "README.md",
+          "url": "https://huggingface.co/datasets/MBZUAI/Dialectal-Arabic-MMLU/raw/f3c801b43861aa47bdbaca5f884598e9fabc8e67/README.md",
+          "sha256": "f49788e24c18552bc852f9ce0a39e67a6e770d26ae8183af40a7693d3a56f9da"
+        }
+      ],
+      "checked_paths": [
+        {
+          "file": "README.md",
+          "result": "retrieved"
+        },
+        {
+          "file": "LICENSE",
+          "result": "HTTP Error 404: Not Found"
+        },
+        {
+          "file": "LICENSE.md",
+          "result": "HTTP Error 404: Not Found"
+        },
+        {
+          "file": "LICENSE.txt",
+          "result": "HTTP Error 404: Not Found"
+        }
+      ],
+      "status": "permission_evidence_missing",
+      "basis": "Checked pinned dataset card and common license paths; no applicable data license or permission evidence established.",
+      "remaining_action": "Obtain permission covering redistribution and intended use, or exclude from a separately versioned successor."
+    },
+    {
+      "source_id": "humain-araifeval",
+      "rows": 3,
+      "source_url": "https://huggingface.co/datasets/humain-ai/AraIFEval",
+      "historical_license": "apache-2.0",
+      "historical_basis": "upstream-license",
+      "purpose": "Arabic and Saudi AI evaluation research",
+      "evidence": [
+        {
+          "file": "README.md",
+          "url": "https://huggingface.co/datasets/humain-ai/AraIFEval/raw/49d32ae083091fc1fbfa22c300c209ebe4740372/README.md",
+          "sha256": "12a3b1760c332c303472982ea33976892117a6d2e9d22cd3ff9601342ccb6dee"
+        }
+      ],
+      "checked_paths": [
+        {
+          "file": "README.md",
+          "result": "retrieved"
+        },
+        {
+          "file": "LICENSE",
+          "result": "HTTP Error 404: Not Found"
+        },
+        {
+          "file": "LICENSE.md",
+          "result": "HTTP Error 404: Not Found"
+        },
+        {
+          "file": "LICENSE.txt",
+          "result": "HTTP Error 404: Not Found"
+        }
+      ],
+      "status": "public_license_evidence",
+      "license": "apache-2.0",
+      "basis": "Pinned dataset card or data license declares these terms. This records the upstream declaration, not a legal certification.",
+      "remaining_action": "Retain attribution, license notices and change notices; comply with the declared terms."
+    },
+    {
+      "source_id": "humain-aramath",
+      "rows": 50,
+      "source_url": "https://huggingface.co/datasets/humain-ai/AraMath",
+      "historical_license": "apache-2.0",
+      "historical_basis": "upstream-license",
+      "purpose": "Arabic and Saudi AI evaluation research",
+      "evidence": [
+        {
+          "file": "README.md",
+          "url": "https://huggingface.co/datasets/humain-ai/AraMath/raw/b79e79b1b993d153613d1ce2357a1177f2cdcfa1/README.md",
+          "sha256": "7d85f4f45ba457bf3251478e6fe600e6550c8d9bf57551185d4373441fdbb662"
+        }
+      ],
+      "checked_paths": [
+        {
+          "file": "README.md",
+          "result": "retrieved"
+        },
+        {
+          "file": "LICENSE",
+          "result": "HTTP Error 404: Not Found"
+        },
+        {
+          "file": "LICENSE.md",
+          "result": "HTTP Error 404: Not Found"
+        },
+        {
+          "file": "LICENSE.txt",
+          "result": "HTTP Error 404: Not Found"
+        }
+      ],
+      "status": "public_license_evidence",
+      "license": "apache-2.0",
+      "basis": "Pinned dataset card or data license declares these terms. This records the upstream declaration, not a legal certification.",
+      "remaining_action": "Retain attribution, license notices and change notices; comply with the declared terms."
+    },
+    {
+      "source_id": "humain-arapro",
+      "rows": 363,
+      "source_url": "https://huggingface.co/datasets/humain-ai/AraPro",
+      "historical_license": "not-declared",
+      "historical_basis": "permission-on-file",
+      "purpose": "Arabic and Saudi AI evaluation research",
+      "evidence": [
+        {
+          "file": "README.md",
+          "url": "https://huggingface.co/datasets/humain-ai/AraPro/raw/e606730ed50b663d7655ea2e02793238f5166422/README.md",
+          "sha256": "a7bd8278511e6647c6ad87c5c9e2fcc73c3ea1e5512192b48bf69803ee53e3e1"
+        }
+      ],
+      "checked_paths": [
+        {
+          "file": "README.md",
+          "result": "retrieved"
+        },
+        {
+          "file": "LICENSE",
+          "result": "HTTP Error 404: Not Found"
+        },
+        {
+          "file": "LICENSE.md",
+          "result": "HTTP Error 404: Not Found"
+        },
+        {
+          "file": "LICENSE.txt",
+          "result": "HTTP Error 404: Not Found"
+        }
+      ],
+      "status": "permission_evidence_missing",
+      "basis": "Checked pinned dataset card and common license paths; no applicable data license or permission evidence established.",
+      "remaining_action": "Obtain permission covering redistribution and intended use, or exclude from a separately versioned successor."
+    },
+    {
+      "source_id": "humain-aratruthfulqa",
+      "rows": 500,
+      "source_url": "https://huggingface.co/datasets/humain-ai/AraTruthfulQA",
+      "historical_license": "not-declared",
+      "historical_basis": "permission-on-file",
+      "purpose": "Arabic and Saudi AI evaluation research",
+      "evidence": [
+        {
+          "file": "README.md",
+          "url": "https://huggingface.co/datasets/humain-ai/AraTruthfulQA/raw/162744fbf0590606415eb0924f2b5bd680486e3a/README.md",
+          "sha256": "74a5668256e80ed4c6e4d15404fe98c8b417e16b7b4cd1f52af6f9463dfa1d4d"
+        }
+      ],
+      "checked_paths": [
+        {
+          "file": "README.md",
+          "result": "retrieved"
+        },
+        {
+          "file": "LICENSE",
+          "result": "HTTP Error 404: Not Found"
+        },
+        {
+          "file": "LICENSE.md",
+          "result": "HTTP Error 404: Not Found"
+        },
+        {
+          "file": "LICENSE.txt",
+          "result": "HTTP Error 404: Not Found"
+        }
+      ],
+      "status": "permission_evidence_missing",
+      "basis": "Checked pinned dataset card and common license paths; no applicable data license or permission evidence established.",
+      "remaining_action": "Obtain permission covering redistribution and intended use, or exclude from a separately versioned successor."
+    },
+    {
+      "source_id": "inception-arabic-ifeval",
+      "rows": 2,
+      "source_url": "https://huggingface.co/datasets/inception42/Arabic-IFEval",
+      "historical_license": "cc-by-nc-4.0",
+      "historical_basis": "upstream-license",
+      "purpose": "Arabic and Saudi AI evaluation research",
+      "evidence": [
+        {
+          "file": "README.md",
+          "url": "https://huggingface.co/datasets/inception42/Arabic-IFEval/raw/48f209003f5c90055248d11b8f0e4ffd4162cb87/README.md",
+          "sha256": "cfe4e60b8e853d1f0539a65e8de6de001bc4cc59308d7987904d826bce991d6a"
+        }
+      ],
+      "checked_paths": [
+        {
+          "file": "README.md",
+          "result": "retrieved"
+        },
+        {
+          "file": "LICENSE",
+          "result": "HTTP Error 404: Not Found"
+        },
+        {
+          "file": "LICENSE.md",
+          "result": "HTTP Error 404: Not Found"
+        },
+        {
+          "file": "LICENSE.txt",
+          "result": "HTTP Error 404: Not Found"
+        }
+      ],
+      "status": "public_license_evidence",
+      "license": "cc-by-nc-4.0",
+      "basis": "Pinned dataset card or data license declares these terms. This records the upstream declaration, not a legal certification.",
+      "remaining_action": "Retain attribution, license notices and change notices; comply with the declared terms."
+    },
+    {
+      "source_id": "mawdoo3-animals",
+      "rows": 19,
+      "source_url": "https://mawdoo3.com/%D8%A3%D9%84%D8%BA%D8%A7%D8%B2_%D8%B9%D9%86_%D8%A7%D9%84%D8%AD%D9%8A%D9%88%D8%A7%D9%86%D8%A7%D8%AA_%D9%85%D8%B9_%D8%A7%D9%84%D8%AD%D9%84",
+      "historical_license": "not-declared",
+      "historical_basis": "permission-on-file",
+      "purpose": "Arabic and Saudi AI evaluation research",
+      "evidence": [],
+      "status": "owner_attested_permission",
+      "basis": "Owner confirmed public redistribution permission on 2026-09-27 with source attribution required.",
+      "remaining_action": "Retain underlying permission documentation; this entry records owner attestation only."
+    },
+    {
+      "source_id": "mawdoo3-riddles",
+      "rows": 18,
+      "source_url": "https://mawdoo3.com/%D8%A3%D9%84%D8%BA%D8%A7%D8%B2_%D8%B0%D9%83%D8%A7%D8%A1_%D9%85%D8%B9_%D8%A7%D9%84%D8%AD%D9%84%D9%88%D9%84",
+      "historical_license": "not-declared",
+      "historical_basis": "permission-on-file",
+      "purpose": "Arabic and Saudi AI evaluation research",
+      "evidence": [],
+      "status": "owner_attested_permission",
+      "basis": "Owner confirmed public redistribution permission on 2026-09-27 with source attribution required.",
+      "remaining_action": "Retain underlying permission documentation; this entry records owner attestation only."
+    },
+    {
+      "source_id": "mawdoo3-science",
+      "rows": 15,
+      "source_url": "https://mawdoo3.com/%D8%A3%D9%84%D8%BA%D8%A7%D8%B2_%D8%B9%D9%86_%D8%A7%D9%84%D8%B9%D9%84%D9%85_%D9%85%D8%B9_%D8%A7%D9%84%D8%AD%D9%84",
+      "historical_license": "not-declared",
+      "historical_basis": "permission-on-file",
+      "purpose": "Arabic and Saudi AI evaluation research",
+      "evidence": [],
+      "status": "owner_attested_permission",
+      "basis": "Owner confirmed public redistribution permission on 2026-09-27 with source attribution required.",
+      "remaining_action": "Retain underlying permission documentation; this entry records owner attestation only."
+    },
+    {
+      "source_id": "mena-values",
+      "rows": 500,
+      "source_url": "https://huggingface.co/datasets/llm-lab/MENA_VALUES_Benchmark",
+      "historical_license": "cc-by-4.0",
+      "historical_basis": "upstream-license",
+      "purpose": "Arabic and Saudi AI evaluation research",
+      "evidence": [
+        {
+          "file": "README.md",
+          "url": "https://huggingface.co/datasets/llm-lab/MENA_VALUES_Benchmark/raw/43bdb1b77d3ed2cbbd957a0d3a976d986fdfebcc/README.md",
+          "sha256": "8f0c7e5b67cd5f155f6570a713fd5f75ed8202614734e37df3566efa045460d2"
+        }
+      ],
+      "checked_paths": [
+        {
+          "file": "README.md",
+          "result": "retrieved"
+        },
+        {
+          "file": "LICENSE",
+          "result": "HTTP Error 404: Not Found"
+        },
+        {
+          "file": "LICENSE.md",
+          "result": "HTTP Error 404: Not Found"
+        },
+        {
+          "file": "LICENSE.txt",
+          "result": "HTTP Error 404: Not Found"
+        }
+      ],
+      "status": "public_license_evidence",
+      "license": "cc-by-4.0",
+      "basis": "Pinned dataset card or data license declares these terms. This records the upstream declaration, not a legal certification.",
+      "remaining_action": "Retain attribution, license notices and change notices; comply with the declared terms."
+    },
+    {
+      "source_id": "najd-benchmark-v1",
+      "rows": 31,
+      "source_url": "https://huggingface.co/datasets/najdresearch/najd-legacy-31",
+      "historical_license": "other",
+      "historical_basis": "permission-on-file",
+      "purpose": "Arabic and Saudi AI evaluation research",
+      "evidence": [],
+      "status": "owner_authorized_release",
+      "basis": "Owner explicitly authorized publication of the selected legacy subset.",
+      "remaining_action": "Original case authoring history remains unavailable."
+    },
+    {
+      "source_id": "paired-msa-saudi-tool-use",
+      "rows": 150,
+      "source_url": "https://github.com/aalsaedi/paired-msa-saudi-tool-use-dataset",
+      "historical_license": "cc-by-4.0",
+      "historical_basis": "permission-on-file",
+      "purpose": "Arabic and Saudi AI evaluation research",
+      "evidence": [
+        {
+          "file": "README.md",
+          "url": "https://raw.githubusercontent.com/aalsaedi/paired-msa-saudi-tool-use-dataset/ba360380c1ca1dacb48b12c20c130385ef20650a/README.md",
+          "sha256": "f2b65e54c7372d212e219e5beab60166ad98a093e6440e039b77f169dcc9f218"
+        },
+        {
+          "file": "LICENSE.md",
+          "url": "https://raw.githubusercontent.com/aalsaedi/paired-msa-saudi-tool-use-dataset/ba360380c1ca1dacb48b12c20c130385ef20650a/LICENSE.md",
+          "sha256": "f6a1f27158865a3f3a93c61aac044e720b990d126bfe3dd0cbca16be13737b60"
+        }
+      ],
+      "checked_paths": [
+        {
+          "file": "README.md",
+          "result": "retrieved"
+        },
+        {
+          "file": "LICENSE",
+          "result": "HTTP Error 404: Not Found"
+        },
+        {
+          "file": "LICENSE.md",
+          "result": "retrieved"
+        },
+        {
+          "file": "LICENSE.txt",
+          "result": "HTTP Error 404: Not Found"
+        }
+      ],
+      "status": "public_license_evidence",
+      "license": "cc-by-4.0",
+      "basis": "Pinned dataset card or data license declares these terms. This records the upstream declaration, not a legal certification.",
+      "remaining_action": "Retain attribution, license notices and change notices; comply with the declared terms."
+    },
+    {
+      "source_id": "pico-saudi-v0.01",
+      "rows": 55,
+      "source_url": "https://github.com/mznmel/Pico-Saudi-LLMs-Benchmark",
+      "historical_license": "mit",
+      "historical_basis": "permission-on-file",
+      "purpose": "Arabic and Saudi AI evaluation research",
+      "evidence": [
+        {
+          "file": "README.md",
+          "url": "https://raw.githubusercontent.com/mznmel/Pico-Saudi-LLMs-Benchmark/6117a74aa757ddee27cd72c20aa428cf7e8e6b1b/README.md",
+          "sha256": "a6e39bb52a935c77770182eeba3dc957f997a9b749870ebc16bd0304b7cd4a5b"
+        },
+        {
+          "file": "LICENSE",
+          "url": "https://raw.githubusercontent.com/mznmel/Pico-Saudi-LLMs-Benchmark/6117a74aa757ddee27cd72c20aa428cf7e8e6b1b/LICENSE",
+          "sha256": "60ec270890613074ab752281c53a5fdc4c14d49f59e677cebee83dd76310529e"
+        }
+      ],
+      "checked_paths": [
+        {
+          "file": "README.md",
+          "result": "retrieved"
+        },
+        {
+          "file": "LICENSE",
+          "result": "retrieved"
+        },
+        {
+          "file": "LICENSE.md",
+          "result": "HTTP Error 404: Not Found"
+        },
+        {
+          "file": "LICENSE.txt",
+          "result": "HTTP Error 404: Not Found"
+        }
+      ],
+      "status": "public_license_evidence",
+      "license": "mit",
+      "basis": "Pinned dataset card or data license declares these terms. This records the upstream declaration, not a legal certification.",
+      "remaining_action": "Retain attribution, license notices and change notices; comply with the declared terms."
+    },
+    {
+      "source_id": "QCRI/IslamicFaithQA",
+      "rows": 476,
+      "source_url": "https://huggingface.co/datasets/QCRI/IslamicFaithQA",
+      "historical_license": "apache-2.0",
+      "historical_basis": "upstream-license",
+      "purpose": "Arabic and Saudi AI evaluation research",
+      "evidence": [
+        {
+          "file": "README.md",
+          "url": "https://huggingface.co/datasets/QCRI/IslamicFaithQA/raw/a525f5d47a04f9290e6aecaf34668c23a4431d63/README.md",
+          "sha256": "413e47d316be1bf1c1f16ed8cafd2d2c96b57ca6ad3c33ede934b428daaf6b20"
+        }
+      ],
+      "checked_paths": [
+        {
+          "file": "README.md",
+          "result": "retrieved"
+        },
+        {
+          "file": "LICENSE",
+          "result": "HTTP Error 404: Not Found"
+        },
+        {
+          "file": "LICENSE.md",
+          "result": "HTTP Error 404: Not Found"
+        },
+        {
+          "file": "LICENSE.txt",
+          "result": "HTTP Error 404: Not Found"
+        }
+      ],
+      "status": "public_license_evidence",
+      "license": "apache-2.0",
+      "basis": "Pinned dataset card or data license declares these terms. This records the upstream declaration, not a legal certification.",
+      "remaining_action": "Retain attribution, license notices and change notices; comply with the declared terms."
+    },
+    {
+      "source_id": "qusama-riddles",
+      "rows": 96,
+      "source_url": "https://qusama1.yoo7.com/t304-100-%D9%84%D8%BA%D8%B2-%D9%85%D8%B9-%D8%A7%D9%84%D8%AD%D9%84-%D9%87%D9%88%D9%88%D9%88%D9%88%D9%88%D9%88%D9%88%D9%88%D9%88%D8%B9",
+      "historical_license": "not-declared",
+      "historical_basis": "permission-on-file",
+      "purpose": "Arabic and Saudi AI evaluation research",
+      "evidence": [],
+      "status": "owner_attested_permission",
+      "basis": "Owner confirmed public redistribution permission on 2026-09-27 with source attribution required.",
+      "remaining_action": "Retain underlying permission documentation; this entry records owner attestation only."
+    },
+    {
+      "source_id": "sayidaty-children-riddles",
+      "rows": 1,
+      "source_url": "https://www.sayidaty.net/%D8%B3%D9%8A%D8%AF%D8%AA%D9%8A-%D9%88%D8%B7%D9%81%D9%84%D9%83/%D8%A3%D8%B7%D9%81%D8%A7%D9%84-%D9%88%D9%85%D8%B1%D8%A7%D9%87%D9%82%D9%88%D9%86/1814996-%D8%A3%D9%84%D8%BA%D8%A7%D8%B2-%D9%84%D9%84%D8%A3%D8%B7%D9%81%D8%A7%D9%84-%D9%88%D8%A7%D9%84%D8%AD%D9%84",
+      "historical_license": "not-declared",
+      "historical_basis": "permission-on-file",
+      "purpose": "Arabic and Saudi AI evaluation research",
+      "evidence": [],
+      "status": "owner_attested_permission",
+      "basis": "Owner confirmed public redistribution permission on 2026-09-27 with source attribution required.",
+      "remaining_action": "Retain underlying permission documentation; this entry records owner attestation only."
+    },
+    {
+      "source_id": "twinkl-arabic-riddles",
+      "rows": 50,
+      "source_url": "https://www.twinkl.com/blog/arabic-riddles-with-answers-more-than-50",
+      "historical_license": "not-declared",
+      "historical_basis": "permission-on-file",
+      "purpose": "Arabic and Saudi AI evaluation research",
+      "evidence": [],
+      "status": "owner_attested_permission",
+      "basis": "Owner confirmed public redistribution permission on 2026-09-27 with source attribution required.",
+      "remaining_action": "Retain underlying permission documentation; this entry records owner attestation only."
+    },
+    {
+      "source_id": "twinkl-islamic-questions",
+      "rows": 24,
+      "source_url": "https://www.twinkl.com/blog/180-islamic-questions-for-competition",
+      "historical_license": "not-declared",
+      "historical_basis": "permission-on-file",
+      "purpose": "Arabic and Saudi AI evaluation research",
+      "evidence": [],
+      "status": "owner_attested_permission",
+      "basis": "Owner confirmed public redistribution permission on 2026-09-27 with source attribution required.",
+      "remaining_action": "Retain underlying permission documentation; this entry records owner attestation only."
+    }
+  ]
+}
