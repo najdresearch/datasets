@@ -1,0 +1,112 @@
+{
+  "target_repo": "najdresearch/system-one",
+  "publication_authorized": true,
+  "authorization": "User requested public HF publication and selected CC BY 4.0 for original data",
+  "semantic_review": "User provisionally accepted; independent review pending",
+  "packs": {
+    "controlled-development": {
+      "status": "cleared",
+      "license": "CC-BY-4.0",
+      "basis": "Author explicitly authorized CC BY 4.0 and public draft in this conversation",
+      "source": "Najd Research original synthetic cases",
+      "privacy_review": "Agent scope/provenance review and contact/credential/path scan; no employer or private source inputs; zero contact/credential/path flags in this subset",
+      "reviewer": "Codex (automated release review; not independent semantic review)"
+    },
+    "controlled-validation": {
+      "status": "cleared",
+      "license": "CC-BY-4.0",
+      "basis": "Author explicitly authorized CC BY 4.0 and public draft in this conversation",
+      "source": "Najd Research original synthetic cases",
+      "privacy_review": "Agent scope/provenance review and contact/credential/path scan; no employer or private source inputs; zero contact/credential/path flags in this subset",
+      "reviewer": "Codex (automated release review; not independent semantic review)"
+    },
+    "controlled-reserved_evaluation": {
+      "status": "cleared",
+      "license": "CC-BY-4.0",
+      "basis": "Author explicitly authorized CC BY 4.0 and public draft in this conversation",
+      "source": "Najd Research original synthetic cases",
+      "privacy_review": "Agent scope/provenance review and contact/credential/path scan; no employer or private source inputs; zero contact/credential/path flags in this subset",
+      "reviewer": "Codex (automated release review; not independent semantic review)"
+    },
+    "natural-development": {
+      "status": "cleared",
+      "license": "CC-BY-4.0",
+      "basis": "Author explicitly authorized CC BY 4.0 and public draft in this conversation",
+      "source": "Najd Research original synthetic cases",
+      "privacy_review": "Agent scope/provenance review and contact/credential/path scan; no employer or private source inputs; zero contact/credential/path flags in this subset",
+      "reviewer": "Codex (automated release review; not independent semantic review)"
+    },
+    "references/arbanking77": {
+      "status": "cleared",
+      "license": "CC-BY-SA-4.0",
+      "basis": "Upstream public license and attribution; retain subset license and row provenance",
+      "source": "https://raw.githubusercontent.com/SinaLab/ArBanking77/2e3a5639e254bc28828ed0af6d3059d64d3b97fc/data/Banking77_full_corpus.csv",
+      "privacy_review": "Agent scope/provenance review and contact/credential/path scan; no employer or private source inputs; zero contact/credential/path flags in this subset",
+      "reviewer": "Codex (automated release review; not independent semantic review)"
+    },
+    "references/massive": {
+      "status": "cleared",
+      "license": "CC-BY-4.0",
+      "basis": "Upstream public license and attribution; retain subset license and row provenance",
+      "source": "https://huggingface.co/datasets/AmazonScience/massive/resolve/ed58ac423a2f4121720918bf5301577edce4ffd3/en-US/test/0000.parquet",
+      "privacy_review": "Agent scope/provenance review and contact/credential/path scan; no employer or private source inputs; zero contact/credential/path flags in this subset",
+      "reviewer": "Codex (automated release review; not independent semantic review)"
+    },
+    "references/paired-tool-use": {
+      "status": "cleared",
+      "license": "CC-BY-4.0",
+      "basis": "Upstream public license and attribution; retain subset license and row provenance",
+      "source": "https://github.com/aalsaedi/paired-msa-saudi-tool-use-dataset",
+      "privacy_review": "Agent scope/provenance review and contact/credential/path scan; no employer or private source inputs; zero contact/credential/path flags in this subset",
+      "reviewer": "Codex (automated release review; not independent semantic review)"
+    },
+    "references/arabic-function-calling": {
+      "status": "cleared",
+      "license": "Apache-2.0",
+      "basis": "Upstream public license and attribution; retain subset license and row provenance",
+      "source": "https://huggingface.co/datasets/AISA-Framework/AISA-AR-FunctionCall/resolve/d4bc97b387f50929e55a50fa87be06165a33cd05/data/test-00000-of-00001.parquet",
+      "privacy_review": "Agent scope/provenance review and contact/credential/path scan; no employer or private source inputs; zero contact/credential/path flags in this subset",
+      "reviewer": "Codex (automated release review; not independent semantic review)"
+    },
+    "references/agent-diagnostic": {
+      "status": "cleared",
+      "license": "CC-BY-4.0",
+      "basis": "Upstream public license and attribution; retain subset license and row provenance",
+      "source": "https://github.com/Moshe-ship/arabic-agent-eval",
+      "privacy_review": "Agent scope/provenance review and contact/credential/path scan; no employer or private source inputs; zero contact/credential/path flags in this subset",
+      "reviewer": "Codex (automated release review; not independent semantic review)"
+    },
+    "references/absher-diagnostic": {
+      "status": "cleared",
+      "license": "CC-BY-4.0",
+      "basis": "Upstream public license and attribution; retain subset license and row provenance",
+      "source": "https://huggingface.co/datasets/Renad10/Absher-Benchmark",
+      "privacy_review": "Agent scope/provenance review and contact/credential/path scan; no employer or private source inputs; zero contact/credential/path flags in this subset",
+      "reviewer": "Codex (automated release review; not independent semantic review)"
+    },
+    "references/aratrust-diagnostic": {
+      "status": "cleared",
+      "license": "MIT",
+      "basis": "Upstream public license and attribution; retain subset license and row provenance",
+      "source": "https://huggingface.co/datasets/EmanAmeen/AraTrust",
+      "privacy_review": "Agent scope/provenance review and contact/credential/path scan; no employer or private source inputs; zero contact/credential/path flags in this subset",
+      "reviewer": "Codex (automated release review; not independent semantic review)"
+    }
+  },
+  "excluded": {
+    "references/fast-decisions": "114 contact-pattern flags; hold redistribution pending privacy review. Original public source and pinned recipe remain available; no silent redaction."
+  },
+  "rights_evidence_sha256": {
+    "massive-notice.txt": "db1466b051afd1d9ad34b7bd6346a1857f568a0c5f6534168813b4ad3c26013e",
+    "paired-license.txt": "f6a1f27158865a3f3a93c61aac044e720b990d126bfe3dd0cbca16be13737b60",
+    "massive-license.txt": "a601496ab5359ce7ea3dacbb0652f07d7f5700081cb47e2da3fc3d1bff6393d7",
+    "upstream-function-card.txt": "915172c3f346188ee872a88473bdb001214f9aefe66f5c32a6cb01d10ef302eb",
+    "agent-license.txt": "224673ce33e099809b2b306bec4a3f439466eb1ae02da839cbbd1098da331831",
+    "aisa.md": "22af0e204763460694c49aca640c2092c203870bc2d9fc88e5cb1089fb3fcb8c",
+    "arbanking-license.txt": "2c9f00c84d0681f06ce5ccb0dfbccea531e3850f0f14a99561feb316f4a0fdff",
+    "massive-card.txt": "431e25247129a2ae3dc50ffe4dbb2ed01e30b632b9326511795ebee32cbb068b",
+    "absher.md": "6b6dd0cf96ea0b5dcf4001f2a12004448f1fc2a97e8933e02352797becd57acc",
+    "aratrust.md": "37080761e4fa92b8fa8943d4f5f29c73d907aceba1b7645e3b8b0a6dcc40ae3d",
+    "fast-decisions.md": "8d5e0598246cb41714732c10f9d040f0e851cd01ae045e53d13b1f52c03e52d3"
+  }
+}

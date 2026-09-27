@@ -1,0 +1,46 @@
+{
+  "status": "structural_inspection_not_semantic_review",
+  "paired": {
+    "revision": "ba360380c1ca1dacb48b12c20c130385ef20650a",
+    "sha256_verified": true,
+    "rows": 150,
+    "pairs": 75,
+    "expected_conflicts": [],
+    "split": [
+      "test"
+    ],
+    "tools": {
+      "url": "https://raw.githubusercontent.com/aalsaedi/paired-msa-saudi-tool-use-dataset/ba360380c1ca1dacb48b12c20c130385ef20650a/data/releases/heldout-v1.0.3/tools.yaml",
+      "sha256": "e42dfad4d6d29217b900b7c96927ec47a3720b8d7072badbf4ccdfbd13253677"
+    }
+  },
+  "arbanking77": {
+    "revision": "2e3a5639e254bc28828ed0af6d3059d64d3b97fc",
+    "url": "https://raw.githubusercontent.com/SinaLab/ArBanking77/2e3a5639e254bc28828ed0af6d3059d64d3b97fc/data/Banking77_full_corpus.csv",
+    "sha256": "38863ae4093840f2418d76613d0c2134295fc78f1116361fa9ff00680b1309c1",
+    "rows": 13083,
+    "columns": [
+      "Intent_ID",
+      "Intent_en",
+      "Intent_ar",
+      "QID",
+      "Question_en",
+      "QuestionID_MSA1",
+      "Question_MSA1",
+      "QuestionID_MSA2",
+      "Question_MSA2",
+      "QuestionID_PAL1",
+      "Question_PAL1",
+      "QuestionID_PAL2",
+      "Question_PAL2"
+    ],
+    "saudi_rows": 3580,
+    "saudi_columns": [
+      "label",
+      "text"
+    ],
+    "saudi_sha256": "9c01583810f37152a734197c3bf80b6cf9c6d129be25c9e1eac27bc0cd91af74",
+    "alignment": "Saudi file has no row identifiers; EN/MSA/Saudi alignment not established"
+  },
+  "publication_eligible": false
+}

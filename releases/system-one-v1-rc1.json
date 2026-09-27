@@ -1,0 +1,28 @@
+{
+  "release": "system-one-v1-rc1",
+  "status": "local_candidate_complete",
+  "cases": 6884,
+  "publication_eligible": false,
+  "code_sha256": {
+    "src/najd_datasets/system_one_release.py": "1287f772c1aa1b3566545921cc5cb538e6a4116e1bd4c7c6c2d0e4be42c02dd5",
+    "src/najd_datasets/system_one_references.py": "a455e8048d726b3aa7019fc77844b8198ea49a9cb897137f19c94f0233fa40d5",
+    "src/najd_datasets/system_one_audit.py": "e8f4841af01cae5958aabc2a7a34e48f98bbb417e1a238790c089bd2724f3aa2",
+    "src/najd_datasets/saudi_decisions.py": "e80dc49a5cf2e04e6a4bce887d15cf3c2eeacea894a45cd90c3d08fabc039889",
+    "src/najd_datasets/decision_sources.py": "81ceab61b128b2508a32e548b7e752fe4e1e2a4e44240dc862f253ff2a0430bc"
+  },
+  "suite_sha256": "f4643b4bff05957ee2eb71267df7a27fd12c250204d8a43f4cab4a3d33cb4b49",
+  "pack_hashes": {
+    "controlled-development": "c2bfa02ef5ba96fa8b802ca5a772dcadb4800aeebdc44edb4769fd18bb44539d",
+    "controlled-validation": "4c21cac03112ffde8c7c50338171f4f3e1fba11cd244cf1fffbc67fa0c8a8f55",
+    "controlled-reserved_evaluation": "b5c4a698ce55ad37585c18cca9821a862ed9f6514234e7b3cffc36c3ebc87be3",
+    "natural-development": "ef2e33576f5ac6ebce22cc57722809ad4444b67122ab0c523728c1455989fbb1",
+    "references/fast-decisions": "f5e1e031c5a96cf142ae195f5b86a121fba3e2e156afa587f87803ed9ad02e08",
+    "references/arbanking77": "721d5c272d18562b65ab73704f678c322b100bead6ed6b9e3319f3b9359447a9",
+    "references/massive": "bcb7707c448e70c80ccad29f88fb9196002eb6020e5f9d2bd843d538f08dddcc",
+    "references/paired-tool-use": "b8727af6f0c7345470c344802b1da6408c8faf62c1b4019ba225cf3cd7e41aff",
+    "references/arabic-function-calling": "46fa917d3bf550872cb7ff875b2b6ec6d19328c61f47b6915ed678744ed4d593",
+    "references/agent-diagnostic": "78aa0150557e72c723e4526b7c35b7e455f268fefa4340e42de7b8edbd713fcd",
+    "references/absher-diagnostic": "8643b41eb6fe1d66877f0e632df6ac9914de9e2de5270410ba0c3acc86c98a66",
+    "references/aratrust-diagnostic": "fa01b198b2cf4f9c24b17d668b0de805faa43ab53fcf43a4366ae15835f525b8"
+  }
+}

@@ -1,0 +1,157 @@
+{
+  "id": "system-one-saudi-v0.2",
+  "status": "local_v1_candidate_complete",
+  "publication_eligible": false,
+  "supersedes_target": "240-family proposal",
+  "original_families": 800,
+  "variants": [
+    "en",
+    "ar-MSA",
+    "ar-SA"
+  ],
+  "base_cases": 2400,
+  "split_unit": "scenario_and_template_lineage_group",
+  "split_targets_per_domain": {
+    "development": 25,
+    "validation": 25,
+    "sealed_evaluation": 50
+  },
+  "domains": [
+    "government_service_routing",
+    "government_complaints",
+    "application_prerequisites",
+    "banking_payments",
+    "telecom_utilities_logistics",
+    "enterprise_hr_it",
+    "procurement_invoices",
+    "tool_and_text_ui_actions"
+  ],
+  "sources": [
+    {
+      "id": "paired-msa-saudi-tool-use",
+      "lane": "public_reference",
+      "existing_manifest": "sources/paired-msa-saudi-tool-use.json",
+      "status": "requires_decision_mapping_and_semantic_review",
+      "publication_eligible": false
+    },
+    {
+      "id": "arabic-agent-eval",
+      "lane": "public_reference",
+      "existing_manifest": "sources/arabic-agent-eval.json",
+      "status": "requires_decision_mapping_and_semantic_review",
+      "publication_eligible": false
+    },
+    {
+      "id": "arabic-function-calling",
+      "lane": "public_reference",
+      "existing_manifest": "sources/arabic-function-calling.json",
+      "status": "requires_decision_mapping_and_semantic_review",
+      "publication_eligible": false
+    },
+    {
+      "id": "arabicragb",
+      "lane": "public_reference",
+      "existing_manifest": "sources/arabicragb.json",
+      "status": "requires_decision_mapping_and_semantic_review",
+      "publication_eligible": false
+    },
+    {
+      "id": "absher",
+      "lane": "diagnostic",
+      "existing_manifest": "sources/absher.json",
+      "status": "requires_decision_mapping_and_semantic_review",
+      "publication_eligible": false
+    },
+    {
+      "id": "aratrust",
+      "lane": "diagnostic",
+      "existing_manifest": "sources/aratrust.json",
+      "status": "requires_decision_mapping_and_semantic_review",
+      "publication_eligible": false
+    },
+    {
+      "id": "arasafe",
+      "lane": "diagnostic",
+      "existing_manifest": "sources/arasafe.json",
+      "status": "requires_decision_mapping_and_semantic_review",
+      "publication_eligible": false
+    },
+    {
+      "id": "fast-decisions",
+      "url": "https://huggingface.co/datasets/fastino/fast-decisions",
+      "declared_license": "apache-2.0",
+      "status": "pin_and_audit",
+      "lane": "public_reference",
+      "publication_eligible": false
+    },
+    {
+      "id": "arbanking77",
+      "url": "https://github.com/SinaLab/ArBanking77",
+      "declared_license": "cc-by-sa-4.0",
+      "status": "pin_and_audit",
+      "lane": "public_reference",
+      "publication_eligible": false
+    },
+    {
+      "id": "massive",
+      "url": "https://huggingface.co/datasets/AmazonScience/massive",
+      "declared_license": "cc-by-4.0",
+      "status": "pin_and_audit",
+      "lane": "public_reference",
+      "publication_eligible": false
+    },
+    {
+      "id": "arabfuncbench",
+      "url": "https://huggingface.co/datasets/lsadouk1111/ArabFuncBench",
+      "declared_license": "cc-by-4.0",
+      "status": "gated_access_pending",
+      "lane": "public_reference",
+      "publication_eligible": false
+    },
+    {
+      "id": "aisa-ar-functioncall",
+      "url": "https://huggingface.co/datasets/AISA-Framework/AISA-AR-FunctionCall",
+      "declared_license": "apache-2.0",
+      "status": "upstream_overlap_audit",
+      "lane": "public_reference",
+      "publication_eligible": false
+    },
+    {
+      "id": "silma-rag-qa",
+      "url": "https://huggingface.co/datasets/silma-ai/silma-rag-qa-benchmark-v1.0",
+      "declared_license": "apache-2.0",
+      "status": "constituent_rights_and_overlap_audit",
+      "lane": "public_reference",
+      "publication_eligible": false
+    },
+    {
+      "id": "syntha-saudi-support",
+      "url": "https://synthabase.com/en/datasets/saudi-support",
+      "declared_license": "commercial",
+      "status": "inspiration_only_no_import",
+      "lane": "inspiration",
+      "publication_eligible": false
+    }
+  ],
+  "local_execution": "no_model_loading; schema, lineage, rights metadata and mock scoring only",
+  "remote_execution": {
+    "cpu_gpu": "same_server_separate_runs",
+    "concurrency": [
+      1,
+      4,
+      16
+    ],
+    "hosted": "separate_latency_lane_same_client"
+  },
+  "gates": [
+    "source_revision_and_rights",
+    "cross_source_deduplication",
+    "independent_bilingual_review",
+    "family_disjoint_splits",
+    "sealed_evaluation_outside_public_repo",
+    "frozen_protocol_before_evaluation"
+  ],
+  "built_release": "system-one-v1-rc1",
+  "actual_cases": 6884,
+  "holdout_status": "controlled policy-group-disjoint reserve; shared logical template, not sealed"
+}

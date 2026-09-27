@@ -1,0 +1,2322 @@
+[
+  {
+    "id": "government_service_routing-shop-permit",
+    "domain": "government_service_routing",
+    "title": {
+      "en": "Shop permit desk",
+      "ar": "مكتب تصاريح المحلات"
+    },
+    "decision": {
+      "en": "Route the request to this service",
+      "ar": "توجيه الطلب إلى هذه الخدمة"
+    },
+    "predicates": {
+      "a": {
+        "en": "Commercial activity declared",
+        "ar": "النشاط التجاري محدد"
+      },
+      "b": {
+        "en": "Premises address supplied",
+        "ar": "عنوان الموقع متوفر"
+      },
+      "c": {
+        "en": "Location within service area",
+        "ar": "الموقع ضمن نطاق الخدمة"
+      }
+    },
+    "output_type": "noul",
+    "rule": "all_required",
+    "domain_index": 0
+  },
+  {
+    "id": "government_service_routing-street-light",
+    "domain": "government_service_routing",
+    "title": {
+      "en": "Street lighting desk",
+      "ar": "مكتب إنارة الشوارع"
+    },
+    "decision": {
+      "en": "Route the request to this service",
+      "ar": "توجيه الطلب إلى هذه الخدمة"
+    },
+    "predicates": {
+      "a": {
+        "en": "Public street asset",
+        "ar": "المرفق في شارع عام"
+      },
+      "b": {
+        "en": "Fault location supplied",
+        "ar": "موقع العطل متوفر"
+      },
+      "c": {
+        "en": "Maintenance responsibility confirmed",
+        "ar": "مسؤولية الصيانة مؤكدة"
+      }
+    },
+    "output_type": "choice",
+    "rule": "all_required",
+    "domain_index": 1
+  },
+  {
+    "id": "government_service_routing-waste-pickup",
+    "domain": "government_service_routing",
+    "title": {
+      "en": "Waste pickup desk",
+      "ar": "مكتب جمع النفايات"
+    },
+    "decision": {
+      "en": "Route the request to this service",
+      "ar": "توجيه الطلب إلى هذه الخدمة"
+    },
+    "predicates": {
+      "a": {
+        "en": "Municipal waste category",
+        "ar": "نوع النفايات بلدي"
+      },
+      "b": {
+        "en": "Pickup location supplied",
+        "ar": "موقع الجمع متوفر"
+      },
+      "c": {
+        "en": "Access route available",
+        "ar": "مسار الوصول متاح"
+      }
+    },
+    "output_type": "score",
+    "rule": "all_required",
+    "domain_index": 2
+  },
+  {
+    "id": "government_service_routing-building-inspection",
+    "domain": "government_service_routing",
+    "title": {
+      "en": "Building inspection desk",
+      "ar": "مكتب فحص المباني"
+    },
+    "decision": {
+      "en": "Route the request to this service",
+      "ar": "توجيه الطلب إلى هذه الخدمة"
+    },
+    "predicates": {
+      "a": {
+        "en": "Inspection type specified",
+        "ar": "نوع الفحص محدد"
+      },
+      "b": {
+        "en": "Building reference supplied",
+        "ar": "مرجع المبنى متوفر"
+      },
+      "c": {
+        "en": "Owner consent recorded",
+        "ar": "موافقة المالك مسجلة"
+      }
+    },
+    "output_type": "noul",
+    "rule": "all_required",
+    "domain_index": 3
+  },
+  {
+    "id": "government_service_routing-public-park",
+    "domain": "government_service_routing",
+    "title": {
+      "en": "Public park booking desk",
+      "ar": "مكتب حجز الحدائق العامة"
+    },
+    "decision": {
+      "en": "Route the request to this service",
+      "ar": "توجيه الطلب إلى هذه الخدمة"
+    },
+    "predicates": {
+      "a": {
+        "en": "Public event declared",
+        "ar": "الفعالية العامة معلنة"
+      },
+      "b": {
+        "en": "Park identifier supplied",
+        "ar": "معرف الحديقة متوفر"
+      },
+      "c": {
+        "en": "Capacity check passed",
+        "ar": "فحص السعة ناجح"
+      }
+    },
+    "output_type": "choice",
+    "rule": "all_required",
+    "domain_index": 4
+  },
+  {
+    "id": "government_service_routing-road-work",
+    "domain": "government_service_routing",
+    "title": {
+      "en": "Road works desk",
+      "ar": "مكتب أعمال الطرق"
+    },
+    "decision": {
+      "en": "Route the request to this service",
+      "ar": "توجيه الطلب إلى هذه الخدمة"
+    },
+    "predicates": {
+      "a": {
+        "en": "Work description supplied",
+        "ar": "وصف العمل متوفر"
+      },
+      "b": {
+        "en": "Road segment identified",
+        "ar": "مقطع الطريق محدد"
+      },
+      "c": {
+        "en": "Road under this jurisdiction",
+        "ar": "الطريق ضمن الاختصاص"
+      }
+    },
+    "output_type": "score",
+    "rule": "all_required",
+    "domain_index": 5
+  },
+  {
+    "id": "government_service_routing-signage",
+    "domain": "government_service_routing",
+    "title": {
+      "en": "Signage desk",
+      "ar": "مكتب اللوحات"
+    },
+    "decision": {
+      "en": "Route the request to this service",
+      "ar": "توجيه الطلب إلى هذه الخدمة"
+    },
+    "predicates": {
+      "a": {
+        "en": "Sign dimensions supplied",
+        "ar": "أبعاد اللوحة متوفرة"
+      },
+      "b": {
+        "en": "Installation site supplied",
+        "ar": "موقع التركيب متوفر"
+      },
+      "c": {
+        "en": "Required owner consent recorded",
+        "ar": "موافقة المالك المطلوبة مسجلة"
+      }
+    },
+    "output_type": "noul",
+    "rule": "all_required",
+    "domain_index": 6
+  },
+  {
+    "id": "government_service_routing-water-report",
+    "domain": "government_service_routing",
+    "title": {
+      "en": "Water network reports",
+      "ar": "بلاغات شبكة المياه"
+    },
+    "decision": {
+      "en": "Route the request to this service",
+      "ar": "توجيه الطلب إلى هذه الخدمة"
+    },
+    "predicates": {
+      "a": {
+        "en": "Network asset identified",
+        "ar": "عنصر الشبكة محدد"
+      },
+      "b": {
+        "en": "Location supplied",
+        "ar": "الموقع متوفر"
+      },
+      "c": {
+        "en": "This operator owns the asset",
+        "ar": "المشغل يملك العنصر"
+      }
+    },
+    "output_type": "choice",
+    "rule": "all_required",
+    "domain_index": 7
+  },
+  {
+    "id": "government_service_routing-records-copy",
+    "domain": "government_service_routing",
+    "title": {
+      "en": "Records copy desk",
+      "ar": "مكتب نسخ السجلات"
+    },
+    "decision": {
+      "en": "Route the request to this service",
+      "ar": "توجيه الطلب إلى هذه الخدمة"
+    },
+    "predicates": {
+      "a": {
+        "en": "Record identifier supplied",
+        "ar": "معرف السجل متوفر"
+      },
+      "b": {
+        "en": "Requester identity verified",
+        "ar": "هوية مقدم الطلب موثقة"
+      },
+      "c": {
+        "en": "Access entitlement established",
+        "ar": "استحقاق الوصول مثبت"
+      }
+    },
+    "output_type": "score",
+    "rule": "all_required",
+    "domain_index": 8
+  },
+  {
+    "id": "government_service_routing-appointment",
+    "domain": "government_service_routing",
+    "title": {
+      "en": "Service appointment desk",
+      "ar": "مكتب مواعيد الخدمة"
+    },
+    "decision": {
+      "en": "Route the request to this service",
+      "ar": "توجيه الطلب إلى هذه الخدمة"
+    },
+    "predicates": {
+      "a": {
+        "en": "Service type selected",
+        "ar": "نوع الخدمة مختار"
+      },
+      "b": {
+        "en": "Branch selected",
+        "ar": "الفرع مختار"
+      },
+      "c": {
+        "en": "Appointment slot available",
+        "ar": "الموعد متاح"
+      }
+    },
+    "output_type": "noul",
+    "rule": "all_required",
+    "domain_index": 9
+  },
+  {
+    "id": "government_complaints-delay",
+    "domain": "government_complaints",
+    "title": {
+      "en": "Delayed service complaint",
+      "ar": "شكوى تأخر الخدمة"
+    },
+    "decision": {
+      "en": "Escalate the complaint",
+      "ar": "تصعيد الشكوى"
+    },
+    "predicates": {
+      "a": {
+        "en": "Existing complaint found",
+        "ar": "الشكوى القائمة موجودة"
+      },
+      "b": {
+        "en": "Service deadline exceeded",
+        "ar": "مهلة الخدمة متجاوزة"
+      },
+      "c": {
+        "en": "Complaint unresolved",
+        "ar": "الشكوى غير محلولة"
+      }
+    },
+    "output_type": "noul",
+    "rule": "all_required",
+    "domain_index": 0
+  },
+  {
+    "id": "government_complaints-closure",
+    "domain": "government_complaints",
+    "title": {
+      "en": "Disputed complaint closure",
+      "ar": "اعتراض إغلاق الشكوى"
+    },
+    "decision": {
+      "en": "Escalate the complaint",
+      "ar": "تصعيد الشكوى"
+    },
+    "predicates": {
+      "a": {
+        "en": "Closure identifier supplied",
+        "ar": "معرف الإغلاق متوفر"
+      },
+      "b": {
+        "en": "New evidence supplied",
+        "ar": "دليل جديد متوفر"
+      },
+      "c": {
+        "en": "Reopening window valid",
+        "ar": "مهلة إعادة الفتح سارية"
+      }
+    },
+    "output_type": "choice",
+    "rule": "all_required",
+    "domain_index": 1
+  },
+  {
+    "id": "government_complaints-misroute",
+    "domain": "government_complaints",
+    "title": {
+      "en": "Misrouted complaint",
+      "ar": "شكوى محالة بالخطأ"
+    },
+    "decision": {
+      "en": "Escalate the complaint",
+      "ar": "تصعيد الشكوى"
+    },
+    "predicates": {
+      "a": {
+        "en": "Previous referral recorded",
+        "ar": "الإحالة السابقة مسجلة"
+      },
+      "b": {
+        "en": "Wrong destination confirmed",
+        "ar": "خطأ الجهة مؤكد"
+      },
+      "c": {
+        "en": "Correct destination known",
+        "ar": "الجهة الصحيحة معروفة"
+      }
+    },
+    "output_type": "score",
+    "rule": "all_required",
+    "domain_index": 2
+  },
+  {
+    "id": "government_complaints-duplicate",
+    "domain": "government_complaints",
+    "title": {
+      "en": "Duplicate complaint consolidation",
+      "ar": "دمج الشكاوى المكررة"
+    },
+    "decision": {
+      "en": "Escalate the complaint",
+      "ar": "تصعيد الشكوى"
+    },
+    "predicates": {
+      "a": {
+        "en": "Same incident established",
+        "ar": "تطابق الواقعة مثبت"
+      },
+      "b": {
+        "en": "Same requester verified",
+        "ar": "تطابق مقدم الطلب موثق"
+      },
+      "c": {
+        "en": "Consent to merge recorded",
+        "ar": "موافقة الدمج مسجلة"
+      }
+    },
+    "output_type": "noul",
+    "rule": "all_required",
+    "domain_index": 3
+  },
+  {
+    "id": "government_complaints-accessibility",
+    "domain": "government_complaints",
+    "title": {
+      "en": "Accessibility barrier complaint",
+      "ar": "شكوى عائق إمكانية الوصول"
+    },
+    "decision": {
+      "en": "Escalate the complaint",
+      "ar": "تصعيد الشكوى"
+    },
+    "predicates": {
+      "a": {
+        "en": "Barrier description supplied",
+        "ar": "وصف العائق متوفر"
+      },
+      "b": {
+        "en": "Affected service identified",
+        "ar": "الخدمة المتأثرة محددة"
+      },
+      "c": {
+        "en": "Barrier remains unresolved",
+        "ar": "العائق لم يحل"
+      }
+    },
+    "output_type": "choice",
+    "rule": "all_required",
+    "domain_index": 4
+  },
+  {
+    "id": "government_complaints-billing",
+    "domain": "government_complaints",
+    "title": {
+      "en": "Government service billing complaint",
+      "ar": "شكوى فاتورة خدمة حكومية"
+    },
+    "decision": {
+      "en": "Escalate the complaint",
+      "ar": "تصعيد الشكوى"
+    },
+    "predicates": {
+      "a": {
+        "en": "Invoice reference supplied",
+        "ar": "مرجع الفاتورة متوفر"
+      },
+      "b": {
+        "en": "Payment evidence supplied",
+        "ar": "دليل الدفع متوفر"
+      },
+      "c": {
+        "en": "Mismatch confirmed",
+        "ar": "الاختلاف مؤكد"
+      }
+    },
+    "output_type": "score",
+    "rule": "all_required",
+    "domain_index": 5
+  },
+  {
+    "id": "government_complaints-contractor",
+    "domain": "government_complaints",
+    "title": {
+      "en": "Contractor service complaint",
+      "ar": "شكوى خدمة متعاقد"
+    },
+    "decision": {
+      "en": "Escalate the complaint",
+      "ar": "تصعيد الشكوى"
+    },
+    "predicates": {
+      "a": {
+        "en": "Contract reference supplied",
+        "ar": "مرجع العقد متوفر"
+      },
+      "b": {
+        "en": "Issue within contracted scope",
+        "ar": "المشكلة ضمن نطاق العقد"
+      },
+      "c": {
+        "en": "Remedy deadline exceeded",
+        "ar": "مهلة المعالجة متجاوزة"
+      }
+    },
+    "output_type": "noul",
+    "rule": "all_required",
+    "domain_index": 6
+  },
+  {
+    "id": "government_complaints-privacy",
+    "domain": "government_complaints",
+    "title": {
+      "en": "Records disclosure complaint",
+      "ar": "شكوى إفشاء سجلات"
+    },
+    "decision": {
+      "en": "Escalate the complaint",
+      "ar": "تصعيد الشكوى"
+    },
+    "predicates": {
+      "a": {
+        "en": "Disclosure event identified",
+        "ar": "واقعة الإفشاء محددة"
+      },
+      "b": {
+        "en": "Affected record identified",
+        "ar": "السجل المتأثر محدد"
+      },
+      "c": {
+        "en": "Complaint channel authenticated",
+        "ar": "قناة الشكوى موثقة"
+      }
+    },
+    "output_type": "choice",
+    "rule": "all_required",
+    "domain_index": 7
+  },
+  {
+    "id": "government_complaints-appeal",
+    "domain": "government_complaints",
+    "title": {
+      "en": "Administrative service appeal",
+      "ar": "اعتراض قرار خدمة"
+    },
+    "decision": {
+      "en": "Escalate the complaint",
+      "ar": "تصعيد الشكوى"
+    },
+    "predicates": {
+      "a": {
+        "en": "Decision reference supplied",
+        "ar": "مرجع القرار متوفر"
+      },
+      "b": {
+        "en": "Appeal window valid",
+        "ar": "مهلة الاعتراض سارية"
+      },
+      "c": {
+        "en": "Grounds supplied",
+        "ar": "أسباب الاعتراض متوفرة"
+      }
+    },
+    "output_type": "score",
+    "rule": "all_required",
+    "domain_index": 8
+  },
+  {
+    "id": "government_complaints-feedback",
+    "domain": "government_complaints",
+    "title": {
+      "en": "Unanswered feedback complaint",
+      "ar": "شكوى ملاحظة لم يرد عليها"
+    },
+    "decision": {
+      "en": "Escalate the complaint",
+      "ar": "تصعيد الشكوى"
+    },
+    "predicates": {
+      "a": {
+        "en": "Feedback reference exists",
+        "ar": "مرجع الملاحظة موجود"
+      },
+      "b": {
+        "en": "Reply deadline exceeded",
+        "ar": "مهلة الرد متجاوزة"
+      },
+      "c": {
+        "en": "No reply recorded",
+        "ar": "لا يوجد رد مسجل"
+      }
+    },
+    "output_type": "noul",
+    "rule": "all_required",
+    "domain_index": 9
+  },
+  {
+    "id": "application_prerequisites-renewal",
+    "domain": "application_prerequisites",
+    "title": {
+      "en": "Permit renewal",
+      "ar": "تجديد تصريح"
+    },
+    "decision": {
+      "en": "Accept the application for processing",
+      "ar": "قبول الطلب للمعالجة"
+    },
+    "predicates": {
+      "a": {
+        "en": "Existing permit identified",
+        "ar": "التصريح القائم محدد"
+      },
+      "b": {
+        "en": "Lease valid",
+        "ar": "الإيجار ساري"
+      },
+      "c": {
+        "en": "Renewal window open",
+        "ar": "فترة التجديد مفتوحة"
+      }
+    },
+    "output_type": "noul",
+    "rule": "all_required",
+    "domain_index": 0
+  },
+  {
+    "id": "application_prerequisites-grant",
+    "domain": "application_prerequisites",
+    "title": {
+      "en": "Training grant",
+      "ar": "منحة تدريب"
+    },
+    "decision": {
+      "en": "Accept the application for processing",
+      "ar": "قبول الطلب للمعالجة"
+    },
+    "predicates": {
+      "a": {
+        "en": "Operating period sufficient",
+        "ar": "مدة التشغيل كافية"
+      },
+      "b": {
+        "en": "Required training plan attached",
+        "ar": "خطة التدريب المطلوبة مرفقة"
+      },
+      "c": {
+        "en": "No active duplicate application",
+        "ar": "لا يوجد طلب مكرر نشط"
+      }
+    },
+    "output_type": "choice",
+    "rule": "all_required",
+    "domain_index": 1
+  },
+  {
+    "id": "application_prerequisites-vendor",
+    "domain": "application_prerequisites",
+    "title": {
+      "en": "Vendor registration",
+      "ar": "تسجيل مورد"
+    },
+    "decision": {
+      "en": "Accept the application for processing",
+      "ar": "قبول الطلب للمعالجة"
+    },
+    "predicates": {
+      "a": {
+        "en": "Legal identity verified",
+        "ar": "الهوية القانونية موثقة"
+      },
+      "b": {
+        "en": "Contact record complete",
+        "ar": "بيانات التواصل مكتملة"
+      },
+      "c": {
+        "en": "Required certificate valid",
+        "ar": "الشهادة المطلوبة سارية"
+      }
+    },
+    "output_type": "score",
+    "rule": "all_required",
+    "domain_index": 2
+  },
+  {
+    "id": "application_prerequisites-occupancy",
+    "domain": "application_prerequisites",
+    "title": {
+      "en": "Occupancy application",
+      "ar": "طلب إشغال"
+    },
+    "decision": {
+      "en": "Accept the application for processing",
+      "ar": "قبول الطلب للمعالجة"
+    },
+    "predicates": {
+      "a": {
+        "en": "Inspection passed",
+        "ar": "الفحص ناجح"
+      },
+      "b": {
+        "en": "Building record supplied",
+        "ar": "سجل المبنى متوفر"
+      },
+      "c": {
+        "en": "Required safety approval recorded",
+        "ar": "اعتماد السلامة المطلوب مسجل"
+      }
+    },
+    "output_type": "noul",
+    "rule": "all_required",
+    "domain_index": 3
+  },
+  {
+    "id": "application_prerequisites-event",
+    "domain": "application_prerequisites",
+    "title": {
+      "en": "Event application",
+      "ar": "طلب فعالية"
+    },
+    "decision": {
+      "en": "Accept the application for processing",
+      "ar": "قبول الطلب للمعالجة"
+    },
+    "predicates": {
+      "a": {
+        "en": "Venue permission recorded",
+        "ar": "إذن الموقع مسجل"
+      },
+      "b": {
+        "en": "Event plan attached",
+        "ar": "خطة الفعالية مرفقة"
+      },
+      "c": {
+        "en": "Attendance within capacity",
+        "ar": "الحضور ضمن السعة"
+      }
+    },
+    "output_type": "choice",
+    "rule": "all_required",
+    "domain_index": 4
+  },
+  {
+    "id": "application_prerequisites-address",
+    "domain": "application_prerequisites",
+    "title": {
+      "en": "Address correction",
+      "ar": "تصحيح عنوان"
+    },
+    "decision": {
+      "en": "Accept the application for processing",
+      "ar": "قبول الطلب للمعالجة"
+    },
+    "predicates": {
+      "a": {
+        "en": "Identity verified",
+        "ar": "الهوية موثقة"
+      },
+      "b": {
+        "en": "New address evidence attached",
+        "ar": "إثبات العنوان الجديد مرفق"
+      },
+      "c": {
+        "en": "Affected record found",
+        "ar": "السجل المتأثر موجود"
+      }
+    },
+    "output_type": "score",
+    "rule": "all_required",
+    "domain_index": 5
+  },
+  {
+    "id": "application_prerequisites-transfer",
+    "domain": "application_prerequisites",
+    "title": {
+      "en": "Permit transfer",
+      "ar": "نقل تصريح"
+    },
+    "decision": {
+      "en": "Accept the application for processing",
+      "ar": "قبول الطلب للمعالجة"
+    },
+    "predicates": {
+      "a": {
+        "en": "Current holder consent recorded",
+        "ar": "موافقة الحائز الحالي مسجلة"
+      },
+      "b": {
+        "en": "New holder verified",
+        "ar": "الحائز الجديد موثق"
+      },
+      "c": {
+        "en": "Transferable permit class",
+        "ar": "فئة التصريح قابلة للنقل"
+      }
+    },
+    "output_type": "noul",
+    "rule": "all_required",
+    "domain_index": 6
+  },
+  {
+    "id": "application_prerequisites-subsidy",
+    "domain": "application_prerequisites",
+    "title": {
+      "en": "Equipment support",
+      "ar": "دعم معدات"
+    },
+    "decision": {
+      "en": "Accept the application for processing",
+      "ar": "قبول الطلب للمعالجة"
+    },
+    "predicates": {
+      "a": {
+        "en": "Equipment category eligible",
+        "ar": "فئة المعدات مؤهلة"
+      },
+      "b": {
+        "en": "Quote supplied",
+        "ar": "عرض السعر متوفر"
+      },
+      "c": {
+        "en": "Funding window open",
+        "ar": "فترة التمويل مفتوحة"
+      }
+    },
+    "output_type": "choice",
+    "rule": "all_required",
+    "domain_index": 7
+  },
+  {
+    "id": "application_prerequisites-archive",
+    "domain": "application_prerequisites",
+    "title": {
+      "en": "Archive access request",
+      "ar": "طلب وصول للأرشيف"
+    },
+    "decision": {
+      "en": "Accept the application for processing",
+      "ar": "قبول الطلب للمعالجة"
+    },
+    "predicates": {
+      "a": {
+        "en": "Research purpose declared",
+        "ar": "غرض البحث معلن"
+      },
+      "b": {
+        "en": "Requested collection identified",
+        "ar": "المجموعة المطلوبة محددة"
+      },
+      "c": {
+        "en": "Access restrictions satisfied",
+        "ar": "قيود الوصول مستوفاة"
+      }
+    },
+    "output_type": "score",
+    "rule": "all_required",
+    "domain_index": 8
+  },
+  {
+    "id": "application_prerequisites-certificate",
+    "domain": "application_prerequisites",
+    "title": {
+      "en": "Service certificate",
+      "ar": "شهادة خدمة"
+    },
+    "decision": {
+      "en": "Accept the application for processing",
+      "ar": "قبول الطلب للمعالجة"
+    },
+    "predicates": {
+      "a": {
+        "en": "Service completion recorded",
+        "ar": "إتمام الخدمة مسجل"
+      },
+      "b": {
+        "en": "Applicant identity verified",
+        "ar": "هوية المتقدم موثقة"
+      },
+      "c": {
+        "en": "Required fee settled",
+        "ar": "الرسم المطلوب مسدد"
+      }
+    },
+    "output_type": "noul",
+    "rule": "all_required",
+    "domain_index": 9
+  },
+  {
+    "id": "banking_payments-beneficiary",
+    "domain": "banking_payments",
+    "title": {
+      "en": "Add beneficiary",
+      "ar": "إضافة مستفيد"
+    },
+    "decision": {
+      "en": "Allow the requested operation",
+      "ar": "السماح بالعملية المطلوبة"
+    },
+    "predicates": {
+      "a": {
+        "en": "Customer authenticated",
+        "ar": "العميل موثق"
+      },
+      "b": {
+        "en": "Beneficiary details validated",
+        "ar": "بيانات المستفيد متحقق منها"
+      },
+      "c": {
+        "en": "Confirmation recorded",
+        "ar": "التأكيد مسجل"
+      }
+    },
+    "output_type": "noul",
+    "rule": "all_required",
+    "domain_index": 0
+  },
+  {
+    "id": "banking_payments-limit",
+    "domain": "banking_payments",
+    "title": {
+      "en": "Change transfer limit",
+      "ar": "تعديل حد التحويل"
+    },
+    "decision": {
+      "en": "Allow the requested operation",
+      "ar": "السماح بالعملية المطلوبة"
+    },
+    "predicates": {
+      "a": {
+        "en": "Customer authenticated",
+        "ar": "العميل موثق"
+      },
+      "b": {
+        "en": "Requested limit within allowed range",
+        "ar": "الحد المطلوب ضمن المسموح"
+      },
+      "c": {
+        "en": "Required approval recorded",
+        "ar": "الاعتماد المطلوب مسجل"
+      }
+    },
+    "output_type": "choice",
+    "rule": "all_required",
+    "domain_index": 1
+  },
+  {
+    "id": "banking_payments-refund",
+    "domain": "banking_payments",
+    "title": {
+      "en": "Merchant refund",
+      "ar": "استرداد تاجر"
+    },
+    "decision": {
+      "en": "Allow the requested operation",
+      "ar": "السماح بالعملية المطلوبة"
+    },
+    "predicates": {
+      "a": {
+        "en": "Original transaction found",
+        "ar": "العملية الأصلية موجودة"
+      },
+      "b": {
+        "en": "Amount within refundable balance",
+        "ar": "المبلغ ضمن الرصيد القابل للاسترداد"
+      },
+      "c": {
+        "en": "Refund not already issued",
+        "ar": "لم يصدر الاسترداد سابقا"
+      }
+    },
+    "output_type": "score",
+    "rule": "all_required",
+    "domain_index": 2
+  },
+  {
+    "id": "banking_payments-card-replace",
+    "domain": "banking_payments",
+    "title": {
+      "en": "Replace card",
+      "ar": "استبدال بطاقة"
+    },
+    "decision": {
+      "en": "Allow the requested operation",
+      "ar": "السماح بالعملية المطلوبة"
+    },
+    "predicates": {
+      "a": {
+        "en": "Identity verified",
+        "ar": "الهوية موثقة"
+      },
+      "b": {
+        "en": "Delivery address verified",
+        "ar": "عنوان التوصيل موثق"
+      },
+      "c": {
+        "en": "Replacement consent recorded",
+        "ar": "موافقة الاستبدال مسجلة"
+      }
+    },
+    "output_type": "noul",
+    "rule": "all_required",
+    "domain_index": 3
+  },
+  {
+    "id": "banking_payments-statement",
+    "domain": "banking_payments",
+    "title": {
+      "en": "Download statement",
+      "ar": "تنزيل كشف حساب"
+    },
+    "decision": {
+      "en": "Allow the requested operation",
+      "ar": "السماح بالعملية المطلوبة"
+    },
+    "predicates": {
+      "a": {
+        "en": "Account ownership verified",
+        "ar": "ملكية الحساب موثقة"
+      },
+      "b": {
+        "en": "Date range valid",
+        "ar": "الفترة صالحة"
+      },
+      "c": {
+        "en": "Export channel approved",
+        "ar": "قناة التصدير معتمدة"
+      }
+    },
+    "output_type": "choice",
+    "rule": "all_required",
+    "domain_index": 4
+  },
+  {
+    "id": "banking_payments-dispute",
+    "domain": "banking_payments",
+    "title": {
+      "en": "Open payment dispute",
+      "ar": "فتح اعتراض دفع"
+    },
+    "decision": {
+      "en": "Allow the requested operation",
+      "ar": "السماح بالعملية المطلوبة"
+    },
+    "predicates": {
+      "a": {
+        "en": "Transaction reference supplied",
+        "ar": "مرجع العملية متوفر"
+      },
+      "b": {
+        "en": "Dispute window valid",
+        "ar": "مهلة الاعتراض سارية"
+      },
+      "c": {
+        "en": "Reason supplied",
+        "ar": "السبب متوفر"
+      }
+    },
+    "output_type": "score",
+    "rule": "all_required",
+    "domain_index": 5
+  },
+  {
+    "id": "banking_payments-standing-order",
+    "domain": "banking_payments",
+    "title": {
+      "en": "Create standing order",
+      "ar": "إنشاء أمر دفع دوري"
+    },
+    "decision": {
+      "en": "Allow the requested operation",
+      "ar": "السماح بالعملية المطلوبة"
+    },
+    "predicates": {
+      "a": {
+        "en": "Funding account authorized",
+        "ar": "حساب التمويل مصرح به"
+      },
+      "b": {
+        "en": "Schedule valid",
+        "ar": "الجدول صالح"
+      },
+      "c": {
+        "en": "Recurring consent recorded",
+        "ar": "موافقة التكرار مسجلة"
+      }
+    },
+    "output_type": "noul",
+    "rule": "all_required",
+    "domain_index": 6
+  },
+  {
+    "id": "banking_payments-wallet",
+    "domain": "banking_payments",
+    "title": {
+      "en": "Activate business wallet",
+      "ar": "تفعيل محفظة أعمال"
+    },
+    "decision": {
+      "en": "Allow the requested operation",
+      "ar": "السماح بالعملية المطلوبة"
+    },
+    "predicates": {
+      "a": {
+        "en": "Business verified",
+        "ar": "النشاط موثق"
+      },
+      "b": {
+        "en": "Representative authorized",
+        "ar": "الممثل مفوض"
+      },
+      "c": {
+        "en": "Required checks passed",
+        "ar": "الفحوص المطلوبة ناجحة"
+      }
+    },
+    "output_type": "choice",
+    "rule": "all_required",
+    "domain_index": 7
+  },
+  {
+    "id": "banking_payments-cheque",
+    "domain": "banking_payments",
+    "title": {
+      "en": "Request cheque book",
+      "ar": "طلب دفتر شيكات"
+    },
+    "decision": {
+      "en": "Allow the requested operation",
+      "ar": "السماح بالعملية المطلوبة"
+    },
+    "predicates": {
+      "a": {
+        "en": "Account eligible",
+        "ar": "الحساب مؤهل"
+      },
+      "b": {
+        "en": "Delivery verified",
+        "ar": "التوصيل موثق"
+      },
+      "c": {
+        "en": "Request authorized",
+        "ar": "الطلب مصرح به"
+      }
+    },
+    "output_type": "score",
+    "rule": "all_required",
+    "domain_index": 8
+  },
+  {
+    "id": "banking_payments-close-account",
+    "domain": "banking_payments",
+    "title": {
+      "en": "Close account",
+      "ar": "إغلاق حساب"
+    },
+    "decision": {
+      "en": "Allow the requested operation",
+      "ar": "السماح بالعملية المطلوبة"
+    },
+    "predicates": {
+      "a": {
+        "en": "Customer authenticated",
+        "ar": "العميل موثق"
+      },
+      "b": {
+        "en": "Outstanding obligations cleared",
+        "ar": "الالتزامات القائمة مسواة"
+      },
+      "c": {
+        "en": "Closure confirmed",
+        "ar": "الإغلاق مؤكد"
+      }
+    },
+    "output_type": "noul",
+    "rule": "all_required",
+    "domain_index": 9
+  },
+  {
+    "id": "telecom_utilities_logistics-sim",
+    "domain": "telecom_utilities_logistics",
+    "title": {
+      "en": "Replace SIM",
+      "ar": "استبدال شريحة"
+    },
+    "decision": {
+      "en": "Proceed with the requested service change",
+      "ar": "متابعة تغيير الخدمة المطلوب"
+    },
+    "predicates": {
+      "a": {
+        "en": "Subscriber verified",
+        "ar": "المشترك موثق"
+      },
+      "b": {
+        "en": "Replacement consent recorded",
+        "ar": "موافقة الاستبدال مسجلة"
+      },
+      "c": {
+        "en": "Delivery or collection verified",
+        "ar": "التوصيل أو الاستلام موثق"
+      }
+    },
+    "output_type": "noul",
+    "rule": "all_required",
+    "domain_index": 0
+  },
+  {
+    "id": "telecom_utilities_logistics-port",
+    "domain": "telecom_utilities_logistics",
+    "title": {
+      "en": "Port number",
+      "ar": "نقل رقم"
+    },
+    "decision": {
+      "en": "Proceed with the requested service change",
+      "ar": "متابعة تغيير الخدمة المطلوب"
+    },
+    "predicates": {
+      "a": {
+        "en": "Number ownership verified",
+        "ar": "ملكية الرقم موثقة"
+      },
+      "b": {
+        "en": "Porting authorization recorded",
+        "ar": "تفويض النقل مسجل"
+      },
+      "c": {
+        "en": "Destination supports porting",
+        "ar": "الوجهة تدعم النقل"
+      }
+    },
+    "output_type": "choice",
+    "rule": "all_required",
+    "domain_index": 1
+  },
+  {
+    "id": "telecom_utilities_logistics-plan",
+    "domain": "telecom_utilities_logistics",
+    "title": {
+      "en": "Change service plan",
+      "ar": "تعديل باقة"
+    },
+    "decision": {
+      "en": "Proceed with the requested service change",
+      "ar": "متابعة تغيير الخدمة المطلوب"
+    },
+    "predicates": {
+      "a": {
+        "en": "Account owner authorized",
+        "ar": "مالك الحساب مفوض"
+      },
+      "b": {
+        "en": "Plan available",
+        "ar": "الباقة متاحة"
+      },
+      "c": {
+        "en": "Price consent recorded",
+        "ar": "موافقة السعر مسجلة"
+      }
+    },
+    "output_type": "score",
+    "rule": "all_required",
+    "domain_index": 2
+  },
+  {
+    "id": "telecom_utilities_logistics-meter",
+    "domain": "telecom_utilities_logistics",
+    "title": {
+      "en": "Install meter",
+      "ar": "تركيب عداد"
+    },
+    "decision": {
+      "en": "Proceed with the requested service change",
+      "ar": "متابعة تغيير الخدمة المطلوب"
+    },
+    "predicates": {
+      "a": {
+        "en": "Premises identified",
+        "ar": "الموقع محدد"
+      },
+      "b": {
+        "en": "Connection approval recorded",
+        "ar": "اعتماد التوصيل مسجل"
+      },
+      "c": {
+        "en": "Access appointment confirmed",
+        "ar": "موعد الدخول مؤكد"
+      }
+    },
+    "output_type": "noul",
+    "rule": "all_required",
+    "domain_index": 3
+  },
+  {
+    "id": "telecom_utilities_logistics-move",
+    "domain": "telecom_utilities_logistics",
+    "title": {
+      "en": "Move service",
+      "ar": "نقل خدمة"
+    },
+    "decision": {
+      "en": "Proceed with the requested service change",
+      "ar": "متابعة تغيير الخدمة المطلوب"
+    },
+    "predicates": {
+      "a": {
+        "en": "New address verified",
+        "ar": "العنوان الجديد موثق"
+      },
+      "b": {
+        "en": "Coverage available",
+        "ar": "التغطية متاحة"
+      },
+      "c": {
+        "en": "Move date accepted",
+        "ar": "تاريخ النقل مقبول"
+      }
+    },
+    "output_type": "choice",
+    "rule": "all_required",
+    "domain_index": 4
+  },
+  {
+    "id": "telecom_utilities_logistics-parcel-redirect",
+    "domain": "telecom_utilities_logistics",
+    "title": {
+      "en": "Redirect parcel",
+      "ar": "إعادة توجيه طرد"
+    },
+    "decision": {
+      "en": "Proceed with the requested service change",
+      "ar": "متابعة تغيير الخدمة المطلوب"
+    },
+    "predicates": {
+      "a": {
+        "en": "Recipient authenticated",
+        "ar": "المستلم موثق"
+      },
+      "b": {
+        "en": "Parcel still redirectable",
+        "ar": "الطرد قابل لإعادة التوجيه"
+      },
+      "c": {
+        "en": "New address valid",
+        "ar": "العنوان الجديد صالح"
+      }
+    },
+    "output_type": "score",
+    "rule": "all_required",
+    "domain_index": 5
+  },
+  {
+    "id": "telecom_utilities_logistics-parcel-return",
+    "domain": "telecom_utilities_logistics",
+    "title": {
+      "en": "Return parcel",
+      "ar": "إرجاع طرد"
+    },
+    "decision": {
+      "en": "Proceed with the requested service change",
+      "ar": "متابعة تغيير الخدمة المطلوب"
+    },
+    "predicates": {
+      "a": {
+        "en": "Return authorization recorded",
+        "ar": "إذن الإرجاع مسجل"
+      },
+      "b": {
+        "en": "Return window valid",
+        "ar": "مهلة الإرجاع سارية"
+      },
+      "c": {
+        "en": "Required packaging available",
+        "ar": "التغليف المطلوب متوفر"
+      }
+    },
+    "output_type": "noul",
+    "rule": "all_required",
+    "domain_index": 6
+  },
+  {
+    "id": "telecom_utilities_logistics-electricity",
+    "domain": "telecom_utilities_logistics",
+    "title": {
+      "en": "Reconnect electricity",
+      "ar": "إعادة الكهرباء"
+    },
+    "decision": {
+      "en": "Proceed with the requested service change",
+      "ar": "متابعة تغيير الخدمة المطلوب"
+    },
+    "predicates": {
+      "a": {
+        "en": "Account authorized",
+        "ar": "الحساب مصرح به"
+      },
+      "b": {
+        "en": "Reconnection conditions met",
+        "ar": "شروط الإعادة مستوفاة"
+      },
+      "c": {
+        "en": "Safety clearance recorded",
+        "ar": "تصريح السلامة مسجل"
+      }
+    },
+    "output_type": "choice",
+    "rule": "all_required",
+    "domain_index": 7
+  },
+  {
+    "id": "telecom_utilities_logistics-appointment-change",
+    "domain": "telecom_utilities_logistics",
+    "title": {
+      "en": "Reschedule technician",
+      "ar": "تغيير موعد فني"
+    },
+    "decision": {
+      "en": "Proceed with the requested service change",
+      "ar": "متابعة تغيير الخدمة المطلوب"
+    },
+    "predicates": {
+      "a": {
+        "en": "Appointment exists",
+        "ar": "الموعد موجود"
+      },
+      "b": {
+        "en": "New slot available",
+        "ar": "الموعد الجديد متاح"
+      },
+      "c": {
+        "en": "Requester authorized",
+        "ar": "مقدم الطلب مفوض"
+      }
+    },
+    "output_type": "score",
+    "rule": "all_required",
+    "domain_index": 8
+  },
+  {
+    "id": "telecom_utilities_logistics-cancel-contract",
+    "domain": "telecom_utilities_logistics",
+    "title": {
+      "en": "Cancel service contract",
+      "ar": "إلغاء عقد خدمة"
+    },
+    "decision": {
+      "en": "Proceed with the requested service change",
+      "ar": "متابعة تغيير الخدمة المطلوب"
+    },
+    "predicates": {
+      "a": {
+        "en": "Account owner verified",
+        "ar": "مالك الحساب موثق"
+      },
+      "b": {
+        "en": "Consequences disclosed",
+        "ar": "الآثار موضحة"
+      },
+      "c": {
+        "en": "Final confirmation recorded",
+        "ar": "التأكيد النهائي مسجل"
+      }
+    },
+    "output_type": "noul",
+    "rule": "all_required",
+    "domain_index": 9
+  },
+  {
+    "id": "enterprise_hr_it-leave",
+    "domain": "enterprise_hr_it",
+    "title": {
+      "en": "Annual leave",
+      "ar": "إجازة سنوية"
+    },
+    "decision": {
+      "en": "Grant the enterprise request",
+      "ar": "منح الطلب المؤسسي"
+    },
+    "predicates": {
+      "a": {
+        "en": "Balance sufficient",
+        "ar": "الرصيد كاف"
+      },
+      "b": {
+        "en": "Coverage arranged",
+        "ar": "التغطية مرتبة"
+      },
+      "c": {
+        "en": "Manager approval recorded",
+        "ar": "اعتماد المدير مسجل"
+      }
+    },
+    "output_type": "noul",
+    "rule": "all_required",
+    "domain_index": 0
+  },
+  {
+    "id": "enterprise_hr_it-remote",
+    "domain": "enterprise_hr_it",
+    "title": {
+      "en": "Remote work",
+      "ar": "عمل عن بعد"
+    },
+    "decision": {
+      "en": "Grant the enterprise request",
+      "ar": "منح الطلب المؤسسي"
+    },
+    "predicates": {
+      "a": {
+        "en": "Role eligible",
+        "ar": "الدور مؤهل"
+      },
+      "b": {
+        "en": "Secure access available",
+        "ar": "الوصول الآمن متاح"
+      },
+      "c": {
+        "en": "Supervisor approval recorded",
+        "ar": "اعتماد المشرف مسجل"
+      }
+    },
+    "output_type": "choice",
+    "rule": "all_required",
+    "domain_index": 1
+  },
+  {
+    "id": "enterprise_hr_it-contractor",
+    "domain": "enterprise_hr_it",
+    "title": {
+      "en": "Contractor access",
+      "ar": "وصول متعاقد"
+    },
+    "decision": {
+      "en": "Grant the enterprise request",
+      "ar": "منح الطلب المؤسسي"
+    },
+    "predicates": {
+      "a": {
+        "en": "Sponsor approval recorded",
+        "ar": "اعتماد المسؤول مسجل"
+      },
+      "b": {
+        "en": "Account expiry bounded",
+        "ar": "انتهاء الحساب محدد"
+      },
+      "c": {
+        "en": "Least privilege satisfied",
+        "ar": "أقل الصلاحيات مستوفى"
+      }
+    },
+    "output_type": "score",
+    "rule": "all_required",
+    "domain_index": 2
+  },
+  {
+    "id": "enterprise_hr_it-software",
+    "domain": "enterprise_hr_it",
+    "title": {
+      "en": "Install software",
+      "ar": "تثبيت برنامج"
+    },
+    "decision": {
+      "en": "Grant the enterprise request",
+      "ar": "منح الطلب المؤسسي"
+    },
+    "predicates": {
+      "a": {
+        "en": "Software approved",
+        "ar": "البرنامج معتمد"
+      },
+      "b": {
+        "en": "License available",
+        "ar": "الترخيص متاح"
+      },
+      "c": {
+        "en": "Device managed",
+        "ar": "الجهاز مدار"
+      }
+    },
+    "output_type": "noul",
+    "rule": "all_required",
+    "domain_index": 3
+  },
+  {
+    "id": "enterprise_hr_it-payroll-change",
+    "domain": "enterprise_hr_it",
+    "title": {
+      "en": "Payroll account update",
+      "ar": "تعديل حساب الراتب"
+    },
+    "decision": {
+      "en": "Grant the enterprise request",
+      "ar": "منح الطلب المؤسسي"
+    },
+    "predicates": {
+      "a": {
+        "en": "Employee authenticated",
+        "ar": "الموظف موثق"
+      },
+      "b": {
+        "en": "Bank evidence verified",
+        "ar": "إثبات البنك موثق"
+      },
+      "c": {
+        "en": "Change confirmation recorded",
+        "ar": "تأكيد التغيير مسجل"
+      }
+    },
+    "output_type": "choice",
+    "rule": "all_required",
+    "domain_index": 4
+  },
+  {
+    "id": "enterprise_hr_it-equipment",
+    "domain": "enterprise_hr_it",
+    "title": {
+      "en": "Issue equipment",
+      "ar": "صرف معدات"
+    },
+    "decision": {
+      "en": "Grant the enterprise request",
+      "ar": "منح الطلب المؤسسي"
+    },
+    "predicates": {
+      "a": {
+        "en": "Role need documented",
+        "ar": "الحاجة الوظيفية موثقة"
+      },
+      "b": {
+        "en": "Stock available",
+        "ar": "المخزون متوفر"
+      },
+      "c": {
+        "en": "Custody acceptance recorded",
+        "ar": "قبول العهدة مسجل"
+      }
+    },
+    "output_type": "score",
+    "rule": "all_required",
+    "domain_index": 5
+  },
+  {
+    "id": "enterprise_hr_it-training",
+    "domain": "enterprise_hr_it",
+    "title": {
+      "en": "Training enrollment",
+      "ar": "التسجيل في تدريب"
+    },
+    "decision": {
+      "en": "Grant the enterprise request",
+      "ar": "منح الطلب المؤسسي"
+    },
+    "predicates": {
+      "a": {
+        "en": "Prerequisites met",
+        "ar": "المتطلبات مستوفاة"
+      },
+      "b": {
+        "en": "Seat available",
+        "ar": "المقعد متاح"
+      },
+      "c": {
+        "en": "Budget approval recorded",
+        "ar": "اعتماد الميزانية مسجل"
+      }
+    },
+    "output_type": "noul",
+    "rule": "all_required",
+    "domain_index": 6
+  },
+  {
+    "id": "enterprise_hr_it-admin",
+    "domain": "enterprise_hr_it",
+    "title": {
+      "en": "Temporary admin access",
+      "ar": "صلاحية إدارية مؤقتة"
+    },
+    "decision": {
+      "en": "Grant the enterprise request",
+      "ar": "منح الطلب المؤسسي"
+    },
+    "predicates": {
+      "a": {
+        "en": "Ticket justification approved",
+        "ar": "مبرر التذكرة معتمد"
+      },
+      "b": {
+        "en": "Expiry configured",
+        "ar": "الانتهاء مضبوط"
+      },
+      "c": {
+        "en": "Audit logging enabled",
+        "ar": "سجل التدقيق مفعل"
+      }
+    },
+    "output_type": "choice",
+    "rule": "all_required",
+    "domain_index": 7
+  },
+  {
+    "id": "enterprise_hr_it-data-export",
+    "domain": "enterprise_hr_it",
+    "title": {
+      "en": "Export internal data",
+      "ar": "تصدير بيانات داخلية"
+    },
+    "decision": {
+      "en": "Grant the enterprise request",
+      "ar": "منح الطلب المؤسسي"
+    },
+    "predicates": {
+      "a": {
+        "en": "Purpose authorized",
+        "ar": "الغرض مصرح به"
+      },
+      "b": {
+        "en": "Fields permitted",
+        "ar": "الحقول مسموحة"
+      },
+      "c": {
+        "en": "Destination approved",
+        "ar": "الوجهة معتمدة"
+      }
+    },
+    "output_type": "score",
+    "rule": "all_required",
+    "domain_index": 8
+  },
+  {
+    "id": "enterprise_hr_it-offboarding",
+    "domain": "enterprise_hr_it",
+    "title": {
+      "en": "Close employee access",
+      "ar": "إغلاق وصول موظف"
+    },
+    "decision": {
+      "en": "Grant the enterprise request",
+      "ar": "منح الطلب المؤسسي"
+    },
+    "predicates": {
+      "a": {
+        "en": "Departure effective",
+        "ar": "المغادرة نافذة"
+      },
+      "b": {
+        "en": "Identity matched",
+        "ar": "الهوية مطابقة"
+      },
+      "c": {
+        "en": "Offboarding authorization recorded",
+        "ar": "تفويض الإنهاء مسجل"
+      }
+    },
+    "output_type": "noul",
+    "rule": "all_required",
+    "domain_index": 9
+  },
+  {
+    "id": "procurement_invoices-purchase",
+    "domain": "procurement_invoices",
+    "title": {
+      "en": "Purchase request",
+      "ar": "طلب شراء"
+    },
+    "decision": {
+      "en": "Approve the procurement operation",
+      "ar": "اعتماد عملية المشتريات"
+    },
+    "predicates": {
+      "a": {
+        "en": "Budget available",
+        "ar": "الميزانية متاحة"
+      },
+      "b": {
+        "en": "Quotes sufficient",
+        "ar": "العروض كافية"
+      },
+      "c": {
+        "en": "No conflict declared",
+        "ar": "عدم التعارض معلن"
+      }
+    },
+    "output_type": "noul",
+    "rule": "all_required",
+    "domain_index": 0
+  },
+  {
+    "id": "procurement_invoices-invoice",
+    "domain": "procurement_invoices",
+    "title": {
+      "en": "Pay invoice",
+      "ar": "دفع فاتورة"
+    },
+    "decision": {
+      "en": "Approve the procurement operation",
+      "ar": "اعتماد عملية المشتريات"
+    },
+    "predicates": {
+      "a": {
+        "en": "Invoice unpaid",
+        "ar": "الفاتورة غير مدفوعة"
+      },
+      "b": {
+        "en": "Order match confirmed",
+        "ar": "مطابقة الطلب مؤكدة"
+      },
+      "c": {
+        "en": "Approvals complete",
+        "ar": "الاعتمادات مكتملة"
+      }
+    },
+    "output_type": "choice",
+    "rule": "all_required",
+    "domain_index": 1
+  },
+  {
+    "id": "procurement_invoices-bank-change",
+    "domain": "procurement_invoices",
+    "title": {
+      "en": "Update supplier bank account",
+      "ar": "تعديل حساب مورد"
+    },
+    "decision": {
+      "en": "Approve the procurement operation",
+      "ar": "اعتماد عملية المشتريات"
+    },
+    "predicates": {
+      "a": {
+        "en": "Change independently verified",
+        "ar": "التغيير متحقق منه مستقلا"
+      },
+      "b": {
+        "en": "Supplier identity verified",
+        "ar": "هوية المورد موثقة"
+      },
+      "c": {
+        "en": "Dual approval recorded",
+        "ar": "الاعتماد المزدوج مسجل"
+      }
+    },
+    "output_type": "score",
+    "rule": "all_required",
+    "domain_index": 2
+  },
+  {
+    "id": "procurement_invoices-sole-source",
+    "domain": "procurement_invoices",
+    "title": {
+      "en": "Sole-source purchase",
+      "ar": "شراء من مصدر وحيد"
+    },
+    "decision": {
+      "en": "Approve the procurement operation",
+      "ar": "اعتماد عملية المشتريات"
+    },
+    "predicates": {
+      "a": {
+        "en": "Exception documented",
+        "ar": "الاستثناء موثق"
+      },
+      "b": {
+        "en": "Exception authority approved",
+        "ar": "صاحب صلاحية الاستثناء اعتمد"
+      },
+      "c": {
+        "en": "Conflict check passed",
+        "ar": "فحص التعارض ناجح"
+      }
+    },
+    "output_type": "noul",
+    "rule": "all_required",
+    "domain_index": 3
+  },
+  {
+    "id": "procurement_invoices-advance",
+    "domain": "procurement_invoices",
+    "title": {
+      "en": "Advance payment",
+      "ar": "دفعة مقدمة"
+    },
+    "decision": {
+      "en": "Approve the procurement operation",
+      "ar": "اعتماد عملية المشتريات"
+    },
+    "predicates": {
+      "a": {
+        "en": "Contract allows advance",
+        "ar": "العقد يسمح بالمقدم"
+      },
+      "b": {
+        "en": "Required guarantee valid",
+        "ar": "الضمان المطلوب ساري"
+      },
+      "c": {
+        "en": "Advance approval recorded",
+        "ar": "اعتماد المقدم مسجل"
+      }
+    },
+    "output_type": "choice",
+    "rule": "all_required",
+    "domain_index": 4
+  },
+  {
+    "id": "procurement_invoices-goods",
+    "domain": "procurement_invoices",
+    "title": {
+      "en": "Accept goods receipt",
+      "ar": "قبول استلام بضاعة"
+    },
+    "decision": {
+      "en": "Approve the procurement operation",
+      "ar": "اعتماد عملية المشتريات"
+    },
+    "predicates": {
+      "a": {
+        "en": "Quantity matches",
+        "ar": "الكمية مطابقة"
+      },
+      "b": {
+        "en": "Inspection passed",
+        "ar": "الفحص ناجح"
+      },
+      "c": {
+        "en": "Receiver authorized",
+        "ar": "المستلم مفوض"
+      }
+    },
+    "output_type": "score",
+    "rule": "all_required",
+    "domain_index": 5
+  },
+  {
+    "id": "procurement_invoices-credit",
+    "domain": "procurement_invoices",
+    "title": {
+      "en": "Apply credit note",
+      "ar": "تطبيق إشعار دائن"
+    },
+    "decision": {
+      "en": "Approve the procurement operation",
+      "ar": "اعتماد عملية المشتريات"
+    },
+    "predicates": {
+      "a": {
+        "en": "Original invoice matched",
+        "ar": "الفاتورة الأصلية مطابقة"
+      },
+      "b": {
+        "en": "Credit unused",
+        "ar": "الرصيد لم يستخدم"
+      },
+      "c": {
+        "en": "Amount within balance",
+        "ar": "المبلغ ضمن الرصيد"
+      }
+    },
+    "output_type": "noul",
+    "rule": "all_required",
+    "domain_index": 6
+  },
+  {
+    "id": "procurement_invoices-renew-contract",
+    "domain": "procurement_invoices",
+    "title": {
+      "en": "Renew supplier contract",
+      "ar": "تجديد عقد مورد"
+    },
+    "decision": {
+      "en": "Approve the procurement operation",
+      "ar": "اعتماد عملية المشتريات"
+    },
+    "predicates": {
+      "a": {
+        "en": "Performance acceptable",
+        "ar": "الأداء مقبول"
+      },
+      "b": {
+        "en": "Renewal option valid",
+        "ar": "خيار التجديد ساري"
+      },
+      "c": {
+        "en": "Budget approved",
+        "ar": "الميزانية معتمدة"
+      }
+    },
+    "output_type": "choice",
+    "rule": "all_required",
+    "domain_index": 7
+  },
+  {
+    "id": "procurement_invoices-change-order",
+    "domain": "procurement_invoices",
+    "title": {
+      "en": "Approve change order",
+      "ar": "اعتماد أمر تغيير"
+    },
+    "decision": {
+      "en": "Approve the procurement operation",
+      "ar": "اعتماد عملية المشتريات"
+    },
+    "predicates": {
+      "a": {
+        "en": "Change scope documented",
+        "ar": "نطاق التغيير موثق"
+      },
+      "b": {
+        "en": "Cost approved",
+        "ar": "التكلفة معتمدة"
+      },
+      "c": {
+        "en": "Authorized signatures complete",
+        "ar": "التوقيعات المخولة مكتملة"
+      }
+    },
+    "output_type": "score",
+    "rule": "all_required",
+    "domain_index": 8
+  },
+  {
+    "id": "procurement_invoices-expense",
+    "domain": "procurement_invoices",
+    "title": {
+      "en": "Reimburse expense",
+      "ar": "تعويض مصروف"
+    },
+    "decision": {
+      "en": "Approve the procurement operation",
+      "ar": "اعتماد عملية المشتريات"
+    },
+    "predicates": {
+      "a": {
+        "en": "Receipt valid",
+        "ar": "الإيصال صالح"
+      },
+      "b": {
+        "en": "Expense category permitted",
+        "ar": "فئة المصروف مسموحة"
+      },
+      "c": {
+        "en": "No prior reimbursement",
+        "ar": "لم يعوض سابقا"
+      }
+    },
+    "output_type": "noul",
+    "rule": "all_required",
+    "domain_index": 9
+  },
+  {
+    "id": "tool_and_text_ui_actions-send",
+    "domain": "tool_and_text_ui_actions",
+    "title": {
+      "en": "Send message",
+      "ar": "إرسال رسالة"
+    },
+    "decision": {
+      "en": "Execute the requested action",
+      "ar": "تنفيذ الإجراء المطلوب"
+    },
+    "predicates": {
+      "a": {
+        "en": "Recipient confirmed",
+        "ar": "المستلم مؤكد"
+      },
+      "b": {
+        "en": "Content approved",
+        "ar": "المحتوى معتمد"
+      },
+      "c": {
+        "en": "Send consent recorded",
+        "ar": "موافقة الإرسال مسجلة"
+      }
+    },
+    "output_type": "noul",
+    "rule": "all_required",
+    "domain_index": 0
+  },
+  {
+    "id": "tool_and_text_ui_actions-delete",
+    "domain": "tool_and_text_ui_actions",
+    "title": {
+      "en": "Delete record",
+      "ar": "حذف سجل"
+    },
+    "decision": {
+      "en": "Execute the requested action",
+      "ar": "تنفيذ الإجراء المطلوب"
+    },
+    "predicates": {
+      "a": {
+        "en": "Target identifier confirmed",
+        "ar": "معرف الهدف مؤكد"
+      },
+      "b": {
+        "en": "Deletion authorized",
+        "ar": "الحذف مصرح به"
+      },
+      "c": {
+        "en": "Final confirmation recorded",
+        "ar": "التأكيد النهائي مسجل"
+      }
+    },
+    "output_type": "choice",
+    "rule": "all_required",
+    "domain_index": 1
+  },
+  {
+    "id": "tool_and_text_ui_actions-upload",
+    "domain": "tool_and_text_ui_actions",
+    "title": {
+      "en": "Upload document",
+      "ar": "رفع مستند"
+    },
+    "decision": {
+      "en": "Execute the requested action",
+      "ar": "تنفيذ الإجراء المطلوب"
+    },
+    "predicates": {
+      "a": {
+        "en": "File selected",
+        "ar": "الملف مختار"
+      },
+      "b": {
+        "en": "Destination authorized",
+        "ar": "الوجهة مصرح بها"
+      },
+      "c": {
+        "en": "Content allowed for destination",
+        "ar": "المحتوى مسموح للوجهة"
+      }
+    },
+    "output_type": "score",
+    "rule": "all_required",
+    "domain_index": 2
+  },
+  {
+    "id": "tool_and_text_ui_actions-export",
+    "domain": "tool_and_text_ui_actions",
+    "title": {
+      "en": "Export table",
+      "ar": "تصدير جدول"
+    },
+    "decision": {
+      "en": "Execute the requested action",
+      "ar": "تنفيذ الإجراء المطلوب"
+    },
+    "predicates": {
+      "a": {
+        "en": "Scope selected",
+        "ar": "النطاق مختار"
+      },
+      "b": {
+        "en": "Export permission valid",
+        "ar": "صلاحية التصدير سارية"
+      },
+      "c": {
+        "en": "Sensitive fields excluded",
+        "ar": "الحقول الحساسة مستبعدة"
+      }
+    },
+    "output_type": "noul",
+    "rule": "all_required",
+    "domain_index": 3
+  },
+  {
+    "id": "tool_and_text_ui_actions-calendar",
+    "domain": "tool_and_text_ui_actions",
+    "title": {
+      "en": "Create calendar event",
+      "ar": "إنشاء موعد"
+    },
+    "decision": {
+      "en": "Execute the requested action",
+      "ar": "تنفيذ الإجراء المطلوب"
+    },
+    "predicates": {
+      "a": {
+        "en": "Time resolved",
+        "ar": "الوقت محدد"
+      },
+      "b": {
+        "en": "Attendees confirmed",
+        "ar": "الحضور مؤكدون"
+      },
+      "c": {
+        "en": "Calendar writable",
+        "ar": "التقويم قابل للكتابة"
+      }
+    },
+    "output_type": "choice",
+    "rule": "all_required",
+    "domain_index": 4
+  },
+  {
+    "id": "tool_and_text_ui_actions-cancel",
+    "domain": "tool_and_text_ui_actions",
+    "title": {
+      "en": "Cancel booking",
+      "ar": "إلغاء حجز"
+    },
+    "decision": {
+      "en": "Execute the requested action",
+      "ar": "تنفيذ الإجراء المطلوب"
+    },
+    "predicates": {
+      "a": {
+        "en": "Booking identifier supplied",
+        "ar": "معرف الحجز متوفر"
+      },
+      "b": {
+        "en": "Cancellation permitted",
+        "ar": "الإلغاء مسموح"
+      },
+      "c": {
+        "en": "Cancellation confirmed",
+        "ar": "الإلغاء مؤكد"
+      }
+    },
+    "output_type": "score",
+    "rule": "all_required",
+    "domain_index": 5
+  },
+  {
+    "id": "tool_and_text_ui_actions-submit",
+    "domain": "tool_and_text_ui_actions",
+    "title": {
+      "en": "Submit application",
+      "ar": "تقديم طلب"
+    },
+    "decision": {
+      "en": "Execute the requested action",
+      "ar": "تنفيذ الإجراء المطلوب"
+    },
+    "predicates": {
+      "a": {
+        "en": "Required fields complete",
+        "ar": "الحقول المطلوبة مكتملة"
+      },
+      "b": {
+        "en": "Attachments valid",
+        "ar": "المرفقات صالحة"
+      },
+      "c": {
+        "en": "Submission confirmed",
+        "ar": "التقديم مؤكد"
+      }
+    },
+    "output_type": "noul",
+    "rule": "all_required",
+    "domain_index": 6
+  },
+  {
+    "id": "tool_and_text_ui_actions-share",
+    "domain": "tool_and_text_ui_actions",
+    "title": {
+      "en": "Share file",
+      "ar": "مشاركة ملف"
+    },
+    "decision": {
+      "en": "Execute the requested action",
+      "ar": "تنفيذ الإجراء المطلوب"
+    },
+    "predicates": {
+      "a": {
+        "en": "File ownership authorized",
+        "ar": "ملكية الملف مخولة"
+      },
+      "b": {
+        "en": "Recipient access permitted",
+        "ar": "وصول المستلم مسموح"
+      },
+      "c": {
+        "en": "Sharing confirmed",
+        "ar": "المشاركة مؤكدة"
+      }
+    },
+    "output_type": "choice",
+    "rule": "all_required",
+    "domain_index": 7
+  },
+  {
+    "id": "tool_and_text_ui_actions-retry",
+    "domain": "tool_and_text_ui_actions",
+    "title": {
+      "en": "Retry write operation",
+      "ar": "إعادة محاولة كتابة"
+    },
+    "decision": {
+      "en": "Execute the requested action",
+      "ar": "تنفيذ الإجراء المطلوب"
+    },
+    "predicates": {
+      "a": {
+        "en": "Previous outcome verified",
+        "ar": "نتيجة المحاولة السابقة موثقة"
+      },
+      "b": {
+        "en": "Idempotency key present",
+        "ar": "مفتاح منع التكرار موجود"
+      },
+      "c": {
+        "en": "Retry authorized",
+        "ar": "الإعادة مصرح بها"
+      }
+    },
+    "output_type": "score",
+    "rule": "all_required",
+    "domain_index": 8
+  },
+  {
+    "id": "tool_and_text_ui_actions-purchase",
+    "domain": "tool_and_text_ui_actions",
+    "title": {
+      "en": "Confirm cart purchase",
+      "ar": "تأكيد شراء سلة"
+    },
+    "decision": {
+      "en": "Execute the requested action",
+      "ar": "تنفيذ الإجراء المطلوب"
+    },
+    "predicates": {
+      "a": {
+        "en": "Items verified",
+        "ar": "العناصر موثقة"
+      },
+      "b": {
+        "en": "Total approved",
+        "ar": "الإجمالي معتمد"
+      },
+      "c": {
+        "en": "Purchase confirmation recorded",
+        "ar": "تأكيد الشراء مسجل"
+      }
+    },
+    "output_type": "noul",
+    "rule": "all_required",
+    "domain_index": 9
+  }
+]

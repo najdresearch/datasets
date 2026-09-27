@@ -6,6 +6,7 @@ Code and source manifests for collecting, cleaning, normalizing, generating and 
 
 | Dataset | Rows | Purpose |
 |---|---:|---|
+| [System One](https://huggingface.co/datasets/najdresearch/system-one) | 5,184 | Public decision-model research draft; 11 separately licensed packs, independent review pending |
 | [Najd Benchmark](https://huggingface.co/datasets/najdresearch/najd-benchmark) | 6,089 | Historical Arabic/Saudi evaluation collection: 5,717 structurally certified and 372 quarantined cases |
 | [Najd Legacy 31](https://huggingface.co/datasets/najdresearch/najd-legacy-31) | 31 | Selected original Najd cases, required fixtures and historical row mapping |
 | [Arabic Riddles and Questions](https://huggingface.co/datasets/najdresearch/arabic-riddles) | 333 | Freshly collected question–answer pairs, with source attribution on every row and the dataset card |
@@ -65,3 +66,11 @@ The generic publication command requires a hash-bound approval record and refuse
 ## Next implementation milestone
 
 Build the internal Arabic customer-support version-comparison task pack using original fictional policies and scenario-level splits. Other task families are documented placeholders, not released benchmark packs.
+
+## Local decision-model development pack
+
+The original bilingual pilot can now be packaged locally with hashes and development-only provenance. See [fixture instructions](fixtures/decision-pilot/README.md). It is not a reviewed public release or a fresh holdout.
+
+## System One decision candidate
+
+[Dataset v1 documentation](docs/system-one-v1.md) describes the completed local candidate: 6,884 cases across controlled policies, natural development drafts, and public references/diagnostics. Build with `python -m najd_datasets.system_one_release --include-references --output <fresh-directory>` after restoring the pinned inputs. Cases are not automatically eligible for publication.

@@ -1,0 +1,54 @@
+{
+  "version": "pilot-0.1",
+  "languages": ["en", "ar"],
+  "task_order": ["triage", "policy", "tool_route", "computer_action"],
+  "questions": {
+    "triage": {
+      "category": {
+        "type": "choice",
+        "instructions": "Which team should handle the customer's main issue? Decide from the message, not from urgency.",
+        "criteria": {
+          "delivery": "Parcel, courier, shipping, arrival, or delivery issue",
+          "payment": "Charge, refund, card, or checkout payment issue",
+          "account": "Login, password, or account access issue",
+          "other": "Product or app issue that is not delivery, payment, or account access"
+        }
+      },
+      "urgency": {
+        "type": "score",
+        "instructions": "Apply the urgency rubric to the customer's message. The levels are ordered low, medium, high.",
+        "criteria": [
+          "Low: no deadline today, and the customer is not blocked from a necessary task",
+          "Medium: a deadline is today but more than two hours away, or a feature is blocked but a workaround exists",
+          "High: a necessary task is blocked with no workaround and a deadline within two hours"
+        ]
+      }
+    },
+    "policy": {
+      "eligible": {
+        "type": "noul",
+        "instructions": "Under the policy supplied in the state, is this request eligible for a refund? Use only that policy and the explicit facts in the request."
+      }
+    },
+    "tool_route": {
+      "tool": {
+        "type": "choice",
+        "instructions": "Which offline tool action does the user explicitly request? Do not execute tools or invent arguments.",
+        "criteria": {
+          "create_reminder": "One explicit request to create a reminder",
+          "find_note": "One explicit request to find a saved note",
+          "draft_message": "One explicit request to draft a message without sending it",
+          "none": "No action requested, including questions, hypotheticals, and negated requests",
+          "multiple": "The user explicitly requested two or more different tool actions"
+        }
+      }
+    },
+    "computer_action": {
+      "action": {
+        "type": "choice",
+        "instructions": "Choose the single safest next action that advances the user's goal from the current screen. Select one candidate ID. Do not execute it.",
+        "criteria_from": "state.candidates"
+      }
+    }
+  }
+}

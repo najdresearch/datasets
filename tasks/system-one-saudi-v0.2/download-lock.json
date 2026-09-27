@@ -1,0 +1,165 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "path": "fast-agent_handoff.jsonl",
+      "url": "https://huggingface.co/datasets/fastino/fast-decisions/resolve/1a33070cabf94ce2e29105482dd2ef6c157ad7f2/agent_handoff.jsonl",
+      "revision": "1a33070cabf94ce2e29105482dd2ef6c157ad7f2",
+      "sha256": "7c086a3a6a0014fc53d76df3912b93e1b5e4c293d92ab36f1620e5346c3269f8",
+      "license": "Apache-2.0",
+      "source": "fast-decisions"
+    },
+    {
+      "path": "fast-banking_intent.jsonl",
+      "url": "https://huggingface.co/datasets/fastino/fast-decisions/resolve/1a33070cabf94ce2e29105482dd2ef6c157ad7f2/banking_intent.jsonl",
+      "revision": "1a33070cabf94ce2e29105482dd2ef6c157ad7f2",
+      "sha256": "43af4aafdf6aeca74400505acbe528d1605aacb1097e1e1c0a169e9dfb6b5a77",
+      "license": "Apache-2.0",
+      "source": "fast-decisions"
+    },
+    {
+      "path": "fast-benefits_request.jsonl",
+      "url": "https://huggingface.co/datasets/fastino/fast-decisions/resolve/1a33070cabf94ce2e29105482dd2ef6c157ad7f2/benefits_request.jsonl",
+      "revision": "1a33070cabf94ce2e29105482dd2ef6c157ad7f2",
+      "sha256": "a37c96197152006fbb46e8ea0099dc6ab89feafbca424d21bd57b3f7ae3b235b",
+      "license": "Apache-2.0",
+      "source": "fast-decisions"
+    },
+    {
+      "path": "fast-clinic_request.jsonl",
+      "url": "https://huggingface.co/datasets/fastino/fast-decisions/resolve/1a33070cabf94ce2e29105482dd2ef6c157ad7f2/clinic_request.jsonl",
+      "revision": "1a33070cabf94ce2e29105482dd2ef6c157ad7f2",
+      "sha256": "84392b5b6de98c6cf7b474b45b6cffd19ab581770b89fab5d3eb5c77e9397652",
+      "license": "Apache-2.0",
+      "source": "fast-decisions"
+    },
+    {
+      "path": "fast-document_type.jsonl",
+      "url": "https://huggingface.co/datasets/fastino/fast-decisions/resolve/1a33070cabf94ce2e29105482dd2ef6c157ad7f2/document_type.jsonl",
+      "revision": "1a33070cabf94ce2e29105482dd2ef6c157ad7f2",
+      "sha256": "87798b1b7c57a553fa82b1c15495b4bcefcf9552e80185673f00e733d59552d7",
+      "license": "Apache-2.0",
+      "source": "fast-decisions"
+    },
+    {
+      "path": "fast-email_triage.jsonl",
+      "url": "https://huggingface.co/datasets/fastino/fast-decisions/resolve/1a33070cabf94ce2e29105482dd2ef6c157ad7f2/email_triage.jsonl",
+      "revision": "1a33070cabf94ce2e29105482dd2ef6c157ad7f2",
+      "sha256": "779fdef3ad22d1f8fc0b8b81a15b7a591546ff2f5df3d4a850884e08033b11e0",
+      "license": "Apache-2.0",
+      "source": "fast-decisions"
+    },
+    {
+      "path": "fast-news_topic.jsonl",
+      "url": "https://huggingface.co/datasets/fastino/fast-decisions/resolve/1a33070cabf94ce2e29105482dd2ef6c157ad7f2/news_topic.jsonl",
+      "revision": "1a33070cabf94ce2e29105482dd2ef6c157ad7f2",
+      "sha256": "c31f7710592c2f31f3634930da4840b535ceccd14a3092521547bc9c0f0a6b17",
+      "license": "Apache-2.0",
+      "source": "fast-decisions"
+    },
+    {
+      "path": "fast-paper_field.jsonl",
+      "url": "https://huggingface.co/datasets/fastino/fast-decisions/resolve/1a33070cabf94ce2e29105482dd2ef6c157ad7f2/paper_field.jsonl",
+      "revision": "1a33070cabf94ce2e29105482dd2ef6c157ad7f2",
+      "sha256": "bb4513faf7616d2ee21694ee62fdc222b4e0e86a2ac0601298b23c538d23e5d0",
+      "license": "Apache-2.0",
+      "source": "fast-decisions"
+    },
+    {
+      "path": "fast-product_feedback.jsonl",
+      "url": "https://huggingface.co/datasets/fastino/fast-decisions/resolve/1a33070cabf94ce2e29105482dd2ef6c157ad7f2/product_feedback.jsonl",
+      "revision": "1a33070cabf94ce2e29105482dd2ef6c157ad7f2",
+      "sha256": "0b44b04d361cf29fc95728a5c1cae4506f42545fe1cb39af53b835287cba001f",
+      "license": "Apache-2.0",
+      "source": "fast-decisions"
+    },
+    {
+      "path": "fast-restaurant_review.jsonl",
+      "url": "https://huggingface.co/datasets/fastino/fast-decisions/resolve/1a33070cabf94ce2e29105482dd2ef6c157ad7f2/restaurant_review.jsonl",
+      "revision": "1a33070cabf94ce2e29105482dd2ef6c157ad7f2",
+      "sha256": "64bf7cd3e498045f337956bfec1e002a456cb9aac02c23cac2911fd902914a67",
+      "license": "Apache-2.0",
+      "source": "fast-decisions"
+    },
+    {
+      "path": "fast-review_sentiment.jsonl",
+      "url": "https://huggingface.co/datasets/fastino/fast-decisions/resolve/1a33070cabf94ce2e29105482dd2ef6c157ad7f2/review_sentiment.jsonl",
+      "revision": "1a33070cabf94ce2e29105482dd2ef6c157ad7f2",
+      "sha256": "413e8f6f81ce048d3e17f39ecd11cd28c1443253712a0930cfe8063bd1d82616",
+      "license": "Apache-2.0",
+      "source": "fast-decisions"
+    },
+    {
+      "path": "fast-screen_tags.jsonl",
+      "url": "https://huggingface.co/datasets/fastino/fast-decisions/resolve/1a33070cabf94ce2e29105482dd2ef6c157ad7f2/screen_tags.jsonl",
+      "revision": "1a33070cabf94ce2e29105482dd2ef6c157ad7f2",
+      "sha256": "5433a6cb7d67e88de2c9b9443bf3291d91ce89be4a7ea631b93d71d8b56e227b",
+      "license": "Apache-2.0",
+      "source": "fast-decisions"
+    },
+    {
+      "path": "fast-sports_recap.jsonl",
+      "url": "https://huggingface.co/datasets/fastino/fast-decisions/resolve/1a33070cabf94ce2e29105482dd2ef6c157ad7f2/sports_recap.jsonl",
+      "revision": "1a33070cabf94ce2e29105482dd2ef6c157ad7f2",
+      "sha256": "b2e1e6e174650d8b6a114f16dbacbd8b62f93ee77c3967c23d322e9848dac1b3",
+      "license": "Apache-2.0",
+      "source": "fast-decisions"
+    },
+    {
+      "path": "fast-support_intent.jsonl",
+      "url": "https://huggingface.co/datasets/fastino/fast-decisions/resolve/1a33070cabf94ce2e29105482dd2ef6c157ad7f2/support_intent.jsonl",
+      "revision": "1a33070cabf94ce2e29105482dd2ef6c157ad7f2",
+      "sha256": "a293e95915be740dab18e0bba4d9ca1e31ce9ce2f86f127080ad172cdf89ce72",
+      "license": "Apache-2.0",
+      "source": "fast-decisions"
+    },
+    {
+      "path": "fast-support_topic.jsonl",
+      "url": "https://huggingface.co/datasets/fastino/fast-decisions/resolve/1a33070cabf94ce2e29105482dd2ef6c157ad7f2/support_topic.jsonl",
+      "revision": "1a33070cabf94ce2e29105482dd2ef6c157ad7f2",
+      "sha256": "e7f41083889f229bf7eae58c48b42e0587d397dbfc959966bbfc379197102ed6",
+      "license": "Apache-2.0",
+      "source": "fast-decisions"
+    },
+    {
+      "path": "fast-ticket_route.jsonl",
+      "url": "https://huggingface.co/datasets/fastino/fast-decisions/resolve/1a33070cabf94ce2e29105482dd2ef6c157ad7f2/ticket_route.jsonl",
+      "revision": "1a33070cabf94ce2e29105482dd2ef6c157ad7f2",
+      "sha256": "8660f5b7bfc6f2475d5aaf2d3202a62d2c647ed49a950dc2dd04d76d14cffe08",
+      "license": "Apache-2.0",
+      "source": "fast-decisions"
+    },
+    {
+      "path": "fast-travel_request.jsonl",
+      "url": "https://huggingface.co/datasets/fastino/fast-decisions/resolve/1a33070cabf94ce2e29105482dd2ef6c157ad7f2/travel_request.jsonl",
+      "revision": "1a33070cabf94ce2e29105482dd2ef6c157ad7f2",
+      "sha256": "6e596454de299d765d1d104e90d93543218f06e42b8b55bfc614cd2c8981ebfb",
+      "license": "Apache-2.0",
+      "source": "fast-decisions"
+    },
+    {
+      "path": "massive-en.parquet",
+      "url": "https://huggingface.co/datasets/AmazonScience/massive/resolve/ed58ac423a2f4121720918bf5301577edce4ffd3/en-US/test/0000.parquet",
+      "revision": "ed58ac423a2f4121720918bf5301577edce4ffd3",
+      "sha256": "c418da9a5f3a7425b5cf44941bcea032a31040dbda2da85e0dd9323785c7731e",
+      "license": "CC-BY-4.0",
+      "source": "massive"
+    },
+    {
+      "path": "massive-ar.parquet",
+      "url": "https://huggingface.co/datasets/AmazonScience/massive/resolve/ed58ac423a2f4121720918bf5301577edce4ffd3/ar-SA/test/0000.parquet",
+      "revision": "ed58ac423a2f4121720918bf5301577edce4ffd3",
+      "sha256": "fabc7afec26a29ec31c2deb016d47f9a4e38c33fa63c4b92b9f069e2b9f1054c",
+      "license": "CC-BY-4.0",
+      "source": "massive"
+    },
+    {
+      "path": "aisa-test.parquet",
+      "url": "https://huggingface.co/datasets/AISA-Framework/AISA-AR-FunctionCall/resolve/d4bc97b387f50929e55a50fa87be06165a33cd05/data/test-00000-of-00001.parquet",
+      "revision": "d4bc97b387f50929e55a50fa87be06165a33cd05",
+      "sha256": "7b5100ed83db24c413aab9d0714f4e122fb9d0c86d68f77c9b8ebb52383abeb2",
+      "license": "Apache-2.0",
+      "source": "aisa-ar-functioncall"
+    }
+  ]
+}

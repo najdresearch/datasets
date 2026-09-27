@@ -1,0 +1,27 @@
+{
+  "saudi-decisions-draft-v0.4": {
+    "cases": 144,
+    "families": 48,
+    "paired_gold_conflicts": 0,
+    "exact_duplicate_states_within_register": 0,
+    "candidate_counts": {
+      "5": 120
+    },
+    "unsafe_labeled_cases": 57,
+    "independent_review": false,
+    "model_inference": false
+  },
+  "public-decision-adapter-smoke-v0.3": {
+    "cases": 210,
+    "families": 115,
+    "paired_gold_conflicts": 0,
+    "exact_duplicate_states_within_register": 0,
+    "candidate_counts": {
+      "4": 150,
+      "77": 60
+    },
+    "unsafe_labeled_cases": 0,
+    "independent_review": false,
+    "model_inference": false
+  }
+}
