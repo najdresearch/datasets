@@ -65,7 +65,7 @@ English, MSA and Saudi versions of original scenarios share facts and gold. Poli
 | SILMA RAG QA / ArabicRAGB | Excluded from decision v1; need a separate reviewed retrieval/answerability task and rights review |
 | AraSafe | Excluded because its historical ledger lacks a declared license |
 
-Source URLs and licensing are retained in row provenance and the source records. Share-alike and attribution obligations remain attached to their subsets. No employer data is included. No files have been pushed or published.
+Source URLs and licensing are retained in row provenance and the source records. Share-alike and attribution obligations remain attached to their subsets. No employer data is included. The public subset and current revision are listed in the Public release section above.
 
 ## Evidence and scoring
 
@@ -73,4 +73,4 @@ The final audit passes hashes, case identities, typed labels, paired-gold consis
 
 Report quality separately by pack, task, register and output type. Do not average all 6,884 rows into a headline leaderboard. Count invalid outputs and unsupported coverage. Safety annotations exist only on applicable original cases; unannotated reference cases are not proven safe. Language deltas use actual paired families only. Group uncertainty by policy/lineage rather than counting translated rows independently.
 
-The next phase is remote execution: fixed CPU allocation and GPU configuration, identical model revisions and declared precision, hosted APIs as a separate latency lane. Dataset creation is finished for this candidate; no inference or cloud provisioning was performed.
+The next phase is remote execution: fixed CPU allocation and GPU configuration, identical model revisions and declared precision, hosted APIs as a separate latency lane. Dataset creation is finished for this candidate. Execution evidence belongs to the benchmark repository; the public natural-development experiment is tracked there.
