@@ -6,7 +6,7 @@ Code and source manifests for collecting, cleaning, normalizing, generating and 
 
 | Dataset | Rows | Purpose |
 |---|---:|---|
-| [Najd Benchmark](https://huggingface.co/datasets/najdresearch/najd-benchmark) | 6,089 | Historical Arabic/Saudi evaluation collection: 5,717 structurally certified and 372 quarantined cases |
+| [Najd Benchmark](https://huggingface.co/datasets/najdresearch/najd-benchmark) | 6,089 | Arabic/Saudi evaluation collection: all 6,089 cases in one default configuration |
 | [Najd Legacy 31](https://huggingface.co/datasets/najdresearch/najd-legacy-31) | 31 | Selected original Najd cases, required fixtures and historical row mapping |
 | [Arabic Riddles and Questions](https://huggingface.co/datasets/najdresearch/arabic-riddles) | 333 | Freshly collected question–answer pairs, with source attribution on every row and the dataset card |
 
@@ -23,6 +23,16 @@ The published [Hugging Face dataset card](docs/huggingface/najd-benchmark.md) is
 | datasets | Sources, collection, normalization, synthetic generation, provenance and dataset releases |
 | [benchmark](https://github.com/najdresearch/benchmark) | Task contracts, shared evaluation/scoring, local reports and pinned execution package |
 | [najd-arena](https://github.com/najdresearch/najd-arena) | Website, organizations, managed jobs, private reports, publication and public results |
+
+## Current unified release
+
+The current Hugging Face version, `2026.09.27`, exposes all 6,089 cases in `default/test` without `audit_status` labels. Prompts, answers, IDs, provenance and specific issue notes are preserved. To produce it after the historical public build:
+
+```sh
+uv run python scripts/build_unified_release.py build/public-release/release build/current
+```
+
+Earlier pinned revisions remain unchanged. Historical commands below reproduce those original artifacts.
 
 ## Reconstruction audit
 

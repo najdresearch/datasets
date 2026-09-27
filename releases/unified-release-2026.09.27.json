@@ -1,0 +1,11 @@
+{
+  "version": "2026.09.27",
+  "revision": "e2dcd2aac116da180835ce9eacc7572bc7cec2f7",
+  "previous_revision": "a55629beae86ea381487c75fb052607be6e321e9",
+  "rows": 6089,
+  "removed_case_fields": [
+    "audit_status"
+  ],
+  "preserved_case_content_verified": true,
+  "case_sha256": "8b8bcbee213726333292976a0efa5152bfba8b003a84137244db7879767bb8ae"
+}

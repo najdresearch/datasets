@@ -2,6 +2,10 @@
 
 A new checkout can rebuild every published question, answer and case metadata field using public inputs. The build does not download the target case files. A separate verification step downloads the target only after reconstruction.
 
+## Current default collection
+
+After the historical build below, run `uv run python scripts/build_unified_release.py build/public-release/release build/current` to produce version `2026.09.27`: one 6,089-case collection without `audit_status`. The input hashes are checked before conversion; only that field is removed. Specific issue notes remain. Historical artifacts and their verification below retain their original representation.
+
 ## Run it
 
 ```sh
