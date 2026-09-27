@@ -1,5 +1,8 @@
 # Public reconstruction dependency audit
 
+> Update: the [public release builder](public-release-builder.md) now reconstructs all 6,089 case records without private inputs or target case downloads. Earlier dependency descriptions below document the historical path. Missing original extract/authoring evidence and unverified redistribution permissions remain distinct from reproducible case content.
+
+
 This audit explains what can be rebuilt from public inputs and exactly what still blocks a complete reconstruction. Publishing an input, matching its content, and recreating its original bytes are different claims.
 
 ## Run the evidence check
@@ -21,24 +24,19 @@ The [committed evidence report](../releases/public-reconstruction-evidence.json)
 | 31 | Public original selected objects plus row mapping reproduce all non-audit fields | Original case authoring/generation process |
 | 333 | Pinned fresh public snapshot matches every historical question and answer | Original extract bytes, all historical provenance fields, or raw-page replay |
 
-R1 is closed for those verification scopes. R2's private-input dependency is closed for the selected 31 cases through the new runner; the older standalone adapter still supports private historical replay. R3 has content evidence but the original file is still missing. R4–R9 remain explicit reconstruction/rights gates. No complete end-to-end byte reconstruction claim is made.
+## Current closure status
 
-## Unresolved dependencies and closure evidence
+The [public release builder](public-release-builder.md) supersedes the partial checks above. It rebuilds both case files byte for byte and exports equivalent Parquet content. See [the dependency ledger](../releases/reconstruction-dependencies.json) for the exact closure scope of each item.
 
-| ID | Dependency | Evidence needed to close |
-|---|---|---|
-| R1 | End-to-end clean anonymous reconstruction execution | Run scripts/audit_public_reconstruction.py from a clean checkout; account for every source and inspect the per-source comparison scope. Resolve every failure. |
-| R2 | Private historical 64-row input in the old adapter | Replace local-raw dependency with the pinned public original 31-case subset plus published source-row mapping; compare all non-audit fields. The original authoring process is undocumented. |
-| R3 | Missing original authorized-items extract and original snapshots | For historical byte identity recover original bytes plus hashes. For content reconstruction explicitly use the pinned fresh public snapshot and preserve the distinction; compare all expected fields. |
-| R4 | Published target rows are still used to select and validate upstream candidates | Commit a versioned selection ID/split manifest or deterministic selection algorithm with provenance; build without reading target case content, then use the target only for comparison. |
-| R5 | Full byte-for-byte replay starts from a private 178517-row pre-audit export | Replace that export with public input assembly or define a new public-source successor. Document exclusions/replacements if the historical artifact cannot be rebuilt. |
-| R6 | Public-source full release assembly, metadata and Parquet reproduction are not implemented | Assemble source outputs, apply published selection/repair/audit/metadata-removal rules, create JSONL/Parquet/schema/manifests, verify pinned checksums or explicitly version a content-equivalent serialization. |
-| R7 | Public rights evidence is incomplete and historical ledger labels are not permission documents | Record per-source scope and attribution obligations, license or permission reference, and publication authority. Nine web sources now have explicit owner-confirmed redistribution permission; do not silently extend it to unrelated sources. |
-| R8 | Live pages and Jina-rendered text are mutable; raw snapshots are local-only | Publish rights-cleared immutable collection inputs or retain the pinned fresh question snapshot as the explicit reconstruction boundary. Require a content-diff report on future recollection. |
-
-| R9 | Legacy document, RAG and agent fixtures are outside row-content checks | Verify all public fixture hashes and required paths, then demonstrate equivalent harness setup. Public fixture availability alone does not prove executable task equivalence. |
-
-Machine-readable inventory: [reconstruction-dependencies.json](../releases/reconstruction-dependencies.json).
+| Dependency | Current result |
+|---|---|
+| R1–R2 | Anonymous public build and public legacy subset integrated |
+| R3 | All 333 complete published rows reconstructed from fresh Q/A and preserved historical metadata; original extract still missing |
+| R4–R5 | Committed selection specification and direct assembly remove target-case selection and private intermediate export dependencies |
+| R6 | JSONL rebuilt, Parquet generated, historical JSON documents preserved with checksums |
+| R7 | Attribution and research purpose documented; remaining permission records not verified |
+| R8 | Pinned public question snapshot is the explicit boundary; original HTML replay is not claimed |
+| R9 | All fixture files and six installed case workspaces verified; model execution is outside this data build |
 
 ## Every source and its rights record
 

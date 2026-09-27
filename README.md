@@ -34,7 +34,14 @@ uv run pytest
 uv run najd-datasets audit-public-inputs releases/2026.09.14/sources.json --sources sources
 ```
 
-The audit inventories original historical source manifests. It does not certify a fresh complete public rebuild. The 31-case subset and 333 fresh questions are now public; integration of those new artifacts into the full reconstruction path remains unfinished. Do not call the entire historical release publicly reconstructible yet.
+The offline audit inventories original manifests. To rebuild all 6,089 cases from public sources, use the [public release builder](docs/public-release-builder.md):
+
+```sh
+uv run python scripts/reconstruct_public_release.py --output build/public-release
+uv run python scripts/verify_public_release.py build/public-release
+```
+
+Both JSONL files reproduce the published bytes. Parquet exports reproduce values and schema. Historical audit documents are preserved separately. Original authoring/extract history and some redistribution permission evidence remain unavailable; see the documented reconstruction boundary and [source attribution](docs/source-attribution.md).
 
 ## Choose a workflow
 

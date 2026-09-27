@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
-  "audit_scope": "Step 1 dependency inventory; not full reconstruction certification",
+  "audit_scope": "Public reconstruction of published case content and artifact packaging; original collection history and rights evidence distinguished",
   "dependencies": [
     {
       "id": "R1",
       "scope": "all 39 sources / 6089 rows",
       "dependency": "End-to-end clean anonymous reconstruction execution",
       "evidence_to_close": "Run scripts/audit_public_reconstruction.py from a clean checkout; account for every source and inspect the per-source comparison scope. Resolve every failure.",
-      "status": "closed_for_declared_verification_scopes",
-      "evidence": "public-reconstruction-evidence.json: 39 sources and 6089 rows verified; see source-specific scopes"
+      "status": "closed_for_public_case_reconstruction",
+      "evidence": "Clean public builder and post-build verifier; see public-release-build-evidence.json."
     },
     {
       "id": "R2",
@@ -16,56 +16,63 @@
       "dependency": "Private historical 64-row input in the old adapter",
       "evidence_to_close": "Replace local-raw dependency with the pinned public original 31-case subset plus published source-row mapping; compare all non-audit fields. The original authoring process is undocumented.",
       "status": "closed_for_public_selected_case_reconstruction",
-      "evidence": "public-reconstruction-evidence.json: 31 rows match all non-audit fields using public original subset plus original row mapping"
+      "evidence": "Pinned public legacy objects and row mapping; original authoring is not recoverable from these inputs."
     },
     {
       "id": "R3",
       "scope": "nine web sources / 333 selected rows",
       "dependency": "Missing original authorized-items extract and original snapshots",
       "evidence_to_close": "For historical byte identity recover original bytes plus hashes. For content reconstruction explicitly use the pinned fresh public snapshot and preserve the distinction; compare all expected fields.",
-      "status": "fresh_public_content_available_original_bytes_missing"
+      "status": "closed_for_published_case_content_original_extract_unavailable",
+      "evidence": "Fresh pinned Q/A plus explicitly recovered historical metadata rebuild complete published rows. No claim of recovered original extract."
     },
     {
       "id": "R4",
       "scope": "historical source adapters and web selection",
       "dependency": "Published target rows are still used to select and validate upstream candidates",
       "evidence_to_close": "Commit a versioned selection ID/split manifest or deterministic selection algorithm with provenance; build without reading target case content, then use the target only for comparison.",
-      "status": "open"
+      "status": "closed",
+      "evidence": "Committed public-selection.json specifies IDs, split, order and historical annotations; builder never downloads target case content."
     },
     {
       "id": "R5",
       "scope": "entire historical release",
       "dependency": "Full byte-for-byte replay starts from a private 178517-row pre-audit export",
       "evidence_to_close": "Replace that export with public input assembly or define a new public-source successor. Document exclusions/replacements if the historical artifact cannot be rebuilt.",
-      "status": "open"
+      "status": "closed_for_selected_release",
+      "evidence": "Direct public assembly replaces private pre-audit export; original intermediate export replay is not claimed."
     },
     {
       "id": "R6",
       "scope": "all release artifacts",
       "dependency": "Public-source full release assembly, metadata and Parquet reproduction are not implemented",
       "evidence_to_close": "Assemble source outputs, apply published selection/repair/audit/metadata-removal rules, create JSONL/Parquet/schema/manifests, verify pinned checksums or explicitly version a content-equivalent serialization.",
-      "status": "open"
+      "status": "closed_for_case_content_and_release_packaging",
+      "evidence": "Exact JSONL; content-equivalent Parquet; pinned historical JSON records retained rather than fabricating a new audit."
     },
     {
       "id": "R7",
       "scope": "27 sources recorded permission-on-file; 23 sources have no declared upstream license",
       "dependency": "Public rights evidence is incomplete and historical ledger labels are not permission documents",
       "evidence_to_close": "Record per-source scope and attribution obligations, license or permission reference, and publication authority. Nine web sources now have explicit owner-confirmed redistribution permission; do not silently extend it to unrelated sources.",
-      "status": "partially_documented"
+      "status": "open_permission_records_not_verified",
+      "evidence": "Source attribution and research purpose documented. User requested research-use statement, not evidence of permission for remaining sources."
     },
     {
       "id": "R8",
       "scope": "live web-page collection",
       "dependency": "Live pages and Jina-rendered text are mutable; raw snapshots are local-only",
       "evidence_to_close": "Publish rights-cleared immutable collection inputs or retain the pinned fresh question snapshot as the explicit reconstruction boundary. Require a content-diff report on future recollection.",
-      "status": "open_for_original_page_replay"
+      "status": "closed_at_pinned_question_snapshot_boundary",
+      "evidence": "Immutable public fresh question snapshot is the explicit boundary. Original HTML replay remains unavailable."
     },
     {
       "id": "R9",
       "scope": "legacy document, RAG and agent fixture-dependent cases",
       "dependency": "Published fixture files are separate from the row-content checks",
       "evidence_to_close": "Download every fixture in the public legacy manifest, verify file hashes and required paths, then prove the benchmark harness installs the intended fixtures. Row-content equality alone is insufficient for executable task equivalence.",
-      "status": "public_fixtures_available_harness_equivalence_not_checked"
+      "status": "closed_for_fixture_inputs_and_workspace_layout",
+      "evidence": "11 fixture hashes checked and all six case workspaces populated with historical copy layout. No model-execution equivalence claim."
     }
   ]
 }

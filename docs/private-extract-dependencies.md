@@ -1,5 +1,8 @@
 # Historical private extract dependencies
 
+> Update: the [public release builder](public-release-builder.md) now reconstructs all 6,089 case records without private inputs or target case downloads. Earlier dependency descriptions below document the historical path. Missing original extract/authoring evidence and unverified redistribution permissions remain distinct from reproducible case content.
+
+
 > Historical provenance and original pinned artifacts are described below. The 31 selected legacy cases and 333 fresh questions are now public: see [standalone publications](standalone-publications.md). Current public revisions omit review annotations: see [metadata migration](metadata-migration.md). Availability of those subsets does not yet establish a complete end-to-end public rebuild.
 
 The original upstream builder read `private/authorized-source-extracts/authorized-items.jsonl`. That file is absent from the preserved Git and evidence bundles. We do not copy it into this repo or infer its contents from public cases.
