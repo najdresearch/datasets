@@ -81,3 +81,7 @@ Choose one narrow Saudi/Arabic decision task, make a source manifest with verifi
 - [Hugging Face snapshot download](https://huggingface.co/docs/huggingface_hub/package_reference/file_download)
 - [Hugging Face upload API](https://huggingface.co/docs/huggingface_hub/package_reference/hf_api)
 - [Published Najd Benchmark](https://huggingface.co/datasets/najdresearch/najd-benchmark)
+
+## Standalone source publications
+
+See [published legacy cases and Arabic riddles](docs/standalone-publications.md) for the two new Hugging Face datasets and reproducible collection commands.

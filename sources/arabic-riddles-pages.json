@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "rights_status": "pending",
+  "sources": [
+    {
+      "source_id": "twinkl-arabic-riddles",
+      "canonical_url": "https://www.twinkl.com/blog/arabic-riddles-with-answers-more-than-50",
+      "retrieval_url": "https://r.jina.ai/http://www.twinkl.com/blog/arabic-riddles-with-answers-more-than-50",
+      "parser": "twinkl_riddles"
+    },
+    {
+      "source_id": "twinkl-islamic-questions",
+      "canonical_url": "https://www.twinkl.com/blog/180-islamic-questions-for-competition",
+      "retrieval_url": "https://r.jina.ai/http://www.twinkl.com/blog/180-islamic-questions-for-competition",
+      "parser": "twinkl_islamic"
+    },
+    {
+      "source_id": "qusama-riddles",
+      "canonical_url": "https://qusama1.yoo7.com/t304-100-%D9%84%D8%BA%D8%B2-%D9%85%D8%B9-%D8%A7%D9%84%D8%AD%D9%84-%D9%87%D9%88%D9%88%D9%88%D9%88%D9%88%D9%88%D9%88%D9%88%D9%88%D8%B9",
+      "retrieval_url": "https://r.jina.ai/http://qusama1.yoo7.com/t304-100-%D9%84%D8%BA%D8%B2-%D9%85%D8%B9-%D8%A7%D9%84%D8%AD%D9%84-%D9%87%D9%88%D9%88%D9%88%D9%88%D9%88%D9%88%D9%88%D9%88%D9%88%D8%B9",
+      "parser": "qusama"
+    },
+    {
+      "source_id": "mawdoo3-riddles",
+      "canonical_url": "https://mawdoo3.com/%D8%A3%D9%84%D8%BA%D8%A7%D8%B2_%D8%B0%D9%83%D8%A7%D8%A1_%D9%85%D8%B9_%D8%A7%D9%84%D8%AD%D9%84%D9%88%D9%84",
+      "retrieval_url": "https://r.jina.ai/http://mawdoo3.com/%D8%A3%D9%84%D8%BA%D8%A7%D8%B2_%D8%B0%D9%83%D8%A7%D8%A1_%D9%85%D8%B9_%D8%A7%D9%84%D8%AD%D9%84%D9%88%D9%84",
+      "parser": "mawdoo3"
+    },
+    {
+      "source_id": "almrsal-riddles",
+      "canonical_url": "https://www.almrsal.com/post/1369176",
+      "retrieval_url": "https://www.almrsal.com/post/1369176",
+      "parser": "almrsal_riddles"
+    },
+    {
+      "source_id": "almrsal-general-contest",
+      "canonical_url": "https://www.almrsal.com/post/1556481",
+      "retrieval_url": "https://www.almrsal.com/post/1556481",
+      "parser": "almrsal_riddles"
+    },
+    {
+      "source_id": "mawdoo3-science",
+      "canonical_url": "https://mawdoo3.com/%D8%A3%D9%84%D8%BA%D8%A7%D8%B2_%D8%B9%D9%86_%D8%A7%D9%84%D8%B9%D9%84%D9%85_%D9%85%D8%B9_%D8%A7%D9%84%D8%AD%D9%84",
+      "retrieval_url": "https://r.jina.ai/http://mawdoo3.com/%D8%A3%D9%84%D8%BA%D8%A7%D8%B2_%D8%B9%D9%86_%D8%A7%D9%84%D8%B9%D9%84%D9%85_%D9%85%D8%B9_%D8%A7%D9%84%D8%AD%D9%84",
+      "parser": "mawdoo3"
+    },
+    {
+      "source_id": "mawdoo3-animals",
+      "canonical_url": "https://mawdoo3.com/%D8%A3%D9%84%D8%BA%D8%A7%D8%B2_%D8%B9%D9%86_%D8%A7%D9%84%D8%AD%D9%8A%D9%88%D8%A7%D9%86%D8%A7%D8%AA_%D9%85%D8%B9_%D8%A7%D9%84%D8%AD%D9%84",
+      "retrieval_url": "https://r.jina.ai/http://mawdoo3.com/%D8%A3%D9%84%D8%BA%D8%A7%D8%B2_%D8%B9%D9%86_%D8%A7%D9%84%D8%AD%D9%8A%D9%88%D8%A7%D9%86%D8%A7%D8%AA_%D9%85%D8%B9_%D8%A7%D9%84%D8%AD%D9%84",
+      "parser": "mawdoo3"
+    },
+    {
+      "source_id": "sayidaty-children-riddles",
+      "canonical_url": "https://www.sayidaty.net/%D8%B3%D9%8A%D8%AF%D8%AA%D9%8A-%D9%88%D8%B7%D9%81%D9%84%D9%83/%D8%A3%D8%B7%D9%81%D8%A7%D9%84-%D9%88%D9%85%D8%B1%D8%A7%D9%87%D9%82%D9%88%D9%86/1814996-%D8%A3%D9%84%D8%BA%D8%A7%D8%B2-%D9%84%D9%84%D8%A3%D8%B7%D9%81%D8%A7%D9%84-%D9%88%D8%A7%D9%84%D8%AD%D9%84",
+      "retrieval_url": "https://r.jina.ai/http://www.sayidaty.net/%D8%B3%D9%8A%D8%AF%D8%AA%D9%8A-%D9%88%D8%B7%D9%81%D9%84%D9%83/%D8%A3%D8%B7%D9%81%D8%A7%D9%84-%D9%88%D9%85%D8%B1%D8%A7%D9%87%D9%82%D9%88%D9%86/1814996-%D8%A3%D9%84%D8%BA%D8%A7%D8%B2-%D9%84%D9%84%D8%A3%D8%B7%D9%81%D8%A7%D9%84-%D9%88%D8%A7%D9%84%D8%AD%D9%84",
+      "parser": "numbered"
+    }
+  ]
+}
