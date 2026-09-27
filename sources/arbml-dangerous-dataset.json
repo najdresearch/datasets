@@ -14,9 +14,13 @@
   "reference_sha256": "b8b52ded0f6731b7a4764a90476edfe643f46d6a286096bab02b7ed189af94f6",
   "license": "Not declared in the historical source ledger",
   "redistribution_basis": "historical permission-on-file claim; recheck before new publication",
-  "review_status": "not_reviewed",
   "split": "historical_test_candidates",
-  "transformations": ["field_mapping", "source_provenance", "historical_global_selection"],
+  "transformations": [
+    "field_mapping",
+    "source_provenance",
+    "historical_global_selection"
+  ],
   "reviewer": null,
-  "required_extra": "parquet"
+  "required_extra": "parquet",
+  "historical_review_metadata": true
 }

@@ -15,6 +15,5 @@
   "transformations": [
     "whitespace_normalization",
     "exact_prompt_expected_dedup"
-  ],
-  "review_status": "not_reviewed"
+  ]
 }

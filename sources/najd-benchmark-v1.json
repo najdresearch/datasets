@@ -18,12 +18,12 @@
   "reference_quarantine_sha256": "5b108a254466d621da41e53acfa5b6302b310c4f9f80d8e87124d605cbfc5ed8",
   "license": "other",
   "redistribution_basis": "permission-on-file",
-  "review_status": "not_reviewed",
   "split": "historical_internal_copy",
   "transformations": [
     "legacy_v1_copy",
     "source_provenance",
     "historical_global_selection"
   ],
-  "reviewer": null
+  "reviewer": null,
+  "historical_review_metadata": true
 }

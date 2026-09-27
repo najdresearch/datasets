@@ -7,6 +7,8 @@ import time
 from pathlib import Path
 from urllib.request import urlopen
 
+from .legacy_metadata import historical_mode, historical_review_fields
+from .metadata import without_review_metadata
 from .pipeline import PipelineError, digest, read_jsonl, write_json, write_jsonl
 from .remaining_adapters import (
     absher,
@@ -67,7 +69,7 @@ def arabic_agent_eval(raw_path: Path, output_path: Path, revision: str) -> dict[
                     "upstreamId": source.get("id"),
                     "sourceRevision": revision,
                 },
-                "review_status": "not_reviewed",
+                **historical_review_fields(),
                 "audit_status": "certified",
                 "audit_issues": [],
             }
@@ -101,7 +103,7 @@ def paired_tool_use(raw_path: Path, output_path: Path, revision: str) -> dict[st
                 "variantId": source["variant_id"],
                 "sourceRevision": revision,
             },
-            "review_status": "not_reviewed",
+            **historical_review_fields(),
             "audit_status": "certified",
             "audit_issues": [],
         })
@@ -135,7 +137,7 @@ def islamic_faith_qa(raw_path: Path, output_path: Path, revision: str) -> dict[s
                 "sourceRow": index,
                 "sourceRevision": revision,
             },
-            "review_status": "not_reviewed",
+            **historical_review_fields(),
         })
     write_jsonl(output_path, rows)
     return {
@@ -173,7 +175,7 @@ def arabic_function_calling(raw_path: Path, output_path: Path, revision: str) ->
                 "domain": source.get("domain"),
                 "dialect": source.get("dialect"),
             },
-            "review_status": "not_reviewed",
+            **historical_review_fields(),
         })
     write_jsonl(output_path, rows)
     return {
@@ -207,7 +209,7 @@ def arabic_ragb(raw_path: Path, output_path: Path, revision: str) -> dict[str, o
                 "queryDialect": source.get("query_dialect"),
                 "queryComplexity": source.get("query_complexity"),
             },
-            "review_status": "not_reviewed",
+            **historical_review_fields(),
         })
     write_jsonl(output_path, rows)
     return {
@@ -242,7 +244,7 @@ def ara_truthful_qa(raw_path: Path, output_path: Path, revision: str) -> dict[st
                 "sourceRow": index,
                 "sourceKey": source.get("iid"),
             },
-            "review_status": "not_reviewed",
+            **historical_review_fields(),
         })
     write_jsonl(output_path, rows)
     return {
@@ -285,7 +287,7 @@ def ara_safe(raw_dir: Path, output_path: Path, revision: str) -> dict[str, objec
                     "sourceRow": index,
                     "origin": origin,
                 },
-                "review_status": "not_reviewed",
+                **historical_review_fields(),
             })
     write_jsonl(output_path, rows)
     return {"source_id": "arasafe", "rows": len(rows), "sha256": digest(output_path.read_bytes())}
@@ -330,7 +332,7 @@ def mena_values(raw_path: Path, output_path: Path, revision: str) -> dict[str, o
                 "source": source.get("Source"),
                 "subQuestion": source.get("Sub Question"),
             },
-            "review_status": "not_reviewed",
+            **historical_review_fields(),
         })
     write_jsonl(output_path, rows)
     return {
@@ -369,7 +371,7 @@ def arbml_label_source(
                 "sourceFile": f"sources/huggingface/arbml/{kind}/train-00000-of-00001.parquet",
                 "sourceRow": index,
             },
-            "review_status": "not_reviewed",
+            **historical_review_fields(),
         })
     write_jsonl(output_path, rows)
     return {
@@ -416,7 +418,7 @@ def arabic_hate_speech(raw_path: Path, output_path: Path, revision: str) -> dict
                 ),
                 "sourceRow": index, "sourceKey": source.get("id"),
             },
-            "review_status": "not_reviewed",
+            **historical_review_fields(),
         })
     write_jsonl(output_path, rows)
     return {
@@ -446,7 +448,7 @@ def dangerous_dataset(raw_path: Path, output_path: Path, revision: str) -> dict[
                 ),
                 "sourceRow": index,
             },
-            "review_status": "not_reviewed",
+            **historical_review_fields(),
         })
     write_jsonl(output_path, rows)
     return {
@@ -484,7 +486,7 @@ def arabic_reading_comprehension(
                 "questionClass": source.get("question_class"),
                 "questionSubclass": source.get("question_subclass"),
             },
-            "review_status": "not_reviewed",
+            **historical_review_fields(),
         })
     write_jsonl(output_path, rows)
     return {
@@ -518,7 +520,7 @@ def ara_pro(raw_path: Path, output_path: Path, revision: str) -> dict[str, objec
                 "domain": source.get("domain"),
                 "subDomain": source.get("sub-domain"),
             },
-            "review_status": "not_reviewed",
+            **historical_review_fields(),
         })
     write_jsonl(output_path, rows)
     return {
@@ -555,7 +557,7 @@ def dialectal_mmlu(raw_path: Path, output_path: Path, revision: str) -> dict[str
                 "dialect": dialect,
                 "domain": str(source.get("domain") or ""),
             },
-            "review_status": "not_reviewed",
+            **historical_review_fields(),
         })
     write_jsonl(output_path, rows)
     return {
@@ -649,7 +651,11 @@ def reproduce_source(
             raise PipelineError("upstream source SHA-256 mismatch")
         raw_path.write_bytes(raw)
     output_path = output_dir / "cases.jsonl"
-    result = adapters[manifest["adapter"]](raw_path, output_path, manifest["revision"])
+    token = historical_mode.set(manifest.get("historical_review_metadata", False))
+    try:
+        result = adapters[manifest["adapter"]](raw_path, output_path, manifest["revision"])
+    finally:
+        historical_mode.reset(token)
     if result["rows"] != manifest["expected_rows"]:
         raise PipelineError("adapter row count mismatch")
     if result["sha256"] != manifest["expected_sha256"]:
@@ -719,6 +725,9 @@ def reproduce_source(
     if result.get("quarantine_rows_matched", 0) != manifest.get("expected_quarantine_rows", 0):
         raise PipelineError("published quarantine row count mismatch")
     result["published_rows_matched"] = len(reference)
+    result["historical_output_sha256"] = result["sha256"]
+    write_jsonl(output_path, without_review_metadata(read_jsonl(output_path)))
+    result["sha256"] = digest(output_path.read_bytes())
     write_json(output_dir / "report.json", result)
     return result
 

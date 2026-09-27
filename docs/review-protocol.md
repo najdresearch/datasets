@@ -10,7 +10,7 @@ The existing public release is a collection of candidate cases. Structural certi
 | Full case review | Reviewer ID, decision, corrected answer or exclusion reason, evidence URL, adjudication | Hold a case until disagreements are resolved. |
 | Split freeze | Case IDs and hashes for development and sealed evaluation partitions | Do not tune on sealed cases. |
 
-Review decisions belong in a private, access-controlled record until publication rights are established. A release manifest should cite only approved reviewer IDs, counts, and artifact hashes. The current release remains `not_reviewed` until this protocol is completed; no approval is implied by reproducibility.
+Review decisions belong in a private, access-controlled record until publication rights are established. A release manifest should cite only approved reviewer IDs, counts, and artifact hashes. No review approval is implied by reproducibility; current public data omits review annotations.
 
 For the first source, generate a deterministic two-per-category packet (12 cases from six categories) in the ignored `build/` directory:
 

@@ -48,4 +48,4 @@ uv run python scripts/package_riddles.py \
 
 The owner explicitly confirmed redistribution permission on 2026-09-27 with source attribution required. This is recorded as owner-confirmed permission, not independently verified licensing. Every source is linked on the card and every row. Raw webpages are not uploaded. No general CC/Apache license is asserted over third-party text.
 
-Both releases preserve `not_reviewed`: content matching and publication are not semantic certification. No original dataset rows, scores, or audit metadata were changed. Historical audit counts in `audit-public-inputs` still describe the old release manifests until public-subset adapters are integrated.
+Both releases now omit review annotations: content matching and publication are not semantic certification. No original dataset rows, scores, or audit metadata were changed. Historical audit counts in `audit-public-inputs` still describe the old release manifests until public-subset adapters are integrated.

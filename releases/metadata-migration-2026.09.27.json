@@ -1,0 +1,18 @@
+{
+  "transformation": "omit-review-annotations-v1",
+  "datasets": {
+    "najd-benchmark": {
+      "previous_revision": "cb30c1c9e46c62f691380c3269885cdb8f22f52b",
+      "revision": "43674ef228c1461d6fd34e20c20f51efcbdce56d"
+    },
+    "najd-legacy-31": {
+      "previous_revision": "dde7eca88d9fe7cc2697502f544f1ebaf953fce3",
+      "revision": "ccbf837af54611fa8106e4355302fa2b4d4660f9"
+    },
+    "arabic-riddles": {
+      "previous_revision": "d21090ba3ad945ae5eb42b999fb5708ff863be70",
+      "revision": "96dd7b99b31233f83325307c778e756501afb8fc"
+    }
+  },
+  "benchmark_cases_sha256": "149e6815a29434a462e9d1f8f3ccbb21a142c79848947ad20c19b9639c72c081"
+}

@@ -6,6 +6,8 @@ import json
 from collections import Counter
 from pathlib import Path
 
+from najd_datasets.metadata import without_review_metadata
+
 
 def package(snapshot, output, authorization):
     approval = json.loads(authorization.read_text())
@@ -21,7 +23,7 @@ def package(snapshot, output, authorization):
         and set(approval.get("source_ids", [])) == {p["source_id"] for p in manifest["pages"]}
     ):
         raise ValueError("Missing hash-bound source redistribution authorization")
-    rows = [json.loads(line) for line in data.decode().splitlines() if line]
+    rows = without_review_metadata([json.loads(line) for line in data.decode().splitlines() if line])
     if manifest["missing_ids"] or len(rows) != 333 or len({r["id"] for r in rows}) != 333:
         raise ValueError("Incomplete collection")
     if output.exists():
@@ -42,7 +44,6 @@ def package(snapshot, output, authorization):
             "rights_basis": "Dataset owner confirmed permission for public redistribution on "
             + approval["date"],
             "ready_for_publication": True,
-            "semantic_review": "not_performed",
         }
     )
     (output / "manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n")
@@ -115,7 +116,7 @@ No blanket CC or Apache license is granted over third-party text. See `LICENSE.m
 
 Answers are preserved as published by their sources and may be incorrect, ambiguous, culturally
 specific, or dependent on Arabic wordplay. Religious answers have not had specialist review.
-`review_status=not_reviewed` remains unchanged. The test split is a display convention:
+Review annotations are omitted. The test split is a display convention:
 these are public cases, not a sealed test set. Do not claim independence from the historical
 Najd Benchmark or train on these rows and report held-out performance on that benchmark.
 This publication does not modify the original benchmark or historical scores.

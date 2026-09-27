@@ -6,6 +6,7 @@ import csv
 import hashlib
 from pathlib import Path
 
+from .legacy_metadata import historical_review_fields
 from .pipeline import digest, read_jsonl, write_jsonl
 
 
@@ -35,7 +36,7 @@ def ara_math(raw_path: Path, output_path: Path, revision: str) -> dict[str, obje
                 "sourceFile": "sources/huggingface/humain-aramath/test.jsonl",
                 "sourceRow": index, "sourceKey": source.get("iid"),
             },
-            "review_status": "not_reviewed",
+            **historical_review_fields(),
         })
     return _finish("humain-aramath", output_path, rows)
 
@@ -53,7 +54,7 @@ def humain_araifeval(raw_path: Path, output_path: Path, revision: str) -> dict[s
                 "sourceFile": "sources/huggingface/humain-araifeval/Arabic_IF_Eval_Flat.jsonl",
                 "sourceRow": index, "originalSampleId": source.get("original_sample_id"),
             },
-            "review_status": "not_reviewed",
+            **historical_review_fields(),
         })
     return _finish("humain-araifeval", output_path, rows)
 
@@ -74,7 +75,7 @@ def inception_ifeval(raw_path: Path, output_path: Path, revision: str) -> dict[s
                 "sourceFile": "sources/huggingface/inception-arabic-ifeval/ar_IFEval.jsonl",
                 "sourceRow": index, "key": source.get("key"),
             },
-            "review_status": "not_reviewed",
+            **historical_review_fields(),
         })
     return _finish("inception-arabic-ifeval", output_path, rows)
 
@@ -102,7 +103,7 @@ def commonsense_validation(raw_path: Path, output_path: Path, revision: str) -> 
                 ),
                 "sourceRow": index, "sourceKey": str(source.get("id") or index),
             },
-            "review_status": "not_reviewed",
+            **historical_review_fields(),
         })
     return _finish("commonsense-validation", output_path, rows)
 
@@ -129,7 +130,7 @@ def arabic_exams(raw_path: Path, output_path: Path, revision: str) -> dict[str, 
                 "sourceFile": "sources/huggingface/arabic-exams/data/test-00000-of-00001.parquet",
                 "sourceRow": index, "sourceKey": str(source.get("id") or index),
             },
-            "review_status": "not_reviewed",
+            **historical_review_fields(),
         })
     return _finish("arabic-exams", output_path, rows)
 
@@ -152,7 +153,7 @@ def ara_trust(raw_path: Path, output_path: Path, revision: str) -> dict[str, obj
                 "sourceFile": "sources/huggingface/aratrust/data/test-00000-of-00001.parquet",
                 "sourceRow": index, "category": category, "subcategory": subcategory,
             },
-            "review_status": "not_reviewed",
+            **historical_review_fields(),
         })
     return _finish("aratrust", output_path, rows)
 
@@ -178,7 +179,7 @@ def cidar_eval(raw_path: Path, output_path: Path, revision: str) -> dict[str, ob
                 ),
                 "sourceRow": index,
             },
-            "review_status": "not_reviewed",
+            **historical_review_fields(),
         })
     return _finish("arbml-cidar-eval-100", output_path, rows)
 
@@ -210,7 +211,7 @@ def cidar_mcq(raw_path: Path, output_path: Path, revision: str) -> dict[str, obj
                 ),
                 "sourceRow": index,
             },
-            "review_status": "not_reviewed",
+            **historical_review_fields(),
         })
     return _finish("arbml-cidar-mcq-100", output_path, rows)
 
@@ -249,7 +250,7 @@ def arabic_mmlu(raw_dir: Path, output_path: Path, revision: str) -> dict[str, ob
                         "country": source.get("Country", ""),
                         "group": source.get("Group", ""),
                     },
-                    "review_status": "not_reviewed",
+                    **historical_review_fields(),
                 })
     return _finish("arabicmmlu", output_path, rows)
 
@@ -300,7 +301,7 @@ def absher(raw_dir: Path, output_path: Path, revision: str) -> dict[str, object]
                         "surfaceCategory": surface,
                         "classificationRule": "one_token_word_else_phrase_v1",
                     },
-                    "review_status": "not_reviewed",
+                    **historical_review_fields(),
                 })
     return _finish("absher", output_path, rows)
 
@@ -352,7 +353,7 @@ def alghafa_native(raw_dir: Path, output_path: Path, revision: str) -> dict[str,
                     "sourceId": "alghafa-native", "sourceRevision": revision,
                     "sourceFile": source_file, "sourceRow": index, "task": task,
                 },
-                "review_status": "not_reviewed",
+                **historical_review_fields(),
             })
     return _finish("alghafa-native", output_path, rows)
 
@@ -385,7 +386,7 @@ def pico_saudi(raw_path: Path, output_path: Path, revision: str) -> dict[str, ob
                 "sourceFile": "datasets/pico-saudi-v0.01/cases.jsonl",
                 "sourceRow": index, "repair": "legacy_contract_v1",
             },
-            "review_status": "not_reviewed",
+            **historical_review_fields(),
         })
     return _finish("pico-saudi-v0.01", output_path, rows)
 
@@ -429,7 +430,7 @@ def arabic_safety_evaluation(
                     ),
                     "sourceRow": int(zero_index) + 2, "sourceKey": source_key,
                 },
-                "review_status": "not_reviewed",
+                **historical_review_fields(),
             })
     return _finish("arabic-safety-evaluation", output_path, rows)
 
@@ -443,6 +444,6 @@ def najd_v1_copy(raw_path: Path, output_path: Path, revision: str) -> dict[str, 
             "sourceFile": "datasets/najd-benchmark-v1/cases.jsonl",
             "sourceRow": index, "repair": "legacy_contract_v1",
         }
-        row["review_status"] = "not_reviewed"
+        row.update(historical_review_fields())
         rows.append(row)
     return _finish("najd-benchmark-v1", output_path, rows)
