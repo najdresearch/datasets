@@ -14,6 +14,8 @@ The standalone datasets overlap with Najd Benchmark; do not add their counts as 
 
 Current immutable revisions and hashes are in the [migration ledger](releases/metadata-migration-2026.09.27.json). See [standalone dataset builds](docs/standalone-publications.md) and [metadata migration](docs/metadata-migration.md).
 
+The published [Hugging Face dataset card](docs/huggingface/najd-benchmark.md) is also tracked here for documentation updates.
+
 ## Repository responsibilities
 
 | Repository | Responsibility |
