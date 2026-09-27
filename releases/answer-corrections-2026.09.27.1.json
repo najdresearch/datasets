@@ -1,0 +1,56 @@
+[
+  {
+    "id": "absher-words-cultural_interpretation-00175",
+    "source_url": "https://huggingface.co/datasets/Renad10/Absher-Benchmark/resolve/554f7457e9f91290f204ac56ab82e707f302944e/Words/Words_Cultural_Interpretation_questions.csv",
+    "source_sha256": "e4a263214f20b3d22e3d288d732f957998af4f8e49a011db7e8d27c797b6b40b",
+    "csv_record_index": 174,
+    "term": "افقشه",
+    "meaning": "أفجر البالونه",
+    "original_prompt": "المهمة: فسر معنى كلمة 'افقشه' في السياق الثقافي.\nالسؤال: لماذا تستخدم كلمة 'افقشه' في اللهجة السعودية؟\nالخيارات:\nأ) تعبير شائع في الاحتفالات\nب) تعبير يستخدم في الأطعمة\nج) تعبير للتعبير عن الحزن\nد) تعبير يستخدم في التعليم",
+    "annotation_author": "Najd Research / AI-assisted source-based correction",
+    "original_correct_answer": "",
+    "prompt": "ما معنى «افقشه» في الاستعمال المسجل في مصدر أبشر؟\nأ) فرقع البالون\nب) افتح الباب\nج) أغلق النافذة\nد) اترك المكان",
+    "answer": "أ",
+    "reason": "The source meaning says pop the balloon; the original cultural-purpose options do not establish a unique answer. Replace with a meaning question."
+  },
+  {
+    "id": "absher-words-location_recognition-01207",
+    "source_url": "https://huggingface.co/datasets/Renad10/Absher-Benchmark/resolve/554f7457e9f91290f204ac56ab82e707f302944e/Words/Words_Location_Recognition_questions.csv",
+    "source_sha256": "9934fdd588e05d50260d553c5ecc2f0e836cc89d8417357693b3bde82002e986",
+    "csv_record_index": 1206,
+    "term": "قموطه",
+    "meaning": "قموطه تعني المؤخره مؤخرة الإنسان",
+    "original_prompt": "المهمة: حدد الدولة التي تستخدم فيها كلمة 'قموطه' بشكل شائع.\nالسؤال: أي دولة تستخدم المصطلح 'قموطه' بشكل رئيسي؟\nالخيارات:\nأ) المملكة العربية السعودية\nب) الكويت\nج) الإمارات\nد) البحرين",
+    "annotation_author": "Najd Research / AI-assisted source-based correction",
+    "original_correct_answer": "",
+    "prompt": "ما معنى «قموطه» في الاستعمال المسجل في مصدر أبشر؟\nأ) يد الإنسان\nب) قدم الإنسان\nج) مؤخرة الإنسان\nد) رأس الإنسان",
+    "answer": "ج",
+    "reason": "The source supplies a meaning but no evidence for primary country of use. Replace the unsupported geographic claim with a meaning question."
+  },
+  {
+    "id": "absher-words-true_false-00536",
+    "source_url": "https://huggingface.co/datasets/Renad10/Absher-Benchmark/resolve/554f7457e9f91290f204ac56ab82e707f302944e/Words/Words_True_False_questions.csv",
+    "source_sha256": "2c2f5b8a17a3e863ce4c9c8568e24425606dd66e383066a5ee7223368dc7d89c",
+    "csv_record_index": 535,
+    "term": "حره",
+    "meaning": "الغيظ او الضغينه او الرغبة بالانتقام.",
+    "original_prompt": "المهمة: حدد ما إذا كانت العبارة صحيحة أم خاطئة.\nالسؤال: كلمة 'حره' تشير إلى الشعور بالراحة والهدوء.\nالخيارات:\nأ) صحيح\nب) خطأ",
+    "annotation_author": "Najd Research / AI-assisted source-based correction",
+    "original_correct_answer": "",
+    "answer": "ب",
+    "reason": "The recorded meaning is anger, resentment or revenge, contradicting comfort and calm."
+  },
+  {
+    "id": "absher-words-true_false-01042",
+    "source_url": "https://huggingface.co/datasets/Renad10/Absher-Benchmark/resolve/554f7457e9f91290f204ac56ab82e707f302944e/Words/Words_True_False_questions.csv",
+    "source_sha256": "2c2f5b8a17a3e863ce4c9c8568e24425606dd66e383066a5ee7223368dc7d89c",
+    "csv_record_index": 1041,
+    "term": "عبنّه",
+    "meaning": "عبنه : أي يبدو أنه",
+    "original_prompt": "المهمة: حدد ما إذا كانت العبارة صحيحة أم خاطئة.\nالسؤال: عبارة 'محمد عبنه توظف' تعني أن محمد يبدو أنه قد توظف.\nالخيارات:\nأ) صحيح\nب) خاطئ",
+    "annotation_author": "Najd Research / AI-assisted source-based correction",
+    "original_correct_answer": "",
+    "answer": "أ",
+    "reason": "The recorded meaning is يبدو أنه, exactly matching the statement."
+  }
+]
