@@ -1,0 +1,17 @@
+{
+  "dataset_repo": "najdresearch/system-one",
+  "evaluated_revision": "84bf0a30ced090e2b552beafa5f0f3c9a3665c0c",
+  "family_id": "B04",
+  "case_ids": ["B04-en", "B04-ar-MSA", "B04-ar-SA"],
+  "status": "wording_ambiguity_flagged",
+  "reviewer": "Codex; not independent human review",
+  "finding": "The policy requires an explicitly matching purchase order. The request says matching invoice without naming the purchase order. It is unclear whether this satisfies the requirement, especially across languages.",
+  "current_gold": {"action": true},
+  "label_changed": false,
+  "evaluation_treatment": "Keep original frozen scores. Separately report sensitivity excluding the whole three-language family for every model. This is post-hoc sensitivity, not a replacement headline score.",
+  "proposed_next_revision": {
+    "en": "The two approvals are recorded, the purchase order matches, the invoice is unpaid, and the bank account has been independently verified after a change.",
+    "ar-MSA": "سُجل الاعتمادان، وأمر الشراء مطابق، والفاتورة غير مدفوعة، وقد تم التحقق المستقل من الحساب بعد تغييره.",
+    "ar-SA": "الاعتمادين مسجلين، وأمر الشراء مطابق، والفاتورة ما اندفعت، وتحققنا من الحساب بشكل مستقل بعد ما تغير."
+  }
+}
