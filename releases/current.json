@@ -1,0 +1,11 @@
+{
+  "dataset_id": "najdresearch/najd-benchmark",
+  "version": "2026.09.27",
+  "revision": "e2dcd2aac116da180835ce9eacc7572bc7cec2f7",
+  "case_count": 6089,
+  "track_count": 25,
+  "cases_path": "datasets/najd-benchmark/2026.09.27/cases.jsonl",
+  "cases_sha256": "8b8bcbee213726333292976a0efa5152bfba8b003a84137244db7879767bb8ae",
+  "configuration": "default",
+  "split": "test"
+}
