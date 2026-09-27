@@ -99,3 +99,10 @@ Version `2026.09.27.1` adds verified public fixture files and four source-based 
 corrections. Run `scripts/build_executable_release.py` after the historical and unified
 builders; see [the correction guide](docs/executable-release.md). Case count remains
 6,089. Old revisions remain immutable; these corrected cases require a fresh evaluation.
+
+## Shared contracts (Step 2)
+
+[Dataset manifests and contribution checks](docs/shared-contracts.md) now share pinned
+schemas with benchmark and Arena. The original [Arabic support routing example](examples/arabic-support-routing-v1/README.md)
+rebuilds deterministically and demonstrates the end-to-end development contract.
+It is separate from the existing Hugging Face benchmark release.
