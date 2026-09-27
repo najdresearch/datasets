@@ -92,3 +92,10 @@ Build the internal Arabic customer-support version-comparison task pack using or
 ## Consumers
 
 `benchmark` and Arena use the immutable identity in `releases/current.json`: 6,089 cases across 25 tracks. Task-specific scorers may select a documented subset. Saved results keep their original revisions; changing the default release never rewrites prior scores. New rows do not become scorable merely by removing metadata: missing references and tasks requiring an execution harness must remain explicitly ungraded until supported.
+
+### Executable fixture release
+
+Version `2026.09.27.1` adds verified public fixture files and four source-based answer
+corrections. Run `scripts/build_executable_release.py` after the historical and unified
+builders; see [the correction guide](docs/executable-release.md). Case count remains
+6,089. Old revisions remain immutable; these corrected cases require a fresh evaluation.

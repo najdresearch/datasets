@@ -9,7 +9,7 @@ configs:
 - config_name: default
   data_files:
   - split: test
-    path: datasets/najd-benchmark/2026.09.27/viewer.parquet
+    path: datasets/najd-benchmark/2026.09.27.1/viewer.parquet
 ---
 
 # Najd Benchmark
@@ -26,11 +26,25 @@ from datasets import load_dataset
 data = load_dataset("najdresearch/najd-benchmark", split="test")
 ```
 
-- [Cases — JSONL](datasets/najd-benchmark/2026.09.27/cases.jsonl)
-- [Cases — Parquet](datasets/najd-benchmark/2026.09.27/viewer.parquet)
-- [Manifest](datasets/najd-benchmark/2026.09.27/manifest.json), [schema](datasets/najd-benchmark/2026.09.27/case.schema.json) and [checksums](datasets/najd-benchmark/2026.09.27/checksums.json)
+- [Cases — JSONL](datasets/najd-benchmark/2026.09.27.1/cases.jsonl)
+- [Cases — Parquet](datasets/najd-benchmark/2026.09.27.1/viewer.parquet)
+- [Manifest](datasets/najd-benchmark/2026.09.27.1/manifest.json), [schema](datasets/najd-benchmark/2026.09.27.1/case.schema.json) and [checksums](datasets/najd-benchmark/2026.09.27.1/checksums.json)
 
 JSONL retains native answer/provenance objects. Parquet encodes heterogeneous objects as JSON strings for the viewer. Individual `audit_issues` notes retain known limitations without labeling cases by audit status.
+
+## Version 2026.09.27.1
+
+Four missing Absher answer keys now have source-based Najd annotations. Two true/false
+questions retain their prompts. Two ambiguous questions now ask for the recorded meaning
+instead of an unsupported cultural-purpose or primary-country claim. These are documented
+corrections, not recovered upstream answer keys. See the [correction ledger](datasets/najd-benchmark/2026.09.27.1/answer-corrections.json)
+for the original prompts, pinned source CSVs, row indexes, meanings and reasoning.
+Earlier revisions remain available for reproducing historical scores.
+
+Six file-based cases now include their 11 public, checksum-verified fixture files in this
+release. The benchmark's `fixture-tools-v1` protocol uses a bounded virtual filesystem
+and records reads, writes, final responses and usage. Those six cases measure performance
+with this harness; they must not be described as raw single-turn model results.
 
 ## Reproduce and contribute
 
@@ -41,7 +55,8 @@ git clone https://github.com/najdresearch/datasets.git
 cd datasets
 uv sync --locked --extra dev --extra parquet --extra excel
 uv run python scripts/reconstruct_public_release.py --output build/historical
-uv run python scripts/build_unified_release.py build/historical/release build/current
+uv run python scripts/build_unified_release.py build/historical/release build/unified
+uv run python scripts/build_executable_release.py build/unified build/historical/release build/current
 ```
 
 The public reconstruction supplies every case from pinned upstream inputs, the [31 legacy cases and fixtures](https://huggingface.co/datasets/najdresearch/najd-legacy-31), and [333 freshly collected Arabic questions](https://huggingface.co/datasets/najdresearch/arabic-riddles). Those subsets are already included in the 6,089 count. Original legacy authoring history and the original web extract remain unavailable; the recovered release specification records historical metadata explicitly.
@@ -50,7 +65,7 @@ See [reconstruction details](https://github.com/najdresearch/datasets/blob/main/
 
 ## Sources
 
-Credit belongs to the original creators. Each case retains source provenance; the [source register](datasets/najd-benchmark/2026.09.27/sources.json) contains evidence and pinned references.
+Credit belongs to the original creators. Each case retains source provenance; the [source register](datasets/najd-benchmark/2026.09.27.1/sources.json) contains evidence and pinned references.
 
 | Source | Cases |
 |---|---:|

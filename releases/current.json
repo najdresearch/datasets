@@ -1,11 +1,11 @@
 {
   "dataset_id": "najdresearch/najd-benchmark",
-  "version": "2026.09.27",
-  "revision": "e2dcd2aac116da180835ce9eacc7572bc7cec2f7",
+  "version": "2026.09.27.1",
+  "revision": "3fa471f6c8ed2ebc37a8b60d40c88170d682b569",
   "case_count": 6089,
   "track_count": 25,
-  "cases_path": "datasets/najd-benchmark/2026.09.27/cases.jsonl",
-  "cases_sha256": "8b8bcbee213726333292976a0efa5152bfba8b003a84137244db7879767bb8ae",
+  "cases_path": "datasets/najd-benchmark/2026.09.27.1/cases.jsonl",
+  "cases_sha256": "f2ffd3466a7f3027c585b210e4708b2d589e1df27f365a5dd5b48a4927ef0ff7",
   "configuration": "default",
   "split": "test"
 }
