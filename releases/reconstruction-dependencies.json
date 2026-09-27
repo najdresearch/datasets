@@ -52,11 +52,11 @@
     },
     {
       "id": "R7",
-      "scope": "27 sources recorded permission-on-file; 23 sources have no declared upstream license",
+      "scope": "12 sources / 2759 rows lack established public license or permission evidence",
       "dependency": "Public rights evidence is incomplete and historical ledger labels are not permission documents",
       "evidence_to_close": "Record per-source scope and attribution obligations, license or permission reference, and publication authority. Nine web sources now have explicit owner-confirmed redistribution permission; do not silently extend it to unrelated sources.",
       "status": "open_permission_records_not_verified",
-      "evidence": "Source attribution and research purpose documented. User requested research-use statement, not evidence of permission for remaining sources."
+      "evidence": "source-rights-evidence.json verifies public declarations for 17 sources, records nine owner attestations and one owner-authorized release. Preserve history and obtain permission records for 12 remaining sources."
     },
     {
       "id": "R8",
