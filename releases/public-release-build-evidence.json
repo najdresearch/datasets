@@ -1,0 +1,146 @@
+{
+  "target_case_downloads": 0,
+  "rows": {
+    "cases": 5717,
+    "quarantine": 372
+  },
+  "sha256": {
+    "cases.jsonl": "149e6815a29434a462e9d1f8f3ccbb21a142c79848947ad20c19b9639c72c081",
+    "quarantine.jsonl": "ea1ec967e3161388406251e395e699b4826114a605ed8e68958d382dc1848c40",
+    "viewer.parquet": "2cb88ebfcd28d54b6dee093dc115e556e53e037ee190eb71f37c54bab2feb935",
+    "quarantine.parquet": "d447e98204d84c3f9b10e5f078874c9366556eafe51f52b878525df4d21fe24c",
+    "audit.json": "c96c5efd784edf6a39cd57ae2a4a852e8d5c75d6b0a53211738dda67601526fd",
+    "case.schema.json": "12dd359252987b0e9397b8c772f8c138f763932106bd60fd85a9958ca73e35e0",
+    "manifest.json": "4ea36bdc8046f950d8856b191a2c90aec056f60cc78d33d0a4eb854f0b272100",
+    "publication.json": "f847ea3a07d599b6ba02df4a352f67963631ef2afdce39591708fba7c19b8236",
+    "repairs.json": "b7b25e4616d8f1f3d77cfd6e1af4ed8c22e75f8c8e1206a669fadb178bea3479",
+    "sources.json": "2583a8ef2cb7d040122c2a922a7dfa62ce198722f6b83a446421c8a56456ede2",
+    "suite.json": "499dd433bd6ef5e2ee43438a00962b23cd56954f9645f5e2dc499e448721aae3"
+  },
+  "selection_sha256": "67ce9424efa381b36c752970549440ba6ba0b8f772ce1f4ddf97dcc1d558f3c7",
+  "fixture_sha256": {
+    "fixtures/agent_contacts/contacts.csv": "e4cf329c4f2ca8656ba8835e7e44bcf24ea0543338e6140902dc8eb9b01788cf",
+    "fixtures/docs/files/brief_ar.txt": "d986e81330b0e1884278c60589b83efac8298276ef05568eaff26d743c9fc84d",
+    "fixtures/docs/files/brief_en.txt": "47b3cda7b327932aa27c5d619a108516db80b7c22137e63953ae261fcf9af9e3",
+    "fixtures/docs/files/meeting_ar.txt": "20ed1241bdd074c9a2d66438001bb35a68232b4eb553bd2c9294975d40c1b722",
+    "fixtures/docs/files/policy_ar.txt": "56935836cef777cca84978bb986ef49e8d0c5ecd427b983dc3bc2a2ed55bc031",
+    "fixtures/docs/files/table_ar.csv": "95370d423e2daf20e0b49c82ff7f532d7043f3aaef04778c5171ba23c6e2bb20",
+    "fixtures/rag/corpus/distractor.txt": "24db9fe05233b3eaba8c5d41bf2c0961960e10dfc796142b66ebf6153f22698d",
+    "fixtures/rag/corpus/pif_facts_ar.txt": "60748b304d66b3e28c91f44a8ad7262142d7d3f5290e236f554d7a94367a9286",
+    "fixtures/rag/corpus/pif_facts_en.txt": "c4c6e3e3cc828a2b63d5c992f774047d1d7cf463c6953e04f34dcb2eb7ad0139",
+    "fixtures/rag/corpus/saudi_facts_ar.txt": "07f164f595275d381d4d4a61cbce0e2d8760a1b6f3b11e6771ba1227c9acd62b",
+    "fixtures/rag/corpus/slang_ar.txt": "a83e6032ad97d6247cbe159ad9ccec40d92bd1de565f2c46e073bd2c327855d3"
+  },
+  "reconstruction_boundary": "Pinned upstream sources, archived legacy subset, fresh riddle snapshot, recovered selection and historical metadata",
+  "fixture_workspace_checks": {
+    "agentic-02": {
+      "contacts.csv": "e4cf329c4f2ca8656ba8835e7e44bcf24ea0543338e6140902dc8eb9b01788cf"
+    },
+    "document-02": {
+      "files/meeting_ar.txt": "20ed1241bdd074c9a2d66438001bb35a68232b4eb553bd2c9294975d40c1b722",
+      "files/policy_ar.txt": "56935836cef777cca84978bb986ef49e8d0c5ecd427b983dc3bc2a2ed55bc031",
+      "files/brief_en.txt": "47b3cda7b327932aa27c5d619a108516db80b7c22137e63953ae261fcf9af9e3",
+      "files/brief_ar.txt": "d986e81330b0e1884278c60589b83efac8298276ef05568eaff26d743c9fc84d",
+      "files/table_ar.csv": "95370d423e2daf20e0b49c82ff7f532d7043f3aaef04778c5171ba23c6e2bb20"
+    },
+    "document-03": {
+      "files/meeting_ar.txt": "20ed1241bdd074c9a2d66438001bb35a68232b4eb553bd2c9294975d40c1b722",
+      "files/policy_ar.txt": "56935836cef777cca84978bb986ef49e8d0c5ecd427b983dc3bc2a2ed55bc031",
+      "files/brief_en.txt": "47b3cda7b327932aa27c5d619a108516db80b7c22137e63953ae261fcf9af9e3",
+      "files/brief_ar.txt": "d986e81330b0e1884278c60589b83efac8298276ef05568eaff26d743c9fc84d",
+      "files/table_ar.csv": "95370d423e2daf20e0b49c82ff7f532d7043f3aaef04778c5171ba23c6e2bb20"
+    },
+    "document-05": {
+      "files/meeting_ar.txt": "20ed1241bdd074c9a2d66438001bb35a68232b4eb553bd2c9294975d40c1b722",
+      "files/policy_ar.txt": "56935836cef777cca84978bb986ef49e8d0c5ecd427b983dc3bc2a2ed55bc031",
+      "files/brief_en.txt": "47b3cda7b327932aa27c5d619a108516db80b7c22137e63953ae261fcf9af9e3",
+      "files/brief_ar.txt": "d986e81330b0e1884278c60589b83efac8298276ef05568eaff26d743c9fc84d",
+      "files/table_ar.csv": "95370d423e2daf20e0b49c82ff7f532d7043f3aaef04778c5171ba23c6e2bb20"
+    },
+    "document-08": {
+      "files/meeting_ar.txt": "20ed1241bdd074c9a2d66438001bb35a68232b4eb553bd2c9294975d40c1b722",
+      "files/policy_ar.txt": "56935836cef777cca84978bb986ef49e8d0c5ecd427b983dc3bc2a2ed55bc031",
+      "files/brief_en.txt": "47b3cda7b327932aa27c5d619a108516db80b7c22137e63953ae261fcf9af9e3",
+      "files/brief_ar.txt": "d986e81330b0e1884278c60589b83efac8298276ef05568eaff26d743c9fc84d",
+      "files/table_ar.csv": "95370d423e2daf20e0b49c82ff7f532d7043f3aaef04778c5171ba23c6e2bb20"
+    },
+    "rag-02": {
+      "corpus/saudi_facts_ar.txt": "07f164f595275d381d4d4a61cbce0e2d8760a1b6f3b11e6771ba1227c9acd62b",
+      "corpus/pif_facts_ar.txt": "60748b304d66b3e28c91f44a8ad7262142d7d3f5290e236f554d7a94367a9286",
+      "corpus/distractor.txt": "24db9fe05233b3eaba8c5d41bf2c0961960e10dfc796142b66ebf6153f22698d",
+      "corpus/pif_facts_en.txt": "c4c6e3e3cc828a2b63d5c992f774047d1d7cf463c6953e04f34dcb2eb7ad0139",
+      "corpus/slang_ar.txt": "a83e6032ad97d6247cbe159ad9ccec40d92bd1de565f2c46e073bd2c327855d3"
+    }
+  },
+  "preserved_historical_documents": [
+    "audit.json",
+    "case.schema.json",
+    "manifest.json",
+    "publication.json",
+    "repairs.json",
+    "sources.json",
+    "suite.json"
+  ],
+  "byte_identical_artifacts": [
+    "cases.jsonl",
+    "quarantine.jsonl",
+    "audit.json",
+    "case.schema.json",
+    "manifest.json",
+    "publication.json",
+    "repairs.json",
+    "sources.json",
+    "suite.json"
+  ],
+  "verification": {
+    "audit.json": {
+      "byte_identical": true,
+      "content_equal": true
+    },
+    "case.schema.json": {
+      "byte_identical": true,
+      "content_equal": true
+    },
+    "cases.jsonl": {
+      "byte_identical": true,
+      "content_equal": true
+    },
+    "manifest.json": {
+      "byte_identical": true,
+      "content_equal": true
+    },
+    "publication.json": {
+      "byte_identical": true,
+      "content_equal": true
+    },
+    "quarantine.jsonl": {
+      "byte_identical": true,
+      "content_equal": true
+    },
+    "quarantine.parquet": {
+      "byte_identical": false,
+      "content_equal": true
+    },
+    "repairs.json": {
+      "byte_identical": true,
+      "content_equal": true
+    },
+    "sources.json": {
+      "byte_identical": true,
+      "content_equal": true
+    },
+    "suite.json": {
+      "byte_identical": true,
+      "content_equal": true
+    },
+    "viewer.parquet": {
+      "byte_identical": false,
+      "content_equal": true
+    }
+  },
+  "environment": {
+    "python": "3.9.6",
+    "platform": "macOS-26.6.1-arm64-arm-64bit",
+    "uv_lock_sha256": "ae433984cd785452185b2c7b475c3034431a8acfaa4b3abd53c42229eab5b3fa"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "algorithm": "sha256",
+  "files": {
+    "audit.json": "c96c5efd784edf6a39cd57ae2a4a852e8d5c75d6b0a53211738dda67601526fd",
+    "case.schema.json": "12dd359252987b0e9397b8c772f8c138f763932106bd60fd85a9958ca73e35e0",
+    "cases.jsonl": "149e6815a29434a462e9d1f8f3ccbb21a142c79848947ad20c19b9639c72c081",
+    "manifest.json": "4ea36bdc8046f950d8856b191a2c90aec056f60cc78d33d0a4eb854f0b272100",
+    "publication.json": "f847ea3a07d599b6ba02df4a352f67963631ef2afdce39591708fba7c19b8236",
+    "quarantine.jsonl": "ea1ec967e3161388406251e395e699b4826114a605ed8e68958d382dc1848c40",
+    "quarantine.parquet": "1ba8555884f8edd3dbc53634aade628ed58a26eb4dfdbd84029a3480726323c0",
+    "repairs.json": "b7b25e4616d8f1f3d77cfd6e1af4ed8c22e75f8c8e1206a669fadb178bea3479",
+    "sources.json": "2583a8ef2cb7d040122c2a922a7dfa62ce198722f6b83a446421c8a56456ede2",
+    "suite.json": "499dd433bd6ef5e2ee43438a00962b23cd56954f9645f5e2dc499e448721aae3",
+    "viewer.parquet": "8762e33ce75e5d77a6f9e6d41ee7c6ff5cfef1d70ada8015c9dd1f5bda966c14"
+  }
+}

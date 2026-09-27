@@ -1,5 +1,8 @@
 # Every published Najd Benchmark data point
 
+> Update: the [public release builder](public-release-builder.md) now reconstructs all 6,089 case records without private inputs or target case downloads. Earlier dependency descriptions below document the historical path. Missing original extract/authoring evidence and unverified redistribution permissions remain distinct from reproducible case content.
+
+
 > Historical provenance and original pinned artifacts are described below. The 31 selected legacy cases and 333 fresh questions are now public: see [standalone publications](standalone-publications.md). Current public revisions omit review annotations: see [metadata migration](metadata-migration.md). Availability of those subsets does not yet establish a complete end-to-end public rebuild.
 
 The Arabic Agent Eval page explains just one source. The complete Najd Benchmark 2026.09.14 release has 5,717 certified cases and 372 quarantined cases from 39 recorded source IDs. This repo can fetch and verify **all 14 files** at the pinned Hugging Face commit, then account for every one of the 6,089 case IDs.
