@@ -5,7 +5,10 @@ on:
     paths:
       - 'scripts/reconstruct_public_release.py'
       - 'scripts/verify_public_release.py'
-      - 'src/najd_datasets/adapters.py'
+      - 'src/najd_datasets/**'
+      - 'sources/**'
+      - 'scripts/audit_public_reconstruction.py'
+      - 'uv.lock'
       - 'releases/2026.09.14/public-*.json'
       - '.github/workflows/public-reconstruction.yml'
 permissions:

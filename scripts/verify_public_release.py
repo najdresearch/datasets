@@ -12,6 +12,13 @@ def verify(output):
     import pyarrow.parquet as pq
 
     checks = json.loads((output / "release/checksums.json").read_text())["files"]
+    expected = json.loads(
+        (
+            Path(__file__).resolve().parents[1] / "releases/2026.09.14/public-checksums.json"
+        ).read_text()
+    )["files"]
+    if set(checks) != set(expected):
+        raise ValueError("Release artifact inventory differs")
     records = {}
     for name, digest in checks.items():
         actual = output / "release" / name
@@ -24,7 +31,10 @@ def verify(output):
             "datasets/najd-benchmark/2026.09.14/" + name,
             reference,
         )
-        exact = hashlib.sha256(data).hexdigest() == digest
+        reference_digest = hashlib.sha256(data).hexdigest()
+        if reference_digest != expected[name]:
+            raise ValueError(f"Pinned published checksum differs: {name}")
+        exact = reference_digest == digest
         equal = exact or (
             name.endswith(".parquet") and pq.read_table(actual).equals(pq.read_table(reference))
         )
