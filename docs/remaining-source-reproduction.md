@@ -1,5 +1,7 @@
 # Rebuilding the final 774 published rows
 
+> Historical provenance and original pinned artifacts are described below. The 31 selected legacy cases and 333 fresh questions are now public: see [standalone publications](standalone-publications.md). Current public revisions omit review annotations: see [metadata migration](metadata-migration.md). Availability of those subsets does not yet establish a complete end-to-end public rebuild.
+
 These rows were always present in the pinned public snapshot. Each source now has a collector that starts from a pinned upstream file or a hash-checked private archive file, builds candidate rows, and compares every selected row with the published release. The comparison ignores only release audit fields.
 
 | Source | Format | Candidates | Published | Recorded transformation |

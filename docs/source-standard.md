@@ -20,7 +20,7 @@ flowchart LR
 | `path` or `repo_id` + `file` | Exact artifact location. |
 | `revision`, `sha256` | Full Hub commit for Hugging Face; SHA-256 is mandatory for every source. |
 | `license`, `redistribution_basis`, `rights_status` | License text, specific basis for reuse, and `approved`, `pending`, or `blocked`. |
-| `split`, `review_status` | Intended partition and current content review state. Keep sealed evaluation data outside this repo. |
+| `split` | Intended partition. Keep sealed evaluation data outside this repo. |
 | `transformations` | Ordered names of the operations applied after collection. |
 
 Use [the source JSON Schema](../schemas/source-manifest.schema.json) and [case JSON Schema](../schemas/case.schema.json) when writing adapters. The CLI also enforces the required source fields and verifies bytes before collection. A collector must emit a manifest with its input digest and row-level provenance. Never silently repair a label: store each case-specific change in a reviewed patch, and pin the resulting output hash.

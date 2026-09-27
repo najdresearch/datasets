@@ -2,24 +2,81 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Najd source manifest v1",
   "type": "object",
-  "required": ["schema_version", "id", "kind", "collection_method", "origin", "license", "redistribution_basis", "rights_status", "split", "revision", "sha256", "review_status", "transformations"],
+  "required": [
+    "schema_version",
+    "id",
+    "kind",
+    "collection_method",
+    "origin",
+    "license",
+    "redistribution_basis",
+    "rights_status",
+    "split",
+    "revision",
+    "sha256",
+    "transformations"
+  ],
   "properties": {
-    "schema_version": {"const": "1"},
-    "id": {"type": "string", "minLength": 1},
-    "kind": {"enum": ["local", "huggingface"]},
-    "collection_method": {"enum": ["local_jsonl", "huggingface_jsonl"]},
-    "path": {"type": "string"},
-    "repo_id": {"type": "string"},
-    "file": {"type": "string"},
-    "origin": {"type": "string"},
-    "license": {"type": "string"},
-    "redistribution_basis": {"type": "string"},
-    "rights_status": {"enum": ["approved", "pending", "blocked"]},
-    "split": {"type": "string"},
-    "revision": {"type": "string"},
-    "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
-    "review_status": {"type": "string"},
-    "transformations": {"type": "array", "items": {"type": "string"}}
+    "schema_version": {
+      "const": "1"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "kind": {
+      "enum": [
+        "local",
+        "huggingface"
+      ]
+    },
+    "collection_method": {
+      "enum": [
+        "local_jsonl",
+        "huggingface_jsonl"
+      ]
+    },
+    "path": {
+      "type": "string"
+    },
+    "repo_id": {
+      "type": "string"
+    },
+    "file": {
+      "type": "string"
+    },
+    "origin": {
+      "type": "string"
+    },
+    "license": {
+      "type": "string"
+    },
+    "redistribution_basis": {
+      "type": "string"
+    },
+    "rights_status": {
+      "enum": [
+        "approved",
+        "pending",
+        "blocked"
+      ]
+    },
+    "split": {
+      "type": "string"
+    },
+    "revision": {
+      "type": "string"
+    },
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "transformations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
   },
   "additionalProperties": false
 }

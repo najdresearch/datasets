@@ -45,7 +45,6 @@ def test_collect_clean_and_package_preserves_provenance(tmp_path: Path):
                 "schema_version": "1",
                 "collection_method": "local_jsonl",
                 "sha256": hashlib.sha256(raw.read_bytes()).hexdigest(),
-                "review_status": "not_reviewed",
                 "transformations": [],
             }
         )
@@ -129,7 +128,6 @@ def test_pending_source_cannot_be_approved(tmp_path: Path):
                 "schema_version": "1",
                 "collection_method": "local_jsonl",
                 "sha256": hashlib.sha256(raw.read_bytes()).hexdigest(),
-                "review_status": "not_reviewed",
                 "transformations": [],
             }
         )

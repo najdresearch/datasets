@@ -55,7 +55,7 @@ def validate_source(source: dict[str, Any]) -> None:
         source,
         (
             "schema_version", "id", "kind", "collection_method", "origin", "license",
-            "redistribution_basis", "split", "revision", "sha256", "review_status",
+            "redistribution_basis", "split", "revision", "sha256",
         ),
         "source",
     )
@@ -155,7 +155,6 @@ def clean(inputs: list[Path], output: Path) -> dict[str, Any]:
                     "prompt": prompt,
                     "expected": row["expected"],
                     "tags": row.get("tags", []),
-                    "review_status": "not_reviewed",
                     "provenance": {
                         "source_id": wrapped["source_id"],
                         "source_revision": wrapped["source_revision"],
@@ -188,8 +187,6 @@ def clean(inputs: list[Path], output: Path) -> dict[str, Any]:
         "exact_duplicates_removed": len(candidates) - len(kept),
         "sources": source_reports,
         "output_sha256": digest(output.read_bytes()),
-        "review_status": "not_reviewed",
-        "semantic_review": "not_performed",
     }
     write_json(output.with_suffix(".manifest.json"), report)
     return report
@@ -240,7 +237,6 @@ def generate(spec_path: Path, output: Path) -> dict[str, Any]:
                 "prompt": _render(spec["prompt_template"], variables),
                 "expected": _render(spec["expected_template"], variables),
                 "tags": spec.get("tags", []),
-                "review_status": "not_reviewed",
                 "provenance": {
                     "origin": "template_generated",
                     "spec_id": spec["id"],
@@ -260,8 +256,6 @@ def generate(spec_path: Path, output: Path) -> dict[str, Any]:
         },
         "rows": len(rows),
         "output_sha256": digest(output.read_bytes()),
-        "review_status": "not_reviewed",
-        "semantic_review": "not_performed",
     }
     write_json(output.with_suffix(".manifest.json"), report)
     return report
@@ -283,7 +277,6 @@ def validate(path: Path) -> dict[str, Any]:
             "prompt",
             "expected",
             "provenance",
-            "review_status",
         ):
             if not row.get(field):
                 failures.append(f"row {index}: missing {field}")

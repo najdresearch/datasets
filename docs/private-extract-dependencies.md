@@ -1,5 +1,7 @@
 # Historical private extract dependencies
 
+> Historical provenance and original pinned artifacts are described below. The 31 selected legacy cases and 333 fresh questions are now public: see [standalone publications](standalone-publications.md). Current public revisions omit review annotations: see [metadata migration](metadata-migration.md). Availability of those subsets does not yet establish a complete end-to-end public rebuild.
+
 The original upstream builder read `private/authorized-source-extracts/authorized-items.jsonl`. That file is absent from the preserved Git and evidence bundles. We do not copy it into this repo or infer its contents from public cases.
 
 The public [source ledger](../releases/2026.09.14/sources.json) records nine source IDs using that path. All 333 of their selected cases were quarantined; none entered the 5,717 certified case file.

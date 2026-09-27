@@ -4,6 +4,7 @@ import argparse
 import hashlib
 import json
 import shutil
+from najd_datasets.metadata import without_review_metadata
 from pathlib import Path
 
 
@@ -46,7 +47,6 @@ def build(original, reference, fixtures, output):
                 "fixture": case.get("fixture"),
                 "source_id": "najd-benchmark-v1",
                 "original_source_row": position,
-                "review_status": "not_reviewed",
             }
         )
     for name, data in [
@@ -55,7 +55,7 @@ def build(original, reference, fixtures, output):
         ("historical-cases.jsonl", chosen),
     ]:
         (output / name).write_text(
-            "".join(json.dumps(r, ensure_ascii=False, sort_keys=True) + "\n" for r in data)
+            "".join(json.dumps(without_review_metadata(r), ensure_ascii=False, sort_keys=True) + "\n" for r in data)
         )
     for fixture in sorted({r["fixture"] for r in rows if r["fixture"]}):
         if fixture not in {"docs", "rag", "agent_contacts"}:
@@ -69,7 +69,6 @@ def build(original, reference, fixtures, output):
         "original_64_row_file_sha256": original_hash,
         "selection": mapping,
         "reference_sha256": digest(reference),
-        "semantic_review": "not_performed",
         "publication_authority": "Dataset owner explicitly requested public release on 2026-09-27",
         "files": {
             str(p.relative_to(output)): digest(p) for p in sorted(output.rglob("*")) if p.is_file()
@@ -107,7 +106,7 @@ The historical reference is [Najd Benchmark at cb30c1c](https://huggingface.co/d
 
 ## Limits
 
-Historical candidate material, not a validated benchmark. `not_reviewed` is retained; answers and rubrics have not undergone independent semantic review. Keyword rubrics are not comprehensive correctness tests. Public cases are not sealed held-out evaluation. Some fixtures intentionally contain false distractors marked untrusted. Facts are historical and should not be assumed current. This release does not change the existing benchmark or scores.
+Historical dataset material. Publication does not establish independent validation. Keyword rubrics are not comprehensive correctness tests. Public cases are not sealed held-out evaluation. Some fixtures intentionally contain false distractors marked untrusted. Facts are historical and should not be assumed current. This release does not change the existing benchmark or scores.
 """)
     (output / "LICENSE.md").write_text(
         "Publicly accessible historical Najd source material, published at the dataset owner’s request. No new permissive reuse license is asserted by this release. Contact Najd Research for reuse terms.\n"

@@ -9,7 +9,7 @@ Two public datasets now make the requested historical cases accessible without c
 
 ## Legacy cases
 
-Public revision: `dde7eca88d9fe7cc2697502f544f1ebaf953fce3`.
+Current public revision: `ccbf837af54611fa8106e4355302fa2b4d4660f9` (metadata-only successor to `dde7eca88d9fe7cc2697502f544f1ebaf953fce3`).
 The source package exposes original selected objects in `original/cases.jsonl`, historical row positions in `manifest.json`, and fixtures. The viewer uses a uniform schema with `expected_json` for heterogeneous answer rubrics.
 
 The initial archive export was built using:
@@ -26,7 +26,7 @@ The script verifies the archived input and historical reference hashes, selects 
 
 ## Fresh web collection
 
-Public revision: `d21090ba3ad945ae5eb42b999fb5708ff863be70`.
+Current public revision: `96dd7b99b31233f83325307c778e756501afb8fc` (metadata-only successor to `d21090ba3ad945ae5eb42b999fb5708ff863be70`).
 Nine pages produced 488 parsed pairs before selection; all 333 historical selected pairs matched exactly. Source-page categories comprise 298 riddle-labelled pairs, 11 general questions and 24 Islamic knowledge questions. These are not independent human labels.
 
 ```sh
@@ -48,4 +48,4 @@ uv run python scripts/package_riddles.py \
 
 The owner explicitly confirmed redistribution permission on 2026-09-27 with source attribution required. This is recorded as owner-confirmed permission, not independently verified licensing. Every source is linked on the card and every row. Raw webpages are not uploaded. No general CC/Apache license is asserted over third-party text.
 
-Both releases preserve `not_reviewed`: content matching and publication are not semantic certification. No original dataset rows, scores, or audit metadata were changed. Historical audit counts in `audit-public-inputs` still describe the old release manifests until public-subset adapters are integrated.
+Both releases now omit review annotations: content matching and publication are not semantic certification. No original dataset rows, scores, or audit metadata were changed. Historical audit counts in `audit-public-inputs` still describe the old release manifests until public-subset adapters are integrated.

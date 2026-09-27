@@ -76,7 +76,6 @@ def collect(sources_path, reference, output):
                     else "general_questions"
                     if "contest" in source["source_id"]
                     else "riddles",
-                    "review_status": "not_reviewed",
                     "rights_status": "pending",
                 }
             )

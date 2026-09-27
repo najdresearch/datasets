@@ -3,10 +3,18 @@
 from __future__ import annotations
 
 import re
-import shutil
 from pathlib import Path
 
-from .pipeline import PipelineError, digest, read_json, validate, write_json
+from .metadata import without_review_metadata
+from .pipeline import (
+    PipelineError,
+    digest,
+    read_json,
+    read_jsonl,
+    validate,
+    write_json,
+    write_jsonl,
+)
 
 
 def package(cases_path: Path, output: Path, dataset_id: str, version: str) -> dict:
@@ -23,17 +31,16 @@ def package(cases_path: Path, output: Path, dataset_id: str, version: str) -> di
     if not source_manifest.exists():
         raise PipelineError("input manifest missing")
     output.mkdir(parents=True)
-    shutil.copyfile(cases_path, output / "cases.jsonl")
-    shutil.copyfile(source_manifest, output / "build-manifest.json")
+    write_jsonl(output / "cases.jsonl", without_review_metadata(read_jsonl(cases_path)))
+    write_json(output / "build-manifest.json", without_review_metadata(read_json(source_manifest)))
     manifest = {
         "id": dataset_id,
         "version": version,
         "status": "candidate",
         "case_count": result["rows"],
-        "cases_sha256": result["sha256"],
+        "cases_sha256": digest((output / "cases.jsonl").read_bytes()),
         "build_manifest_sha256": digest((output / "build-manifest.json").read_bytes()),
         "tracks": result["tracks"],
-        "semantic_review": "not_performed",
     }
     write_json(output / "manifest.json", manifest)
     (output / "README.md").write_text(

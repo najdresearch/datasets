@@ -34,7 +34,6 @@ def canonical_case(source: dict, source_row: int) -> dict:
             "sourceFile": "private/authorized-source-extracts/authorized-items.jsonl",
             "sourceRow": source_row,
         },
-        "review_status": "not_reviewed",
     }
 
 
@@ -58,7 +57,7 @@ def compare(extract_path: Path, quarantine_path: Path) -> dict:
         fresh = by_key.get((source_id, provenance["sourceItemId"]))
         if fresh is None:
             result = "missing"
-        elif fresh == {key: value for key, value in row.items() if not key.startswith("audit_")}:
+        elif fresh == {key: value for key, value in row.items() if not key.startswith("audit_") and key != "review_status"}:
             result = "exact"
         else:
             result = "changed"

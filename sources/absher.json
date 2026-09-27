@@ -158,7 +158,6 @@
   "reference_quarantine_sha256": "5b108a254466d621da41e53acfa5b6302b310c4f9f80d8e87124d605cbfc5ed8",
   "license": "cc-by-4.0",
   "redistribution_basis": "permission-on-file",
-  "review_status": "not_reviewed",
   "split": "historical_test_candidates",
   "transformations": [
     "field_mapping",
@@ -167,5 +166,6 @@
     "historical_global_selection",
     "six_recorded_case_repairs"
   ],
-  "reviewer": null
+  "reviewer": null,
+  "historical_review_metadata": true
 }

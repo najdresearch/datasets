@@ -1,5 +1,7 @@
 # Public reconstruction acceptance criteria
 
+> Historical provenance and original pinned artifacts are described below. The 31 selected legacy cases and 333 fresh questions are now public: see [standalone publications](standalone-publications.md). Current public revisions omit review annotations: see [metadata migration](metadata-migration.md). Availability of those subsets does not yet establish a complete end-to-end public rebuild.
+
 A reader must be able to rebuild the release using this repository and public inputs, without Najd's private archive. Downloading our own Hugging Face output is artifact recovery, not source reconstruction.
 
 ## Current audit
@@ -35,4 +37,4 @@ The 333 rows have fresh content-match evidence. That does not recover the missin
 
 If a historical source cannot satisfy these gates, retain its incomplete status. Create a new successor release with an explicit ID-level removal/replacement mapping, reason, counts, rights, split changes and fresh scores. Do not carry old scores across changed datasets.
 
-`review_status=not_reviewed` remains informational under the existing policy; this audit does not change inclusion or publish anything.
+Review annotations are omitted from current public data. The historical audit does not establish semantic validation.
