@@ -22,6 +22,10 @@ Current immutable revisions and hashes are in the [migration ledger](releases/me
 | [benchmark](https://github.com/najdresearch/benchmark) | Task contracts, shared evaluation/scoring, local reports and pinned execution package |
 | [najd-arena](https://github.com/najdresearch/najd-arena) | Website, organizations, managed jobs, private reports, publication and public results |
 
+## Reconstruction audit
+
+See the [complete source dependency audit](docs/reconstruction-audit.md) for all 39 sources, the public-only execution command, and evidence required to close each remaining gap.
+
 ## Start locally
 
 ```sh
