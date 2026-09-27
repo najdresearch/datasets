@@ -74,3 +74,7 @@ The final audit passes hashes, case identities, typed labels, paired-gold consis
 Report quality separately by pack, task, register and output type. Do not average all 6,884 rows into a headline leaderboard. Count invalid outputs and unsupported coverage. Safety annotations exist only on applicable original cases; unannotated reference cases are not proven safe. Language deltas use actual paired families only. Group uncertainty by policy/lineage rather than counting translated rows independently.
 
 The next phase is remote execution: fixed CPU allocation and GPU configuration, identical model revisions and declared precision, hosted APIs as a separate latency lane. Dataset creation is finished for this candidate. Execution evidence belongs to the benchmark repository; the public natural-development experiment is tracked there.
+
+## Viewer and card update
+
+Revision `788bc10036f4e253ff18f0f926b920ce95f1ef73` adds actual English/MSA/Saudi examples and full choice, Boolean and score examples to the card. Viewer exports omit `provenance_json` and `release_rights_json`; join by case `id` to `metadata/<config>/provenance-and-rights.jsonl`. All 5,184 original typed benchmark rows and their hashes are unchanged. Earlier experiments retain their original revision pins.

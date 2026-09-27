@@ -1,10 +1,12 @@
 {
   "repo_id": "najdresearch/system-one",
-  "revision": "84bf0a30ced090e2b552beafa5f0f3c9a3665c0c",
+  "revision": "788bc10036f4e253ff18f0f926b920ce95f1ef73",
   "url": "https://huggingface.co/datasets/najdresearch/system-one",
   "cases": 5184,
   "packs": 11,
   "status": "public_research_draft",
   "independent_review": "pending",
-  "excluded_fast_decisions_cases": 1700
+  "excluded_fast_decisions_cases": 1700,
+  "previous_revision": "84bf0a30ced090e2b552beafa5f0f3c9a3665c0c",
+  "change": "Dataset card examples and viewer metadata separation; typed benchmark cases unchanged"
 }

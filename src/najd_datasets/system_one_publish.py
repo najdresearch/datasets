@@ -11,6 +11,83 @@ def sha(data):
     return hashlib.sha256(data).hexdigest()
 
 
+def examples(prepared):
+    """Render real original cases, never invented demonstrations or model predictions."""
+    natural = next((rows for name, _, rows in prepared if name == "natural-development"), [])
+    if not natural:
+        return []
+    selected = []
+    for kind, register in [("choice", "en"), ("noul", "ar-MSA"), ("score", "ar-SA")]:
+        row = next(
+            (
+                r
+                for r in natural
+                if r.get("register") == register
+                and any(q["type"] == kind for q in r["questions"].values())
+            ),
+            None,
+        )
+        if row:
+            selected.append((kind, row))
+    lines = [
+        "",
+        "## What is inside?",
+        "",
+        "Each case gives a model some context and asks it to make a small decision. "
+        "The expected answer comes from the dataset, not from a model run.",
+        "",
+        "| Decision | Answer format | Example use |",
+        "|---|---|---|",
+        "| Choice | One allowed string key | Route a service request |",
+        "| Boolean (`noul`) | `true` or `false` | Check whether a policy permits an action |",
+        "| Score | An integer index into the supplied criteria | Select an urgency level |",
+        "",
+        "### The same request in three registers",
+        "",
+        "These are actual aligned rows from `natural-development`. "
+        "The policy and question are localized too; the table shows the request only.",
+        "",
+        "| Case ID | Register | Request | Expected answer |",
+        "|---|---|---|---|",
+    ]
+    if selected:
+        family = selected[0][1]["family_id"]
+        for r in natural:
+            if r["family_id"] == family:
+                request = str(r["state"].get("request", r["state"])).replace("|", "\\|")
+                gold = json.dumps(r["expected"], ensure_ascii=False)
+                lines.append(f"| `{r['id']}` | {r['register']} | {request} | `{gold}` |")
+    for kind, row in selected:
+        labels = {
+            "choice": "Choice — English",
+            "noul": "Boolean — MSA",
+            "score": "Score — Saudi Arabic",
+        }
+        lines += [
+            "",
+            f"### {labels[kind]}",
+            "",
+            f"Actual case: `{row['id']}`. "
+            "The supplied policy is fictional; this is not government or company guidance.",
+            "",
+            "```json",
+            json.dumps(
+                {k: row[k] for k in ["id", "state", "questions", "expected"]},
+                ensure_ascii=False,
+                indent=2,
+            ),
+            "```",
+        ]
+    lines += [
+        "",
+        "Original cases cover government routing, complaints, prerequisites, banking, "
+        "telecom/logistics, HR/IT, procurement, and tool/text-UI actions. "
+        "Adapted upstream packs add intent classification, tool selection, and "
+        "language/culture diagnostics; see the pack table and per-subset licenses.",
+    ]
+    return lines
+
+
 def stage(source, output, clearance, notices=None):
     suite = json.loads((source / "suite.json").read_text())
     if not clearance.get("publication_authorized"):
@@ -75,12 +152,30 @@ def stage(source, output, clearance, notices=None):
                     },
                     **{
                         k + "_json": json.dumps(row.get(k), ensure_ascii=False, sort_keys=True)
-                        for k in ["state", "questions", "expected", "provenance", "release_rights"]
+                        for k in ["state", "questions", "expected"]
                     },
                 }
             )
         (viewer / "data.jsonl").write_text(
             "".join(json.dumps(r, ensure_ascii=False) + "\n" for r in view_rows)
+        )
+        metadata = output / "metadata" / name.replace("/", "--")
+        metadata.mkdir(parents=True)
+        (metadata / "provenance-and-rights.jsonl").write_text(
+            "".join(
+                json.dumps(
+                    {
+                        "id": row["id"],
+                        "pack": name,
+                        "provenance": row.get("provenance"),
+                        "release_rights": row["release_rights"],
+                    },
+                    ensure_ascii=False,
+                    sort_keys=True,
+                )
+                + "\n"
+                for row in rows
+            )
         )
         configs.append(
             {
@@ -130,7 +225,25 @@ def stage(source, output, clearance, notices=None):
         "|---|---:|---|",
     ]
     lines += [f"| {name} | {m['cases']} | {selected[name]['license']} |" for name, m, _ in prepared]
+    lines += examples(prepared)
     lines += [
+        "",
+        "## Files and columns",
+        "",
+        "| File | What it contains |",
+        "|---|---|",
+        "| `viewer/<config>/data.jsonl` | IDs, task, language, split, inputs and answers |",
+        "| `metadata/<config>/provenance-and-rights.jsonl` | Sources and rights, keyed by `id` |",
+        "| `<pack>/cases.jsonl` | Original typed benchmark rows, including complete metadata |",
+        "| `clearance.json` and `licenses/` | Subset permissions and attribution notices |",
+        "",
+        "Join viewer rows to the metadata file for the same configuration using `id`. "
+        "The viewer omits `provenance_json` and `release_rights_json`. "
+        "Benchmark rows keep their original bytes for reproducible experiments.",
+        "",
+        "`state_json` contains the supplied context, `questions_json` defines the decision "
+        "and allowed answers, and `expected_json` contains the gold answer. Parse these "
+        "three columns with `json.loads` when using the viewer export.",
         "",
         "## Use and limitations",
         "",

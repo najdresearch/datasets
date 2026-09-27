@@ -46,7 +46,35 @@ def test_publication_gate_hash_and_review_status(tmp_path):
     assert published["publication_eligible"] is True
     assert published["evaluation_claim_eligible"] is False
     assert published["independent_review"] == "pending"
+    viewer = json.loads((tmp_path / "release/viewer/natural-development/data.jsonl").read_text())
+    metadata = json.loads(
+        (tmp_path / "release/metadata/natural-development/provenance-and-rights.jsonl").read_text()
+    )
+    assert "provenance_json" not in viewer and "release_rights_json" not in viewer
+    assert metadata["id"] == viewer["id"] == published["id"]
+    assert metadata["provenance"] == published["provenance"]
+    assert metadata["release_rights"] == published["release_rights"]
     assert (pack / "cases.jsonl").read_bytes() == data
     (pack / "cases.jsonl").write_bytes(data + b" ")
     with pytest.raises(ValueError, match="hash mismatch"):
         stage(source, tmp_path / "tampered", clearance)
+
+
+def test_examples_use_actual_rows():
+    from najd_datasets.system_one_publish import examples
+
+    rows = [
+        {
+            "id": "demo-" + register,
+            "family_id": "demo",
+            "register": register,
+            "state": {"policy": "Fictional rule", "request": request},
+            "questions": {"action": {"type": "choice", "criteria": {"a": "Route"}}},
+            "expected": {"action": "a"},
+        }
+        for register, request in [("en", "Request"), ("ar-MSA", "طلب"), ("ar-SA", "أبي طلب")]
+    ]
+    card = "\n".join(examples([("natural-development", {}, rows)]))
+    for row in rows:
+        assert row["id"] in card
+        assert row["state"]["request"] in card
