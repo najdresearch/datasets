@@ -10,9 +10,9 @@ Code and source manifests for collecting, cleaning, normalizing, generating and 
 | [Najd Legacy 31](https://huggingface.co/datasets/najdresearch/najd-legacy-31) | 31 | Selected original Najd cases, required fixtures and historical row mapping |
 | [Arabic Riddles and Questions](https://huggingface.co/datasets/najdresearch/arabic-riddles) | 333 | Freshly collected question–answer pairs, with source attribution on every row and the dataset card |
 
-The standalone datasets overlap with Najd Benchmark; do not add their counts as independent cases. Current public versions omit review annotations. Questions, answers, IDs, splits and scoring were not changed by that metadata migration. Structural certification is not a claim of semantic correctness.
+The standalone datasets overlap with Najd Benchmark; do not add their counts as independent cases. Current public versions omit review annotations. Questions, answers, IDs, splits and scoring were not changed by that metadata migration. Dataset availability is not a claim of semantic correctness.
 
-Current immutable revisions and hashes are in the [migration ledger](releases/metadata-migration-2026.09.27.json). See [standalone dataset builds](docs/standalone-publications.md) and [metadata migration](docs/metadata-migration.md).
+The current benchmark pin is in [releases/current.json](releases/current.json). Earlier metadata-only revisions are in the [migration ledger](releases/metadata-migration-2026.09.27.json). See [standalone dataset builds](docs/standalone-publications.md) and [metadata migration](docs/metadata-migration.md).
 
 The published [Hugging Face dataset card](docs/huggingface/najd-benchmark.md) is also tracked here for documentation updates.
 
@@ -88,3 +88,7 @@ The generic publication command requires a hash-bound approval record and refuse
 ## Next implementation milestone
 
 Build the internal Arabic customer-support version-comparison task pack using original fictional policies and scenario-level splits. Other task families are documented placeholders, not released benchmark packs.
+
+## Consumers
+
+`benchmark` and Arena use the immutable identity in `releases/current.json`: 6,089 cases across 25 tracks. Task-specific scorers may select a documented subset. Saved results keep their original revisions; changing the default release never rewrites prior scores. New rows do not become scorable merely by removing metadata: missing references and tasks requiring an execution harness must remain explicitly ungraded until supported.
