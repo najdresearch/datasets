@@ -1,5 +1,7 @@
 # Najd Datasets
 
+[Public reconstruction audit](docs/public-reconstruction.md) · [Task generation roadmap](tasks/README.md) · [Contributing](CONTRIBUTING.md)
+
 This repository holds **code and manifests** for collecting, cleaning, generating, and preparing Najd Research datasets. Large data and generated build artifacts stay outside Git. The published [Najd Benchmark](https://huggingface.co/datasets/najdresearch/najd-benchmark) is a historical candidate collection with structural certification; this repository does not claim its cases were semantically reviewed.
 
 ## Reproduce and inspect the public release
@@ -79,3 +81,7 @@ Choose one narrow Saudi/Arabic decision task, make a source manifest with verifi
 - [Hugging Face snapshot download](https://huggingface.co/docs/huggingface_hub/package_reference/file_download)
 - [Hugging Face upload API](https://huggingface.co/docs/huggingface_hub/package_reference/hf_api)
 - [Published Najd Benchmark](https://huggingface.co/datasets/najdresearch/najd-benchmark)
+
+## Standalone source publications
+
+See [published legacy cases and Arabic riddles](docs/standalone-publications.md) for the two new Hugging Face datasets and reproducible collection commands.

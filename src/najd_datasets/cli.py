@@ -7,6 +7,7 @@ import json
 from pathlib import Path
 
 from .adapters import reproduce_source
+from .audit import audit_public_inputs
 from .historical import reproduce
 from .pipeline import PipelineError, clean, collect, generate, validate
 from .reference import render_source_catalog
@@ -31,6 +32,7 @@ def main() -> None:
         "reproduce-source",
         "prepare-review",
         "sync-release",
+        "audit-public-inputs",
     ):
         cmd = commands.add_parser(name)
         if name == "clean":
@@ -45,6 +47,8 @@ def main() -> None:
             "sync-release",
         }:
             cmd.add_argument("--output", required=True, type=Path)
+        if name == "audit-public-inputs":
+            cmd.add_argument("--sources", required=True, type=Path)
         if name == "reproduce-source":
             cmd.add_argument("--reference", type=Path)
             cmd.add_argument("--local-raw", type=Path)
@@ -58,7 +62,9 @@ def main() -> None:
             cmd.add_argument("--repo", required=True)
     args = parser.parse_args()
     try:
-        if args.command == "collect":
+        if args.command == "audit-public-inputs":
+            result = audit_public_inputs(args.input, args.sources)
+        elif args.command == "collect":
             result = collect(args.input, args.output)
         elif args.command == "clean":
             result = clean(args.inputs, args.output)
